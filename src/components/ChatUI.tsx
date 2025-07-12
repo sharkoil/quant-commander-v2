@@ -89,7 +89,13 @@ const ChatUI = forwardRef<ChatUIHandles, ChatUIProps>(({ ollamaModel, isExternal
           >
             {msg.role === 'assistant' ? (
               <div className="prose prose-sm max-w-none">
-                <ReactMarkdown>{msg.content}</ReactMarkdown>
+                {msg.content.includes('<div') ? (
+                  // Render HTML content for tables/cards
+                  <div dangerouslySetInnerHTML={{ __html: msg.content }} />
+                ) : (
+                  // Render Markdown content for regular text
+                  <ReactMarkdown>{msg.content}</ReactMarkdown>
+                )}
               </div>
             ) : (
               <p className="text-sm">{msg.content}</p>
