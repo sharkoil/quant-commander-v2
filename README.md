@@ -224,4 +224,3 @@ MIT License - see [LICENSE](LICENSE) file for details.
 **Built with ❤️ by the Quant Commander team**
 
 *Empowering financial professionals with AI-driven analytics and intuitive data visualization.*
-# quant-commander-v2
