@@ -483,7 +483,7 @@ function generateInsights(
 
 /**
  * Generates HTML output for the Top N analysis results
- * Creates formatted cards and visualizations matching the app's design
+ * Creates beautiful cards matching the Budget vs Actual analysis design
  */
 function generateTopNHTML(
   topResults: RankingItem[], 
@@ -496,123 +496,174 @@ function generateTopNHTML(
   const scopeEmoji = params.analysisScope === 'growth' ? '📈' : 
                    params.analysisScope === 'period' ? '📅' : '📊';
   
-  return `
-    <div class="top-n-analysis-results" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-      <!-- Analysis Header -->
-      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px;">
-        <h2 style="margin: 0 0 16px 0; font-size: 28px; font-weight: bold;">
-          ${scopeEmoji} ${metadata.analysisType}
-        </h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px;">
-          <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px; backdrop-filter: blur(10px);">
-            <div style="font-size: 24px; font-weight: bold;">${metadata.totalCategories}</div>
-            <div style="font-size: 14px; opacity: 0.9;">Categories Analyzed</div>
+  // Generate individual performer cards using the Budget vs Actual style
+  const generatePerformerCard = (item: RankingItem, index: number, isTop: boolean) => {
+    const isGrowthAnalysis = params.analysisScope === 'growth';
+    const performanceEmoji = isTop ? ['🥇', '🥈', '🥉', '🏅', '⭐'][index] || '🏆' : 
+                                   ['🔴', '🟠', '🟡', '🔶', '📊'][index] || '📉';
+    
+    // Performance assessment
+    const performanceText = isTop ? 'Good Performance' : 
+                           item.percentageOfTotal < 1 ? 'Significant Underperformance' : 'Mild Underperformance';
+    
+    // Card background color
+    const bgColor = isTop ? '#d1fae5' : '#fee2e2';
+    const textColor = isTop ? '#059669' : '#dc2626';
+    const varianceColor = isTop ? '#059669' : '#dc2626';
+    
+    // Format main value
+    const mainValue = isGrowthAnalysis ? `${item.growthRate?.toFixed(1)}%` : formatDisplayValue(item.value);
+    const shareValue = `${item.percentageOfTotal.toFixed(1)}%`;
+    
+    return `
+      <div style="background: ${bgColor}; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid ${textColor};">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 20px;">${performanceEmoji}</span>
+            <h4 style="margin: 0; font-size: 18px; font-weight: 600; color: #1f2937;">
+              ${item.category}
+            </h4>
           </div>
-          <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px; backdrop-filter: blur(10px);">
-            <div style="font-size: 24px; font-weight: bold;">${formatDisplayValue(metadata.totalSum)}</div>
-            <div style="font-size: 14px; opacity: 0.9;">Total ${params.valueColumn}</div>
+          <span style="font-size: 14px; color: #6b7280; font-weight: 500;">
+            ${performanceText}
+          </span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 12px;">
+          <div>
+            <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+              ${isGrowthAnalysis ? 'Growth Rate' : params.valueColumn}
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: #1f2937;">
+              ${mainValue}
+            </div>
           </div>
-          <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px; backdrop-filter: blur(10px);">
-            <div style="font-size: 24px; font-weight: bold;">${metadata.totalRecords}</div>
-            <div style="font-size: 14px; opacity: 0.9;">Data Records</div>
+          <div>
+            <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+              Share of Total
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: #1f2937;">
+              ${shareValue}
+            </div>
           </div>
+          <div>
+            <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+              Records
+            </div>
+            <div style="font-size: 24px; font-weight: 700; color: ${varianceColor};">
+              ${item.recordCount}
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; background: rgba(255,255,255,0.8); padding: 12px; border-radius: 6px;">
+          <span style="font-size: 18px; font-weight: 700; color: ${varianceColor};">
+            ${isGrowthAnalysis ? 
+              (item.growthRate && item.growthRate > 0 ? `+${item.growthRate.toFixed(1)}%` : `${item.growthRate?.toFixed(1)}%`) :
+              `#${item.rank} of ${metadata.totalCategories}`
+            }
+          </span>
         </div>
       </div>
+    `;
+  };
 
-      <!-- Top Performers Section -->
-      ${topResults.length > 0 ? `
-        <div style="margin-bottom: 32px;">
-          <h3 style="color: #059669; font-size: 24px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center;">
-            🏆 Top ${params.n} Performers
-          </h3>
-          <div style="display: grid; gap: 16px;">
-            ${topResults.map((item, index) => generateRankingCard(item, index, 'top', params)).join('')}
+  // Generate analysis summary card
+  const summaryCard = `
+    <div style="background: #f8fafc; border-radius: 8px; padding: 20px; margin-top: 20px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+        <span style="font-size: 20px;">📊</span>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #1e40af;">
+          Analysis Summary
+        </h3>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+        <div style="text-align: center;">
+          <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+            Overall Performance
+          </div>
+          <div style="font-size: 24px; font-weight: 700; color: #059669;">
+            ${Math.round((topResults.reduce((sum, item) => sum + item.percentageOfTotal, 0) / topResults.length))}%
           </div>
         </div>
-      ` : ''}
-
-      <!-- Bottom Performers Section -->
-      ${bottomResults.length > 0 ? `
-        <div style="margin-bottom: 32px;">
-          <h3 style="color: #dc2626; font-size: 24px; font-weight: bold; margin-bottom: 16px; display: flex; align-items: center;">
-            📉 Bottom ${params.n} Performers
-          </h3>
-          <div style="display: grid; gap: 16px;">
-            ${bottomResults.map((item, index) => generateRankingCard(item, index, 'bottom', params)).join('')}
+        <div style="text-align: center;">
+          <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+            Categories Analyzed
+          </div>
+          <div style="font-size: 24px; font-weight: 700; color: #3b82f6;">
+            ${metadata.totalCategories}
           </div>
         </div>
-      ` : ''}
-
-      <!-- Insights Section -->
-      ${insights.length > 0 ? `
-        <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-          <h3 style="color: #1e293b; font-size: 20px; font-weight: bold; margin-bottom: 16px;">
-            💡 Key Insights
-          </h3>
-          <div style="display: grid; gap: 12px;">
-            ${insights.map(insight => `
-              <div style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: white; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                <div style="color: #64748b; font-size: 14px; line-height: 1.5;">${insight}</div>
-              </div>
-            `).join('')}
+        <div style="text-align: center;">
+          <div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: 4px;">
+            Total ${params.valueColumn}
           </div>
-        </div>
-      ` : ''}
-    </div>
-  `;
-}
-
-/**
- * Generates individual ranking card HTML
- * Creates styled cards for each ranked item with appropriate metrics
- */
-function generateRankingCard(item: RankingItem, index: number, type: 'top' | 'bottom', params: TopNAnalysisParams): string {
-  const isGrowthAnalysis = params.analysisScope === 'growth';
-  const cardColor = type === 'top' ? '#059669' : '#dc2626';
-  const bgColor = type === 'top' ? '#ecfdf5' : '#fef2f2';
-  const rankEmoji = type === 'top' 
-    ? ['🥇', '🥈', '🥉', '🏅', '⭐'][index] || '🏆'
-    : ['🔴', '🟠', '🟡', '🔶', '📊'][index] || '📉';
-  
-  return `
-    <div style="background: ${bgColor}; border: 2px solid ${cardColor}; border-radius: 12px; padding: 20px; transition: transform 0.2s;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <span style="font-size: 24px;">${rankEmoji}</span>
-          <div>
-            <h4 style="margin: 0; font-size: 18px; font-weight: bold; color: ${cardColor};">
-              #${item.rank} ${item.category}
-            </h4>
-            <div style="font-size: 14px; color: #64748b; margin-top: 4px;">
-              ${item.recordCount} record${item.recordCount !== 1 ? 's' : ''}
-            </div>
+          <div style="font-size: 24px; font-weight: 700; color: #8b5cf6;">
+            ${formatDisplayValue(metadata.totalSum)}
           </div>
-        </div>
-        <div style="text-align: right;">
-          <div style="font-size: 24px; font-weight: bold; color: ${cardColor};">
-            ${isGrowthAnalysis ? `${item.growthRate?.toFixed(1)}%` : formatDisplayValue(item.value)}
-          </div>
-          ${!isGrowthAnalysis ? `
-            <div style="font-size: 14px; color: #64748b;">
-              ${item.percentageOfTotal.toFixed(1)}% of total
-            </div>
-          ` : ''}
         </div>
       </div>
       
-      ${item.periodBreakdown && item.periodBreakdown.length > 1 ? `
-        <div style="background: white; border-radius: 8px; padding: 12px; margin-top: 16px;">
-          <div style="font-size: 14px; color: #64748b; margin-bottom: 8px;">Period Breakdown:</div>
-          <div style="display: grid; gap: 4px;">
-            ${item.periodBreakdown.slice(-5).map(period => `
-              <div style="display: flex; justify-content: space-between; font-size: 13px;">
-                <span style="color: #64748b;">${period.period}</span>
-                <span style="font-weight: 500;">${formatDisplayValue(period.value)}</span>
-              </div>
-            `).join('')}
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+        <div style="background: #d1fae5; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 16px; font-weight: 700; color: #059669;">
+            ${topResults.length}
+          </div>
+          <div style="font-size: 12px; color: #059669; font-weight: 500;">
+            top performers
           </div>
         </div>
-      ` : ''}
+        <div style="background: #dbeafe; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 16px; font-weight: 700; color: #3b82f6;">
+            ${metadata.totalCategories - topResults.length - bottomResults.length}
+          </div>
+          <div style="font-size: 12px; color: #3b82f6; font-weight: 500;">
+            middle tier
+          </div>
+        </div>
+        <div style="background: #fee2e2; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 16px; font-weight: 700; color: #dc2626;">
+            ${bottomResults.length}
+          </div>
+          <div style="font-size: 12px; color: #dc2626; font-weight: 500;">
+            need attention
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 16px; padding: 16px; background: white; border-radius: 6px;">
+        <div style="font-size: 14px; color: #1f2937; font-weight: 600; margin-bottom: 8px;">
+          Key Insights:
+        </div>
+        ${insights.map(insight => `
+          <div style="font-size: 13px; color: #374151; margin-bottom: 6px; padding-left: 12px; border-left: 3px solid #3b82f6; line-height: 1.4;">
+            ${insight}
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  // Main header with title
+  const headerCard = `
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h2 style="margin: 0; font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+        ${scopeEmoji} ${params.categoryColumn || 'Category'} - Top N Analysis
+      </h2>
+    </div>
+  `;
+
+  // Combine all sections
+  return `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px;">
+      ${headerCard}
+      
+      ${topResults.map((item, index) => generatePerformerCard(item, index, true)).join('')}
+      
+      ${bottomResults.map((item, index) => generatePerformerCard(item, index, false)).join('')}
+      
+      ${summaryCard}
     </div>
   `;
 }
