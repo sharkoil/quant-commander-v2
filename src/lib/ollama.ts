@@ -70,8 +70,8 @@ export async function getOllamaModels(): Promise<string[]> {
     if (!response.ok) {
       throw new Error(`Ollama API error: ${response.status}`);
     }
-    const data = await response.json();
-    return data.models.map((m: any) => m.name);
+    const data = await response.json() as { models: Array<{ name: string }> };
+    return data.models.map((m) => m.name);
   } catch (error) {
     console.error("Error fetching Ollama models:", error);
     return [];
@@ -82,7 +82,7 @@ export async function checkOllamaStatus(): Promise<boolean> {
   try {
     const response = await fetch(`${OLLAMA_BASE_URL}/`);
     return response.ok;
-  } catch (error) {
+  } catch {
     return false;
   }
 }

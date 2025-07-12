@@ -71,15 +71,20 @@ const ChatUI = forwardRef<ChatUIHandles, ChatUIProps>(({ ollamaModel, isExternal
   const showLoadingIndicator = isLoading || isExternalLoading; // Combine internal and external loading
 
   return (
-    <div className="flex flex-col h-full bg-gray-100 p-4 rounded-lg shadow-inner">
-      <h2 className="text-lg font-semibold mb-4 text-gray-800">Chat with AI</h2>
-      <div className="flex-grow overflow-y-auto mb-4 space-y-3 pr-2">
+    <div className="flex flex-col h-full bg-gray-50">
+      {/* Chat Header */}
+      <div className="p-4 border-b border-gray-200 bg-white">
+        <h2 className="text-lg font-semibold text-gray-800">Chat with AI</h2>
+      </div>
+      
+      {/* Messages Area - Scrollable */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-3">
         {messages.map((msg, index) => (
           <div
             key={index}
             className={`p-3 rounded-lg shadow-sm max-w-[85%] ${msg.role === 'user'
-              ? 'bg-blue-500 text-white self-end ml-auto'
-              : 'bg-white text-gray-800 self-start mr-auto'
+              ? 'bg-blue-500 text-white ml-auto'
+              : 'bg-white text-gray-800 mr-auto border border-gray-200'
             }`}
           >
             {msg.role === 'assistant' ? (
@@ -92,29 +97,36 @@ const ChatUI = forwardRef<ChatUIHandles, ChatUIProps>(({ ollamaModel, isExternal
           </div>
         ))}
         {showLoadingIndicator && (
-          <div className="p-3 rounded-lg shadow-sm bg-white text-gray-800 self-start mr-auto">
-            <p className="text-sm">AI is thinking...</p>
+          <div className="p-3 rounded-lg shadow-sm bg-white text-gray-800 mr-auto border border-gray-200">
+            <div className="flex items-center space-x-2">
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+              <p className="text-sm">AI is thinking...</p>
+            </div>
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
-      <div className="flex">
-        <input
-          type="text"
-          placeholder={ollamaModel ? "Type your message..." : "Ollama not connected or model not selected."}
-          className="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
-          value={inputMessage}
-          onChange={(e) => setInputMessage(e.target.value)}
-          onKeyPress={handleKeyPress}
-          disabled={isLoading || !ollamaModel}
-        />
-        <button
-          onClick={handleSendMessage}
-          className="px-6 py-3 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-          disabled={isLoading || !ollamaModel}
-        >
-          Send
-        </button>
+      
+      {/* Fixed Input Area at Bottom */}
+      <div className="p-4 border-t border-gray-200 bg-white">
+        <div className="flex">
+          <input
+            type="text"
+            placeholder={ollamaModel ? "Type your message..." : "Ollama not connected or model not selected."}
+            className="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+            value={inputMessage}
+            onChange={(e) => setInputMessage(e.target.value)}
+            onKeyPress={handleKeyPress}
+            disabled={isLoading || !ollamaModel}
+          />
+          <button
+            onClick={handleSendMessage}
+            className="px-6 py-3 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isLoading || !ollamaModel}
+          >
+            Send
+          </button>
+        </div>
       </div>
     </div>
   );

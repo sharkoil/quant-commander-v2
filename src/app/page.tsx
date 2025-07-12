@@ -48,7 +48,7 @@ export default function Home() {
     chatUIRef.current?.addMessage(message);
   };
 
-  const inferDataType = (value: any): string => {
+  const inferDataType = (value: unknown): string => {
     if (value === null || value === undefined || value === '') return 'string';
     if (typeof value === 'boolean') return 'boolean';
     if (typeof value === 'number') return 'number';
@@ -70,7 +70,7 @@ export default function Home() {
     return false;
   };
 
-  const cleanAndConvertValue = (value: any, type: string): string | number | Date | boolean => {
+  const cleanAndConvertValue = (value: unknown, type: string): string | number | Date | boolean => {
     if (value === null || value === undefined) return '';
     if (type === 'number') {
       const cleaned = String(value).replace(/[^0-9.-]/g, '');
@@ -80,7 +80,7 @@ export default function Home() {
       return String(value).toLowerCase() === 'true';
     }
     if (type === 'date') {
-      const date = new Date(value);
+      const date = new Date(String(value));
       return isNaN(date.getTime()) ? String(value) : date;
     }
     return String(value);
@@ -102,7 +102,7 @@ export default function Home() {
               
               const processedData = results.data.map(row => {
                 return originalColumns.map(col => {
-                  const value = (row as any)[col];
+                  const value = (row as Record<string, unknown>)[col];
                   const inferredType = inferDataType(value);
                   return cleanAndConvertValue(value, inferredType);
                 });
@@ -117,6 +117,7 @@ export default function Home() {
               if (selectedOllamaModel) {
                 const analysisPrompt = `Please analyze the following CSV data summary and recommend appropriate financial analysis techniques. Also, describe the data in 2-3 sentences.\\n\\n${summaryData}`;
                 handleNewChatMessage({ role: 'user', content: analysisPrompt });
+                handleNewChatMessage({ role: 'assistant', content: '🤔 Analyzing your data... Please wait while I examine the structure and patterns.' });
                 const llmResponse = await chatWithOllama(
                   [{ role: 'user', content: analysisPrompt }],
                   selectedOllamaModel
@@ -142,59 +143,64 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <div className="bg-white rounded-lg shadow-sm p-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">Beautiful Data Analysis</h1>
-          
-          <div className="flex items-center space-x-4 mb-4">
-            <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${ollamaStatus === 'Running' ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              <span className="font-medium text-gray-700">Ollama Status:</span>
-              <span className={`${ollamaStatus === 'Running' ? 'text-green-600' : 'text-red-600'}`}>{ollamaStatus}</span>
-            </div>
+    <div className="min-h-screen bg-gray-100 flex">
+      {/* Main Content Area */}
+      <div className="flex-1 p-6 pr-[466px]">
+        <div className="max-w-none space-y-6">
+          {/* Header */}
+          <div className="bg-white rounded-lg shadow-sm p-6">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">Beautiful Data Analysis</h1>
             
-            {ollamaModels.length > 0 && (
+            <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2">
-                <span className="font-medium text-gray-700">Model:</span>
-                <select
-                  value={selectedOllamaModel || ''}
-                  onChange={(e) => setSelectedOllamaModel(e.target.value)}
-                  className="border border-gray-300 rounded px-3 py-1 text-sm"
-                >
-                  {ollamaModels.map(model => (
-                    <option key={model} value={model}>{model}</option>
-                  ))}
-                </select>
+                <div className={`w-3 h-3 rounded-full ${ollamaStatus === 'Running' ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <span className="font-medium text-gray-700">Ollama Status:</span>
+                <span className={`${ollamaStatus === 'Running' ? 'text-green-600' : 'text-red-600'}`}>{ollamaStatus}</span>
               </div>
-            )}
+              
+              {ollamaModels.length > 0 && (
+                <div className="flex items-center space-x-2">
+                  <span className="font-medium text-gray-700">Model:</span>
+                  <select
+                    value={selectedOllamaModel || ''}
+                    onChange={(e) => setSelectedOllamaModel(e.target.value)}
+                    className="border border-gray-300 rounded px-3 py-1 text-sm"
+                    title="Select Ollama Model"
+                    aria-label="Select Ollama Model"
+                  >
+                    {ollamaModels.map(model => (
+                      <option key={model} value={model}>{model}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+            </div>
+
+            <div className="flex space-x-1 bg-gray-200 rounded-lg p-1">
+              <button
+                onClick={() => setActiveTab('grid')}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  activeTab === 'grid' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
+                }`}
+              >
+                Data Grid
+              </button>
+              <button
+                onClick={() => setActiveTab('documents')}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  activeTab === 'documents' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
+                }`}
+              >
+                Documents
+              </button>
+            </div>
           </div>
 
-          <div className="flex space-x-1 bg-gray-200 rounded-lg p-1">
-            <button
-              onClick={() => setActiveTab('grid')}
-              className={`px-4 py-2 rounded-md transition-colors ${
-                activeTab === 'grid' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
-              }`}
-            >
-              Data Grid
-            </button>
-            <button
-              onClick={() => setActiveTab('documents')}
-              className={`px-4 py-2 rounded-md transition-colors ${
-                activeTab === 'documents' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
-              }`}
-            >
-              Documents
-            </button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
-            {activeTab === 'grid' && (
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <div className="flex items-center justify-between mb-4">
+          {/* Main Content */}
+          {activeTab === 'grid' && (
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="p-6 border-b border-gray-200">
+                <div className="flex items-center justify-between">
                   <h2 className="text-xl font-semibold text-gray-800">CSV Data</h2>
                   <div className="flex items-center space-x-2">
                     <input
@@ -218,31 +224,32 @@ export default function Home() {
                     )}
                   </div>
                 </div>
+              </div>
+              <div className="overflow-x-auto p-6">
                 <DataGrid data={csvData} columns={csvColumns} />
               </div>
-            )}
+            </div>
+          )}
 
-            {activeTab === 'documents' && (
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">Document Analysis</h2>
-                <DocumentUploadUI 
-                  ollamaModel={selectedOllamaModel} 
-                  onNewMessage={handleNewChatMessage} 
-                />
-              </div>
-            )}
-          </div>
-
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm">
-              <ChatUI 
-                ref={chatUIRef} 
+          {activeTab === 'documents' && (
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">Document Analysis</h2>
+              <DocumentUploadUI 
                 ollamaModel={selectedOllamaModel} 
-                isExternalLoading={csvProcessingLoading} 
+                onNewMessage={handleNewChatMessage} 
               />
             </div>
-          </div>
+          )}
         </div>
+      </div>
+
+      {/* Fixed Chat Sidebar */}
+      <div className="w-[450px] h-screen bg-white border-l border-gray-200 flex flex-col fixed right-0 top-0">
+        <ChatUI 
+          ref={chatUIRef} 
+          ollamaModel={selectedOllamaModel} 
+          isExternalLoading={csvProcessingLoading} 
+        />
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ const DocumentUploadUI: React.FC<DocumentUploadUIProps> = ({ ollamaModel, onNewM
           for (let i = 0; i < pdf.numPages; i++) {
             const page = await pdf.getPage(i + 1);
             const textContent = await page.getTextContent();
-            fullText += textContent.items.map((item: any) => item.str).join(' ') + '\n';
+            fullText += textContent.items.map((item) => 'str' in item ? item.str : '').join(' ') + '\n';
           }
           resolve(fullText);
         } catch (error) {
