@@ -145,6 +145,37 @@ ${table3}
     }
   };
 
+  // Test function for trend analysis analyzer
+  const handleTestTrendAnalysis = async () => {
+    try {
+      const { testTrendAnalysis, formatTrendAnalysisTable } = await import('../lib/test/trendAnalysisTest');
+      const results = testTrendAnalysis();
+      
+      // Format all three test results as HTML tables
+      const table1 = formatTrendAnalysisTable(results.test1);
+      const table2 = formatTrendAnalysisTable(results.test2);
+      const table3 = formatTrendAnalysisTable(results.test3);
+      
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `${table1}
+
+${table2}
+
+${table3}
+
+✅ All Trend Analysis tests completed successfully! The analyzer can detect trends, calculate moving averages, assess trend strength, and analyze momentum with comprehensive statistical insights.`
+      });
+      
+    } catch (error) {
+      console.error('Trend Analysis test failed:', error);
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `❌ Trend Analysis test failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      });
+    }
+  };
+
   const inferDataType = (value: unknown): string => {
     if (value === null || value === undefined || value === '') return 'string';
     if (typeof value === 'boolean') return 'boolean';
@@ -336,6 +367,12 @@ ${table3}
                       className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
                     >
                       Test Column Intelligence
+                    </button>
+                    <button
+                      onClick={handleTestTrendAnalysis}
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                    >
+                      Test Trend Analysis
                     </button>
                   </div>
                 </div>
