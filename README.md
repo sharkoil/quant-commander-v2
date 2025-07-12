@@ -12,12 +12,19 @@
 
 ## 🌟 Features
 
-### 📊 **Period Variance Analyzer** *(Currently Implemented)*
+### 📊 **Period Variance Analyzer** *(Implemented)*
 - **Time Series Analysis**: Intelligent period-over-period variance calculations
 - **Trend Detection**: Emoji-coded visual indicators (🔥📈📉💔) for instant trend recognition
 - **Smart Scaling**: Card-based display that adapts to any number of periods
 - **Statistical Insights**: Automatic calculation of averages, maximums, and trend summaries
 - **HTML Rendering**: Beautiful, interactive tables with color-coded performance indicators
+
+### 🎯 **Budget vs Actual Variance Analyzer** *(Implemented)*
+- **Performance Analysis**: Compares actual results against budgeted/planned values
+- **Visual Indicators**: Emoji-coded performance status (🚀🎯⚠️💥) for quick assessment
+- **Comprehensive Metrics**: Variance amounts, percentages, and performance scoring
+- **Multi-Period Support**: Quarterly, monthly, or custom period analysis
+- **Summary Statistics**: Overall performance score, favorable/unfavorable period counts
 
 ### 🤖 **AI-Powered Analysis**
 - **Ollama Integration**: Local LLM for intelligent data interpretation
@@ -26,7 +33,6 @@
 - **Smart Recommendations**: AI-driven insights and actionable recommendations
 
 ### 🎯 **Coming Soon** *(Roadmap)*
-- Budget vs Actual Variance Analysis
 - Seasonal Trend Detection
 - Anomaly Detection & Alerting
 - Multi-dimensional Data Correlation
@@ -86,21 +92,30 @@ ollama serve
 The Period Variance Analyzer automatically detects time series patterns in your data:
 
 ```typescript
-// Example data structure
+// Period Variance Example
 const timeSeriesData = [
   { date: '2024-01', value: 1000 },
   { date: '2024-02', value: 1200 },
   { date: '2024-03', value: 950 }
 ];
 
+// Budget Variance Example  
+const budgetData = [
+  { period: '2024-Q1', actual: 275000, budget: 250000 },
+  { period: '2024-Q2', actual: 320000, budget: 300000 },
+  { period: '2024-Q3', actual: 280000, budget: 320000 }
+];
+
 // Automatic analysis with trend detection
-const analysis = calculatePeriodVariance(timeSeriesData);
+const periodAnalysis = calculatePeriodVariance(timeSeriesData);
+const budgetAnalysis = calculateBudgetVariance(budgetData);
 ```
 
 **Sample Output:**
 - 🔥 **Feb 2024**: +20.0% (Significant Growth)
 - 💔 **Mar 2024**: -20.8% (Concerning Decline)
-- 📊 **Average Change**: -0.4%
+- � **Q2 2024**: +6.7% (Strong Performance vs Budget)
+- ⚠️ **Q3 2024**: -12.5% (Significant Underperformance)
 
 ### AI Chat Interface
 
@@ -110,6 +125,9 @@ Simply upload your CSV data and ask natural language questions:
 "Analyze the period variance for our sales data"
 "Show me trends in revenue over the last 12 months"
 "What periods had the highest growth?"
+"Compare our actual performance against budget"
+"Which quarters exceeded budget expectations?"
+"Show me budget variance analysis for this year"
 ```
 
 ## 📁 Project Structure
@@ -126,9 +144,14 @@ src/
 │   └── DocumentUploadUI.tsx # File upload interface
 ├── lib/                   # Core business logic
 │   ├── analyzers/        # Financial analysis engines
-│   │   └── periodVariance.ts # Period variance calculator
+│   │   ├── periodVariance.ts # Period variance calculator
+│   │   ├── budgetVariance.ts # Budget vs actual analyzer
+│   │   ├── columnIntelligence.ts # Smart column detection
+│   │   └── csvProcessor.ts # Intelligent CSV processing
 │   ├── test/             # Test utilities and harnesses
-│   │   └── periodVarianceTest.ts # Period variance testing
+│   │   ├── periodVarianceTest.ts # Period variance testing
+│   │   ├── budgetVarianceTest.ts # Budget variance testing
+│   │   └── columnIntelligenceTest.ts # Column detection testing
 │   └── ollama.ts         # AI integration utilities
 └── test/                 # Unit and integration tests
 ```
@@ -193,12 +216,13 @@ npm run type-check   # TypeScript type checking
 
 ### Phase 1: Core Analytics *(Current)*
 - [x] Period Variance Analyzer
+- [x] Budget vs Actual Variance Analyzer
+- [x] Column Intelligence System
 - [x] AI Chat Interface
 - [x] HTML Table Rendering
 - [ ] CSV Import/Export
 
 ### Phase 2: Advanced Analysis
-- [ ] Budget vs Actual Variance
 - [ ] Seasonal Trend Detection
 - [ ] Anomaly Detection
 - [ ] Multi-dimensional Correlation

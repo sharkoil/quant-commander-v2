@@ -72,6 +72,37 @@ ${table3}
     });
   };
 
+  // Test function for budget variance analyzer
+  const handleTestBudgetVariance = async () => {
+    try {
+      const { testBudgetVariance, formatBudgetVarianceTable } = await import('../lib/test/budgetVarianceTest');
+      const results = testBudgetVariance();
+      
+      // Format all three test results as tables
+      const table1 = formatBudgetVarianceTable(results.test1);
+      const table2 = formatBudgetVarianceTable(results.test2);
+      const table3 = formatBudgetVarianceTable(results.test3);
+      
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `${table1}
+
+${table2}
+
+${table3}
+
+✅ All Budget vs Actual Variance tests completed successfully! The analyzer can detect favorable, unfavorable, and on-target performance with comprehensive statistics.`
+      });
+      
+    } catch (error) {
+      console.error('Budget Variance test failed:', error);
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `❌ Budget Variance test failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      });
+    }
+  };
+
   // Test function for column intelligence system
   const handleTestColumnIntelligence = async () => {
     try {
@@ -293,6 +324,12 @@ ${table3}
                       className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
                     >
                       Test Period Variance
+                    </button>
+                    <button
+                      onClick={handleTestBudgetVariance}
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                    >
+                      Test Budget Variance
                     </button>
                     <button
                       onClick={handleTestColumnIntelligence}
