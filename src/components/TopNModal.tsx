@@ -301,7 +301,7 @@ const TopNModal: React.FC<TopNModalProps> = ({
                 id="numberOfItems"
                 value={numberOfItems}
                 onChange={(e) => setNumberOfItems(Number(e.target.value))}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                 aria-label="Select number of items to analyze"
               >
                 {[3, 5, 10, 15, 20].map(n => (
@@ -439,7 +439,7 @@ const TopNModal: React.FC<TopNModalProps> = ({
                 id="valueColumn"
                 value={valueColumn}
                 onChange={(e) => setValueColumn(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                 aria-label="Select column for ranking values"
               >
                 <option value="">Select a numeric column...</option>
@@ -472,7 +472,7 @@ const TopNModal: React.FC<TopNModalProps> = ({
                 id="categoryColumn"
                 value={categoryColumn}
                 onChange={(e) => setCategoryColumn(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                 aria-label="Select column for grouping categories"
               >
                 <option value="">Select a category column...</option>
@@ -505,7 +505,7 @@ const TopNModal: React.FC<TopNModalProps> = ({
                 id="periodColumn"
                 value={periodColumn}
                 onChange={(e) => setPeriodColumn(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                 aria-label="Select column for period analysis"
               >
                 <option value="">No period analysis</option>

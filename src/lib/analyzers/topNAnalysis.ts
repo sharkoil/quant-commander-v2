@@ -435,27 +435,27 @@ function generateInsights(
   // Performance concentration insights
   if (topResults.length > 0) {
     const topPercentage = topResults.reduce((sum, item) => sum + item.percentageOfTotal, 0);
-    insights.push(`📊 Top ${topResults.length} performers account for ${topPercentage.toFixed(1)}% of total ${params.valueColumn}`);
+    insights.push(`📊 Top ${topResults.length} performers account for <strong>${topPercentage.toFixed(1)}%</strong> of total ${params.valueColumn}`);
     
     if (topPercentage > 80) {
-      insights.push(`⚡ High concentration: Top performers dominate the distribution`);
+      insights.push(`⚡ <strong>High concentration:</strong> Top performers dominate the distribution`);
     } else if (topPercentage < 20) {
-      insights.push(`📈 Balanced distribution: Performance is spread across categories`);
+      insights.push(`📈 <strong>Balanced distribution:</strong> Performance is spread across categories`);
     }
   }
   
   // Growth rate insights
   if (params.analysisScope === 'growth' && topResults.length > 0) {
     const avgGrowth = topResults.reduce((sum, item) => sum + (item.growthRate || 0), 0) / topResults.length;
-    insights.push(`📈 Average growth rate among top performers: ${avgGrowth.toFixed(1)}%`);
+    insights.push(`📈 Average growth rate among top performers: <strong>${avgGrowth.toFixed(1)}%</strong>`);
     
     const positiveGrowth = topResults.filter(item => (item.growthRate || 0) > 0).length;
-    insights.push(`🔥 ${positiveGrowth} out of ${topResults.length} top performers show positive growth`);
+    insights.push(`🔥 <strong>${positiveGrowth}</strong> out of ${topResults.length} top performers show positive growth`);
   }
   
   // Period analysis insights
   if (params.analysisScope === 'period' && params.periodAggregation) {
-    insights.push(`📅 Analysis based on latest ${params.periodAggregation} period`);
+    insights.push(`📅 Analysis based on latest <strong>${params.periodAggregation}</strong> period`);
   }
   
   // Statistical insights
@@ -464,9 +464,9 @@ function generateInsights(
     : 0;
   
   if (coefficient > 1) {
-    insights.push(`📊 High variability detected: Values vary significantly across categories`);
+    insights.push(`📊 <strong>High variability detected:</strong> Values vary significantly across categories`);
   } else if (coefficient < 0.3) {
-    insights.push(`⚖️ Low variability: Values are relatively consistent across categories`);
+    insights.push(`⚖️ <strong>Low variability:</strong> Values are relatively consistent across categories`);
   }
   
   // Performance gap insights
@@ -475,7 +475,7 @@ function generateInsights(
     const gapPercentage = bottomResults[0].value > 0 
       ? (gap / bottomResults[0].value) * 100 
       : 0;
-    insights.push(`📏 Performance gap: ${formatDisplayValue(gap)} (${gapPercentage.toFixed(0)}% difference)`);
+    insights.push(`📏 <strong>Performance gap:</strong> ${formatDisplayValue(gap)} (${gapPercentage.toFixed(0)}% difference)`);
   }
   
   return insights;
