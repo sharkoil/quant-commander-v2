@@ -21,6 +21,10 @@ import {
   filterDataByPeriod
 } from './contributionHelpers';
 
+import {
+  processQuarterlyContribution
+} from './contributionQuarterly';
+
 /**
  * Main function to calculate contribution analysis with comprehensive insights
  */
@@ -97,6 +101,60 @@ export function calculateContributionAnalysis(
     // Calculate contributions
     const contributions = calculateContributions(analysisData, params.valueColumn, params.categoryColumn, params);
     
+    // Calculate quarterly analysis if enabled
+    let quarterlyAnalysis: { [quarterLabel: string]: ContributionItem[] } | undefined;
+    let monthlyAnalysis: { [monthLabel: string]: ContributionItem[] } | undefined;
+    let periodComparison: {
+      periods: string[];
+      categoryTrends: {
+        category: string;
+        values: number[];
+        trend: 'increasing' | 'decreasing' | 'stable' | 'volatile';
+        variance: number;
+      }[];
+    } | undefined;
+    let seasonalInsights: string[] = [];
+    let trendInsights: string[] = [];
+    let timePeriodMetadata: {
+      periodType: 'quarter' | 'month';
+      periodsAnalyzed: string[];
+      dateRange: { start: Date; end: Date };
+    } | undefined;
+    
+    if (params.timePeriodAnalysis?.enabled && params.timePeriodAnalysis.dateColumn) {
+      try {
+        if (params.timePeriodAnalysis.periodType === 'quarter') {
+          const quarterlyResults = processQuarterlyContribution(analysisData, params);
+          quarterlyAnalysis = quarterlyResults.quarterlyAnalysis;
+          periodComparison = quarterlyResults.periodComparison;
+          seasonalInsights = quarterlyResults.seasonalInsights;
+          trendInsights = quarterlyResults.trendInsights;
+          
+          // Add time period metadata
+          const periods = Object.keys(quarterlyAnalysis);
+          if (periods.length > 0) {
+            const allDates = analysisData
+              .map(row => row[params.timePeriodAnalysis!.dateColumn])
+              .filter(date => date)
+              .map(date => new Date(date as string))
+              .filter(date => !isNaN(date.getTime()));
+                  timePeriodMetadata = {
+            periodType: 'quarter' as const,
+            periodsAnalyzed: periods.sort(),
+            dateRange: {
+              start: new Date(Math.min(...allDates.map(d => d.getTime()))),
+              end: new Date(Math.max(...allDates.map(d => d.getTime())))
+            }
+          };
+          }
+        }
+        // Monthly analysis would be implemented similarly here
+      } catch (error) {
+        console.warn('Quarterly analysis failed:', error);
+        // Continue with standard analysis
+      }
+    }
+    
     // Calculate hierarchical contributions if subcategory specified
     let hierarchical: HierarchicalContribution[] | undefined;
     if (params.subcategoryColumn) {
@@ -171,6 +229,12 @@ export function calculateContributionAnalysis(
       success: true,
       analysis: finalContributions,
       hierarchical,
+      
+      // NEW: Add quarterly and monthly analysis results
+      quarterlyAnalysis,
+      monthlyAnalysis,
+      periodComparison,
+      
       metadata: {
         totalValue,
         totalCategories,
@@ -180,9 +244,17 @@ export function calculateContributionAnalysis(
         diversityIndex,
         analysisScope: params.analysisScope,
         periodAnalyzed,
-        dataQuality: validation.dataQuality
+        dataQuality: validation.dataQuality,
+        
+        // NEW: Add time period metadata
+        timePeriodAnalysis: timePeriodMetadata
       },
-      insights,
+      insights: {
+        ...insights,
+        // NEW: Add seasonal and trend insights
+        seasonalInsights: seasonalInsights.length > 0 ? seasonalInsights : undefined,
+        trendInsights: trendInsights.length > 0 ? trendInsights : undefined
+      },
       htmlOutput
     };
 

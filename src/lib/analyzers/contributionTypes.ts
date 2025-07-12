@@ -15,6 +15,15 @@ export interface ContributionAnalysisParams {
   sortBy: 'contribution' | 'value' | 'alphabetical';
   sortOrder: 'desc' | 'asc';
   includePercentiles?: boolean; // Include quartile analysis
+  
+  // NEW: Quarterly and monthly analysis support
+  timePeriodAnalysis?: {
+    enabled: boolean;
+    periodType: 'quarter' | 'month' | 'all';
+    compareAcrossPeriods?: boolean; // Compare quarters or months side-by-side
+    specificPeriod?: string; // e.g., "2024-Q1" or "2024-Jan"
+    dateColumn: string; // Required when time period analysis is enabled
+  };
 }
 
 export interface ContributionItem {
@@ -41,6 +50,24 @@ export interface ContributionAnalysisResult {
   success: boolean;
   analysis: ContributionItem[];
   hierarchical?: HierarchicalContribution[];
+  
+  // NEW: Quarterly comparison results
+  quarterlyAnalysis?: {
+    [quarterLabel: string]: ContributionItem[];
+  };
+  monthlyAnalysis?: {
+    [monthLabel: string]: ContributionItem[];
+  };
+  periodComparison?: {
+    periods: string[];
+    categoryTrends: {
+      category: string;
+      values: number[];
+      trend: 'increasing' | 'decreasing' | 'stable' | 'volatile';
+      variance: number;
+    }[];
+  };
+  
   metadata: {
     totalValue: number;
     totalCategories: number;
@@ -51,6 +78,13 @@ export interface ContributionAnalysisResult {
     analysisScope: string;
     periodAnalyzed?: string;
     dataQuality: 'Excellent' | 'Good' | 'Fair' | 'Poor';
+    
+    // NEW: Time period metadata
+    timePeriodAnalysis?: {
+      periodType: 'quarter' | 'month' | 'all';
+      periodsAnalyzed: string[];
+      dateRange: { start: Date; end: Date };
+    };
   };
   insights: {
     summary: string;
@@ -58,6 +92,10 @@ export interface ContributionAnalysisResult {
     recommendations: string[];
     concentrationLevel: 'High' | 'Medium' | 'Low';
     diversityLevel: 'High' | 'Medium' | 'Low';
+    
+    // NEW: Seasonal insights
+    seasonalInsights?: string[];
+    trendInsights?: string[];
   };
   htmlOutput: string;
   errorMessage?: string;

@@ -42,6 +42,13 @@ export default function ContributionModal({
   const [sortBy, setSortBy] = useState<'contribution' | 'value' | 'alphabetical'>('contribution');
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
   const [includePercentiles, setIncludePercentiles] = useState(true);
+  
+  // NEW: Time period analysis state
+  const [timePeriodEnabled, setTimePeriodEnabled] = useState(false);
+  const [timePeriodType, setTimePeriodType] = useState<'quarter' | 'month'>('quarter');
+  const [dateColumn, setDateColumn] = useState('');
+  const [compareAcrossPeriods, setCompareAcrossPeriods] = useState(true);
+  const [specificPeriod, setSpecificPeriod] = useState('');
 
   // Analysis state
   const [isAnalyzingColumns, setIsAnalyzingColumns] = useState(false);
@@ -189,6 +196,12 @@ export default function ContributionModal({
       return;
     }
 
+    // Validate time period analysis
+    if (timePeriodEnabled && !dateColumn) {
+      alert('Please select a date column for time period analysis');
+      return;
+    }
+
     const params: ContributionAnalysisParams = {
       valueColumn,
       categoryColumn,
@@ -200,7 +213,16 @@ export default function ContributionModal({
       showOthers,
       sortBy,
       sortOrder,
-      includePercentiles
+      includePercentiles,
+      
+      // NEW: Add time period analysis parameters
+      timePeriodAnalysis: timePeriodEnabled ? {
+        enabled: true,
+        periodType: timePeriodType,
+        compareAcrossPeriods,
+        specificPeriod: specificPeriod || undefined,
+        dateColumn
+      } : undefined
     };
 
     onAnalyze(params);
@@ -473,6 +495,117 @@ export default function ContributionModal({
                 className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 aria-label="Minimum contribution percentage"
               />
+            </div>
+
+            {/* NEW: Time Period Analysis Section */}
+            <div className="border-t border-gray-200 pt-4">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-semibold text-gray-800">📅 Seasonal Analysis (NEW!)</h3>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={timePeriodEnabled}
+                    onChange={(e) => setTimePeriodEnabled(e.target.checked)}
+                    className="text-purple-600"
+                  />
+                  <span className="text-sm font-medium">Enable quarterly/monthly analysis</span>
+                </label>
+              </div>
+
+              {timePeriodEnabled && (
+                <div className="space-y-4 bg-purple-50 p-4 rounded-lg">
+                  <p className="text-sm text-purple-700">
+                    🎯 Analyze contribution patterns across quarters or months to identify seasonal trends
+                  </p>
+                  
+                  {/* Date Column Selection */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Date Column <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      value={dateColumn}
+                      onChange={(e) => setDateColumn(e.target.value)}
+                      className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-gray-900 bg-white"
+                      required={timePeriodEnabled}
+                      title="Select date column for time period analysis"
+                      aria-label="Select date column for time period analysis"
+                    >
+                      <option value="">Select date column...</option>
+                      {csvColumns.map(col => (
+                        <option key={col} value={col}>{col}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Period Type Selection */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Analysis Period
+                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      <label className="flex items-center space-x-2 p-3 border rounded-lg cursor-pointer hover:bg-purple-50">
+                        <input
+                          type="radio"
+                          name="timePeriodType"
+                          value="quarter"
+                          checked={timePeriodType === 'quarter'}
+                          onChange={(e) => setTimePeriodType(e.target.value as 'quarter')}
+                          className="text-purple-600"
+                        />
+                        <div>
+                          <div className="font-medium">📊 Quarterly</div>
+                          <div className="text-xs text-gray-600">Compare Q1, Q2, Q3, Q4</div>
+                        </div>
+                      </label>
+                      <label className="flex items-center space-x-2 p-3 border rounded-lg cursor-pointer hover:bg-purple-50">
+                        <input
+                          type="radio"
+                          name="timePeriodType"
+                          value="month"
+                          checked={timePeriodType === 'month'}
+                          onChange={(e) => setTimePeriodType(e.target.value as 'month')}
+                          className="text-purple-600"
+                        />
+                        <div>
+                          <div className="font-medium">📅 Monthly</div>
+                          <div className="text-xs text-gray-600">Compare Jan, Feb, Mar...</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Comparison Options */}
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={compareAcrossPeriods}
+                        onChange={(e) => setCompareAcrossPeriods(e.target.checked)}
+                        className="text-purple-600"
+                      />
+                      <span className="text-sm">Compare contributions across periods</span>
+                    </label>
+                  </div>
+
+                  {/* Specific Period Filter */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Specific Period (Optional)
+                    </label>
+                    <input
+                      type="text"
+                      value={specificPeriod}
+                      onChange={(e) => setSpecificPeriod(e.target.value)}
+                      placeholder={timePeriodType === 'quarter' ? 'e.g., 2024-Q1' : 'e.g., 2024-Jan'}
+                      className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">
+                      Leave empty to analyze all periods. Format: {timePeriodType === 'quarter' ? '2024-Q1, 2024-Q2, etc.' : '2024-Jan, 2024-Feb, etc.'}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Additional Options */}

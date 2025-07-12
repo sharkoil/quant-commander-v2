@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@shopify/draggable": "^1.1.4",
     "@tailwindcss/typography": "^0.5.16",
     "gridjs": "^6.2.0",
     "gridjs-react": "^6.1.1",

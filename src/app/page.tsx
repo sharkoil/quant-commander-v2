@@ -15,13 +15,25 @@ const DocumentUploadUI = dynamic(() => import('@/components/DocumentUploadUI'), 
   ssr: false,
 });
 
+const AnalysisTab = dynamic(() => import('@/components/AnalysisTabSimple'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-64">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+        <p className="text-gray-500">Loading Analysis Tab...</p>
+      </div>
+    </div>
+  ),
+});
+
 export default function Home() {
   const [csvData, setCsvData] = useState<(string | number | Date | boolean)[][]>([]);
   const [csvColumns, setCsvColumns] = useState<string[]>([]);
   const [ollamaStatus, setOllamaStatus] = useState<string>('Checking...');
   const [ollamaModels, setOllamaModels] = useState<string[]>([]);
   const [selectedOllamaModel, setSelectedOllamaModel] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'grid' | 'documents'>('grid');
+  const [activeTab, setActiveTab] = useState<'grid' | 'documents' | 'analysis'>('grid');
   const [csvProcessingLoading, setCsvProcessingLoading] = useState<boolean>(false);
   
   // TopN Modal state
@@ -586,6 +598,14 @@ Please adjust your parameters and try again.`
                 Data Grid
               </button>
               <button
+                onClick={() => setActiveTab('analysis')}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  activeTab === 'analysis' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
+                }`}
+              >
+                Analysis
+              </button>
+              <button
                 onClick={() => setActiveTab('documents')}
                 className={`px-4 py-2 rounded-md transition-colors ${
                   activeTab === 'documents' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600 hover:text-gray-800'
@@ -678,6 +698,12 @@ Please adjust your parameters and try again.`
               <div className="overflow-x-auto p-6">
                 <DataGrid data={csvData} columns={csvColumns} />
               </div>
+            </div>
+          )}
+
+          {activeTab === 'analysis' && (
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <AnalysisTab />
             </div>
           )}
 
