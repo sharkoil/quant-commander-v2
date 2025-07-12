@@ -68,15 +68,50 @@ ${table2}
 
 ${table3}
 
-🎉 **Test Summary:**
-✅ All tests completed successfully!
-• Time series analysis working correctly
-• Emoji trend indicators functioning perfectly
-• Chat-friendly formatting implemented
-• Ready for real CSV data analysis!
-
-The analyzer now processes entire time series datasets and provides beautiful period-by-period variance analysis! 📊✨`
+✅ All tests completed successfully! The Period Variance Analyzer can detect trends and calculate statistical insights automatically.`
     });
+  };
+
+  // Test function for column intelligence system
+  const handleTestColumnIntelligence = async () => {
+    try {
+      const { testColumnIntelligence, testManualColumnMapping } = await import('../lib/test/columnIntelligenceTest');
+      
+      const intelligenceResult = await testColumnIntelligence();
+      const manualResult = await testManualColumnMapping();
+      
+      const formattedResult = `
+<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; font-family: monospace;">
+  <h3 style="color: #2563eb; margin-bottom: 15px;">🧠 Column Intelligence System Test Results</h3>
+  <div style="background: white; padding: 15px; border-radius: 6px; margin-bottom: 15px; border-left: 4px solid #10b981;">
+    <pre style="white-space: pre-wrap; margin: 0; font-size: 14px; line-height: 1.5;">${intelligenceResult}</pre>
+  </div>
+  <div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #8b5cf6;">
+    <pre style="white-space: pre-wrap; margin: 0; font-size: 14px; line-height: 1.5;">${manualResult}</pre>
+  </div>
+  <div style="background: #e0f2fe; padding: 12px; border-radius: 6px; margin-top: 15px;">
+    <strong style="color: #0277bd;">💡 Key Benefits:</strong><br/>
+    • Works with ANY CSV column names<br/>
+    • Automatically detects Budget vs Actual vs Forecast columns<br/>
+    • Provides confidence scores for mappings<br/>
+    • Suggests appropriate analyzers for the data<br/>
+    • Falls back to manual mapping when needed<br/>
+    • Uses LLM for intelligent column interpretation
+  </div>
+</div>`;
+
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: formattedResult
+      });
+      
+    } catch (error) {
+      console.error('Column Intelligence test failed:', error);
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `❌ Column Intelligence test failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      });
+    }
   };
 
   const inferDataType = (value: unknown): string => {
@@ -258,6 +293,12 @@ The analyzer now processes entire time series datasets and provides beautiful pe
                       className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
                     >
                       Test Period Variance
+                    </button>
+                    <button
+                      onClick={handleTestColumnIntelligence}
+                      className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                    >
+                      Test Column Intelligence
                     </button>
                   </div>
                 </div>

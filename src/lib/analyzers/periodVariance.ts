@@ -7,10 +7,21 @@ export interface TimeSeriesDataPoint {
   label?: string; // Optional label for the period
 }
 
+// Enhanced interface for flexible CSV data input
+export interface FlexibleTimeSeriesData {
+  [key: string]: string | number; // Raw CSV row data
+}
+
 export interface PeriodVarianceArgs {
   data: TimeSeriesDataPoint[];
   periodType: 'WoW' | 'MoM' | 'YoY' | 'QoQ' | 'DoD'; // Day-over-Day added
   metricName: string;
+  // Column mapping for flexible data - future enhancement
+  columnMapping?: {
+    dateColumn: string;
+    valueColumn: string;
+    labelColumn?: string;
+  };
 }
 
 export interface PeriodVarianceResult {
