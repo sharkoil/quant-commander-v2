@@ -36,6 +36,17 @@
 - **Visual Indicators**: Emoji-based trend representation (📈📉⚖️💪👍👌⚡🐌)
 - **Comprehensive Reporting**: Detailed trend summaries with confidence metrics
 
+### 🏆 **Top N / Bottom N Analysis** ✅
+- **Intelligent Rankings**: Identifies highest and lowest performing categories with configurable N values
+- **Multi-Dimensional Analysis**: Supports analysis by region, product, manager, or any categorical dimension
+- **Time-Based Rankings**: Latest period performance and growth rate analysis with period aggregation
+- **Smart Column Detection**: Automatic identification of numeric, categorical, and date columns
+- **Period Aggregation**: Week, month, quarter, and year grouping with intelligent auto-selection
+- **Growth Analysis**: Quarter-over-quarter, month-over-month growth rate calculations
+- **Comprehensive Insights**: Statistical distribution analysis, performance gaps, and concentration metrics
+- **Visual Rankings**: Emoji-coded performance indicators with detailed breakdown cards
+- **Default Suggestions**: Out-of-the-box analysis recommendations based on CSV structure
+
 ### 🧠 **Column Intelligence System** ✅
 - **Automatic Column Detection**: Smart pattern matching for budget, actual, forecast, and date columns
 - **Semantic Analysis**: AI-powered column name interpretation and mapping
@@ -159,12 +170,16 @@ src/
 │   │   ├── periodVariance.ts     # Period variance calculator
 │   │   ├── budgetVariance.ts     # Budget vs actual analyzer
 │   │   ├── trendAnalysis.ts      # Trend analysis with moving averages
+│   │   ├── topNAnalysis.ts       # Top N ranking analyzer
+│   │   ├── topNHelpers.ts        # Top N utility functions
+│   │   ├── topNTypes.ts          # Top N TypeScript interfaces
 │   │   ├── columnIntelligence.ts # Smart column detection
 │   │   └── csvProcessor.ts       # Intelligent CSV processing
 │   ├── test/             # Test utilities and harnesses
 │   │   ├── periodVarianceTest.ts     # Period variance testing
 │   │   ├── budgetVarianceTest.ts     # Budget variance testing
 │   │   ├── trendAnalysisTest.ts      # Trend analysis testing
+│   │   ├── topNAnalysisTest.ts       # Top N analysis testing
 │   │   └── columnIntelligenceTest.ts # Column detection testing
 │   └── ollama.ts         # AI integration utilities
 └── test/                 # Unit and integration tests
@@ -193,6 +208,7 @@ npm test -- trendAnalysis
 - ✅ **Period Variance Analyzer**: Complete test suite with multiple time series scenarios
 - ✅ **Budget Variance Analyzer**: Comprehensive testing with favorable/unfavorable/on-target cases
 - ✅ **Trend Analysis Analyzer**: Full testing with upward/downward/volatile trend scenarios
+- ✅ **Top N Analysis Analyzer**: Multi-column testing with regional/state/city/product dimensions
 - ✅ **Column Intelligence**: Testing automatic detection and manual mapping fallbacks
 - ✅ **Interactive Testing**: In-browser test buttons for immediate validation
 
@@ -241,13 +257,14 @@ npm run type-check   # TypeScript type checking
 - [x] Period Variance Analyzer with time series analysis
 - [x] Budget vs Actual Variance Analyzer with performance classification
 - [x] Trend Analysis Analyzer with moving averages and momentum detection
+- [x] Top N / Bottom N Analyzer with intelligent ranking algorithms
 - [x] Column Intelligence System with automatic CSV mapping
 - [x] AI Chat Interface with function calling
 - [x] HTML Card Rendering with visual indicators
 - [x] Comprehensive Test Suites for all analyzers
 
 ### 🔄 **Phase 2: Advanced Analytics** *(IN PROGRESS)*
-- [ ] **Top N Analysis**: Identify highest/lowest performing categories with ranking algorithms
+- [x] **Top N Analysis**: Identify highest/lowest performing categories with ranking algorithms
 - [ ] **Outlier Detection**: Statistical anomaly detection with confidence intervals
 - [ ] **Contribution Analysis**: Calculate percentage contributions to totals with hierarchical breakdowns
 - [ ] **Seasonal Analysis**: Detect recurring patterns and seasonal trends
