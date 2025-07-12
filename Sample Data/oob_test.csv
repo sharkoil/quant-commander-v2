@@ -1,0 +1,201 @@
+Date,Product,Category,State,City,Budget,Actuals,Channel
+2024-01-01,Professional Coffee Machine,Home & Garden,Texas,Dallas,32934,38861,Partner
+2024-01-03,Professional Coffee Machine,Home & Garden,Oklahoma,Oklahoma City,72733,60337,Partner
+2024-01-05,Premium Laptop Pro,Electronics,New Jersey,Paterson,169029,209534,Online
+2024-01-09,Premium Laptop Pro,Electronics,Idaho,Meridian,168230,177755,Retail
+2024-01-17,Smart Home Security System,Home & Garden,Alaska,Anchorage,97415,98365,Retail
+2024-01-19,Smart Home Security System,Home & Garden,South Carolina,Charleston,67565,83529,Direct Sales
+2024-01-22,Premium Laptop Pro,Electronics,Alaska,Anchorage,135966,151409,Direct Sales
+2024-01-25,Wireless Gaming Headset,Electronics,Tennessee,Memphis,142780,138427,Online
+2024-01-26,Professional Coffee Machine,Home & Garden,Rhode Island,Cranston,158762,176296,Direct Sales
+2024-01-28,Wireless Gaming Headset,Electronics,Montana,Great Falls,147447,179824,Retail
+2024-01-29,Wireless Gaming Headset,Electronics,Iowa,Des Moines,110015,99708,Partner
+2024-01-30,Professional Coffee Machine,Home & Garden,Arkansas,Fayetteville,34309,39030,Retail
+2024-02-01,Professional Coffee Machine,Home & Garden,New Mexico,Las Cruces,102268,89399,Online
+2024-02-07,Wireless Gaming Headset,Electronics,New Hampshire,Nashua,110476,94272,Partner
+2024-02-07,Professional Coffee Machine,Home & Garden,New Hampshire,Manchester,146149,121664,Online
+2024-02-08,Premium Laptop Pro,Electronics,New Hampshire,Concord,217479,192067,Online
+2024-02-11,Premium Laptop Pro,Electronics,New Mexico,Albuquerque,140924,179650,Direct Sales
+2024-02-13,Professional Coffee Machine,Home & Garden,Maryland,Rockville,189051,237490,Direct Sales
+2024-02-13,Premium Laptop Pro,Electronics,North Dakota,Bismarck,175106,205514,Online
+2024-02-13,Premium Laptop Pro,Electronics,Washington,Spokane,96158,123292,Retail
+2024-02-15,Smart Home Security System,Home & Garden,Tennessee,Knoxville,174935,143126,Online
+2024-02-16,Professional Coffee Machine,Home & Garden,South Carolina,North Charleston,88554,106699,Partner
+2024-02-17,Professional Coffee Machine,Home & Garden,Tennessee,Knoxville,37709,39335,Direct Sales
+2024-02-19,Wireless Gaming Headset,Electronics,Minnesota,Saint Paul,172904,210026,Online
+2024-02-20,Wireless Gaming Headset,Electronics,Arkansas,Fort Smith,100973,104134,Online
+2024-02-21,Premium Laptop Pro,Electronics,North Dakota,Bismarck,172274,160647,Retail
+2024-02-21,Smart Home Security System,Home & Garden,Illinois,Aurora,60903,50382,Direct Sales
+2024-02-25,Smart Home Security System,Home & Garden,New Hampshire,Concord,139518,178863,Online
+2024-02-28,Premium Laptop Pro,Electronics,Minnesota,Saint Paul,207070,171327,Direct Sales
+2024-02-29,Smart Home Security System,Home & Garden,Connecticut,Bridgeport,77118,84341,Partner
+2024-03-03,Professional Coffee Machine,Home & Garden,New Jersey,Newark,169725,206264,Direct Sales
+2024-03-05,Wireless Gaming Headset,Electronics,Louisiana,Shreveport,177345,152021,Partner
+2024-03-07,Smart Home Security System,Home & Garden,Ohio,Cleveland,133743,146371,Online
+2024-03-08,Wireless Gaming Headset,Electronics,Colorado,Colorado Springs,77770,81728,Partner
+2024-03-11,Professional Coffee Machine,Home & Garden,North Dakota,Bismarck,127547,135056,Direct Sales
+2024-03-14,Wireless Gaming Headset,Electronics,Iowa,Cedar Rapids,91942,98681,Partner
+2024-03-14,Professional Coffee Machine,Home & Garden,Oregon,Salem,53278,52643,Online
+2024-03-16,Smart Home Security System,Home & Garden,Kansas,Wichita,74162,94604,Direct Sales
+2024-03-17,Wireless Gaming Headset,Electronics,Ohio,Columbus,156428,192461,Retail
+2024-03-19,Wireless Gaming Headset,Electronics,New York,Rochester,254771,321249,Direct Sales
+2024-03-20,Premium Laptop Pro,Electronics,Nebraska,Bellevue,120121,122805,Partner
+2024-03-21,Professional Coffee Machine,Home & Garden,Alabama,Mobile,65303,54566,Partner
+2024-03-23,Smart Home Security System,Home & Garden,Massachusetts,Springfield,161772,139542,Direct Sales
+2024-03-25,Wireless Gaming Headset,Electronics,Maryland,Rockville,64564,69082,Partner
+2024-03-25,Premium Laptop Pro,Electronics,New Jersey,Newark,190043,169302,Partner
+2024-03-28,Professional Coffee Machine,Home & Garden,North Dakota,Grand Forks,124795,101017,Retail
+2024-03-30,Wireless Gaming Headset,Electronics,South Carolina,North Charleston,181192,199914,Partner
+2024-04-01,Wireless Gaming Headset,Electronics,North Carolina,Charlotte,83968,105736,Retail
+2024-04-05,Professional Coffee Machine,Home & Garden,New York,Rochester,181945,220366,Direct Sales
+2024-04-11,Professional Coffee Machine,Home & Garden,Rhode Island,Cranston,29309,25629,Online
+2024-04-12,Smart Home Security System,Home & Garden,Alaska,Juneau,42954,39866,Retail
+2024-04-12,Wireless Gaming Headset,Electronics,Arizona,Tucson,151156,186083,Partner
+2024-04-14,Smart Home Security System,Home & Garden,Louisiana,Shreveport,96923,116274,Direct Sales
+2024-04-14,Smart Home Security System,Home & Garden,Maryland,Baltimore,89956,89065,Direct Sales
+2024-04-16,Smart Home Security System,Home & Garden,Pennsylvania,Philadelphia,144759,126279,Direct Sales
+2024-04-23,Premium Laptop Pro,Electronics,Michigan,Detroit,189846,229613,Online
+2024-04-25,Professional Coffee Machine,Home & Garden,Utah,Provo,52754,59950,Direct Sales
+2024-04-25,Premium Laptop Pro,Electronics,California,San Diego,108186,104422,Retail
+2024-04-25,Premium Laptop Pro,Electronics,Florida,Jacksonville,115647,143193,Direct Sales
+2024-04-26,Smart Home Security System,Home & Garden,Iowa,Des Moines,58810,62027,Partner
+2024-04-29,Smart Home Security System,Home & Garden,Kentucky,Bowling Green,42700,35684,Partner
+2024-04-30,Wireless Gaming Headset,Electronics,Mississippi,Jackson,74873,76921,Direct Sales
+2024-04-30,Smart Home Security System,Home & Garden,Montana,Billings,92592,86146,Online
+2024-05-01,Professional Coffee Machine,Home & Garden,Hawaii,Honolulu,58572,72162,Online
+2024-05-02,Premium Laptop Pro,Electronics,Louisiana,Baton Rouge,140681,128811,Direct Sales
+2024-05-07,Premium Laptop Pro,Electronics,Louisiana,New Orleans,50412,48022,Partner
+2024-05-09,Premium Laptop Pro,Electronics,New Mexico,Albuquerque,133243,144091,Partner
+2024-05-13,Smart Home Security System,Home & Garden,Missouri,Saint Louis,71773,72546,Partner
+2024-05-19,Professional Coffee Machine,Home & Garden,Hawaii,Pearl City,158601,186685,Direct Sales
+2024-05-19,Smart Home Security System,Home & Garden,New Hampshire,Concord,33821,27507,Partner
+2024-05-27,Professional Coffee Machine,Home & Garden,Virginia,Virginia Beach,124341,107049,Direct Sales
+2024-05-27,Premium Laptop Pro,Electronics,Kansas,Overland Park,108896,136400,Online
+2024-05-27,Wireless Gaming Headset,Electronics,Rhode Island,Warwick,161985,198056,Online
+2024-05-28,Professional Coffee Machine,Home & Garden,Tennessee,Memphis,132927,116848,Retail
+2024-05-29,Professional Coffee Machine,Home & Garden,Vermont,Burlington,116219,149079,Online
+2024-06-04,Premium Laptop Pro,Electronics,Colorado,Denver,86151,94271,Partner
+2024-06-04,Premium Laptop Pro,Electronics,South Carolina,North Charleston,92672,116948,Retail
+2024-06-06,Premium Laptop Pro,Electronics,New York,New York City,170559,187403,Partner
+2024-06-09,Professional Coffee Machine,Home & Garden,Nebraska,Omaha,85656,99677,Retail
+2024-06-09,Premium Laptop Pro,Electronics,Nevada,Reno,97599,104355,Partner
+2024-06-09,Wireless Gaming Headset,Electronics,Nevada,Henderson,101477,103094,Direct Sales
+2024-06-13,Smart Home Security System,Home & Garden,Illinois,Rockford,51029,64128,Partner
+2024-06-13,Professional Coffee Machine,Home & Garden,New Jersey,Jersey City,104782,88268,Retail
+2024-06-17,Premium Laptop Pro,Electronics,Maryland,Rockville,163795,164238,Direct Sales
+2024-06-19,Wireless Gaming Headset,Electronics,Wyoming,Cheyenne,163425,202900,Retail
+2024-06-21,Smart Home Security System,Home & Garden,Maine,Bangor,118820,100209,Retail
+2024-06-22,Premium Laptop Pro,Electronics,Utah,Provo,81807,100277,Direct Sales
+2024-06-28,Wireless Gaming Headset,Electronics,New Hampshire,Manchester,109940,110281,Partner
+2024-07-01,Smart Home Security System,Home & Garden,California,San Diego,175869,197219,Online
+2024-07-02,Smart Home Security System,Home & Garden,Indiana,Evansville,84912,74491,Online
+2024-07-04,Smart Home Security System,Home & Garden,South Dakota,Rapid City,50031,53487,Partner
+2024-07-05,Smart Home Security System,Home & Garden,Utah,Provo,94649,90364,Partner
+2024-07-07,Premium Laptop Pro,Electronics,Hawaii,Hilo,119057,152284,Retail
+2024-07-07,Smart Home Security System,Home & Garden,Delaware,Dover,127049,137005,Partner
+2024-07-08,Professional Coffee Machine,Home & Garden,Maine,Portland,138672,149391,Direct Sales
+2024-07-09,Premium Laptop Pro,Electronics,Florida,Tampa,118990,98252,Direct Sales
+2024-07-13,Wireless Gaming Headset,Electronics,Louisiana,Baton Rouge,152044,127063,Retail
+2024-07-14,Smart Home Security System,Home & Garden,Missouri,Springfield,25445,31107,Partner
+2024-07-14,Wireless Gaming Headset,Electronics,Oregon,Eugene,65916,75335,Direct Sales
+2024-07-22,Premium Laptop Pro,Electronics,Virginia,Virginia Beach,73667,88261,Retail
+2024-07-22,Wireless Gaming Headset,Electronics,New York,New York City,63299,70936,Online
+2024-07-23,Premium Laptop Pro,Electronics,Florida,Miami,152740,151529,Direct Sales
+2024-07-24,Premium Laptop Pro,Electronics,Wisconsin,Green Bay,60020,63459,Partner
+2024-07-24,Smart Home Security System,Home & Garden,Arkansas,Fayetteville,126613,153537,Direct Sales
+2024-07-27,Premium Laptop Pro,Electronics,Illinois,Chicago,128875,166517,Partner
+2024-07-29,Smart Home Security System,Home & Garden,Oregon,Salem,56872,71454,Retail
+2024-07-31,Smart Home Security System,Home & Garden,New Mexico,Las Cruces,130958,127380,Direct Sales
+2024-08-04,Premium Laptop Pro,Electronics,Minnesota,Rochester,81332,70572,Online
+2024-08-04,Professional Coffee Machine,Home & Garden,Vermont,South Burlington,60035,70480,Retail
+2024-08-05,Wireless Gaming Headset,Electronics,West Virginia,Parkersburg,191955,165038,Direct Sales
+2024-08-07,Premium Laptop Pro,Electronics,Maryland,Rockville,109715,118052,Online
+2024-08-12,Premium Laptop Pro,Electronics,Colorado,Aurora,121352,149294,Partner
+2024-08-14,Professional Coffee Machine,Home & Garden,Tennessee,Memphis,53899,46062,Retail
+2024-08-14,Smart Home Security System,Home & Garden,Delaware,Newark,31002,31241,Partner
+2024-08-15,Wireless Gaming Headset,Electronics,Hawaii,Hilo,57696,53201,Online
+2024-08-17,Premium Laptop Pro,Electronics,Pennsylvania,Pittsburgh,149706,126707,Retail
+2024-08-20,Wireless Gaming Headset,Electronics,Michigan,Detroit,151980,133545,Direct Sales
+2024-08-28,Professional Coffee Machine,Home & Garden,Illinois,Aurora,129526,156525,Partner
+2024-08-31,Professional Coffee Machine,Home & Garden,South Carolina,Charleston,123978,114306,Partner
+2024-09-02,Professional Coffee Machine,Home & Garden,North Dakota,Bismarck,55198,53666,Online
+2024-09-04,Wireless Gaming Headset,Electronics,New Jersey,Jersey City,156036,161084,Direct Sales
+2024-09-05,Professional Coffee Machine,Home & Garden,New Mexico,Albuquerque,49082,50431,Online
+2024-09-09,Wireless Gaming Headset,Electronics,Alaska,Fairbanks,159472,184743,Partner
+2024-09-12,Professional Coffee Machine,Home & Garden,Montana,Great Falls,67889,68854,Retail
+2024-09-14,Premium Laptop Pro,Electronics,Virginia,Norfolk,166848,195857,Direct Sales
+2024-09-16,Professional Coffee Machine,Home & Garden,Maryland,Rockville,95779,94780,Direct Sales
+2024-09-17,Premium Laptop Pro,Electronics,West Virginia,Charleston,187377,217924,Direct Sales
+2024-09-19,Smart Home Security System,Home & Garden,West Virginia,Parkersburg,55508,50956,Online
+2024-09-20,Professional Coffee Machine,Home & Garden,Kansas,Overland Park,109447,130494,Retail
+2024-09-20,Wireless Gaming Headset,Electronics,Texas,Dallas,119280,110026,Online
+2024-09-20,Wireless Gaming Headset,Electronics,Florida,Miami,190649,203264,Retail
+2024-09-25,Professional Coffee Machine,Home & Garden,New York,New York City,90277,72857,Direct Sales
+2024-10-01,Smart Home Security System,Home & Garden,Wisconsin,Green Bay,55752,61237,Retail
+2024-10-02,Smart Home Security System,Home & Garden,West Virginia,Parkersburg,52922,63457,Partner
+2024-10-03,Smart Home Security System,Home & Garden,Wisconsin,Green Bay,101341,87204,Direct Sales
+2024-10-04,Smart Home Security System,Home & Garden,Maine,Lewiston,126638,116300,Retail
+2024-10-06,Premium Laptop Pro,Electronics,Maine,Lewiston,144713,165679,Online
+2024-10-07,Professional Coffee Machine,Home & Garden,New Hampshire,Manchester,59705,62230,Partner
+2024-10-09,Smart Home Security System,Home & Garden,South Dakota,Aberdeen,93089,88626,Retail
+2024-10-14,Wireless Gaming Headset,Electronics,Delaware,Dover,90030,77544,Partner
+2024-10-15,Professional Coffee Machine,Home & Garden,Arkansas,Fayetteville,137394,114932,Direct Sales
+2024-10-16,Professional Coffee Machine,Home & Garden,Arizona,Tucson,52891,45103,Direct Sales
+2024-10-21,Professional Coffee Machine,Home & Garden,Nevada,Reno,63897,70865,Partner
+2024-10-25,Smart Home Security System,Home & Garden,Montana,Missoula,101735,89525,Retail
+2024-10-26,Professional Coffee Machine,Home & Garden,Vermont,Burlington,29771,36257,Partner
+2024-10-27,Wireless Gaming Headset,Electronics,Alaska,Juneau,94793,103576,Online
+2024-10-27,Premium Laptop Pro,Electronics,Kansas,Wichita,109110,129337,Retail
+2024-10-27,Professional Coffee Machine,Home & Garden,Pennsylvania,Allentown,85786,88159,Retail
+2024-10-29,Premium Laptop Pro,Electronics,Arkansas,Fort Smith,230824,284404,Direct Sales
+2024-11-01,Smart Home Security System,Home & Garden,Ohio,Columbus,69742,78960,Retail
+2024-11-01,Premium Laptop Pro,Electronics,Vermont,Essex,71086,73790,Retail
+2024-11-02,Premium Laptop Pro,Electronics,Massachusetts,Worcester,209744,267103,Online
+2024-11-04,Premium Laptop Pro,Electronics,Georgia,Columbus,146125,168689,Retail
+2024-11-05,Premium Laptop Pro,Electronics,Florida,Miami,140120,165559,Partner
+2024-11-06,Professional Coffee Machine,Home & Garden,Mississippi,Gulfport,136473,139662,Retail
+2024-11-07,Wireless Gaming Headset,Electronics,Texas,Dallas,88470,78800,Online
+2024-11-08,Premium Laptop Pro,Electronics,Iowa,Davenport,91894,119275,Partner
+2024-11-08,Wireless Gaming Headset,Electronics,Texas,San Antonio,204788,198679,Online
+2024-11-11,Premium Laptop Pro,Electronics,Alabama,Birmingham,140427,120148,Direct Sales
+2024-11-11,Smart Home Security System,Home & Garden,Nebraska,Omaha,121343,125396,Direct Sales
+2024-11-12,Professional Coffee Machine,Home & Garden,Florida,Tampa,59699,49063,Retail
+2024-11-12,Smart Home Security System,Home & Garden,Mississippi,Southaven,38328,47267,Online
+2024-11-12,Premium Laptop Pro,Electronics,Arkansas,Fayetteville,204809,241156,Direct Sales
+2024-11-15,Premium Laptop Pro,Electronics,Utah,Provo,79787,93947,Retail
+2024-11-15,Premium Laptop Pro,Electronics,Vermont,Essex,249815,308819,Direct Sales
+2024-11-17,Professional Coffee Machine,Home & Garden,New York,Buffalo,230057,275646,Direct Sales
+2024-11-21,Professional Coffee Machine,Home & Garden,New York,New York City,116828,110298,Direct Sales
+2024-11-21,Smart Home Security System,Home & Garden,Hawaii,Hilo,99458,113611,Retail
+2024-11-23,Wireless Gaming Headset,Electronics,Delaware,Wilmington,99886,109399,Retail
+2024-11-24,Professional Coffee Machine,Home & Garden,Washington,Tacoma,209483,236903,Direct Sales
+2024-11-26,Smart Home Security System,Home & Garden,Idaho,Boise,85438,84900,Partner
+2024-11-26,Professional Coffee Machine,Home & Garden,Mississippi,Gulfport,94156,78944,Online
+2024-11-28,Smart Home Security System,Home & Garden,Michigan,Detroit,78887,81612,Online
+2024-11-29,Professional Coffee Machine,Home & Garden,Illinois,Aurora,40479,34089,Retail
+2024-11-30,Wireless Gaming Headset,Electronics,Utah,West Valley City,76019,74724,Online
+2024-12-01,Smart Home Security System,Home & Garden,Tennessee,Knoxville,73098,85145,Partner
+2024-12-01,Premium Laptop Pro,Electronics,Vermont,Burlington,76774,70985,Partner
+2024-12-05,Wireless Gaming Headset,Electronics,Connecticut,Bridgeport,85627,83181,Online
+2024-12-05,Premium Laptop Pro,Electronics,Indiana,Evansville,123330,145847,Online
+2024-12-08,Smart Home Security System,Home & Garden,Virginia,Norfolk,101294,128427,Direct Sales
+2024-12-08,Smart Home Security System,Home & Garden,Connecticut,Bridgeport,60395,56378,Partner
+2024-12-09,Professional Coffee Machine,Home & Garden,Illinois,Aurora,136764,170958,Online
+2024-12-10,Professional Coffee Machine,Home & Garden,Kentucky,Bowling Green,56836,54790,Direct Sales
+2024-12-12,Wireless Gaming Headset,Electronics,Wyoming,Laramie,98637,127353,Partner
+2024-12-12,Professional Coffee Machine,Home & Garden,Ohio,Cleveland,155791,151612,Direct Sales
+2024-12-13,Premium Laptop Pro,Electronics,Ohio,Cleveland,103242,105026,Online
+2024-12-13,Smart Home Security System,Home & Garden,Wisconsin,Green Bay,155976,153235,Online
+2024-12-14,Wireless Gaming Headset,Electronics,Washington,Seattle,120888,155455,Direct Sales
+2024-12-14,Premium Laptop Pro,Electronics,Nevada,Reno,129928,165166,Partner
+2024-12-16,Professional Coffee Machine,Home & Garden,New Jersey,Paterson,142256,128143,Retail
+2024-12-17,Professional Coffee Machine,Home & Garden,South Dakota,Rapid City,191818,157682,Direct Sales
+2024-12-18,Professional Coffee Machine,Home & Garden,South Dakota,Sioux Falls,147611,161156,Direct Sales
+2024-12-19,Professional Coffee Machine,Home & Garden,Mississippi,Jackson,60298,70723,Online
+2024-12-21,Smart Home Security System,Home & Garden,Georgia,Augusta,81258,82076,Online
+2024-12-26,Wireless Gaming Headset,Electronics,Iowa,Davenport,176386,217140,Online
+2024-12-26,Premium Laptop Pro,Electronics,Mississippi,Jackson,224755,275829,Online
+2024-12-27,Smart Home Security System,Home & Garden,Florida,Tampa,172876,185519,Direct Sales
+2024-12-28,Professional Coffee Machine,Home & Garden,Oregon,Eugene,72996,91200,Online
+2024-12-29,Premium Laptop Pro,Electronics,Hawaii,Pearl City,73251,82323,Partner
+2024-12-30,Premium Laptop Pro,Electronics,New York,Buffalo,156639,166892,Online
