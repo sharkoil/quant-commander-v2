@@ -87,6 +87,14 @@ export default function AnalysisTab() {
   // Force re-render trigger for period variance
   const [periodVarianceRenderTrigger, setPeriodVarianceRenderTrigger] = useState(0);
   
+  // State for collapsible cards - track which cards are collapsed
+  const [collapsedCards, setCollapsedCards] = useState<{
+    [analysisId: string]: boolean;
+  }>({});
+  
+  // State for tooltip visibility
+  const [visibleTooltip, setVisibleTooltip] = useState<string | null>(null);
+  
   // Refs for draggable containers
   const pinnedContainerRef = useRef<HTMLDivElement>(null);
   const unpinnedContainerRef = useRef<HTMLDivElement>(null);
@@ -323,6 +331,41 @@ export default function AnalysisTab() {
         order: index
       }));
     });
+  };
+
+  /**
+   * Get analysis explanation for tooltip
+   */
+  const getAnalysisExplanation = (type: AnalysisType): string => {
+    switch (type) {
+      case 'contribution':
+        return 'Contribution Analysis calculates what percentage each category contributes to the total value. It helps identify which segments, regions, or products drive the most revenue/value. For example, if Product A generates $50K out of $100K total sales, it contributes 50%.';
+      
+      case 'budget-variance':
+        return 'Budget Variance Analysis compares planned/budgeted amounts against actual results. It calculates the difference (variance) both in absolute terms and percentages. Positive variance means you exceeded budget (favorable), negative means you fell short (unfavorable).';
+      
+      case 'top-n':
+        return 'Top N Analysis ranks and identifies the highest or lowest performing items in your data. It sorts all entries by a value column and shows the top/bottom N results. Useful for finding best/worst performers, largest contributors, or outliers.';
+      
+      case 'trend-analysis':
+        return 'Trend Analysis examines how values change over time periods. It calculates moving averages, identifies upward/downward trends, and measures trend strength. Helps spot patterns, seasonality, and momentum in time-series data.';
+      
+      case 'period-variance':
+        return 'Period Variance Analysis compares values between consecutive time periods (month-over-month, quarter-over-quarter). It calculates the change amount and percentage, helping identify growth, decline, or volatility patterns over time.';
+      
+      default:
+        return 'This analysis provides insights into your data patterns and relationships to help with decision-making.';
+    }
+  };
+
+  /**
+   * Toggle collapse state of an analysis card
+   */
+  const toggleCollapse = (itemId: string) => {
+    setCollapsedCards(prev => ({
+      ...prev,
+      [itemId]: !prev[itemId]
+    }));
   };
 
   /**
@@ -1084,6 +1127,37 @@ export default function AnalysisTab() {
               {typeConfig.name}
             </span>
             
+            {/* Info icon with tooltip */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => setVisibleTooltip(item.id)}
+                onMouseLeave={() => setVisibleTooltip(null)}
+                className="text-gray-400 hover:text-blue-500 transition-colors"
+                title="Analysis Information"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </button>
+              
+              {/* Tooltip */}
+              {visibleTooltip === item.id && (
+                <div className="absolute z-10 w-80 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg left-0">
+                  <div className="font-semibold text-blue-600 mb-2">
+                    {typeConfig.icon} {typeConfig.name}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    {getAnalysisExplanation(item.result.type)}
+                  </p>
+                  <div className="mt-2 pt-2 border-t border-gray-100">
+                    <p className="text-xs text-gray-500">
+                      💡 Hover over controls and results for more specific details
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             {/* Pin indicator */}
             {item.isPinned && (
               <span className="text-yellow-500" title="Pinned">
@@ -1094,6 +1168,13 @@ export default function AnalysisTab() {
           
           {/* Action buttons */}
           <div className="flex items-center space-x-2">
+            <button
+              onClick={() => toggleCollapse(item.id)}
+              className="text-gray-500 hover:bg-gray-50 text-sm px-2 py-1 rounded transition-colors"
+              title={collapsedCards[item.id] ? 'Expand card' : 'Collapse card'}
+            >
+              {collapsedCards[item.id] ? '📂' : '📁'}
+            </button>
             <button
               onClick={() => togglePin(item.id)}
               className={`text-sm px-2 py-1 rounded transition-colors ${
@@ -1115,25 +1196,66 @@ export default function AnalysisTab() {
           </div>
         </div>
         
-        {/* Content */}
-        <div className="p-4">
-          {/* Title and metadata */}
-          <div className="mb-3">
-            <h3 className="font-semibold text-gray-800 mb-1">{item.result.title}</h3>
-            <div className="text-sm text-gray-500 space-y-1">
-              <div>📄 {item.result.metadata.datasetName}</div>
-              <div className="flex items-center space-x-4">
+        {/* Collapsed state - show minimal info */}
+        {collapsedCards[item.id] && (
+          <div className="px-4 pb-3">
+            <div className="text-sm text-gray-500 flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <span>📄 {item.result.metadata.datasetName}</span>
                 <span>📊 {item.result.metadata.recordCount.toLocaleString()} records</span>
-                <span>⏱️ {item.result.metadata.processingTime}s</span>
-                <span>📅 {formatDate(item.result.createdAt)}</span>
               </div>
+              <span className="text-xs text-gray-400">📅 {formatDate(item.result.createdAt)}</span>
             </div>
           </div>
+        )}
+        
+        {/* Content - conditionally rendered based on collapse state */}
+        {!collapsedCards[item.id] && (
+          <div className="p-4">
+            {/* Title and metadata */}
+            <div className="mb-3">
+              <h3 className="font-semibold text-gray-800 mb-1">{item.result.title}</h3>
+              <div className="text-sm text-gray-500 space-y-1">
+                <div>📄 {item.result.metadata.datasetName}</div>
+                <div className="flex items-center space-x-4">
+                  <span>📊 {item.result.metadata.recordCount.toLocaleString()} records</span>
+                  <span>⏱️ {item.result.metadata.processingTime}s</span>
+                  <span>📅 {formatDate(item.result.createdAt)}</span>
+                </div>
+              </div>
+            </div>
           
           {/* Contribution Analysis Controls */}
           {item.result.type === 'contribution' ? (
             <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-              <h4 className="text-sm font-semibold mb-2 text-gray-700">🔧 Analysis Controls</h4>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-sm font-semibold text-gray-700">🔧 Analysis Controls</h4>
+                <div className="relative">
+                  <button
+                    onMouseEnter={() => setVisibleTooltip(`${item.id}-contribution-controls`)}
+                    onMouseLeave={() => setVisibleTooltip(null)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors"
+                    title="Control Information"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  {/* Controls tooltip */}
+                  {visibleTooltip === `${item.id}-contribution-controls` && (
+                    <div className="absolute z-10 w-72 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg right-0">
+                      <div className="font-semibold text-blue-600 mb-2">� Interactive Controls</div>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Field to Analyze:</strong> Choose which column to calculate contributions for (e.g., Revenue, Sales).
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        <strong>Time Scale:</strong> View contributions by total (all time), quarterly, or monthly periods.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {/* Field selector */}
                 <div className="flex-1 min-w-40">
@@ -1177,7 +1299,34 @@ export default function AnalysisTab() {
           {/* Budget Variance Analysis Controls */}
           {item.result.type === 'budget-variance' ? (
             <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-              <h4 className="text-sm font-semibold mb-2 text-gray-700">💰 Budget vs Actual Controls</h4>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-sm font-semibold text-gray-700">💰 Budget vs Actual Controls</h4>
+                <div className="relative">
+                  <button
+                    onMouseEnter={() => setVisibleTooltip(`${item.id}-budget-controls`)}
+                    onMouseLeave={() => setVisibleTooltip(null)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors"
+                    title="Control Information"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  {/* Controls tooltip */}
+                  {visibleTooltip === `${item.id}-budget-controls` && (
+                    <div className="absolute z-10 w-72 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg right-0">
+                      <div className="font-semibold text-blue-600 mb-2">💰 Budget Controls</div>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Budget Column:</strong> Select the column containing planned/budgeted amounts.
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        <strong>Actual Column:</strong> Select the column containing actual results to compare against budget.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {/* Budget column selector */}
                 <div className="flex-1 min-w-40">
@@ -1217,7 +1366,37 @@ export default function AnalysisTab() {
           {/* Top N Analysis Controls */}
           {item.result.type === 'top-n' ? (
             <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-              <h4 className="text-sm font-semibold mb-2 text-gray-700">🏆 Top N Analysis Controls</h4>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-sm font-semibold text-gray-700">🏆 Top N Analysis Controls</h4>
+                <div className="relative">
+                  <button
+                    onMouseEnter={() => setVisibleTooltip(`${item.id}-topn-controls`)}
+                    onMouseLeave={() => setVisibleTooltip(null)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors"
+                    title="Control Information"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  {/* Controls tooltip */}
+                  {visibleTooltip === `${item.id}-topn-controls` && (
+                    <div className="absolute z-10 w-72 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg right-0">
+                      <div className="font-semibold text-blue-600 mb-2">🏆 Ranking Controls</div>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Value Column:</strong> Choose the numeric column to rank by (e.g., Sales, Revenue).
+                      </p>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Category Column:</strong> Select the column containing items to rank (e.g., Product, Region).
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        <strong>N & Direction:</strong> Set how many items to show and whether to show top or bottom performers.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {/* Value column selector */}
                 <div className="flex-1 min-w-40">
@@ -1288,7 +1467,37 @@ export default function AnalysisTab() {
           {/* Trend Analysis Controls */}
           {item.result.type === 'trend-analysis' ? (
             <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-              <h4 className="text-sm font-semibold mb-2 text-gray-700">📈 Trend Analysis Controls</h4>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-sm font-semibold text-gray-700">📈 Trend Analysis Controls</h4>
+                <div className="relative">
+                  <button
+                    onMouseEnter={() => setVisibleTooltip(`${item.id}-trend-controls`)}
+                    onMouseLeave={() => setVisibleTooltip(null)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors"
+                    title="Control Information"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  {/* Controls tooltip */}
+                  {visibleTooltip === `${item.id}-trend-controls` && (
+                    <div className="absolute z-10 w-72 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg right-0">
+                      <div className="font-semibold text-blue-600 mb-2">📈 Trend Controls</div>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Value Column:</strong> Select the numeric column to analyze trends for.
+                      </p>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Date Column:</strong> Choose the date/time column for temporal analysis.
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        <strong>Window Size:</strong> Set moving average window size (e.g., 3 = 3-period moving average).
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {/* Value column selector */}
                 <div className="flex-1 min-w-40">
@@ -1344,7 +1553,34 @@ export default function AnalysisTab() {
           {/* Period Variance Analysis Controls */}
           {item.result.type === 'period-variance' ? (
             <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-              <h4 className="text-sm font-semibold mb-2 text-gray-700">📊 Period Variance Controls</h4>
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-sm font-semibold text-gray-700">📊 Period Variance Controls</h4>
+                <div className="relative">
+                  <button
+                    onMouseEnter={() => setVisibleTooltip(`${item.id}-period-controls`)}
+                    onMouseLeave={() => setVisibleTooltip(null)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors"
+                    title="Control Information"
+                  >
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  {/* Controls tooltip */}
+                  {visibleTooltip === `${item.id}-period-controls` && (
+                    <div className="absolute z-10 w-72 p-3 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg shadow-lg right-0">
+                      <div className="font-semibold text-blue-600 mb-2">📊 Period Controls</div>
+                      <p className="text-gray-600 leading-relaxed mb-2">
+                        <strong>Value Column:</strong> Select the numeric column to analyze period changes for.
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        <strong>Date Column:</strong> Choose the date/period column to compare consecutive periods.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {/* Value column selector */}
                 <div className="flex-1 min-w-40">
@@ -1427,7 +1663,8 @@ export default function AnalysisTab() {
               </ul>
             </div>
           )}
-        </div>
+          </div>
+        )}
       </div>
     );
   };
