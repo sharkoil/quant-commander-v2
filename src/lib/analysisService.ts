@@ -395,3 +395,90 @@ export function sortAnalysisResults(
       return sorted;
   }
 }
+
+/**
+ * Global analysis results store for real-time analysis management
+ */
+let globalAnalysisResults: DraggableAnalysisItem[] = [];
+let analysisUpdateCallback: ((items: DraggableAnalysisItem[]) => void) | null = null;
+
+/**
+ * Register a callback to be notified when analysis results change
+ */
+export function registerAnalysisUpdateCallback(callback: (items: DraggableAnalysisItem[]) => void) {
+  analysisUpdateCallback = callback;
+}
+
+/**
+ * Add a new analysis result to the global store
+ */
+export function addAnalysisResult(result: AnalysisResult): void {
+  console.log('🔥 addAnalysisResult called with:', result);
+  console.log('📦 Current globalAnalysisResults before adding:', globalAnalysisResults);
+  
+  const newItem: DraggableAnalysisItem = {
+    id: result.id,
+    order: globalAnalysisResults.length,
+    isPinned: false,
+    result
+  };
+  
+  globalAnalysisResults = [newItem, ...globalAnalysisResults];
+  console.log('📦 Global analysis results updated:', globalAnalysisResults);
+  console.log('🔢 Total items now:', globalAnalysisResults.length);
+  
+  // Notify subscribers of the update
+  if (analysisUpdateCallback) {
+    console.log('📡 Calling update callback with:', globalAnalysisResults);
+    analysisUpdateCallback(globalAnalysisResults);
+    console.log('✅ Update callback completed');
+  } else {
+    console.warn('⚠️ No update callback registered!');
+  }
+}
+
+/**
+ * Get current global analysis results (real results only)
+ */
+export function getCurrentAnalysisResults(): DraggableAnalysisItem[] {
+  // Return only real analysis results - no mock data
+  return globalAnalysisResults;
+}
+
+/**
+ * Clear all global analysis results
+ */
+export function clearGlobalAnalysisResults(): void {
+  globalAnalysisResults = [];
+  if (analysisUpdateCallback) {
+    analysisUpdateCallback([]);
+  }
+}
+
+/**
+ * Check if we're using real analysis results or mock data
+ */
+export function isUsingRealAnalysis(): boolean {
+  return globalAnalysisResults.length > 0;
+}
+
+/**
+ * Get only real analysis results (no mock data)
+ */
+export function getRealAnalysisResults(): DraggableAnalysisItem[] {
+  return globalAnalysisResults;
+}
+
+/**
+ * Get only mock analysis results as draggable items
+ */
+export function getMockAnalysisResultsAsDraggableItems(): DraggableAnalysisItem[] {
+  return getAnalysisResultsAsDraggableItems();
+}
+
+/**
+ * Initialize clean state - clear any existing results on app start
+ */
+export function initializeAnalysisService(): void {
+  globalAnalysisResults = [];
+}
