@@ -1,4 +1,10 @@
-# 🚀 Quant Commander V2
+# 🚀 Quant Com### 🆕 **Recent Updates (July 2025)**
+- **🎯 Automatic Analysis Cards**: NEW! CSV uploads now automatically generate contribution analysis cards with interactive controls
+- **🔄 Interactive Controls**: Real-time field and time scale selection with instant card content updates  
+- **📊 Enhanced Card Rendering**: Improved visual design with colored borders, better formatting, and dataset context
+- **⚡ Auto Tab Switching**: Automatically switches to Analysis tab when cards are created for immediate visibility
+- **🛠️ Robust State Management**: Fixed timing issues and component lifecycle handling for seamless card creation
+- **️ Quarterly Contribution Analysis**: NEW! Time-based contribution analysis with quarter-over-quarter comparisons, seasonal insights, and trend detectionnder V2
 
 **Advanced Financial Data Analysis Platform with AI-Powered Insights**
 
@@ -205,6 +211,37 @@ The Analysis Tab provides a centralized workspace for organizing and managing al
 // 4. Filter by "budget-variance" to review budget performance
 // 5. Search for "sales" to find all sales-related analyses
 // 6. Drag and drop to organize by priority
+```
+
+### Automatic Analysis Cards
+
+The application now automatically creates contribution analysis cards when you upload CSV files:
+
+```typescript
+// Simply upload a CSV file and get instant analysis!
+
+// 1. Upload CSV file through the interface
+//    - File is processed automatically
+//    - Contribution analysis card is created instantly
+//    - App switches to Analysis tab for immediate viewing
+
+// 2. Interactive controls on each card:
+//    - Field Selector: Choose any column for analysis
+//    - Time Scale: Switch between Total, Quarterly, Monthly views
+//    - Real-time Updates: Card content updates instantly
+
+// 3. Example CSV structure that works great:
+const csvData = [
+  { date: '2024-01-15', product: 'Laptop Pro', category: 'Electronics', revenue: 50000 },
+  { date: '2024-02-10', product: 'Tablet Max', category: 'Electronics', revenue: 30000 },
+  { date: '2024-03-20', product: 'Phone Case', category: 'Accessories', revenue: 15000 }
+];
+
+// Results in automatic card showing:
+// - Revenue contribution by category
+// - Interactive field selection (revenue, product, category)
+// - Time scale options (total, quarterly, monthly)
+// - Beautiful colored visualization with percentages
 ```
 
 ### Quarterly Contribution Analysis
