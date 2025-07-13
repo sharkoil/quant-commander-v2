@@ -100,40 +100,173 @@ export default function AnalysisTab() {
   const unpinnedContainerRef = useRef<HTMLDivElement>(null);
 
   /**
+   * Move item up in the order
+   */
+  const moveItemUp = (itemId: string) => {
+    setAnalysisItems(prevItems => {
+      const itemIndex = prevItems.findIndex(item => item.id === itemId);
+      const item = prevItems[itemIndex];
+      
+      if (itemIndex <= 0) return prevItems; // Already at top
+      
+      // Check if we can move within the same group (pinned/unpinned)
+      const previousItem = prevItems[itemIndex - 1];
+      if (item.isPinned !== previousItem.isPinned) {
+        // Can't move across pinned/unpinned boundary
+        return prevItems;
+      }
+      
+      const newItems = [...prevItems];
+      const [movedItem] = newItems.splice(itemIndex, 1);
+      newItems.splice(itemIndex - 1, 0, movedItem);
+      
+      // Update order values
+      return newItems.map((item, index) => ({
+        ...item,
+        order: index
+      }));
+    });
+  };
+
+  /**
+   * Move item down in the order
+   */
+  const moveItemDown = (itemId: string) => {
+    setAnalysisItems(prevItems => {
+      const itemIndex = prevItems.findIndex(item => item.id === itemId);
+      const item = prevItems[itemIndex];
+      
+      if (itemIndex >= prevItems.length - 1) return prevItems; // Already at bottom
+      
+      // Check if we can move within the same group (pinned/unpinned)
+      const nextItem = prevItems[itemIndex + 1];
+      if (item.isPinned !== nextItem.isPinned) {
+        // Can't move across pinned/unpinned boundary
+        return prevItems;
+      }
+      
+      const newItems = [...prevItems];
+      const [movedItem] = newItems.splice(itemIndex, 1);
+      newItems.splice(itemIndex + 1, 0, movedItem);
+      
+      // Update order values
+      return newItems.map((item, index) => ({
+        ...item,
+        order: index
+      }));
+    });
+  };
+
+  /**
+   * Check if item can move up
+   */
+  const canMoveUp = (itemId: string): boolean => {
+    const itemIndex = analysisItems.findIndex(item => item.id === itemId);
+    if (itemIndex <= 0) return false;
+    
+    const item = analysisItems[itemIndex];
+    const previousItem = analysisItems[itemIndex - 1];
+    
+    return item.isPinned === previousItem.isPinned;
+  };
+
+  /**
+   * Check if item can move down
+   */
+  const canMoveDown = (itemId: string): boolean => {
+    const itemIndex = analysisItems.findIndex(item => item.id === itemId);
+    if (itemIndex >= analysisItems.length - 1) return false;
+    
+    const item = analysisItems[itemIndex];
+    const nextItem = analysisItems[itemIndex + 1];
+    
+    return item.isPinned === nextItem.isPinned;
+  };
+
+  /**
    * Initialize Shopify Draggable for both containers
    */
   const initializeDraggable = useCallback(() => {
     if (!pinnedContainerRef.current || !unpinnedContainerRef.current) return;
 
-    // Create sortable instance for pinned items
-    const pinnedSortable = new Sortable([pinnedContainerRef.current], {
-      draggable: '.draggable-analysis-item',
-      handle: '.drag-handle',
-      mirror: {
-        appendTo: 'body',
-        constrainDimensions: true,
-      },
-    });
+    try {
+      // Create sortable instance for pinned items
+      const pinnedSortable = new Sortable([pinnedContainerRef.current], {
+        draggable: '.draggable-analysis-item',
+        handle: '.drag-handle',
+        mirror: {
+          appendTo: 'body',
+          constrainDimensions: true,
+        },
+      });
 
-    // Create sortable instance for unpinned items
-    const unpinnedSortable = new Sortable([unpinnedContainerRef.current], {
-      draggable: '.draggable-analysis-item',
-      handle: '.drag-handle',
-      mirror: {
-        appendTo: 'body',
-        constrainDimensions: true,
-      },
-    });
+      // Create sortable instance for unpinned items  
+      const unpinnedSortable = new Sortable([unpinnedContainerRef.current], {
+        draggable: '.draggable-analysis-item',
+        handle: '.drag-handle',
+        mirror: {
+          appendTo: 'body',
+          constrainDimensions: true,
+        },
+      });
 
-    // Handle drag events
-    pinnedSortable.on('sortable:stop', handleDragEnd);
-    unpinnedSortable.on('sortable:stop', handleDragEnd);
+      // Handle drag events for pinned items
+      pinnedSortable.on('sortable:stop', (event: any) => {
+        const { oldIndex, newIndex } = event;
+        if (oldIndex === newIndex) return;
 
-    // Cleanup function
-    return () => {
-      pinnedSortable.destroy();
-      unpinnedSortable.destroy();
-    };
+        setAnalysisItems(prevItems => {
+          const pinnedItems = prevItems.filter(item => item.isPinned);
+          const unpinnedItems = prevItems.filter(item => !item.isPinned);
+          
+          const newPinnedItems = [...pinnedItems];
+          const [movedItem] = newPinnedItems.splice(oldIndex, 1);
+          newPinnedItems.splice(newIndex, 0, movedItem);
+          
+          // Combine and update order values
+          const newItems = [...newPinnedItems, ...unpinnedItems];
+          return newItems.map((item, index) => ({
+            ...item,
+            order: index
+          }));
+        });
+      });
+
+      // Handle drag events for unpinned items
+      unpinnedSortable.on('sortable:stop', (event: any) => {
+        const { oldIndex, newIndex } = event;
+        if (oldIndex === newIndex) return;
+
+        setAnalysisItems(prevItems => {
+          const pinnedItems = prevItems.filter(item => item.isPinned);
+          const unpinnedItems = prevItems.filter(item => !item.isPinned);
+          
+          const newUnpinnedItems = [...unpinnedItems];
+          const [movedItem] = newUnpinnedItems.splice(oldIndex, 1);
+          newUnpinnedItems.splice(newIndex, 0, movedItem);
+          
+          // Combine and update order values
+          const newItems = [...pinnedItems, ...newUnpinnedItems];
+          return newItems.map((item, index) => ({
+            ...item,
+            order: index
+          }));
+        });
+      });
+
+      // Cleanup function
+      return () => {
+        try {
+          pinnedSortable.destroy();
+          unpinnedSortable.destroy();
+        } catch (error) {
+          console.warn('Error destroying draggable instances:', error);
+        }
+      };
+    } catch (error) {
+      console.warn('Error initializing draggable:', error);
+      return () => {}; // Return empty cleanup function
+    }
   }, []);
 
   // Initialize mock data and draggable functionality
@@ -312,26 +445,6 @@ export default function AnalysisTab() {
     console.log('💰 Budget variance controls changed, forcing re-render');
     // This effect will trigger a re-render whenever budgetVarianceControls changes
   }, [budgetVarianceControls]);
-
-  /**
-   * Handle drag end event to update item order
-   */
-  const handleDragEnd = (event: { oldIndex: number; newIndex: number }) => {
-    const { oldIndex, newIndex } = event;
-    if (oldIndex === newIndex) return;
-
-    setAnalysisItems(prevItems => {
-      const newItems = [...prevItems];
-      const [movedItem] = newItems.splice(oldIndex, 1);
-      newItems.splice(newIndex, 0, movedItem);
-      
-      // Update order values
-      return newItems.map((item, index) => ({
-        ...item,
-        order: index
-      }));
-    });
-  };
 
   /**
    * Get analysis explanation for tooltip
@@ -1168,6 +1281,26 @@ export default function AnalysisTab() {
           
           {/* Action buttons */}
           <div className="flex items-center space-x-2">
+            {/* Move up button */}
+            <button
+              onClick={() => moveItemUp(item.id)}
+              disabled={!canMoveUp(item.id)}
+              className="text-gray-500 hover:bg-gray-50 text-sm px-2 py-1 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Move up"
+            >
+              ⬆️
+            </button>
+            
+            {/* Move down button */}
+            <button
+              onClick={() => moveItemDown(item.id)}
+              disabled={!canMoveDown(item.id)}
+              className="text-gray-500 hover:bg-gray-50 text-sm px-2 py-1 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Move down"
+            >
+              ⬇️
+            </button>
+            
             <button
               onClick={() => toggleCollapse(item.id)}
               className="text-gray-500 hover:bg-gray-50 text-sm px-2 py-1 rounded transition-colors"
@@ -1686,7 +1819,7 @@ export default function AnalysisTab() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-gray-800">Analysis Results</h2>
-          <p className="text-gray-600">Drag and drop to organize your analysis results</p>
+          <p className="text-gray-600">Drag and drop or use ⬆️⬇️ arrows to organize your analysis results</p>
         </div>
         <div className="flex items-center space-x-3">
           {/* View mode toggle */}

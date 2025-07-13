@@ -54,6 +54,13 @@ export const ANALYSIS_TYPES: AnalysisTypeConfig[] = [
     name: 'Column Intelligence',
     color: 'bg-indigo-100 text-indigo-800',
     description: 'Smart insights about data columns'
+  },
+  {
+    type: 'outlier-detection',
+    icon: '🚨',
+    name: 'Outlier Detection',
+    color: 'bg-orange-100 text-orange-800',
+    description: 'Identify statistical anomalies and data outliers'
   }
 ];
 
@@ -303,6 +310,130 @@ const MOCK_ANALYSIS_RESULTS: AnalysisResult[] = [
       insights: ['High data quality overall', 'Minor date format inconsistencies', 'Clean dataset ready for analysis']
     },
     parameters: { checkCompleteness: true, validateFormats: true, findDuplicates: true },
+    status: 'completed'
+  },
+  {
+    id: 'analysis-007',
+    type: 'outlier-detection',
+    title: 'Sales Data Outlier Analysis',
+    createdAt: new Date('2024-01-20T14:45:00'),
+    htmlOutput: `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 32px; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white;">
+          <h2 style="margin: 0 0 8px 0; font-size: 28px; font-weight: 700;">🔍 Outlier Detection Analysis</h2>
+          <p style="margin: 0; font-size: 16px; opacity: 0.9;">IQR & Z-Score Method • Variance Analysis</p>
+        </div>
+
+        <!-- Summary Statistics Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
+          
+          <div style="background: #fffbeb; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-size: 14px; color: #6b7280; font-weight: 500; margin-bottom: 8px;">Risk Level</div>
+            <div style="font-size: 24px; font-weight: 700; color: #d97706;">MEDIUM</div>
+          </div>
+
+          <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-size: 14px; color: #6b7280; font-weight: 500; margin-bottom: 8px;">Total Outliers</div>
+            <div style="font-size: 24px; font-weight: 700; color: #1f2937;">7</div>
+          </div>
+
+          <div style="background: #fef2f2; border: 2px solid #fca5a5; border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-size: 14px; color: #6b7280; font-weight: 500; margin-bottom: 8px;">Upper Outliers</div>
+            <div style="font-size: 24px; font-weight: 700; color: #dc2626;">📈 4</div>
+          </div>
+
+          <div style="background: #eff6ff; border: 2px solid #93c5fd; border-radius: 12px; padding: 20px; text-align: center;">
+            <div style="font-size: 14px; color: #6b7280; font-weight: 500; margin-bottom: 8px;">Lower Outliers</div>
+            <div style="font-size: 24px; font-weight: 700; color: #2563eb;">📉 3</div>
+          </div>
+
+        </div>
+
+        <!-- Detected Outliers -->
+        <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+          <h3 style="margin: 0 0 20px 0; font-size: 18px; font-weight: 600; color: #1f2937;">🚨 Detected Outliers</h3>
+          <div style="display: grid; gap: 12px;">
+            
+            <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="flex: 1;">
+                <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">🚨 2024-01-15: extremely above normal variance</div>
+                <div style="font-size: 14px; color: #6b7280;">Value: 25.5K • Deviation: 15.8K • Severity: extreme • Z-Score: 3.2</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 20px; font-weight: 700; color: #dc2626;">25,500</div>
+              </div>
+            </div>
+
+            <div style="background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="flex: 1;">
+                <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">💥 2024-01-22: extremely below normal variance</div>
+                <div style="font-size: 14px; color: #6b7280;">Value: -8.2K • Deviation: 12.3K • Severity: extreme • Z-Score: -2.9</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 20px; font-weight: 700; color: #2563eb;">-8,200</div>
+              </div>
+            </div>
+
+            <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="flex: 1;">
+                <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">⚠️ 2024-01-28: significantly above normal variance</div>
+                <div style="font-size: 14px; color: #6b7280;">Value: 18.7K • Deviation: 8.9K • Severity: moderate • Z-Score: 2.4</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 20px; font-weight: 700; color: #dc2626;">18,700</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Assessment Summary -->
+        <div style="background: #f9fafb; border: 2px solid #e5e7eb; border-radius: 12px; padding: 24px;">
+          <h3 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #1f2937;">🎯 Assessment Summary</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #4b5563;">
+            <strong>Moderate outlier presence suggests data quality issues requiring attention</strong>
+          </p>
+          <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;">
+            <div style="text-align: center;">
+              <div style="font-size: 12px; color: #6b7280; margin-bottom: 4px;">Mild Outliers</div>
+              <div style="font-size: 18px; font-weight: 600; color: #f59e0b;">📈 2</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 12px; color: #6b7280; margin-bottom: 4px;">Moderate Outliers</div>
+              <div style="font-size: 18px; font-weight: 600; color: #dc2626;">⚠️ 3</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 12px; color: #6b7280; margin-bottom: 4px;">Extreme Outliers</div>
+              <div style="font-size: 18px; font-weight: 600; color: #7f1d1d;">🚨 2</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    `,
+    metadata: {
+      datasetName: 'Sales_Monthly_Data.csv',
+      recordCount: 120,
+      processingTime: 1.8,
+      columns: ['date', 'actual_sales', 'budget_sales', 'region'],
+      insights: [
+        '7 outliers detected (5.8% of data points)',
+        '2 extreme outliers require immediate investigation',
+        'Variance analysis reveals budget planning issues',
+        'January 2024 shows highest volatility'
+      ]
+    },
+    parameters: { 
+      method: 'both', 
+      analysisTarget: 'variance', 
+      threshold: 2, 
+      iqrMultiplier: 1.5,
+      dateColumn: 'date',
+      actualColumn: 'actual_sales',
+      budgetColumn: 'budget_sales'
+    },
     status: 'completed'
   }
 ];

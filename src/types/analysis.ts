@@ -9,7 +9,8 @@ export type AnalysisType =
   | 'trend-analysis' 
   | 'top-n' 
   | 'contribution'
-  | 'column-intelligence';
+  | 'column-intelligence'
+  | 'outlier-detection';
 
 export interface AnalysisResult {
   id: string;
