@@ -16,9 +16,7 @@ import {
 import { 
   getAnalysisResultsAsDraggableItems, 
   getAnalysisTypes,
-  getAnalysisTypeConfig,
-  filterAnalysisResults,
-  sortAnalysisResults 
+  getAnalysisTypeConfig
 } from '../lib/analysisService';
 
 export default function AnalysisTabSimple() {

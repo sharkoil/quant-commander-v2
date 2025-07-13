@@ -11,7 +11,6 @@ import {
   createQuarterPeriod,
   createMonthPeriod,
   getAvailableQuarters,
-  getAvailableMonths,
   groupDataByPeriod,
   isDateInPeriod
 } from '../lib/timePeriodUtils';

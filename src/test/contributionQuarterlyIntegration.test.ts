@@ -205,13 +205,6 @@ describe('Quarterly Contribution Analysis Integration', () => {
 
     expect(result.success).toBe(true);
     
-    // Check that insights mention quarterly patterns
-    const allInsights = [
-      ...result.insights.keyFindings,
-      ...(result.insights.seasonalInsights || []),
-      ...(result.insights.trendInsights || [])
-    ].join(' ').toLowerCase();
-
     // Should contain some quarterly-related insights
     expect(result.insights.seasonalInsights).toBeDefined();
     expect(result.insights.trendInsights).toBeDefined();

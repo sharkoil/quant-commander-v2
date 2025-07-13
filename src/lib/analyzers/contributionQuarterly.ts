@@ -9,14 +9,9 @@ import {
   FlexibleContributionData 
 } from './contributionTypes';
 import { 
-  TimePeriod,
   parseDate,
   getAvailableQuarters,
-  getAvailableMonths,
-  groupDataByPeriod,
-  getQuarterLabel,
-  getMonthLabel,
-  isDateInPeriod
+  groupDataByPeriod
 } from '../timePeriodUtils';
 
 /**
@@ -79,9 +74,7 @@ export function processQuarterlyContribution(
     const quarterData = quarterlyData.get(quarter.label) || [];
     if (quarterData.length > 0) {
       quarterlyAnalysis[quarter.label] = calculateContributionItems(
-        quarterData,
-        params.categoryColumn,
-        params.valueColumn
+        quarterData
       );
     }
   });
@@ -90,7 +83,7 @@ export function processQuarterlyContribution(
   const periodComparison = generatePeriodComparison(quarterlyAnalysis);
   
   // Generate insights
-  const seasonalInsights = generateSeasonalInsights(quarterlyAnalysis, availableQuarters);
+  const seasonalInsights = generateSeasonalInsights(quarterlyAnalysis);
   const trendInsights = generateTrendInsights(periodComparison);
 
   return {
@@ -105,9 +98,7 @@ export function processQuarterlyContribution(
  * Calculate contribution items for a dataset
  */
 function calculateContributionItems(
-  data: Array<{ category: string; value: number }>,
-  _categoryColumn: string,
-  _valueColumn: string
+  data: Array<{ category: string; value: number }>
 ): ContributionItem[] {
   // Group by category and sum values
   const categoryTotals = new Map<string, number>();
@@ -240,8 +231,7 @@ function calculateVariance(values: number[]): number {
  * Generate seasonal insights
  */
 function generateSeasonalInsights(
-  quarterlyAnalysis: { [quarterLabel: string]: ContributionItem[] },
-  _quarters: TimePeriod[]
+  quarterlyAnalysis: { [quarterLabel: string]: ContributionItem[] }
 ): string[] {
   const insights: string[] = [];
   const periods = Object.keys(quarterlyAnalysis).sort();
