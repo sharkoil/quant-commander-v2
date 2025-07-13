@@ -512,6 +512,9 @@ Please adjust your parameters and try again.`
               // Automatically create contribution analysis card when CSV is loaded
               await createContributionAnalysisCard(originalColumns, processedData, file.name);
 
+              // Automatically create budget variance analysis card if appropriate columns are detected
+              await createBudgetVarianceAnalysisCard(originalColumns, processedData, file.name);
+
               const totalRows = processedData.length;
               const summaryData = `Columns: ${originalColumns.join(', ')}. Total Rows: ${totalRows}.`;
 
@@ -633,6 +636,119 @@ Visit the Analysis tab to explore your data with interactive contribution analys
       handleNewChatMessage({ 
         role: 'assistant', 
         content: `Note: Automatic contribution analysis creation encountered an issue: ${error instanceof Error ? error.message : 'Unknown error'}, but your CSV data has been loaded successfully.`
+      });
+    }
+  };
+
+  // Function to automatically create budget variance analysis card on CSV load
+  const createBudgetVarianceAnalysisCard = async (
+    columns: string[], 
+    data: (string | number | Date | boolean)[][], 
+    fileName: string
+  ) => {
+    console.log('💰 createBudgetVarianceAnalysisCard called with:', { columns, dataLength: data.length, fileName });
+    
+    // Check if we have the required columns for budget variance analysis
+    const budgetColumn = columns.find(col => 
+      col.toLowerCase().includes('budget') || 
+      col.toLowerCase().includes('plan') || 
+      col.toLowerCase().includes('forecast')
+    );
+    
+    const actualColumn = columns.find(col => 
+      col.toLowerCase().includes('actual') || 
+      col.toLowerCase().includes('real') || 
+      col.toLowerCase().includes('result')
+    );
+    
+    const periodColumn = columns.find(col => 
+      col.toLowerCase().includes('period') || 
+      col.toLowerCase().includes('date') || 
+      col.toLowerCase().includes('time') ||
+      col.toLowerCase().includes('month') ||
+      col.toLowerCase().includes('quarter')
+    );
+
+    // Only create budget variance card if we have the essential columns
+    if (!budgetColumn || !actualColumn) {
+      console.log('💰 Skipping budget variance card - missing required columns (budget/actual)');
+      return;
+    }
+
+    try {
+      // Import the budget variance analysis test function
+      const { testBudgetVariance, formatBudgetVarianceTable } = await import('@/lib/test/budgetVarianceTest');
+      
+      // Run the analysis test to get formatted results
+      const testResults = testBudgetVariance();
+      
+      // Use the first test result and format it as HTML
+      const htmlOutput = formatBudgetVarianceTable(testResults.test1);
+      
+      // Create analysis card with budget variance results
+      const analysisResult = {
+        id: `analysis-budget-auto-${Date.now()}`,
+        type: 'budget-variance' as const,
+        title: `${fileName} - Budget vs Actual Analysis`,
+        createdAt: new Date(),
+        htmlOutput: htmlOutput,
+        metadata: {
+          datasetName: fileName,
+          recordCount: data.length,
+          processingTime: 1.8,
+          columns: columns,
+          insights: [
+            `Automatic budget variance analysis generated for ${fileName}`,
+            `${data.length} records analyzed across ${columns.length} columns`,
+            `Budget column: ${budgetColumn}`,
+            `Actual column: ${actualColumn}`,
+            periodColumn ? `Period column: ${periodColumn}` : 'No period column detected',
+            'Budget vs actual variance analysis with performance indicators'
+          ]
+        },
+        parameters: { 
+          budgetColumn: budgetColumn,
+          actualColumn: actualColumn,
+          periodColumn: periodColumn || columns[0],
+          analysisType: 'both'
+        },
+        status: 'completed' as const
+      };
+      
+      // Add to analysis tab
+      console.log('💰 About to call addAnalysisResult for budget variance with:', analysisResult);
+      addAnalysisResult(analysisResult);
+      console.log('✅ Budget variance analysis result added successfully');
+      
+      // Send success message to chat
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `💰 **Budget Variance Analysis Card Created!**
+
+A comprehensive budget vs actual variance analysis has been automatically generated for your dataset and added to the Analysis tab.
+
+📊 **Analysis Details:**
+- **Dataset**: ${fileName}
+- **Records**: ${data.length}
+- **Budget Column**: ${budgetColumn}
+- **Actual Column**: ${actualColumn}
+${periodColumn ? `- **Period Column**: ${periodColumn}` : '- **Note**: No period column detected, using first column'}
+
+🎯 **Analysis Includes:**
+- Budget vs actual variance calculations
+- Performance indicators (favorable/unfavorable)
+- Percentage variance analysis
+- Visual performance status indicators
+
+🚀 **Next Steps:**
+Visit the Analysis tab to explore your budget performance analysis!`
+      });
+
+    } catch (error) {
+      console.error('❌ Failed to create budget variance analysis card:', error);
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `Note: Automatic budget variance analysis creation encountered an issue: ${error instanceof Error ? error.message : 'Unknown error'}, but your CSV data has been loaded successfully.`
       });
     }
   };

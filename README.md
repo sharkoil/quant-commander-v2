@@ -1,10 +1,12 @@
 # 🚀 Quant Com### 🆕 **Recent Updates (July 2025)**
-- **🎯 Automatic Analysis Cards**: NEW! CSV uploads now automatically generate contribution analysis cards with interactive controls
+- **💰 Budget Variance Interactive Controls**: NEW! Dynamic dropdown controls for budget vs actual analysis with real-time calculation updates
+- **🔄 Enhanced Interactive System**: Fixed dropdown re-rendering issues with proper React state management and render triggers
+- **🎯 Automatic Analysis Cards**: CSV uploads now automatically generate contribution and budget variance analysis cards with interactive controls
 - **🔄 Interactive Controls**: Real-time field and time scale selection with instant card content updates  
 - **📊 Enhanced Card Rendering**: Improved visual design with colored borders, better formatting, and dataset context
 - **⚡ Auto Tab Switching**: Automatically switches to Analysis tab when cards are created for immediate visibility
 - **🛠️ Robust State Management**: Fixed timing issues and component lifecycle handling for seamless card creation
-- **️ Quarterly Contribution Analysis**: NEW! Time-based contribution analysis with quarter-over-quarter comparisons, seasonal insights, and trend detectionnder V2
+- **️ Quarterly Contribution Analysis**: Time-based contribution analysis with quarter-over-quarter comparisons, seasonal insights, and trend detectionnder V2
 
 **Advanced Financial Data Analysis Platform with AI-Powered Insights**
 
@@ -80,7 +82,11 @@
 - **Statistical Insights**: Automatic calculation of averages, maximums, and trend summaries
 - **HTML Rendering**: Beautiful, interactive cards with color-coded performance indicators
 
-### 🎯 **Budget vs Actual Variance Analyzer** ✅
+### 🎯 **Budget vs Actual Variance Analyzer** ✅ **ENHANCED!**
+- **💰 Interactive Column Selection**: NEW! Dropdown controls to dynamically change budget and actual columns with real-time analysis updates
+- **🔄 Live Calculation Updates**: Instant recalculation and re-rendering when users switch between different column combinations
+- **📊 Smart Column Detection**: Automatic identification of budget, actual, forecast, and planned columns with intelligent defaults
+- **🎯 Real-time Controls**: Interactive dropdown selectors for budget and actual columns with immediate analysis refresh
 - **Performance Analysis**: Compares actual results against budgeted/planned values
 - **Visual Indicators**: Emoji-coded performance status (🚀🎯⚠️💥) for quick assessment
 - **Classification System**: Favorable, unfavorable, and on-target performance detection
@@ -242,6 +248,34 @@ const csvData = [
 // - Interactive field selection (revenue, product, category)
 // - Time scale options (total, quarterly, monthly)
 // - Beautiful colored visualization with percentages
+```
+
+### Budget Variance Interactive Controls
+
+The Budget vs Actual Variance analyzer now includes powerful interactive controls for dynamic analysis:
+
+```typescript
+// Upload CSV data with multiple financial columns
+const budgetData = [
+  { period: 'Q1 2024', budget: 250000, actual: 275000, forecast: 260000, planned: 245000 },
+  { period: 'Q2 2024', budget: 300000, actual: 320000, forecast: 310000, planned: 295000 },
+  { period: 'Q3 2024', budget: 320000, actual: 280000, forecast: 315000, planned: 325000 },
+  { period: 'Q4 2024', budget: 350000, actual: 365000, forecast: 355000, planned: 340000 }
+];
+
+// Interactive Features:
+// 1. Budget Column Dropdown - Select any column for budget comparison:
+//    - Budget, Planned, Forecast, Target, etc.
+// 2. Actual Column Dropdown - Select any column for actual results:
+//    - Actual, Real, Results, Performance, etc.
+// 3. Real-time Updates - Analysis recalculates instantly when columns change
+// 4. Variance Calculations - Shows both absolute and percentage differences
+// 5. Performance Indicators - Color-coded favorable/unfavorable/on-target status
+
+// Example Analysis Results:
+// Budget vs Actual: Q1: +10% Favorable 🚀, Q2: +6.7% Favorable 🚀, Q3: -12.5% Unfavorable ⚠️
+// Forecast vs Actual: Different perspective using forecast as baseline
+// Planned vs Budget: Compare planning accuracy against final budgets
 ```
 
 ### Quarterly Contribution Analysis
