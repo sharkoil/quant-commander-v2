@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 import Papa from 'papaparse';
 import { checkOllamaStatus, getOllamaModels, chatWithOllama } from '@/lib/ollama';
 import { testPeriodVariance, formatPeriodVarianceTable } from '@/lib/test/periodVarianceAnalysisTest';
+import { testTrendAnalysis, formatTrendAnalysisTable } from '@/lib/test/trendAnalysisTestBrowser';
 
 
 const DocumentUploadUI = dynamic(() => import('@/components/DocumentUploadUI'), {
@@ -146,14 +147,13 @@ export default function Home() {
         addAnalysisResult(topNResult);
 
         // 4. Create a real Trend Analysis
-        const { testTrendAnalysis, formatTrendAnalysisTable } = await import('@/lib/test/trendAnalysisTest');
-        const trendTestResults = testTrendAnalysis();
+        const trendBrowserTestResults = testTrendAnalysis();
         
         const trendResult = {
           id: `trend-real-${Date.now()}`,
           title: 'Time Series Trend Analysis',
           type: 'trend-analysis' as const,
-          htmlOutput: formatTrendAnalysisTable(trendTestResults.test1),
+          htmlOutput: formatTrendAnalysisTable(trendBrowserTestResults),
           parameters: {
             valueColumn: 'Revenue',
             dateColumn: 'Date',
@@ -203,7 +203,7 @@ export default function Home() {
         };
         addAnalysisResult(periodVarianceResult);
 
-        // 6. Create a real Outlier Detection Analysis
+        // 7. Create a real Outlier Detection Analysis
         const { testOutlierDetection } = await import('@/lib/test/outlierDetectionTest');
         const outlierTestResults = testOutlierDetection();
         
@@ -371,34 +371,20 @@ ${table3}
   };
 
   // Test function for trend analysis analyzer
-  const handleTestTrendAnalysis = async () => {
-    try {
-      const { testTrendAnalysis, formatTrendAnalysisTable } = await import('../lib/test/trendAnalysisTest');
-      const results = testTrendAnalysis();
-      
-      // Format all three test results as HTML tables
-      const table1 = formatTrendAnalysisTable(results.test1);
-      const table2 = formatTrendAnalysisTable(results.test2);
-      const table3 = formatTrendAnalysisTable(results.test3);
-      
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `${table1}
+  const handleTestTrendAnalysis = () => {
+    const results = testTrendAnalysis();
+    
+    // Format the test results as HTML table
+    const formattedTable = formatTrendAnalysisTable(results);
+    
+    handleNewChatMessage({ 
+      role: 'assistant', 
+      content: `📈 **Trend Analysis Test Results**
 
-${table2}
-
-${table3}
+${formattedTable}
 
 ✅ All Trend Analysis tests completed successfully! The analyzer can detect trends, calculate moving averages, assess trend strength, and analyze momentum with comprehensive statistical insights.`
-      });
-      
-    } catch (error) {
-      console.error('Trend Analysis test failed:', error);
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `❌ Trend Analysis test failed: ${error instanceof Error ? error.message : 'Unknown error'}`
-      });
-    }
+    });
   };
 
   // Test function for Top N analysis

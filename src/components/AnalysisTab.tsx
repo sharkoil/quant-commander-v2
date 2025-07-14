@@ -22,6 +22,7 @@ import {
 import { BudgetVarianceControls } from './BudgetVarianceControls';
 import { ContributionControls } from './ContributionControls';
 import { PeriodVarianceControls } from './PeriodVarianceControls';
+import { TrendAnalysisControls } from './TrendAnalysisControls';
 import { 
   processBudgetVarianceData, 
   BudgetVarianceParams 
@@ -37,10 +38,15 @@ import {
   PeriodVarianceParams
 } from '../lib/analyzers/periodVarianceProcessor';
 import {
+  processTrendAnalysisData,
+  TrendAnalysisParams
+} from '../lib/analyzers/trendAnalysisProcessor';
+import {
   generateContributionVisualization
 } from '../lib/visualizations/contributionVisualizer';
 import { generateBudgetVarianceVisualization } from '../lib/visualizations/budgetVarianceVisualizer';
 import { generatePeriodVarianceVisualization } from '../lib/visualizations/periodVarianceVisualizer';
+import { generateTrendAnalysisVisualization } from '../lib/visualizations/trendAnalysisVisualizer';
 import { 
   getDefaultBudgetColumn, 
   getDefaultActualColumn,
@@ -106,6 +112,16 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       periodType: 'weekly' | 'monthly' | 'quarterly' | 'yearly';
     }
   }>({});
+
+  // State for trend analysis controls
+  const [trendAnalysisControls, setTrendAnalysisControls] = useState<{
+    [analysisId: string]: {
+      valueColumn: string;
+      dateColumn: string;
+      windowSize: number;
+      trendType: 'simple' | 'exponential';
+    }
+  }>({});
   
   // Force re-render trigger for budget variance
   // Note: Currently not used but kept for future auto-refresh functionality
@@ -132,6 +148,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
         const initialBudgetControls: typeof budgetVarianceControls = {};
         const initialContributionControls: typeof contributionControls = {};
         const initialPeriodVarianceControls: typeof periodVarianceControls = {};
+        const initialTrendAnalysisControls: typeof trendAnalysisControls = {};
         
         // Convert CSV data to format expected by field analyzer
         const csvDataForAnalysis = csvData.length > 0 ? csvData.slice(1).map(row => 
@@ -202,11 +219,32 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               availableDate: dateFields
             });
           }
+
+          if (item.result.type === 'trend-analysis') {
+            // Auto-detect columns for trend analysis
+            const numericFields = getNumericFields(csvDataForAnalysis);
+            const dateFields = getDateFields(csvDataForAnalysis);
+            
+            initialTrendAnalysisControls[item.id] = {
+              valueColumn: numericFields[0] || csvColumns[0] || 'Value',
+              dateColumn: dateFields[0] || csvColumns[0] || 'Date',
+              windowSize: 3,
+              trendType: 'simple'
+            };
+            
+            console.log(`🎯 Auto-detected columns for trend analysis ${item.id}:`, {
+              value: numericFields[0],
+              date: dateFields[0],
+              availableNumeric: numericFields,
+              availableDate: dateFields
+            });
+          }
         });
         
         setBudgetVarianceControls(initialBudgetControls);
         setContributionControls(initialContributionControls);
         setPeriodVarianceControls(initialPeriodVarianceControls);
+        setTrendAnalysisControls(initialTrendAnalysisControls);
       } catch (error) {
         console.error('Error initializing analysis items:', error);
       } finally {
@@ -403,6 +441,23 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     });
   };
 
+  const updateTrendAnalysisControls = (
+    analysisId: string, 
+    updates: Partial<TrendAnalysisParams>
+  ) => {
+    setTrendAnalysisControls(prev => {
+      const updated = {
+        ...prev,
+        [analysisId]: {
+          ...prev[analysisId],
+          ...updates
+        }
+      };
+      
+      return updated;
+    });
+  };
+
   // Generate budget variance visualization
   const generateBudgetVarianceHTML = (analysisId: string): string => {
     try {
@@ -535,8 +590,67 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
   };
 
+  const generateTrendAnalysisHTML = (analysisId: string): string => {
+    try {
+      const item = analysisItems.find(item => item.id === analysisId);
+      if (!item || item.result.type !== 'trend-analysis') {
+        return '<div>No trend analysis data available</div>';
+      }
+
+      const controls = trendAnalysisControls[analysisId];
+      if (!controls) {
+        return '<div>Loading trend analysis controls...</div>';
+      }
+
+      const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
+        Object.fromEntries(
+          csvColumns.map((col, index) => [col, row[index]])
+        )
+      ) : [];
+
+      if (realData.length === 0) {
+        return '<div class="text-yellow-600">No data available for trend analysis</div>';
+      }
+
+      const processedResult = processTrendAnalysisData(
+        realData,
+        {
+          valueColumn: controls.valueColumn,
+          dateColumn: controls.dateColumn,
+          windowSize: controls.windowSize,
+          trendType: controls.trendType
+        }
+      );
+
+      return generateTrendAnalysisVisualization(processedResult);
+    } catch (error) {
+      console.error('Error generating trend analysis visualization:', error);
+      return '<div class="text-red-600">Error generating trend analysis</div>';
+    }
+  };
+
   // Get organized items using enhanced filtering
   const { pinned: pinnedItems, unpinned: unpinnedItems } = getFilteredAndSortedItems();
+
+  // Function to get analysis description for info tooltips
+  const getAnalysisDescription = (analysisType: string): string => {
+    switch (analysisType) {
+      case 'budget-variance':
+        return 'Budget vs Actual Analysis: Compares planned budget amounts with actual spending to identify favorable, unfavorable, and on-target performance. Shows percentage variances and helps track financial performance against expectations.';
+      case 'contribution':
+        return 'Contribution Analysis: Analyzes how different categories contribute to the total value. Shows percentage breakdowns, top contributors, and allows drilling down into subcategories for detailed insights.';
+      case 'period-variance':
+        return 'Period Variance Analysis: Compares values across different time periods (weekly, monthly, quarterly, yearly) to identify trends, seasonal patterns, and period-over-period changes with statistical significance.';
+      case 'trend-analysis':
+        return 'Trend Analysis: Calculates moving averages and detects trend directions (upward, downward, stable). Analyzes trend strength, growth rates, volatility, and momentum to understand data patterns over time.';
+      case 'outlier-detection':
+        return 'Outlier Detection: Identifies data points that deviate significantly from normal patterns using statistical methods (Z-score, IQR). Helps find anomalies, errors, or exceptional cases in your data.';
+      case 'top-n':
+        return 'Top N Analysis: Ranks and highlights the highest or lowest values in your dataset. Useful for identifying best/worst performers, largest contributors, or most significant outliers.';
+      default:
+        return 'This analysis provides insights and patterns from your data using advanced statistical methods and visualization techniques.';
+    }
+  };
 
   if (isLoading) {
     return (
@@ -792,6 +906,14 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             
             {/* Action Buttons */}
             <div className="flex items-center gap-2">
+              {/* Info Button */}
+              <button
+                className="p-2 text-blue-500 hover:text-blue-600 transition-colors"
+                title={getAnalysisDescription(item.result.type)}
+              >
+                ℹ️
+              </button>
+              
               {/* Pin Button */}
               <button
                 onClick={() => togglePinState(item.id)}
@@ -851,7 +973,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                     ) : []}
                     valueColumn={contributionControls[item.id]?.valueColumn || getNumericFields(csvData.length > 0 ? csvData.slice(1).map(row => 
                       Object.fromEntries(
-                        csvCcolumns.map((col, index) => [col, row[index]])
+                        csvColumns.map((col, index) => [col, row[index]])
                       )
                     ) : [])[0] || csvColumns[0] || 'Value'}
                     categoryColumn={contributionControls[item.id]?.categoryColumn || getTextFields(csvData.length > 0 ? csvData.slice(1).map(row => 
@@ -896,6 +1018,27 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                 </div>
               )}
 
+              {/* Trend Analysis Controls */}
+              {item.result.type === 'trend-analysis' && (
+                <div className="mb-6">
+                  <TrendAnalysisControls
+                    csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvColumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : []}
+                    valueColumn={trendAnalysisControls[item.id]?.valueColumn}
+                    dateColumn={trendAnalysisControls[item.id]?.dateColumn}
+                    windowSize={trendAnalysisControls[item.id]?.windowSize}
+                    trendType={trendAnalysisControls[item.id]?.trendType}
+                    onValueColumnChange={(column) => updateTrendAnalysisControls(item.id, { valueColumn: column })}
+                    onDateColumnChange={(column) => updateTrendAnalysisControls(item.id, { dateColumn: column })}
+                    onWindowSizeChange={(size) => updateTrendAnalysisControls(item.id, { windowSize: size })}
+                    onTrendTypeChange={(type) => updateTrendAnalysisControls(item.id, { trendType: type })}
+                  />
+                </div>
+              )}
+
               {/* Metadata */}
               <div className="text-sm text-gray-700 mb-4 border-b pb-3">
                 <div className="flex justify-between items-center">
@@ -918,6 +1061,8 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                     ? generateContributionHTML(item.id)
                     : item.result.type === 'period-variance'
                     ? generatePeriodVarianceHTML(item.id)
+                    : item.result.type === 'trend-analysis'
+                    ? generateTrendAnalysisHTML(item.id)
                     : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
                 }}
               />
