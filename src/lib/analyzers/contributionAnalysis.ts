@@ -1,6 +1,7 @@
 /**
  * Contribution Analysis Engine
  * Calculates percentage contributions to totals with hierarchical breakdowns and beautiful card formatting
+ * Updated to use real CSV data and remove demo data references
  */
 
 import {
@@ -10,6 +11,8 @@ import {
   ContributionItem,
   HierarchicalContribution
 } from './contributionTypes';
+
+import { removeDemoData } from '../utils/dataCleanup';
 
 import {
   validateContributionColumns,
@@ -33,8 +36,37 @@ export function calculateContributionAnalysis(
   params: ContributionAnalysisParams
 ): ContributionAnalysisResult {
   try {
-    // Validate input data and columns
-    const validation = validateContributionColumns(data, params.valueColumn, params.categoryColumn);
+    // Remove demo data first to ensure only real CSV data is used
+    const cleanData = removeDemoData(data) as FlexibleContributionData[];
+    
+    if (cleanData.length === 0) {
+      return {
+        success: false,
+        analysis: [],
+        metadata: {
+          totalValue: 0,
+          totalCategories: 0,
+          topContributor: '',
+          topContribution: 0,
+          concentrationRatio: 0,
+          diversityIndex: 0,
+          analysisScope: params.analysisScope,
+          dataQuality: 'Poor'
+        },
+        insights: {
+          summary: 'No valid data available after demo data cleanup',
+          keyFindings: [],
+          recommendations: [],
+          concentrationLevel: 'Low',
+          diversityLevel: 'Low'
+        },
+        htmlOutput: '',
+        errorMessage: 'No real CSV data found - only demo data detected'
+      };
+    }
+    
+    // Validate input data and columns using cleaned data
+    const validation = validateContributionColumns(cleanData, params.valueColumn, params.categoryColumn);
     
     if (!validation.isValid) {
       return {
@@ -63,11 +95,11 @@ export function calculateContributionAnalysis(
     }
 
     // Filter data by period if specified
-    let analysisData = data;
+    let analysisData = cleanData;
     let periodAnalyzed: string | undefined;
     
     if (params.analysisScope === 'period' && params.periodColumn && params.periodFilter) {
-      analysisData = filterDataByPeriod(data, params.periodColumn, params.periodFilter);
+      analysisData = filterDataByPeriod(cleanData, params.periodColumn, params.periodFilter);
       periodAnalyzed = params.periodFilter;
       
       if (analysisData.length === 0) {

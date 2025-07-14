@@ -1,0 +1,601 @@
+Date,Product,Category,Region,Country,City,Budget,Actuals,Channel,Quarter,Month
+2025-01-01,Process Control Software,Supply Chain,North America,Canada,Winnipeg,184550,204592,Online,2025-Q1,2025-01
+2025-01-01,Quality Assurance Software,Production Machinery,Asia Pacific,Singapore,North,435322,460754,Partner,2025-Q1,2025-01
+2025-01-01,CNC Machining Center,Industrial Equipment,Europe,Germany,Hamburg,352957,312873,Mobile App,2025-Q1,2025-01
+2025-01-02,Assembly Line Component,Industrial Equipment,Asia Pacific,Japan,Osaka,123752,143746,Wholesale,2025-Q1,2025-01
+2025-01-02,CNC Machining Center,Automotive Parts,North America,Mexico,León,456178,592049,Wholesale,2025-Q1,2025-01
+2025-01-02,Industrial Robot System,Production Machinery,Asia Pacific,Singapore,Northeast,118227,164117,Online,2025-Q1,2025-01
+2025-01-02,Quality Inspection System,Automotive Parts,Asia Pacific,Singapore,East,242885,306080,Mobile App,2025-Q1,2025-01
+2025-01-03,Automated Production Line,Automotive Parts,Europe,Germany,Dortmund,152008,195606,Direct Sales,2025-Q1,2025-01
+2025-01-03,Industrial Robot System,Supply Chain,Europe,France,Montpellier,232948,268364,Mobile App,2025-Q1,2025-01
+2025-01-03,High-Performance Engine Component,Supply Chain,Europe,France,Nice,509243,407806,Retail,2025-Q1,2025-01
+2025-01-04,Quality Assurance Software,Production Machinery,North America,Canada,Winnipeg,345614,325209,Direct Sales,2025-Q1,2025-01
+2025-01-04,Industrial Robot System,Industrial Equipment,Asia Pacific,Singapore,North,160283,210759,Retail,2025-Q1,2025-01
+2025-01-04,Automated Production Line,Automotive Parts,Asia Pacific,Australia,Sunshine Coast,279127,351244,Online,2025-Q1,2025-01
+2025-01-05,Inventory Management Platform,Industrial Equipment,North America,Canada,Ottawa,388397,497799,Mobile App,2025-Q1,2025-01
+2025-01-05,Precision Manufacturing Tool,Production Machinery,Europe,United Kingdom,Cardiff,371282,482581,Wholesale,2025-Q1,2025-01
+2025-01-05,Warehouse Management System,Industrial Equipment,North America,Canada,Vancouver,526902,719157,Retail,2025-Q1,2025-01
+2025-01-05,Quality Inspection System,Automotive Parts,Europe,France,Toulouse,373002,437177,Direct Sales,2025-Q1,2025-01
+2025-01-05,Vehicle Diagnostic Tool,Automotive Parts,Asia Pacific,Japan,Kobe,168486,172641,Direct Sales,2025-Q1,2025-01
+2025-01-06,Automotive Safety Module,Industrial Equipment,Europe,Germany,Düsseldorf,161208,196022,Wholesale,2025-Q1,2025-01
+2025-01-06,Logistics Tracking System,Supply Chain,North America,Canada,Toronto,114499,148361,Wholesale,2025-Q1,2025-01
+2025-01-06,Logistics Tracking System,Production Machinery,Asia Pacific,Japan,Osaka,243109,300039,Online,2025-Q1,2025-01
+2025-01-06,Logistics Tracking System,Automotive Parts,North America,Canada,Mississauga,103006,112554,Online,2025-Q1,2025-01
+2025-01-06,Warehouse Management System,Industrial Equipment,Asia Pacific,Australia,Brisbane,161579,123500,Wholesale,2025-Q1,2025-01
+2025-01-07,Heavy Machinery Equipment,Industrial Equipment,Asia Pacific,Singapore,East,198642,200033,Retail,2025-Q1,2025-01
+2025-01-07,CNC Machining Center,Supply Chain,North America,Canada,Hamilton,255593,274680,Retail,2025-Q1,2025-01
+2025-01-07,Heavy Machinery Equipment,Production Machinery,North America,Canada,Edmonton,498866,456492,Direct Sales,2025-Q1,2025-01
+2025-01-08,Automotive Safety Module,Supply Chain,North America,Mexico,León,126442,132508,Partner,2025-Q1,2025-01
+2025-01-08,Logistics Tracking System,Production Machinery,North America,United States,New York,687686,526872,Direct Sales,2025-Q1,2025-01
+2025-01-08,Heavy Machinery Equipment,Quality Control,North America,United States,Chicago,363951,431614,Online,2025-Q1,2025-01
+2025-01-09,Logistics Tracking System,Production Machinery,Asia Pacific,Australia,Brisbane,314769,269297,Direct Sales,2025-Q1,2025-01
+2025-01-09,Automotive Safety Module,Automotive Parts,North America,Canada,Hamilton,139836,103000,Mobile App,2025-Q1,2025-01
+2025-01-09,Quality Inspection System,Supply Chain,North America,Canada,Toronto,506306,532352,Mobile App,2025-Q1,2025-01
+2025-01-09,Assembly Line Component,Production Machinery,Asia Pacific,Japan,Kobe,219539,263329,Online,2025-Q1,2025-01
+2025-01-10,Precision Manufacturing Tool,Quality Control,Asia Pacific,Singapore,Central,271182,221753,Wholesale,2025-Q1,2025-01
+2025-01-10,Automotive Safety Module,Production Machinery,Asia Pacific,Japan,Kyoto,502465,657766,Direct Sales,2025-Q1,2025-01
+2025-01-10,High-Performance Engine Component,Quality Control,Europe,Germany,Frankfurt,268094,361843,Partner,2025-Q1,2025-01
+2025-01-11,Automated Production Line,Industrial Equipment,North America,Canada,Vancouver,258760,187438,Direct Sales,2025-Q1,2025-01
+2025-01-11,Assembly Line Component,Automotive Parts,Europe,Germany,Hamburg,91433,86680,Partner,2025-Q1,2025-01
+2025-01-11,Industrial Robot System,Automotive Parts,North America,Canada,Ottawa,394327,349598,Retail,2025-Q1,2025-01
+2025-01-11,Inventory Management Platform,Production Machinery,Asia Pacific,Australia,Melbourne,229642,303353,Retail,2025-Q1,2025-01
+2025-01-11,Precision Manufacturing Tool,Production Machinery,Europe,Germany,Berlin,214012,213973,Wholesale,2025-Q1,2025-01
+2025-01-12,Assembly Line Component,Production Machinery,North America,United States,Chicago,451356,467114,Retail,2025-Q1,2025-01
+2025-01-12,Industrial Robot System,Automotive Parts,North America,Mexico,Juárez,372474,266900,Mobile App,2025-Q1,2025-01
+2025-01-12,Industrial Robot System,Industrial Equipment,Europe,France,Toulouse,454251,343285,Direct Sales,2025-Q1,2025-01
+2025-01-12,Logistics Tracking System,Supply Chain,North America,Mexico,Monterrey,360401,326649,Partner,2025-Q1,2025-01
+2025-01-12,Automotive Safety Module,Supply Chain,Europe,France,Lille,365574,268363,Mobile App,2025-Q1,2025-01
+2025-01-13,Heavy Machinery Equipment,Industrial Equipment,Asia Pacific,Japan,Saitama,127222,125664,Wholesale,2025-Q1,2025-01
+2025-01-13,CNC Machining Center,Supply Chain,North America,United States,Philadelphia,242889,319633,Partner,2025-Q1,2025-01
+2025-01-13,Industrial Robot System,Industrial Equipment,Europe,United Kingdom,Liverpool,330814,399604,Mobile App,2025-Q1,2025-01
+2025-01-13,Automated Production Line,Quality Control,Asia Pacific,Singapore,West,389374,279822,Partner,2025-Q1,2025-01
+2025-01-13,Assembly Line Component,Industrial Equipment,North America,United States,Houston,261494,309001,Mobile App,2025-Q1,2025-01
+2025-01-13,Process Control Software,Industrial Equipment,Europe,Germany,Frankfurt,181543,208774,Wholesale,2025-Q1,2025-01
+2025-01-13,Automotive Safety Module,Industrial Equipment,North America,Mexico,Puebla,339840,311278,Mobile App,2025-Q1,2025-01
+2025-01-13,Automotive Safety Module,Quality Control,Asia Pacific,Australia,Newcastle,413371,575819,Partner,2025-Q1,2025-01
+2025-01-14,Industrial Robot System,Supply Chain,Asia Pacific,Singapore,Central,93566,100545,Wholesale,2025-Q1,2025-01
+2025-01-14,Logistics Tracking System,Automotive Parts,Asia Pacific,Singapore,West,136592,163963,Mobile App,2025-Q1,2025-01
+2025-01-14,Heavy Machinery Equipment,Supply Chain,North America,United States,San Antonio,354760,461290,Online,2025-Q1,2025-01
+2025-01-15,Vehicle Diagnostic Tool,Industrial Equipment,North America,Mexico,Juárez,121233,118255,Partner,2025-Q1,2025-01
+2025-01-15,Automotive Safety Module,Industrial Equipment,Asia Pacific,Japan,Tokyo,198811,224907,Partner,2025-Q1,2025-01
+2025-01-16,Quality Assurance Software,Quality Control,North America,Canada,Mississauga,588187,710902,Retail,2025-Q1,2025-01
+2025-01-16,Process Control Software,Automotive Parts,North America,United States,San Jose,366869,336792,Partner,2025-Q1,2025-01
+2025-01-16,Inventory Management Platform,Quality Control,Asia Pacific,Singapore,Northeast,209684,172684,Partner,2025-Q1,2025-01
+2025-01-16,Logistics Tracking System,Industrial Equipment,Europe,France,Paris,123279,129286,Mobile App,2025-Q1,2025-01
+2025-01-17,CNC Machining Center,Automotive Parts,Asia Pacific,Japan,Saitama,147565,158633,Partner,2025-Q1,2025-01
+2025-01-17,Precision Manufacturing Tool,Production Machinery,Europe,United Kingdom,Birmingham,471090,639455,Direct Sales,2025-Q1,2025-01
+2025-01-17,Automated Production Line,Automotive Parts,North America,Mexico,León,249148,229778,Wholesale,2025-Q1,2025-01
+2025-01-18,Vehicle Diagnostic Tool,Automotive Parts,Europe,Germany,Frankfurt,376181,289570,Online,2025-Q1,2025-01
+2025-01-18,Industrial Robot System,Supply Chain,Asia Pacific,Japan,Kobe,201537,191507,Wholesale,2025-Q1,2025-01
+2025-01-18,Quality Inspection System,Supply Chain,Asia Pacific,Singapore,Northeast,196698,141221,Retail,2025-Q1,2025-01
+2025-01-19,Logistics Tracking System,Automotive Parts,Europe,United Kingdom,Manchester,415062,434335,Online,2025-Q1,2025-01
+2025-01-19,Inventory Management Platform,Quality Control,Asia Pacific,Singapore,East,145056,166583,Wholesale,2025-Q1,2025-01
+2025-01-20,Automated Production Line,Automotive Parts,North America,Canada,Calgary,189045,201833,Partner,2025-Q1,2025-01
+2025-01-20,Industrial Robot System,Supply Chain,Europe,United Kingdom,Glasgow,245985,234070,Retail,2025-Q1,2025-01
+2025-01-20,Quality Assurance Software,Industrial Equipment,Europe,France,Toulouse,439671,323500,Retail,2025-Q1,2025-01
+2025-01-21,Precision Manufacturing Tool,Production Machinery,Asia Pacific,Australia,Canberra,82741,89888,Mobile App,2025-Q1,2025-01
+2025-01-21,Precision Manufacturing Tool,Industrial Equipment,Europe,Germany,Munich,603157,485756,Direct Sales,2025-Q1,2025-01
+2025-01-21,High-Performance Engine Component,Supply Chain,Europe,United Kingdom,Leeds,285748,232696,Direct Sales,2025-Q1,2025-01
+2025-01-21,Assembly Line Component,Automotive Parts,North America,Mexico,Puebla,258583,281283,Retail,2025-Q1,2025-01
+2025-01-21,Warehouse Management System,Production Machinery,Europe,Germany,Hamburg,284039,269095,Mobile App,2025-Q1,2025-01
+2025-01-22,Automotive Safety Module,Quality Control,Asia Pacific,Singapore,East,122501,171019,Mobile App,2025-Q1,2025-01
+2025-01-22,CNC Machining Center,Supply Chain,North America,United States,Philadelphia,215351,271001,Partner,2025-Q1,2025-01
+2025-01-22,Quality Assurance Software,Automotive Parts,Europe,France,Paris,360757,461527,Wholesale,2025-Q1,2025-01
+2025-01-22,Automotive Safety Module,Industrial Equipment,North America,United States,Chicago,212193,267264,Partner,2025-Q1,2025-01
+2025-01-23,Inventory Management Platform,Production Machinery,Asia Pacific,Japan,Nagoya,450777,561089,Direct Sales,2025-Q1,2025-01
+2025-01-23,Automotive Safety Module,Supply Chain,Europe,Germany,Munich,247830,236141,Retail,2025-Q1,2025-01
+2025-01-23,Automated Production Line,Supply Chain,North America,United States,Phoenix,314048,383287,Online,2025-Q1,2025-01
+2025-01-23,Quality Inspection System,Production Machinery,Asia Pacific,Japan,Sapporo,354692,311243,Online,2025-Q1,2025-01
+2025-01-23,Process Control Software,Supply Chain,Asia Pacific,Japan,Tokyo,304326,284191,Mobile App,2025-Q1,2025-01
+2025-01-23,Industrial Robot System,Supply Chain,North America,Canada,Toronto,163314,145500,Partner,2025-Q1,2025-01
+2025-01-24,Vehicle Diagnostic Tool,Supply Chain,Europe,United Kingdom,London,327773,380118,Direct Sales,2025-Q1,2025-01
+2025-01-25,CNC Machining Center,Supply Chain,Europe,France,Toulouse,402862,463458,Direct Sales,2025-Q1,2025-01
+2025-01-26,Precision Manufacturing Tool,Industrial Equipment,Europe,France,Paris,143471,110899,Mobile App,2025-Q1,2025-01
+2025-01-26,High-Performance Engine Component,Automotive Parts,Europe,United Kingdom,Birmingham,190758,182142,Online,2025-Q1,2025-01
+2025-01-27,Industrial Robot System,Supply Chain,Europe,Germany,Düsseldorf,408736,492961,Retail,2025-Q1,2025-01
+2025-01-27,Industrial Robot System,Supply Chain,North America,Mexico,Mexico City,841976,631296,Direct Sales,2025-Q1,2025-01
+2025-01-27,CNC Machining Center,Industrial Equipment,Asia Pacific,Japan,Kobe,420124,579767,Online,2025-Q1,2025-01
+2025-01-28,Precision Manufacturing Tool,Production Machinery,Asia Pacific,Australia,Canberra,308388,420215,Retail,2025-Q1,2025-01
+2025-01-28,Industrial Robot System,Industrial Equipment,Europe,Germany,Dortmund,285691,275703,Mobile App,2025-Q1,2025-01
+2025-01-28,Inventory Management Platform,Supply Chain,Europe,France,Marseille,206939,272573,Online,2025-Q1,2025-01
+2025-01-28,CNC Machining Center,Automotive Parts,North America,Canada,Edmonton,316501,288863,Direct Sales,2025-Q1,2025-01
+2025-02-01,High-Performance Engine Component,Quality Control,Europe,United Kingdom,Manchester,619093,743526,Direct Sales,2025-Q1,2025-02
+2025-02-01,Inventory Management Platform,Quality Control,Asia Pacific,Singapore,West,322063,326130,Direct Sales,2025-Q1,2025-02
+2025-02-01,Quality Inspection System,Quality Control,Asia Pacific,Australia,Newcastle,285721,396207,Mobile App,2025-Q1,2025-02
+2025-02-01,Inventory Management Platform,Supply Chain,Europe,Germany,Essen,110201,90032,Wholesale,2025-Q1,2025-02
+2025-02-02,CNC Machining Center,Automotive Parts,North America,Mexico,Chihuahua,519245,522225,Mobile App,2025-Q1,2025-02
+2025-02-02,CNC Machining Center,Automotive Parts,Europe,United Kingdom,Edinburgh,476256,567409,Online,2025-Q1,2025-02
+2025-02-02,Heavy Machinery Equipment,Automotive Parts,Europe,France,Marseille,454467,596194,Partner,2025-Q1,2025-02
+2025-02-02,Automotive Safety Module,Industrial Equipment,North America,Canada,Edmonton,309667,395856,Retail,2025-Q1,2025-02
+2025-02-03,Automated Production Line,Industrial Equipment,Europe,Germany,Hamburg,341570,284779,Mobile App,2025-Q1,2025-02
+2025-02-03,Automotive Safety Module,Automotive Parts,North America,Canada,Vancouver,319969,332804,Wholesale,2025-Q1,2025-02
+2025-02-03,Automated Production Line,Industrial Equipment,Asia Pacific,Japan,Kawasaki,123325,130144,Retail,2025-Q1,2025-02
+2025-02-03,Inventory Management Platform,Industrial Equipment,Asia Pacific,Australia,Brisbane,144105,111799,Online,2025-Q1,2025-02
+2025-02-03,High-Performance Engine Component,Automotive Parts,North America,Canada,Montreal,428498,550486,Partner,2025-Q1,2025-02
+2025-02-03,Quality Inspection System,Industrial Equipment,North America,United States,Houston,292856,323244,Mobile App,2025-Q1,2025-02
+2025-02-04,Assembly Line Component,Production Machinery,North America,United States,New York,521217,534107,Retail,2025-Q1,2025-02
+2025-02-04,CNC Machining Center,Production Machinery,Asia Pacific,Australia,Melbourne,105802,92743,Retail,2025-Q1,2025-02
+2025-02-04,Quality Inspection System,Automotive Parts,Asia Pacific,Australia,Wollongong,486645,359125,Direct Sales,2025-Q1,2025-02
+2025-02-05,Process Control Software,Industrial Equipment,Asia Pacific,Japan,Yokohama,368029,434118,Partner,2025-Q1,2025-02
+2025-02-05,Vehicle Diagnostic Tool,Production Machinery,Europe,France,Bordeaux,317235,363700,Wholesale,2025-Q1,2025-02
+2025-02-06,Heavy Machinery Equipment,Quality Control,Europe,United Kingdom,Birmingham,130580,127773,Retail,2025-Q1,2025-02
+2025-02-06,Assembly Line Component,Supply Chain,Europe,France,Paris,84808,81454,Wholesale,2025-Q1,2025-02
+2025-02-06,Precision Manufacturing Tool,Production Machinery,North America,Canada,Montreal,310897,310953,Online,2025-Q1,2025-02
+2025-02-07,Quality Assurance Software,Production Machinery,Europe,France,Nantes,274652,215031,Partner,2025-Q1,2025-02
+2025-02-07,Quality Inspection System,Quality Control,Europe,United Kingdom,London,163899,186697,Wholesale,2025-Q1,2025-02
+2025-02-07,Warehouse Management System,Industrial Equipment,Europe,France,Toulouse,354308,414934,Retail,2025-Q1,2025-02
+2025-02-07,Inventory Management Platform,Supply Chain,Europe,United Kingdom,Cardiff,362047,269450,Mobile App,2025-Q1,2025-02
+2025-02-08,Quality Inspection System,Automotive Parts,Asia Pacific,Japan,Yokohama,185204,189845,Online,2025-Q1,2025-02
+2025-02-08,Vehicle Diagnostic Tool,Automotive Parts,Asia Pacific,Australia,Melbourne,156536,127809,Direct Sales,2025-Q1,2025-02
+2025-02-08,Warehouse Management System,Automotive Parts,North America,Mexico,Guadalajara,258808,254746,Online,2025-Q1,2025-02
+2025-02-09,Inventory Management Platform,Production Machinery,Europe,United Kingdom,Bristol,444289,437781,Direct Sales,2025-Q1,2025-02
+2025-02-09,Vehicle Diagnostic Tool,Industrial Equipment,Europe,United Kingdom,Sheffield,355681,370323,Partner,2025-Q1,2025-02
+2025-02-09,Automotive Safety Module,Production Machinery,Europe,Germany,Dortmund,402892,355186,Retail,2025-Q1,2025-02
+2025-02-09,Automated Production Line,Quality Control,North America,United States,Chicago,406237,503754,Retail,2025-Q1,2025-02
+2025-02-10,Industrial Robot System,Quality Control,Asia Pacific,Australia,Sydney,141302,194066,Direct Sales,2025-Q1,2025-02
+2025-02-10,Vehicle Diagnostic Tool,Supply Chain,Europe,United Kingdom,Sheffield,291293,290687,Retail,2025-Q1,2025-02
+2025-02-10,Assembly Line Component,Production Machinery,Asia Pacific,Australia,Gold Coast,329377,407913,Partner,2025-Q1,2025-02
+2025-02-10,Automated Production Line,Production Machinery,North America,Mexico,Zapopan,178489,126868,Mobile App,2025-Q1,2025-02
+2025-02-10,CNC Machining Center,Quality Control,Europe,France,Nice,714090,743299,Direct Sales,2025-Q1,2025-02
+2025-02-10,Precision Manufacturing Tool,Automotive Parts,North America,Mexico,Guadalajara,445367,459853,Online,2025-Q1,2025-02
+2025-02-10,Quality Assurance Software,Supply Chain,Asia Pacific,Japan,Osaka,390683,531284,Direct Sales,2025-Q1,2025-02
+2025-02-11,Automotive Safety Module,Supply Chain,North America,Canada,Hamilton,332152,295781,Wholesale,2025-Q1,2025-02
+2025-02-11,Inventory Management Platform,Production Machinery,Europe,France,Marseille,179888,183722,Online,2025-Q1,2025-02
+2025-02-11,Heavy Machinery Equipment,Quality Control,North America,United States,Philadelphia,271000,296735,Online,2025-Q1,2025-02
+2025-02-12,Logistics Tracking System,Quality Control,Asia Pacific,Japan,Tokyo,116370,109105,Partner,2025-Q1,2025-02
+2025-02-12,High-Performance Engine Component,Quality Control,North America,Mexico,Juárez,180315,215484,Mobile App,2025-Q1,2025-02
+2025-02-12,Precision Manufacturing Tool,Quality Control,North America,Mexico,Chihuahua,517238,544077,Partner,2025-Q1,2025-02
+2025-02-12,Quality Inspection System,Quality Control,North America,Canada,Toronto,302967,241887,Direct Sales,2025-Q1,2025-02
+2025-02-12,Industrial Robot System,Supply Chain,Europe,United Kingdom,Glasgow,156247,146952,Retail,2025-Q1,2025-02
+2025-02-13,High-Performance Engine Component,Industrial Equipment,Asia Pacific,Japan,Nagoya,279980,375236,Wholesale,2025-Q1,2025-02
+2025-02-13,Precision Manufacturing Tool,Automotive Parts,North America,United States,Dallas,157264,192832,Wholesale,2025-Q1,2025-02
+2025-02-13,High-Performance Engine Component,Automotive Parts,Asia Pacific,Singapore,East,205090,220905,Online,2025-Q1,2025-02
+2025-02-14,Automotive Safety Module,Automotive Parts,North America,Canada,Vancouver,716915,583883,Direct Sales,2025-Q1,2025-02
+2025-02-14,Assembly Line Component,Automotive Parts,North America,United States,Dallas,274272,200399,Retail,2025-Q1,2025-02
+2025-02-14,Assembly Line Component,Quality Control,Europe,France,Toulouse,660298,734862,Direct Sales,2025-Q1,2025-02
+2025-02-14,Logistics Tracking System,Automotive Parts,Asia Pacific,Japan,Tokyo,248013,251527,Partner,2025-Q1,2025-02
+2025-02-15,Assembly Line Component,Industrial Equipment,North America,Mexico,Puebla,319641,345629,Retail,2025-Q1,2025-02
+2025-02-15,Assembly Line Component,Industrial Equipment,Asia Pacific,Singapore,North,162277,200198,Online,2025-Q1,2025-02
+2025-02-15,CNC Machining Center,Industrial Equipment,North America,Mexico,Tijuana,321173,306857,Online,2025-Q1,2025-02
+2025-02-15,Vehicle Diagnostic Tool,Automotive Parts,North America,United States,San Antonio,287421,225654,Retail,2025-Q1,2025-02
+2025-02-15,Warehouse Management System,Industrial Equipment,Europe,France,Toulouse,138242,98851,Online,2025-Q1,2025-02
+2025-02-16,Automated Production Line,Quality Control,Asia Pacific,Singapore,North,156567,150364,Wholesale,2025-Q1,2025-02
+2025-02-16,Warehouse Management System,Supply Chain,Europe,United Kingdom,Edinburgh,566860,708820,Direct Sales,2025-Q1,2025-02
+2025-02-16,Automotive Safety Module,Quality Control,Asia Pacific,Japan,Osaka,420280,361265,Direct Sales,2025-Q1,2025-02
+2025-02-16,Automotive Safety Module,Production Machinery,North America,Canada,Vancouver,180425,225150,Partner,2025-Q1,2025-02
+2025-02-17,Automated Production Line,Quality Control,Asia Pacific,Australia,Wollongong,413222,340349,Retail,2025-Q1,2025-02
+2025-02-17,Process Control Software,Automotive Parts,Asia Pacific,Singapore,East,210826,283351,Wholesale,2025-Q1,2025-02
+2025-02-19,Process Control Software,Supply Chain,North America,United States,Phoenix,179080,137185,Wholesale,2025-Q1,2025-02
+2025-02-19,Inventory Management Platform,Automotive Parts,Asia Pacific,Australia,Melbourne,629485,677922,Direct Sales,2025-Q1,2025-02
+2025-02-19,Quality Assurance Software,Production Machinery,Asia Pacific,Japan,Saitama,214881,284862,Direct Sales,2025-Q1,2025-02
+2025-02-19,Logistics Tracking System,Quality Control,Europe,Germany,Hamburg,116113,110904,Partner,2025-Q1,2025-02
+2025-02-20,Warehouse Management System,Production Machinery,Europe,United Kingdom,Bristol,231854,195687,Retail,2025-Q1,2025-02
+2025-02-20,Vehicle Diagnostic Tool,Automotive Parts,North America,Canada,Edmonton,230848,256527,Retail,2025-Q1,2025-02
+2025-02-20,Logistics Tracking System,Automotive Parts,Europe,France,Montpellier,606960,624726,Direct Sales,2025-Q1,2025-02
+2025-02-21,Automotive Safety Module,Supply Chain,Europe,United Kingdom,Leeds,181941,173944,Mobile App,2025-Q1,2025-02
+2025-02-21,CNC Machining Center,Industrial Equipment,Europe,United Kingdom,Bristol,182699,239234,Partner,2025-Q1,2025-02
+2025-02-21,Heavy Machinery Equipment,Production Machinery,Asia Pacific,Australia,Sydney,317606,414891,Partner,2025-Q1,2025-02
+2025-02-22,Quality Assurance Software,Automotive Parts,North America,United States,San Jose,310737,269833,Mobile App,2025-Q1,2025-02
+2025-02-22,Inventory Management Platform,Industrial Equipment,North America,United States,Dallas,107884,90545,Partner,2025-Q1,2025-02
+2025-02-22,Heavy Machinery Equipment,Production Machinery,North America,Canada,Vancouver,353461,391946,Direct Sales,2025-Q1,2025-02
+2025-02-22,Precision Manufacturing Tool,Industrial Equipment,Europe,United Kingdom,Manchester,308156,366850,Mobile App,2025-Q1,2025-02
+2025-02-22,Vehicle Diagnostic Tool,Quality Control,Europe,Germany,Stuttgart,401072,451557,Online,2025-Q1,2025-02
+2025-02-22,Automotive Safety Module,Quality Control,North America,United States,Dallas,440752,557045,Direct Sales,2025-Q1,2025-02
+2025-02-22,Heavy Machinery Equipment,Quality Control,North America,United States,San Antonio,388858,412604,Online,2025-Q1,2025-02
+2025-02-23,Warehouse Management System,Quality Control,Europe,France,Nice,112368,105983,Mobile App,2025-Q1,2025-02
+2025-02-23,Process Control Software,Supply Chain,Europe,Germany,Düsseldorf,240477,238012,Partner,2025-Q1,2025-02
+2025-02-23,High-Performance Engine Component,Industrial Equipment,Europe,France,Nice,286310,357416,Retail,2025-Q1,2025-02
+2025-02-23,Industrial Robot System,Supply Chain,Europe,United Kingdom,Glasgow,111722,140276,Mobile App,2025-Q1,2025-02
+2025-02-23,Assembly Line Component,Supply Chain,Asia Pacific,Australia,Melbourne,258414,217406,Retail,2025-Q1,2025-02
+2025-02-24,Vehicle Diagnostic Tool,Quality Control,Europe,France,Marseille,613158,572088,Direct Sales,2025-Q1,2025-02
+2025-02-24,Vehicle Diagnostic Tool,Automotive Parts,North America,United States,Houston,487317,649763,Online,2025-Q1,2025-02
+2025-02-25,Heavy Machinery Equipment,Supply Chain,Europe,United Kingdom,Leeds,91798,75421,Mobile App,2025-Q1,2025-02
+2025-02-25,Inventory Management Platform,Quality Control,Europe,France,Marseille,183540,224958,Partner,2025-Q1,2025-02
+2025-02-25,High-Performance Engine Component,Automotive Parts,Europe,United Kingdom,Leeds,567270,593807,Direct Sales,2025-Q1,2025-02
+2025-02-26,CNC Machining Center,Production Machinery,Europe,Germany,Munich,252424,270860,Partner,2025-Q1,2025-02
+2025-02-26,Precision Manufacturing Tool,Production Machinery,Asia Pacific,Australia,Wollongong,519889,525260,Direct Sales,2025-Q1,2025-02
+2025-02-27,Inventory Management Platform,Production Machinery,Europe,France,Strasbourg,111801,127736,Retail,2025-Q1,2025-02
+2025-02-27,Vehicle Diagnostic Tool,Quality Control,Asia Pacific,Australia,Brisbane,167928,175473,Partner,2025-Q1,2025-02
+2025-02-27,Inventory Management Platform,Quality Control,Asia Pacific,Singapore,Northeast,283714,224608,Partner,2025-Q1,2025-02
+2025-02-27,Precision Manufacturing Tool,Quality Control,North America,Canada,Hamilton,372528,302149,Partner,2025-Q1,2025-02
+2025-02-28,High-Performance Engine Component,Industrial Equipment,Asia Pacific,Japan,Tokyo,305776,394358,Mobile App,2025-Q1,2025-02
+2025-03-01,Warehouse Management System,Supply Chain,Europe,Germany,Frankfurt,399612,383350,Online,2025-Q1,2025-03
+2025-03-01,Warehouse Management System,Production Machinery,North America,United States,Phoenix,234529,315723,Wholesale,2025-Q1,2025-03
+2025-03-01,Automated Production Line,Automotive Parts,Asia Pacific,Australia,Gold Coast,229482,279286,Direct Sales,2025-Q1,2025-03
+2025-03-01,Automotive Safety Module,Quality Control,Europe,United Kingdom,Liverpool,704799,762603,Direct Sales,2025-Q1,2025-03
+2025-03-01,Process Control Software,Supply Chain,North America,United States,Philadelphia,162816,133583,Direct Sales,2025-Q1,2025-03
+2025-03-01,CNC Machining Center,Automotive Parts,Europe,France,Nice,379983,506891,Retail,2025-Q1,2025-03
+2025-03-01,Quality Assurance Software,Supply Chain,Asia Pacific,Singapore,West,126937,150670,Retail,2025-Q1,2025-03
+2025-03-02,High-Performance Engine Component,Industrial Equipment,North America,United States,San Antonio,396209,403202,Partner,2025-Q1,2025-03
+2025-03-02,CNC Machining Center,Supply Chain,North America,Canada,Ottawa,494845,514313,Direct Sales,2025-Q1,2025-03
+2025-03-02,Automated Production Line,Supply Chain,Europe,Germany,Berlin,133752,140004,Online,2025-Q1,2025-03
+2025-03-02,Logistics Tracking System,Automotive Parts,Asia Pacific,Japan,Kawasaki,179179,198591,Wholesale,2025-Q1,2025-03
+2025-03-03,Automotive Safety Module,Production Machinery,Europe,Germany,Cologne,291336,269423,Online,2025-Q1,2025-03
+2025-03-03,Automotive Safety Module,Automotive Parts,Europe,France,Montpellier,542617,687214,Direct Sales,2025-Q1,2025-03
+2025-03-03,Precision Manufacturing Tool,Supply Chain,Asia Pacific,Japan,Kyoto,414405,534033,Mobile App,2025-Q1,2025-03
+2025-03-03,Automated Production Line,Automotive Parts,Asia Pacific,Japan,Kobe,164482,137951,Direct Sales,2025-Q1,2025-03
+2025-03-04,Automated Production Line,Production Machinery,North America,United States,San Jose,323062,313296,Direct Sales,2025-Q1,2025-03
+2025-03-04,High-Performance Engine Component,Supply Chain,North America,Canada,Calgary,380103,444421,Wholesale,2025-Q1,2025-03
+2025-03-04,Process Control Software,Quality Control,North America,Mexico,Juárez,218570,227220,Wholesale,2025-Q1,2025-03
+2025-03-05,Quality Inspection System,Production Machinery,Europe,Germany,Dortmund,226500,190729,Online,2025-Q1,2025-03
+2025-03-05,Quality Inspection System,Supply Chain,Europe,France,Paris,382171,271854,Online,2025-Q1,2025-03
+2025-03-05,CNC Machining Center,Quality Control,Asia Pacific,Japan,Kyoto,369210,368712,Direct Sales,2025-Q1,2025-03
+2025-03-05,Industrial Robot System,Industrial Equipment,Asia Pacific,Australia,Canberra,105246,96809,Wholesale,2025-Q1,2025-03
+2025-03-06,High-Performance Engine Component,Production Machinery,Europe,United Kingdom,Leeds,292422,408992,Wholesale,2025-Q1,2025-03
+2025-03-06,Assembly Line Component,Production Machinery,North America,Canada,Winnipeg,330860,267328,Retail,2025-Q1,2025-03
+2025-03-07,Automotive Safety Module,Quality Control,Europe,United Kingdom,Bristol,506882,500537,Online,2025-Q1,2025-03
+2025-03-07,High-Performance Engine Component,Industrial Equipment,Europe,France,Strasbourg,295439,245281,Direct Sales,2025-Q1,2025-03
+2025-03-07,High-Performance Engine Component,Industrial Equipment,Europe,United Kingdom,Edinburgh,247893,342218,Mobile App,2025-Q1,2025-03
+2025-03-07,Automotive Safety Module,Supply Chain,Asia Pacific,Singapore,North,192990,259577,Wholesale,2025-Q1,2025-03
+2025-03-08,Logistics Tracking System,Production Machinery,Europe,United Kingdom,Edinburgh,292610,295076,Direct Sales,2025-Q1,2025-03
+2025-03-08,Quality Inspection System,Industrial Equipment,North America,United States,Philadelphia,126654,106070,Wholesale,2025-Q1,2025-03
+2025-03-08,CNC Machining Center,Supply Chain,Asia Pacific,Singapore,North,114116,152355,Partner,2025-Q1,2025-03
+2025-03-08,Automotive Safety Module,Supply Chain,Asia Pacific,Japan,Saitama,98072,104701,Online,2025-Q1,2025-03
+2025-03-08,Warehouse Management System,Production Machinery,North America,Canada,Hamilton,191335,191798,Wholesale,2025-Q1,2025-03
+2025-03-09,Vehicle Diagnostic Tool,Automotive Parts,North America,Canada,Ottawa,492529,397543,Online,2025-Q1,2025-03
+2025-03-09,Quality Assurance Software,Production Machinery,North America,Mexico,Tijuana,268903,269048,Wholesale,2025-Q1,2025-03
+2025-03-09,Quality Assurance Software,Industrial Equipment,North America,Canada,Ottawa,89556,76508,Wholesale,2025-Q1,2025-03
+2025-03-09,Inventory Management Platform,Supply Chain,North America,Mexico,León,444728,602554,Partner,2025-Q1,2025-03
+2025-03-09,Precision Manufacturing Tool,Industrial Equipment,Asia Pacific,Australia,Brisbane,106513,145822,Wholesale,2025-Q1,2025-03
+2025-03-09,Industrial Robot System,Production Machinery,North America,United States,Chicago,564748,404448,Partner,2025-Q1,2025-03
+2025-03-10,Inventory Management Platform,Industrial Equipment,Europe,Germany,Düsseldorf,166973,221353,Mobile App,2025-Q1,2025-03
+2025-03-11,High-Performance Engine Component,Industrial Equipment,Europe,Germany,Düsseldorf,458804,559786,Partner,2025-Q1,2025-03
+2025-03-11,Logistics Tracking System,Industrial Equipment,North America,Mexico,Chihuahua,177296,129118,Direct Sales,2025-Q1,2025-03
+2025-03-11,Vehicle Diagnostic Tool,Production Machinery,North America,Canada,Mississauga,403714,354742,Mobile App,2025-Q1,2025-03
+2025-03-11,Precision Manufacturing Tool,Automotive Parts,Europe,Germany,Düsseldorf,313409,409399,Partner,2025-Q1,2025-03
+2025-03-12,Warehouse Management System,Supply Chain,Asia Pacific,Australia,Newcastle,140748,141730,Retail,2025-Q1,2025-03
+2025-03-13,Warehouse Management System,Industrial Equipment,Asia Pacific,Singapore,West,74916,71678,Wholesale,2025-Q1,2025-03
+2025-03-13,Vehicle Diagnostic Tool,Industrial Equipment,Europe,Germany,Hamburg,230466,295343,Mobile App,2025-Q1,2025-03
+2025-03-13,Industrial Robot System,Quality Control,Asia Pacific,Australia,Sydney,201254,175133,Retail,2025-Q1,2025-03
+2025-03-13,Inventory Management Platform,Quality Control,Europe,France,Montpellier,113805,84773,Online,2025-Q1,2025-03
+2025-03-14,Automated Production Line,Supply Chain,Europe,Germany,Frankfurt,479510,403507,Direct Sales,2025-Q1,2025-03
+2025-03-14,Automated Production Line,Supply Chain,Europe,Germany,Essen,415543,574041,Direct Sales,2025-Q1,2025-03
+2025-03-14,Automotive Safety Module,Supply Chain,Europe,France,Montpellier,194259,255114,Direct Sales,2025-Q1,2025-03
+2025-03-15,Quality Inspection System,Quality Control,North America,United States,Chicago,133682,96593,Retail,2025-Q1,2025-03
+2025-03-15,Industrial Robot System,Industrial Equipment,Europe,France,Lyon,330801,297359,Mobile App,2025-Q1,2025-03
+2025-03-15,Quality Inspection System,Quality Control,Europe,United Kingdom,Manchester,332157,234989,Mobile App,2025-Q1,2025-03
+2025-03-16,Vehicle Diagnostic Tool,Supply Chain,Asia Pacific,Singapore,Central,330511,435856,Retail,2025-Q1,2025-03
+2025-03-16,Process Control Software,Quality Control,Europe,France,Bordeaux,433016,323310,Mobile App,2025-Q1,2025-03
+2025-03-16,Assembly Line Component,Production Machinery,North America,United States,San Diego,251734,275777,Online,2025-Q1,2025-03
+2025-03-17,Inventory Management Platform,Quality Control,North America,United States,Houston,140007,175724,Wholesale,2025-Q1,2025-03
+2025-03-17,Automotive Safety Module,Production Machinery,North America,United States,Dallas,183252,134138,Mobile App,2025-Q1,2025-03
+2025-03-17,Vehicle Diagnostic Tool,Automotive Parts,North America,United States,Chicago,188004,201639,Mobile App,2025-Q1,2025-03
+2025-03-17,Quality Inspection System,Automotive Parts,North America,Canada,Montreal,209314,247959,Partner,2025-Q1,2025-03
+2025-03-18,Industrial Robot System,Industrial Equipment,North America,Mexico,Zapopan,335617,409394,Online,2025-Q1,2025-03
+2025-03-18,Quality Inspection System,Quality Control,North America,Mexico,Juárez,248480,284364,Partner,2025-Q1,2025-03
+2025-03-19,Vehicle Diagnostic Tool,Automotive Parts,Asia Pacific,Japan,Kawasaki,279896,267454,Partner,2025-Q1,2025-03
+2025-03-19,Automotive Safety Module,Supply Chain,Asia Pacific,Singapore,North,378442,413156,Partner,2025-Q1,2025-03
+2025-03-19,High-Performance Engine Component,Industrial Equipment,Asia Pacific,Australia,Melbourne,129655,154534,Wholesale,2025-Q1,2025-03
+2025-03-19,Process Control Software,Quality Control,Europe,United Kingdom,Manchester,198771,223420,Partner,2025-Q1,2025-03
+2025-03-19,Quality Inspection System,Automotive Parts,North America,Canada,Edmonton,161163,180608,Online,2025-Q1,2025-03
+2025-03-20,Industrial Robot System,Supply Chain,Asia Pacific,Japan,Yokohama,225759,263594,Partner,2025-Q1,2025-03
+2025-03-20,Inventory Management Platform,Automotive Parts,North America,Mexico,Juárez,581615,447498,Online,2025-Q1,2025-03
+2025-03-21,Assembly Line Component,Quality Control,Europe,Germany,Cologne,254094,313685,Direct Sales,2025-Q1,2025-03
+2025-03-21,Quality Inspection System,Quality Control,Europe,France,Montpellier,114533,99072,Wholesale,2025-Q1,2025-03
+2025-03-21,Assembly Line Component,Production Machinery,Asia Pacific,Japan,Kawasaki,155271,177333,Partner,2025-Q1,2025-03
+2025-03-21,Vehicle Diagnostic Tool,Automotive Parts,Europe,United Kingdom,Birmingham,220978,203612,Direct Sales,2025-Q1,2025-03
+2025-03-22,Quality Assurance Software,Quality Control,Europe,United Kingdom,London,107197,101189,Online,2025-Q1,2025-03
+2025-03-22,Vehicle Diagnostic Tool,Production Machinery,North America,Canada,Vancouver,197857,223121,Partner,2025-Q1,2025-03
+2025-03-22,CNC Machining Center,Industrial Equipment,Asia Pacific,Australia,Melbourne,279390,314195,Partner,2025-Q1,2025-03
+2025-03-22,Automated Production Line,Quality Control,Asia Pacific,Australia,Perth,95404,72129,Partner,2025-Q1,2025-03
+2025-03-23,Quality Inspection System,Industrial Equipment,North America,Canada,Edmonton,598222,811340,Retail,2025-Q1,2025-03
+2025-03-23,Logistics Tracking System,Quality Control,North America,Mexico,Puebla,365960,376207,Online,2025-Q1,2025-03
+2025-03-23,Automated Production Line,Industrial Equipment,Asia Pacific,Australia,Sunshine Coast,331470,361378,Partner,2025-Q1,2025-03
+2025-03-24,Automated Production Line,Production Machinery,North America,Mexico,Chihuahua,578519,769962,Direct Sales,2025-Q1,2025-03
+2025-03-24,Automated Production Line,Supply Chain,North America,United States,Philadelphia,789931,789767,Direct Sales,2025-Q1,2025-03
+2025-03-24,Automated Production Line,Supply Chain,Asia Pacific,Australia,Canberra,144317,137584,Retail,2025-Q1,2025-03
+2025-03-24,Automotive Safety Module,Automotive Parts,Asia Pacific,Japan,Osaka,238955,277104,Retail,2025-Q1,2025-03
+2025-03-24,Vehicle Diagnostic Tool,Industrial Equipment,North America,United States,San Diego,375075,437242,Mobile App,2025-Q1,2025-03
+2025-03-25,Logistics Tracking System,Quality Control,Asia Pacific,Singapore,Central,186593,246098,Online,2025-Q1,2025-03
+2025-03-25,Logistics Tracking System,Automotive Parts,Europe,France,Paris,382753,419405,Retail,2025-Q1,2025-03
+2025-03-26,Vehicle Diagnostic Tool,Quality Control,North America,Mexico,Tijuana,327714,313954,Mobile App,2025-Q1,2025-03
+2025-03-26,High-Performance Engine Component,Industrial Equipment,Europe,United Kingdom,Birmingham,267442,277066,Mobile App,2025-Q1,2025-03
+2025-03-26,CNC Machining Center,Industrial Equipment,Asia Pacific,Singapore,Northeast,289047,396993,Online,2025-Q1,2025-03
+2025-03-26,Inventory Management Platform,Automotive Parts,Asia Pacific,Japan,Kyoto,172343,199065,Direct Sales,2025-Q1,2025-03
+2025-03-27,Assembly Line Component,Industrial Equipment,Asia Pacific,Japan,Yokohama,99084,105396,Partner,2025-Q1,2025-03
+2025-03-27,Precision Manufacturing Tool,Industrial Equipment,North America,United States,Chicago,176942,148822,Wholesale,2025-Q1,2025-03
+2025-03-27,Heavy Machinery Equipment,Automotive Parts,North America,Canada,Winnipeg,134825,107168,Retail,2025-Q1,2025-03
+2025-03-27,Warehouse Management System,Automotive Parts,Europe,United Kingdom,London,408788,317742,Online,2025-Q1,2025-03
+2025-03-27,Precision Manufacturing Tool,Automotive Parts,Asia Pacific,Singapore,Central,421789,385663,Retail,2025-Q1,2025-03
+2025-03-28,Warehouse Management System,Supply Chain,Asia Pacific,Singapore,North,235069,287841,Mobile App,2025-Q1,2025-03
+2025-03-28,Heavy Machinery Equipment,Industrial Equipment,Asia Pacific,Singapore,North,118747,130595,Direct Sales,2025-Q1,2025-03
+2025-04-01,Warehouse Management System,Supply Chain,Europe,France,Nantes,421310,571153,Retail,2025-Q2,2025-04
+2025-04-01,Industrial Robot System,Production Machinery,North America,United States,San Jose,180785,165570,Mobile App,2025-Q2,2025-04
+2025-04-01,Process Control Software,Production Machinery,Europe,France,Marseille,385503,392746,Retail,2025-Q2,2025-04
+2025-04-01,Quality Inspection System,Supply Chain,Europe,United Kingdom,Liverpool,121873,106207,Partner,2025-Q2,2025-04
+2025-04-02,Logistics Tracking System,Supply Chain,Europe,Germany,Frankfurt,408170,535904,Partner,2025-Q2,2025-04
+2025-04-02,Process Control Software,Industrial Equipment,Europe,Germany,Stuttgart,177965,153453,Online,2025-Q2,2025-04
+2025-04-02,Heavy Machinery Equipment,Industrial Equipment,North America,United States,Philadelphia,169243,174989,Mobile App,2025-Q2,2025-04
+2025-04-02,Warehouse Management System,Supply Chain,Asia Pacific,Singapore,Central,180361,131342,Direct Sales,2025-Q2,2025-04
+2025-04-02,Quality Assurance Software,Industrial Equipment,Asia Pacific,Japan,Kawasaki,247482,183636,Partner,2025-Q2,2025-04
+2025-04-03,High-Performance Engine Component,Quality Control,North America,United States,Phoenix,278815,248825,Mobile App,2025-Q2,2025-04
+2025-04-03,CNC Machining Center,Production Machinery,North America,Canada,Ottawa,296960,246912,Online,2025-Q2,2025-04
+2025-04-04,Industrial Robot System,Supply Chain,Asia Pacific,Australia,Gold Coast,260268,222801,Partner,2025-Q2,2025-04
+2025-04-04,Assembly Line Component,Supply Chain,North America,Canada,Quebec City,480853,427109,Retail,2025-Q2,2025-04
+2025-04-04,Automated Production Line,Production Machinery,North America,Canada,Edmonton,116030,125350,Mobile App,2025-Q2,2025-04
+2025-04-04,Assembly Line Component,Industrial Equipment,Europe,France,Marseille,317733,431843,Retail,2025-Q2,2025-04
+2025-04-04,Heavy Machinery Equipment,Production Machinery,Europe,United Kingdom,Cardiff,320770,335494,Retail,2025-Q2,2025-04
+2025-04-04,Vehicle Diagnostic Tool,Supply Chain,Asia Pacific,Japan,Fukuoka,259567,296544,Online,2025-Q2,2025-04
+2025-04-05,Precision Manufacturing Tool,Quality Control,North America,Canada,Montreal,181826,158486,Online,2025-Q2,2025-04
+2025-04-05,Warehouse Management System,Quality Control,Asia Pacific,Japan,Sapporo,489235,392867,Retail,2025-Q2,2025-04
+2025-04-05,Assembly Line Component,Production Machinery,Europe,France,Lyon,402176,431813,Direct Sales,2025-Q2,2025-04
+2025-04-06,Assembly Line Component,Supply Chain,North America,Mexico,Puebla,549976,754387,Direct Sales,2025-Q2,2025-04
+2025-04-06,CNC Machining Center,Industrial Equipment,Europe,United Kingdom,Glasgow,517160,404413,Partner,2025-Q2,2025-04
+2025-04-06,Industrial Robot System,Supply Chain,North America,Mexico,Mexico City,270639,234732,Mobile App,2025-Q2,2025-04
+2025-04-06,Assembly Line Component,Quality Control,Asia Pacific,Japan,Saitama,122914,152205,Retail,2025-Q2,2025-04
+2025-04-06,Process Control Software,Automotive Parts,Europe,France,Montpellier,427892,567214,Retail,2025-Q2,2025-04
+2025-04-06,Industrial Robot System,Supply Chain,Europe,France,Marseille,409538,296269,Direct Sales,2025-Q2,2025-04
+2025-04-07,Inventory Management Platform,Quality Control,Europe,Germany,Essen,232476,229807,Online,2025-Q2,2025-04
+2025-04-07,Heavy Machinery Equipment,Production Machinery,Asia Pacific,Australia,Brisbane,116509,134951,Partner,2025-Q2,2025-04
+2025-04-07,Precision Manufacturing Tool,Automotive Parts,Europe,France,Lille,474504,602470,Retail,2025-Q2,2025-04
+2025-04-07,CNC Machining Center,Supply Chain,North America,United States,San Diego,329716,342581,Retail,2025-Q2,2025-04
+2025-04-07,Process Control Software,Production Machinery,Asia Pacific,Australia,Brisbane,183795,226849,Retail,2025-Q2,2025-04
+2025-04-08,CNC Machining Center,Automotive Parts,Europe,United Kingdom,Cardiff,342323,298163,Wholesale,2025-Q2,2025-04
+2025-04-08,Inventory Management Platform,Automotive Parts,Asia Pacific,Australia,Sunshine Coast,381358,526794,Online,2025-Q2,2025-04
+2025-04-09,Precision Manufacturing Tool,Automotive Parts,North America,Canada,Quebec City,139036,99304,Partner,2025-Q2,2025-04
+2025-04-09,Warehouse Management System,Supply Chain,Asia Pacific,Australia,Brisbane,89577,88981,Wholesale,2025-Q2,2025-04
+2025-04-09,Vehicle Diagnostic Tool,Production Machinery,Europe,Germany,Berlin,258510,208034,Wholesale,2025-Q2,2025-04
+2025-04-09,Precision Manufacturing Tool,Automotive Parts,Europe,France,Marseille,397095,414604,Partner,2025-Q2,2025-04
+2025-04-09,Heavy Machinery Equipment,Supply Chain,North America,Canada,Toronto,261159,315723,Mobile App,2025-Q2,2025-04
+2025-04-09,High-Performance Engine Component,Quality Control,North America,Canada,Toronto,335362,370235,Wholesale,2025-Q2,2025-04
+2025-04-10,Automotive Safety Module,Automotive Parts,Asia Pacific,Singapore,Northeast,293367,265664,Online,2025-Q2,2025-04
+2025-04-10,Heavy Machinery Equipment,Automotive Parts,Europe,Germany,Essen,298678,224437,Online,2025-Q2,2025-04
+2025-04-10,Industrial Robot System,Industrial Equipment,North America,Mexico,Zapopan,249303,189438,Mobile App,2025-Q2,2025-04
+2025-04-10,Precision Manufacturing Tool,Automotive Parts,North America,Canada,Calgary,181538,156831,Online,2025-Q2,2025-04
+2025-04-10,Automated Production Line,Quality Control,Europe,United Kingdom,Edinburgh,367113,282155,Direct Sales,2025-Q2,2025-04
+2025-04-11,Vehicle Diagnostic Tool,Industrial Equipment,Europe,United Kingdom,Glasgow,408711,329842,Partner,2025-Q2,2025-04
+2025-04-11,CNC Machining Center,Industrial Equipment,Europe,France,Nice,379778,274011,Direct Sales,2025-Q2,2025-04
+2025-04-12,Industrial Robot System,Quality Control,Asia Pacific,Australia,Adelaide,252723,328063,Partner,2025-Q2,2025-04
+2025-04-12,Automated Production Line,Supply Chain,Europe,France,Marseille,229148,168628,Wholesale,2025-Q2,2025-04
+2025-04-12,Automated Production Line,Production Machinery,Asia Pacific,Singapore,West,142400,140056,Direct Sales,2025-Q2,2025-04
+2025-04-12,Vehicle Diagnostic Tool,Industrial Equipment,Europe,France,Paris,285472,363222,Partner,2025-Q2,2025-04
+2025-04-13,Quality Assurance Software,Industrial Equipment,North America,Canada,Mississauga,375175,394033,Mobile App,2025-Q2,2025-04
+2025-04-13,Assembly Line Component,Quality Control,Europe,United Kingdom,Liverpool,305101,281060,Online,2025-Q2,2025-04
+2025-04-14,High-Performance Engine Component,Automotive Parts,Asia Pacific,Australia,Newcastle,234434,178428,Mobile App,2025-Q2,2025-04
+2025-04-14,Vehicle Diagnostic Tool,Automotive Parts,Asia Pacific,Singapore,West,245096,277909,Online,2025-Q2,2025-04
+2025-04-14,Assembly Line Component,Industrial Equipment,Europe,Germany,Cologne,561074,480927,Direct Sales,2025-Q2,2025-04
+2025-04-15,Process Control Software,Production Machinery,North America,United States,Chicago,358355,439894,Wholesale,2025-Q2,2025-04
+2025-04-15,Assembly Line Component,Production Machinery,Asia Pacific,Singapore,East,171687,206875,Retail,2025-Q2,2025-04
+2025-04-15,Industrial Robot System,Automotive Parts,Europe,France,Nice,302564,266892,Partner,2025-Q2,2025-04
+2025-04-16,Quality Assurance Software,Quality Control,Europe,Germany,Düsseldorf,138456,189791,Wholesale,2025-Q2,2025-04
+2025-04-16,Vehicle Diagnostic Tool,Quality Control,Europe,United Kingdom,Sheffield,97250,107826,Wholesale,2025-Q2,2025-04
+2025-04-16,Logistics Tracking System,Industrial Equipment,North America,United States,Philadelphia,147822,140409,Online,2025-Q2,2025-04
+2025-04-17,Automated Production Line,Supply Chain,North America,United States,Chicago,337231,360275,Partner,2025-Q2,2025-04
+2025-04-17,Inventory Management Platform,Automotive Parts,North America,Mexico,Mexico City,258406,240492,Retail,2025-Q2,2025-04
+2025-04-18,Vehicle Diagnostic Tool,Production Machinery,Europe,France,Toulouse,227164,197895,Retail,2025-Q2,2025-04
+2025-04-18,Logistics Tracking System,Automotive Parts,North America,Canada,Montreal,586588,710086,Retail,2025-Q2,2025-04
+2025-04-19,Vehicle Diagnostic Tool,Automotive Parts,Europe,Germany,Leipzig,416411,435384,Partner,2025-Q2,2025-04
+2025-04-19,Assembly Line Component,Automotive Parts,Asia Pacific,Singapore,West,556396,397037,Direct Sales,2025-Q2,2025-04
+2025-04-19,Automated Production Line,Industrial Equipment,Europe,France,Bordeaux,363738,322484,Retail,2025-Q2,2025-04
+2025-04-20,Logistics Tracking System,Quality Control,Asia Pacific,Singapore,Northeast,95684,94543,Wholesale,2025-Q2,2025-04
+2025-04-20,Warehouse Management System,Quality Control,Asia Pacific,Japan,Yokohama,98995,124997,Wholesale,2025-Q2,2025-04
+2025-04-20,Automotive Safety Module,Automotive Parts,North America,United States,Chicago,201739,244815,Wholesale,2025-Q2,2025-04
+2025-04-20,Precision Manufacturing Tool,Industrial Equipment,North America,Canada,Vancouver,385534,370302,Online,2025-Q2,2025-04
+2025-04-20,High-Performance Engine Component,Quality Control,Asia Pacific,Japan,Yokohama,350808,440063,Direct Sales,2025-Q2,2025-04
+2025-04-21,Warehouse Management System,Industrial Equipment,Europe,France,Paris,310152,257418,Online,2025-Q2,2025-04
+2025-04-21,High-Performance Engine Component,Production Machinery,Europe,France,Nice,532351,391045,Direct Sales,2025-Q2,2025-04
+2025-04-22,CNC Machining Center,Quality Control,Europe,Germany,Hamburg,163697,227608,Partner,2025-Q2,2025-04
+2025-04-22,Assembly Line Component,Supply Chain,North America,United States,San Jose,136167,125808,Wholesale,2025-Q2,2025-04
+2025-04-22,Industrial Robot System,Quality Control,Asia Pacific,Australia,Newcastle,286546,364951,Mobile App,2025-Q2,2025-04
+2025-04-22,Warehouse Management System,Industrial Equipment,North America,Mexico,Zapopan,335142,327052,Wholesale,2025-Q2,2025-04
+2025-04-22,Vehicle Diagnostic Tool,Automotive Parts,North America,United States,Dallas,160647,195194,Retail,2025-Q2,2025-04
+2025-04-23,High-Performance Engine Component,Production Machinery,Europe,Germany,Berlin,253976,246294,Online,2025-Q2,2025-04
+2025-04-23,Process Control Software,Automotive Parts,Asia Pacific,Japan,Kobe,111981,114024,Partner,2025-Q2,2025-04
+2025-04-24,Vehicle Diagnostic Tool,Automotive Parts,Europe,Germany,Cologne,257045,314377,Wholesale,2025-Q2,2025-04
+2025-04-24,Quality Inspection System,Production Machinery,Asia Pacific,Australia,Canberra,184049,202904,Partner,2025-Q2,2025-04
+2025-04-24,Precision Manufacturing Tool,Supply Chain,Asia Pacific,Japan,Saitama,270543,361202,Direct Sales,2025-Q2,2025-04
+2025-04-24,Logistics Tracking System,Supply Chain,Asia Pacific,Japan,Kawasaki,290749,379250,Retail,2025-Q2,2025-04
+2025-04-25,CNC Machining Center,Quality Control,Asia Pacific,Australia,Canberra,120699,147709,Direct Sales,2025-Q2,2025-04
+2025-04-25,Process Control Software,Quality Control,Europe,France,Bordeaux,105993,104718,Mobile App,2025-Q2,2025-04
+2025-04-25,Automotive Safety Module,Industrial Equipment,Europe,Germany,Munich,408219,326198,Partner,2025-Q2,2025-04
+2025-04-26,Automotive Safety Module,Production Machinery,Asia Pacific,Singapore,West,199212,168888,Direct Sales,2025-Q2,2025-04
+2025-04-26,Industrial Robot System,Quality Control,Europe,France,Paris,323955,237408,Retail,2025-Q2,2025-04
+2025-04-26,Precision Manufacturing Tool,Supply Chain,Asia Pacific,Singapore,West,177745,145491,Wholesale,2025-Q2,2025-04
+2025-04-26,Assembly Line Component,Industrial Equipment,Asia Pacific,Japan,Sapporo,126105,105398,Mobile App,2025-Q2,2025-04
+2025-04-27,Quality Assurance Software,Automotive Parts,North America,Canada,Edmonton,467802,609335,Direct Sales,2025-Q2,2025-04
+2025-04-27,Precision Manufacturing Tool,Production Machinery,Europe,France,Nice,248159,342441,Wholesale,2025-Q2,2025-04
+2025-04-27,Heavy Machinery Equipment,Supply Chain,North America,United States,Chicago,241551,282406,Retail,2025-Q2,2025-04
+2025-04-27,Automated Production Line,Production Machinery,Asia Pacific,Australia,Sydney,228486,258863,Mobile App,2025-Q2,2025-04
+2025-04-28,Automotive Safety Module,Quality Control,Asia Pacific,Japan,Nagoya,467256,487042,Retail,2025-Q2,2025-04
+2025-04-28,High-Performance Engine Component,Production Machinery,Europe,France,Lyon,180489,235370,Direct Sales,2025-Q2,2025-04
+2025-04-28,Assembly Line Component,Supply Chain,Asia Pacific,Singapore,Central,232310,303842,Direct Sales,2025-Q2,2025-04
+2025-05-01,Quality Inspection System,Quality Control,North America,United States,Chicago,132366,182884,Wholesale,2025-Q2,2025-05
+2025-05-01,Assembly Line Component,Supply Chain,Asia Pacific,Australia,Newcastle,245633,186717,Wholesale,2025-Q2,2025-05
+2025-05-01,Precision Manufacturing Tool,Quality Control,Asia Pacific,Japan,Kobe,196888,253895,Mobile App,2025-Q2,2025-05
+2025-05-01,Warehouse Management System,Industrial Equipment,North America,Mexico,Chihuahua,417335,442643,Partner,2025-Q2,2025-05
+2025-05-02,Assembly Line Component,Quality Control,North America,Mexico,Mexico City,150424,137925,Retail,2025-Q2,2025-05
+2025-05-02,Logistics Tracking System,Industrial Equipment,Asia Pacific,Singapore,North,140564,130822,Direct Sales,2025-Q2,2025-05
+2025-05-03,Vehicle Diagnostic Tool,Quality Control,North America,Mexico,Mexico City,417029,325972,Wholesale,2025-Q2,2025-05
+2025-05-03,Logistics Tracking System,Automotive Parts,Europe,Germany,Munich,169370,152107,Mobile App,2025-Q2,2025-05
+2025-05-03,Inventory Management Platform,Supply Chain,North America,Canada,Winnipeg,397284,546333,Partner,2025-Q2,2025-05
+2025-05-03,High-Performance Engine Component,Automotive Parts,North America,Canada,Toronto,201957,251768,Online,2025-Q2,2025-05
+2025-05-03,Process Control Software,Industrial Equipment,North America,Canada,Ottawa,358656,447110,Retail,2025-Q2,2025-05
+2025-05-03,Industrial Robot System,Automotive Parts,Asia Pacific,Singapore,Central,413342,517186,Partner,2025-Q2,2025-05
+2025-05-03,Automated Production Line,Industrial Equipment,North America,United States,Houston,257402,192411,Online,2025-Q2,2025-05
+2025-05-04,Quality Inspection System,Production Machinery,Asia Pacific,Japan,Kyoto,228512,294243,Online,2025-Q2,2025-05
+2025-05-04,CNC Machining Center,Quality Control,Europe,Germany,Essen,185629,203214,Partner,2025-Q2,2025-05
+2025-05-04,Vehicle Diagnostic Tool,Supply Chain,North America,Canada,Mississauga,188738,207049,Wholesale,2025-Q2,2025-05
+2025-05-04,Vehicle Diagnostic Tool,Quality Control,Asia Pacific,Japan,Sapporo,131057,169117,Wholesale,2025-Q2,2025-05
+2025-05-04,Process Control Software,Supply Chain,Asia Pacific,Singapore,Northeast,216191,189147,Wholesale,2025-Q2,2025-05
+2025-05-05,Assembly Line Component,Production Machinery,North America,Mexico,Zapopan,281920,201880,Online,2025-Q2,2025-05
+2025-05-05,Process Control Software,Quality Control,Asia Pacific,Australia,Perth,170680,168805,Wholesale,2025-Q2,2025-05
+2025-05-05,Industrial Robot System,Quality Control,Europe,United Kingdom,Glasgow,158336,190239,Retail,2025-Q2,2025-05
+2025-05-05,Warehouse Management System,Automotive Parts,North America,Canada,Mississauga,434211,481098,Mobile App,2025-Q2,2025-05
+2025-05-06,Industrial Robot System,Production Machinery,Asia Pacific,Japan,Osaka,309389,262911,Mobile App,2025-Q2,2025-05
+2025-05-06,Heavy Machinery Equipment,Quality Control,Europe,Germany,Cologne,426361,444505,Partner,2025-Q2,2025-05
+2025-05-07,Warehouse Management System,Automotive Parts,Europe,Germany,Stuttgart,159326,178961,Mobile App,2025-Q2,2025-05
+2025-05-07,CNC Machining Center,Supply Chain,North America,United States,Houston,494683,507973,Retail,2025-Q2,2025-05
+2025-05-07,Vehicle Diagnostic Tool,Quality Control,Europe,France,Bordeaux,315623,392278,Mobile App,2025-Q2,2025-05
+2025-05-07,Heavy Machinery Equipment,Automotive Parts,Asia Pacific,Australia,Canberra,229788,170303,Retail,2025-Q2,2025-05
+2025-05-07,Logistics Tracking System,Industrial Equipment,Asia Pacific,Japan,Kawasaki,83395,88544,Wholesale,2025-Q2,2025-05
+2025-05-08,High-Performance Engine Component,Quality Control,North America,United States,Houston,563066,630884,Retail,2025-Q2,2025-05
+2025-05-08,Logistics Tracking System,Quality Control,North America,United States,San Jose,238613,301589,Wholesale,2025-Q2,2025-05
+2025-05-08,Precision Manufacturing Tool,Production Machinery,North America,United States,Philadelphia,220695,266405,Online,2025-Q2,2025-05
+2025-05-09,Industrial Robot System,Quality Control,Europe,Germany,Essen,671251,870267,Direct Sales,2025-Q2,2025-05
+2025-05-09,Vehicle Diagnostic Tool,Quality Control,Europe,Germany,Berlin,483928,642469,Partner,2025-Q2,2025-05
+2025-05-09,Industrial Robot System,Automotive Parts,Asia Pacific,Japan,Osaka,122469,119586,Mobile App,2025-Q2,2025-05
+2025-05-09,Heavy Machinery Equipment,Production Machinery,Asia Pacific,Japan,Tokyo,441349,512922,Direct Sales,2025-Q2,2025-05
+2025-05-09,Inventory Management Platform,Supply Chain,Europe,United Kingdom,Glasgow,318251,390032,Partner,2025-Q2,2025-05
+2025-05-09,Heavy Machinery Equipment,Production Machinery,Europe,Germany,Stuttgart,335998,412502,Online,2025-Q2,2025-05
+2025-05-09,CNC Machining Center,Industrial Equipment,Asia Pacific,Singapore,West,292112,222725,Direct Sales,2025-Q2,2025-05
+2025-05-10,High-Performance Engine Component,Supply Chain,Asia Pacific,Japan,Kyoto,80229,60342,Mobile App,2025-Q2,2025-05
+2025-05-10,Warehouse Management System,Automotive Parts,Asia Pacific,Japan,Sapporo,232410,190162,Wholesale,2025-Q2,2025-05
+2025-05-10,High-Performance Engine Component,Automotive Parts,Europe,France,Montpellier,359165,313420,Wholesale,2025-Q2,2025-05
+2025-05-10,CNC Machining Center,Automotive Parts,North America,United States,San Diego,443528,413104,Online,2025-Q2,2025-05
+2025-05-11,Process Control Software,Quality Control,North America,Mexico,Nezahualcóyotl,344224,257770,Partner,2025-Q2,2025-05
+2025-05-11,Heavy Machinery Equipment,Quality Control,North America,Mexico,León,214148,240984,Partner,2025-Q2,2025-05
+2025-05-11,CNC Machining Center,Automotive Parts,Asia Pacific,Japan,Yokohama,81807,89696,Mobile App,2025-Q2,2025-05
+2025-05-12,Quality Assurance Software,Supply Chain,Europe,Germany,Leipzig,290251,370273,Mobile App,2025-Q2,2025-05
+2025-05-12,Inventory Management Platform,Automotive Parts,North America,United States,Dallas,277378,209238,Partner,2025-Q2,2025-05
+2025-05-12,Automated Production Line,Supply Chain,Europe,Germany,Stuttgart,539145,637608,Direct Sales,2025-Q2,2025-05
+2025-05-13,Precision Manufacturing Tool,Supply Chain,North America,United States,Phoenix,249838,209052,Partner,2025-Q2,2025-05
+2025-05-13,Precision Manufacturing Tool,Automotive Parts,North America,Mexico,Monterrey,404813,314696,Mobile App,2025-Q2,2025-05
+2025-05-14,Heavy Machinery Equipment,Industrial Equipment,Europe,Germany,Cologne,501215,658427,Partner,2025-Q2,2025-05
+2025-05-14,Automotive Safety Module,Automotive Parts,North America,Mexico,León,787209,626497,Direct Sales,2025-Q2,2025-05
+2025-05-15,Heavy Machinery Equipment,Automotive Parts,Asia Pacific,Singapore,West,474058,477691,Direct Sales,2025-Q2,2025-05
+2025-05-15,CNC Machining Center,Supply Chain,Asia Pacific,Japan,Sapporo,307197,385786,Online,2025-Q2,2025-05
+2025-05-15,Automotive Safety Module,Industrial Equipment,North America,Canada,Mississauga,421491,446453,Wholesale,2025-Q2,2025-05
+2025-05-16,Automotive Safety Module,Quality Control,Asia Pacific,Australia,Canberra,171021,230333,Retail,2025-Q2,2025-05
+2025-05-16,Inventory Management Platform,Automotive Parts,North America,United States,San Diego,111194,111820,Online,2025-Q2,2025-05
+2025-05-16,Precision Manufacturing Tool,Industrial Equipment,North America,Canada,Winnipeg,302181,339340,Retail,2025-Q2,2025-05
+2025-05-16,Precision Manufacturing Tool,Quality Control,Europe,France,Lyon,120648,159204,Wholesale,2025-Q2,2025-05
+2025-05-16,Warehouse Management System,Production Machinery,North America,Canada,Calgary,408093,468708,Mobile App,2025-Q2,2025-05
+2025-05-17,Process Control Software,Automotive Parts,Europe,United Kingdom,Leeds,161546,135206,Mobile App,2025-Q2,2025-05
+2025-05-17,Assembly Line Component,Industrial Equipment,North America,Mexico,Tijuana,589063,614859,Partner,2025-Q2,2025-05
+2025-05-17,High-Performance Engine Component,Automotive Parts,Europe,Germany,Munich,329992,423833,Wholesale,2025-Q2,2025-05
+2025-05-17,Logistics Tracking System,Supply Chain,Europe,France,Marseille,469386,646986,Partner,2025-Q2,2025-05
+2025-05-18,Industrial Robot System,Production Machinery,Asia Pacific,Australia,Perth,412730,457930,Direct Sales,2025-Q2,2025-05
+2025-05-18,Quality Inspection System,Production Machinery,North America,Mexico,Zapopan,642657,867254,Retail,2025-Q2,2025-05
+2025-05-18,Quality Inspection System,Industrial Equipment,Asia Pacific,Japan,Tokyo,245750,332219,Partner,2025-Q2,2025-05
+2025-05-18,Logistics Tracking System,Supply Chain,Asia Pacific,Japan,Tokyo,276586,360891,Online,2025-Q2,2025-05
+2025-05-18,Assembly Line Component,Industrial Equipment,Europe,France,Nice,504416,569114,Online,2025-Q2,2025-05
+2025-05-19,Quality Inspection System,Industrial Equipment,Europe,France,Montpellier,377487,377943,Mobile App,2025-Q2,2025-05
+2025-05-19,Precision Manufacturing Tool,Automotive Parts,North America,Canada,Mississauga,304882,376015,Mobile App,2025-Q2,2025-05
+2025-05-19,Logistics Tracking System,Production Machinery,Asia Pacific,Japan,Nagoya,272217,312978,Retail,2025-Q2,2025-05
+2025-05-19,Quality Assurance Software,Industrial Equipment,North America,United States,Philadelphia,678185,768094,Direct Sales,2025-Q2,2025-05
+2025-05-19,Automated Production Line,Production Machinery,North America,United States,San Jose,407406,300150,Direct Sales,2025-Q2,2025-05
+2025-05-20,High-Performance Engine Component,Automotive Parts,Europe,France,Marseille,277231,304138,Mobile App,2025-Q2,2025-05
+2025-05-20,CNC Machining Center,Supply Chain,Asia Pacific,Japan,Kyoto,231975,175378,Wholesale,2025-Q2,2025-05
+2025-05-20,Heavy Machinery Equipment,Quality Control,Asia Pacific,Australia,Perth,290206,402016,Mobile App,2025-Q2,2025-05
+2025-05-20,Precision Manufacturing Tool,Automotive Parts,North America,United States,San Jose,251156,347439,Wholesale,2025-Q2,2025-05
+2025-05-20,Industrial Robot System,Automotive Parts,Asia Pacific,Australia,Melbourne,272198,370252,Online,2025-Q2,2025-05
+2025-05-20,Vehicle Diagnostic Tool,Supply Chain,Asia Pacific,Singapore,Central,342433,240453,Online,2025-Q2,2025-05
+2025-05-21,Inventory Management Platform,Quality Control,Europe,United Kingdom,Sheffield,564440,434032,Partner,2025-Q2,2025-05
+2025-05-21,Quality Inspection System,Automotive Parts,Europe,United Kingdom,Manchester,523736,402947,Retail,2025-Q2,2025-05
+2025-05-21,Logistics Tracking System,Industrial Equipment,Europe,Germany,Hamburg,253183,224634,Online,2025-Q2,2025-05
+2025-05-22,Quality Assurance Software,Supply Chain,North America,United States,San Diego,210873,167806,Mobile App,2025-Q2,2025-05
+2025-05-22,Quality Inspection System,Quality Control,North America,Mexico,Juárez,217084,163616,Mobile App,2025-Q2,2025-05
+2025-05-23,Automated Production Line,Automotive Parts,North America,Mexico,Puebla,318827,429790,Online,2025-Q2,2025-05
+2025-05-23,Warehouse Management System,Production Machinery,Asia Pacific,Singapore,East,111580,134851,Wholesale,2025-Q2,2025-05
+2025-05-25,Assembly Line Component,Quality Control,Europe,France,Paris,230618,171333,Direct Sales,2025-Q2,2025-05
+2025-05-25,Warehouse Management System,Quality Control,Europe,France,Montpellier,335358,287304,Mobile App,2025-Q2,2025-05
+2025-05-25,Logistics Tracking System,Quality Control,Asia Pacific,Australia,Canberra,511871,458419,Direct Sales,2025-Q2,2025-05
+2025-05-26,High-Performance Engine Component,Supply Chain,Europe,France,Strasbourg,118163,160535,Mobile App,2025-Q2,2025-05
+2025-05-26,Logistics Tracking System,Supply Chain,Asia Pacific,Japan,Tokyo,279054,360501,Mobile App,2025-Q2,2025-05
+2025-05-26,High-Performance Engine Component,Supply Chain,North America,Canada,Winnipeg,250841,192599,Retail,2025-Q2,2025-05
+2025-05-27,Precision Manufacturing Tool,Automotive Parts,North America,Canada,Hamilton,567015,574772,Direct Sales,2025-Q2,2025-05
+2025-05-27,Automated Production Line,Industrial Equipment,North America,Mexico,Chihuahua,396757,521432,Wholesale,2025-Q2,2025-05
+2025-05-27,Logistics Tracking System,Industrial Equipment,Asia Pacific,Australia,Sydney,345314,332046,Mobile App,2025-Q2,2025-05
+2025-05-27,Precision Manufacturing Tool,Industrial Equipment,North America,Mexico,Chihuahua,368601,299518,Retail,2025-Q2,2025-05
+2025-05-28,Inventory Management Platform,Supply Chain,North America,United States,Dallas,504597,442204,Mobile App,2025-Q2,2025-05
+2025-05-28,CNC Machining Center,Supply Chain,Asia Pacific,Japan,Yokohama,319581,308974,Mobile App,2025-Q2,2025-05
+2025-06-01,Assembly Line Component,Supply Chain,Asia Pacific,Japan,Kawasaki,334309,403018,Mobile App,2025-Q2,2025-06
+2025-06-01,Logistics Tracking System,Quality Control,North America,Canada,Hamilton,90873,98446,Mobile App,2025-Q2,2025-06
+2025-06-01,Assembly Line Component,Industrial Equipment,Europe,United Kingdom,Manchester,506406,391123,Direct Sales,2025-Q2,2025-06
+2025-06-02,Heavy Machinery Equipment,Supply Chain,Asia Pacific,Singapore,East,333462,378350,Retail,2025-Q2,2025-06
+2025-06-02,Precision Manufacturing Tool,Supply Chain,North America,Canada,Mississauga,236789,182486,Wholesale,2025-Q2,2025-06
+2025-06-02,Heavy Machinery Equipment,Supply Chain,Asia Pacific,Australia,Perth,440619,464512,Partner,2025-Q2,2025-06
+2025-06-03,Automated Production Line,Industrial Equipment,Europe,France,Nantes,199597,149949,Online,2025-Q2,2025-06
+2025-06-03,High-Performance Engine Component,Production Machinery,Europe,United Kingdom,Sheffield,171973,189280,Partner,2025-Q2,2025-06
+2025-06-03,CNC Machining Center,Automotive Parts,Europe,United Kingdom,London,581787,633552,Retail,2025-Q2,2025-06
+2025-06-03,Industrial Robot System,Quality Control,Europe,Germany,Hamburg,384647,507278,Partner,2025-Q2,2025-06
+2025-06-04,CNC Machining Center,Supply Chain,Europe,France,Toulouse,379542,451483,Wholesale,2025-Q2,2025-06
+2025-06-04,Assembly Line Component,Quality Control,North America,United States,San Diego,272314,214929,Online,2025-Q2,2025-06
+2025-06-04,High-Performance Engine Component,Production Machinery,Europe,United Kingdom,Birmingham,205623,267311,Retail,2025-Q2,2025-06
+2025-06-04,Process Control Software,Quality Control,Europe,Germany,Stuttgart,680503,681644,Direct Sales,2025-Q2,2025-06
+2025-06-04,Logistics Tracking System,Production Machinery,North America,United States,Chicago,518546,365333,Direct Sales,2025-Q2,2025-06
+2025-06-05,CNC Machining Center,Industrial Equipment,Europe,Germany,Munich,231286,308396,Retail,2025-Q2,2025-06
+2025-06-05,CNC Machining Center,Quality Control,Asia Pacific,Australia,Gold Coast,102064,87605,Wholesale,2025-Q2,2025-06
+2025-06-05,Process Control Software,Quality Control,Europe,Germany,Frankfurt,796266,705439,Direct Sales,2025-Q2,2025-06
+2025-06-05,Inventory Management Platform,Automotive Parts,North America,United States,New York,321507,306129,Partner,2025-Q2,2025-06
+2025-06-06,Warehouse Management System,Quality Control,Asia Pacific,Australia,Canberra,118159,97778,Wholesale,2025-Q2,2025-06
+2025-06-06,Automotive Safety Module,Production Machinery,Europe,France,Montpellier,486990,382650,Direct Sales,2025-Q2,2025-06
+2025-06-06,Logistics Tracking System,Supply Chain,Asia Pacific,Australia,Adelaide,195682,201692,Online,2025-Q2,2025-06
+2025-06-06,Automotive Safety Module,Production Machinery,Europe,United Kingdom,London,187198,174579,Retail,2025-Q2,2025-06
+2025-06-06,Warehouse Management System,Automotive Parts,Asia Pacific,Japan,Kawasaki,269910,317980,Online,2025-Q2,2025-06
+2025-06-06,Warehouse Management System,Automotive Parts,North America,United States,Philadelphia,479202,583026,Retail,2025-Q2,2025-06
+2025-06-06,Logistics Tracking System,Industrial Equipment,Asia Pacific,Singapore,Central,265233,189853,Partner,2025-Q2,2025-06
+2025-06-07,Heavy Machinery Equipment,Industrial Equipment,North America,Canada,Vancouver,556343,412479,Direct Sales,2025-Q2,2025-06
+2025-06-07,CNC Machining Center,Supply Chain,Asia Pacific,Australia,Perth,244535,315655,Wholesale,2025-Q2,2025-06
+2025-06-07,Quality Inspection System,Automotive Parts,Asia Pacific,Australia,Adelaide,345854,294538,Online,2025-Q2,2025-06
+2025-06-08,Automated Production Line,Quality Control,Europe,France,Marseille,420475,352760,Mobile App,2025-Q2,2025-06
+2025-06-08,Vehicle Diagnostic Tool,Production Machinery,Asia Pacific,Japan,Osaka,170739,188750,Mobile App,2025-Q2,2025-06
+2025-06-08,Vehicle Diagnostic Tool,Industrial Equipment,North America,Canada,Hamilton,520416,446247,Partner,2025-Q2,2025-06
+2025-06-09,Warehouse Management System,Quality Control,North America,Mexico,Mexico City,147069,203191,Wholesale,2025-Q2,2025-06
+2025-06-09,Logistics Tracking System,Production Machinery,North America,Mexico,Guadalajara,302016,331283,Direct Sales,2025-Q2,2025-06
+2025-06-10,Automated Production Line,Production Machinery,Asia Pacific,Australia,Perth,248988,321201,Mobile App,2025-Q2,2025-06
+2025-06-11,Quality Assurance Software,Production Machinery,North America,Canada,Winnipeg,222426,290032,Mobile App,2025-Q2,2025-06
+2025-06-11,Automotive Safety Module,Industrial Equipment,Europe,United Kingdom,London,649134,494723,Direct Sales,2025-Q2,2025-06
+2025-06-11,Process Control Software,Supply Chain,Europe,Germany,Cologne,167865,223355,Wholesale,2025-Q2,2025-06
+2025-06-12,Quality Inspection System,Supply Chain,Europe,France,Toulouse,225271,175262,Partner,2025-Q2,2025-06
+2025-06-12,High-Performance Engine Component,Supply Chain,Asia Pacific,Australia,Canberra,150428,130177,Online,2025-Q2,2025-06
+2025-06-12,Quality Assurance Software,Quality Control,Europe,France,Paris,348994,314616,Direct Sales,2025-Q2,2025-06
+2025-06-12,Automated Production Line,Production Machinery,North America,Mexico,Chihuahua,754996,534537,Direct Sales,2025-Q2,2025-06
+2025-06-12,Automated Production Line,Supply Chain,North America,United States,Houston,411916,562627,Retail,2025-Q2,2025-06
+2025-06-12,Assembly Line Component,Quality Control,North America,Canada,Hamilton,233276,272630,Mobile App,2025-Q2,2025-06
+2025-06-12,Process Control Software,Supply Chain,North America,Canada,Edmonton,157492,127226,Partner,2025-Q2,2025-06
+2025-06-13,Quality Inspection System,Production Machinery,North America,Canada,Toronto,116642,146777,Mobile App,2025-Q2,2025-06
+2025-06-13,Automotive Safety Module,Quality Control,North America,Canada,Calgary,252719,283552,Mobile App,2025-Q2,2025-06
+2025-06-13,Process Control Software,Supply Chain,Asia Pacific,Japan,Osaka,171176,213542,Retail,2025-Q2,2025-06
+2025-06-14,Warehouse Management System,Quality Control,Europe,United Kingdom,Cardiff,93307,103437,Wholesale,2025-Q2,2025-06
+2025-06-14,Logistics Tracking System,Production Machinery,North America,Mexico,León,211836,254510,Direct Sales,2025-Q2,2025-06
+2025-06-15,Process Control Software,Automotive Parts,Europe,France,Toulouse,372164,473233,Mobile App,2025-Q2,2025-06
+2025-06-15,Assembly Line Component,Production Machinery,North America,Canada,Ottawa,294212,282647,Online,2025-Q2,2025-06
+2025-06-15,Process Control Software,Supply Chain,North America,Canada,Hamilton,336092,380096,Direct Sales,2025-Q2,2025-06
+2025-06-16,Quality Assurance Software,Supply Chain,Europe,Germany,Cologne,117942,116778,Mobile App,2025-Q2,2025-06
+2025-06-16,Precision Manufacturing Tool,Quality Control,Asia Pacific,Singapore,Central,107093,143254,Mobile App,2025-Q2,2025-06
+2025-06-16,Quality Assurance Software,Supply Chain,Asia Pacific,Australia,Sydney,117756,130959,Partner,2025-Q2,2025-06
+2025-06-17,Quality Inspection System,Supply Chain,Europe,France,Nice,510030,524474,Mobile App,2025-Q2,2025-06
+2025-06-17,Warehouse Management System,Supply Chain,Asia Pacific,Singapore,Central,446462,351206,Partner,2025-Q2,2025-06
+2025-06-18,Logistics Tracking System,Automotive Parts,Europe,France,Nice,362172,381987,Online,2025-Q2,2025-06
+2025-06-18,High-Performance Engine Component,Industrial Equipment,Europe,Germany,Cologne,694850,717689,Direct Sales,2025-Q2,2025-06
+2025-06-18,Assembly Line Component,Production Machinery,Europe,France,Bordeaux,269986,305088,Wholesale,2025-Q2,2025-06
+2025-06-18,Automotive Safety Module,Automotive Parts,North America,Canada,Ottawa,453488,575473,Online,2025-Q2,2025-06
+2025-06-18,Automated Production Line,Automotive Parts,Asia Pacific,Australia,Perth,324899,367002,Direct Sales,2025-Q2,2025-06
+2025-06-18,Quality Assurance Software,Industrial Equipment,Asia Pacific,Australia,Newcastle,377062,435485,Retail,2025-Q2,2025-06
+2025-06-18,Vehicle Diagnostic Tool,Industrial Equipment,North America,United States,Los Angeles,455130,552012,Online,2025-Q2,2025-06
+2025-06-18,Logistics Tracking System,Automotive Parts,Asia Pacific,Australia,Wollongong,527520,402711,Direct Sales,2025-Q2,2025-06
+2025-06-18,Quality Assurance Software,Production Machinery,Asia Pacific,Japan,Sapporo,156382,203783,Retail,2025-Q2,2025-06
+2025-06-18,Logistics Tracking System,Supply Chain,Europe,France,Strasbourg,334312,284550,Wholesale,2025-Q2,2025-06
+2025-06-18,Automated Production Line,Industrial Equipment,Asia Pacific,Australia,Adelaide,428495,538044,Direct Sales,2025-Q2,2025-06
+2025-06-19,Inventory Management Platform,Industrial Equipment,North America,Mexico,León,562642,424082,Retail,2025-Q2,2025-06
+2025-06-19,Warehouse Management System,Automotive Parts,Asia Pacific,Singapore,Northeast,289439,343849,Mobile App,2025-Q2,2025-06
+2025-06-20,Warehouse Management System,Industrial Equipment,North America,Mexico,Guadalajara,265019,199502,Mobile App,2025-Q2,2025-06
+2025-06-20,CNC Machining Center,Supply Chain,Europe,United Kingdom,Manchester,396929,407927,Wholesale,2025-Q2,2025-06
+2025-06-20,Quality Inspection System,Automotive Parts,Europe,France,Nantes,384172,300511,Wholesale,2025-Q2,2025-06
+2025-06-21,High-Performance Engine Component,Automotive Parts,North America,Mexico,Puebla,133203,162607,Wholesale,2025-Q2,2025-06
+2025-06-21,Logistics Tracking System,Quality Control,Asia Pacific,Australia,Newcastle,200656,150402,Mobile App,2025-Q2,2025-06
+2025-06-21,Vehicle Diagnostic Tool,Production Machinery,Asia Pacific,Singapore,Northeast,270879,378942,Retail,2025-Q2,2025-06
+2025-06-21,Heavy Machinery Equipment,Supply Chain,North America,Mexico,Monterrey,510055,387223,Partner,2025-Q2,2025-06
+2025-06-21,CNC Machining Center,Industrial Equipment,North America,Mexico,Puebla,499414,373264,Partner,2025-Q2,2025-06
+2025-06-22,Automated Production Line,Quality Control,North America,Canada,Edmonton,286095,336067,Wholesale,2025-Q2,2025-06
+2025-06-22,Industrial Robot System,Automotive Parts,Asia Pacific,Singapore,East,129853,148473,Online,2025-Q2,2025-06
+2025-06-22,Industrial Robot System,Industrial Equipment,North America,Canada,Montreal,177183,241733,Mobile App,2025-Q2,2025-06
+2025-06-22,Warehouse Management System,Automotive Parts,North America,United States,Phoenix,261181,199712,Partner,2025-Q2,2025-06
+2025-06-22,High-Performance Engine Component,Supply Chain,Europe,United Kingdom,Birmingham,140024,194685,Wholesale,2025-Q2,2025-06
+2025-06-23,Industrial Robot System,Automotive Parts,Asia Pacific,Singapore,West,264114,193554,Direct Sales,2025-Q2,2025-06
+2025-06-23,Assembly Line Component,Production Machinery,Asia Pacific,Australia,Wollongong,437605,603214,Online,2025-Q2,2025-06
+2025-06-23,Assembly Line Component,Automotive Parts,Asia Pacific,Japan,Fukuoka,102695,85419,Mobile App,2025-Q2,2025-06
+2025-06-23,Assembly Line Component,Automotive Parts,North America,United States,Los Angeles,410329,442501,Wholesale,2025-Q2,2025-06
+2025-06-24,Warehouse Management System,Quality Control,Asia Pacific,Australia,Gold Coast,166956,139783,Direct Sales,2025-Q2,2025-06
+2025-06-25,Precision Manufacturing Tool,Production Machinery,North America,Mexico,Zapopan,532937,587489,Online,2025-Q2,2025-06
+2025-06-25,High-Performance Engine Component,Quality Control,North America,Canada,Edmonton,227773,164134,Retail,2025-Q2,2025-06
+2025-06-25,Industrial Robot System,Automotive Parts,Asia Pacific,Singapore,East,127551,173021,Retail,2025-Q2,2025-06
+2025-06-26,High-Performance Engine Component,Automotive Parts,Europe,Germany,Berlin,185541,191981,Partner,2025-Q2,2025-06
+2025-06-26,Assembly Line Component,Quality Control,Europe,United Kingdom,Leeds,406674,385152,Mobile App,2025-Q2,2025-06
+2025-06-26,High-Performance Engine Component,Quality Control,Europe,United Kingdom,Leeds,86237,61196,Wholesale,2025-Q2,2025-06
+2025-06-26,Process Control Software,Supply Chain,North America,Canada,Mississauga,286346,290266,Mobile App,2025-Q2,2025-06
+2025-06-26,Inventory Management Platform,Supply Chain,North America,United States,Dallas,196994,214931,Wholesale,2025-Q2,2025-06
+2025-06-27,Quality Assurance Software,Supply Chain,Europe,France,Montpellier,532229,408869,Direct Sales,2025-Q2,2025-06
+2025-06-27,Precision Manufacturing Tool,Production Machinery,Europe,France,Montpellier,100673,88104,Wholesale,2025-Q2,2025-06
+2025-06-27,Warehouse Management System,Quality Control,Europe,Germany,Düsseldorf,172786,186113,Retail,2025-Q2,2025-06

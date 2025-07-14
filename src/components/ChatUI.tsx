@@ -40,13 +40,28 @@ const ChatUI = forwardRef<ChatUIHandles, ChatUIProps>(({ ollamaModel, isExternal
     if (inputMessage.trim() === '' || isLoading || !ollamaModel) return;
 
     const userMessage: Message = { role: 'user', content: inputMessage.trim() };
-    const newMessages = [...messages, userMessage];
-    setMessages(newMessages);
+
+    // Define the system prompt
+    const systemPrompt: Message = {
+      role: 'system',
+      content: `
+        You are a financial analyst with 30 years of experience.
+        You are 100% focused on facts and your recommendations are based on the tools the product has.
+        You do not try to recommend stuff the product does not do.
+        Your narratives are concise and focused.
+        You prefer responses in HTML, not markdown.
+      `,
+    };
+
+    // Prepend the system prompt to the message history
+    const messagesWithPrompt = [systemPrompt, ...messages, userMessage];
+    
+    setMessages([...messages, userMessage]);
     setInputMessage('');
     setIsLoading(true);
 
     try {
-      const assistantResponse = await chatWithOllama(newMessages, ollamaModel);
+      const assistantResponse = await chatWithOllama(messagesWithPrompt, ollamaModel);
       setMessages((prevMessages) => [
         ...prevMessages,
         { role: 'assistant', content: assistantResponse },

@@ -1249,7 +1249,10 @@ Visit the Analysis tab to explore your budget performance analysis!`
 
           {activeTab === 'analysis' && (
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <AnalysisTab />
+              <AnalysisTab 
+                csvData={csvData}
+                csvColumns={csvColumns}
+              />
             </div>
           )}
 

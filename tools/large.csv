@@ -1,0 +1,1301 @@
+Date,Product,Category,Region,Country,City,Budget,Actuals,Channel,Quarter,Month
+2024-06-01,Compliance Management Software,Banking Solutions,North America,Mexico,Mexico City,407974,476064,Retail,2024-Q2,2024-06
+2024-06-02,Wealth Management Platform,Risk Management,Europe,Germany,Leipzig,264922,226465,Wholesale,2024-Q2,2024-06
+2024-06-02,Digital Banking Platform,Risk Management,North America,Canada,Calgary,282617,211041,Partner,2024-Q2,2024-06
+2024-06-02,Digital Wallet Solution,Payment Processing,North America,Mexico,Chihuahua,397691,487026,Retail,2024-Q2,2024-06
+2024-06-02,Wealth Management Platform,Risk Management,Asia Pacific,Japan,Saitama,148602,166897,Partner,2024-Q2,2024-06
+2024-06-02,Financial Planning Software,Banking Solutions,Europe,Germany,Dortmund,271705,228521,Online,2024-Q2,2024-06
+2024-06-02,Financial Planning Software,Risk Management,North America,United States,Los Angeles,345976,318983,Partner,2024-Q2,2024-06
+2024-06-03,Life Insurance Policy,Banking Solutions,Europe,France,Strasbourg,268060,365611,Retail,2024-Q2,2024-06
+2024-06-04,Credit Risk Assessment Tool,Insurance Products,Europe,France,Paris,311816,364153,Direct Sales,2024-Q2,2024-06
+2024-06-04,Fraud Detection System,Banking Solutions,Europe,Germany,Frankfurt,442576,603355,Partner,2024-Q2,2024-06
+2024-06-04,Wealth Management Platform,Payment Processing,Europe,Germany,Stuttgart,274453,319518,Wholesale,2024-Q2,2024-06
+2024-06-05,Digital Banking Platform,Investment Services,Asia Pacific,Australia,Wollongong,416604,516366,Direct Sales,2024-Q2,2024-06
+2024-06-05,Investment Portfolio Management,Banking Solutions,North America,Canada,Montreal,289586,353262,Online,2024-Q2,2024-06
+2024-06-05,Wealth Management Platform,Investment Services,North America,Canada,Edmonton,333242,322311,Direct Sales,2024-Q2,2024-06
+2024-06-07,Retirement Planning Service,Insurance Products,North America,Mexico,Monterrey,280868,329717,Wholesale,2024-Q2,2024-06
+2024-06-07,Digital Banking Platform,Banking Solutions,Europe,Germany,Berlin,408448,368088,Online,2024-Q2,2024-06
+2024-06-07,Digital Wallet Solution,Insurance Products,North America,Canada,Quebec City,424553,394297,Retail,2024-Q2,2024-06
+2024-06-07,Retirement Planning Service,Investment Services,Asia Pacific,Australia,Canberra,238110,261451,Online,2024-Q2,2024-06
+2024-06-08,Property Insurance Package,Banking Solutions,Europe,United Kingdom,Edinburgh,508613,474993,Direct Sales,2024-Q2,2024-06
+2024-06-08,Investment Portfolio Management,Risk Management,Europe,Germany,Dortmund,194173,248580,Online,2024-Q2,2024-06
+2024-06-08,Payment Gateway Service,Risk Management,North America,Mexico,Chihuahua,438968,412463,Online,2024-Q2,2024-06
+2024-06-08,Financial Planning Software,Banking Solutions,North America,United States,Houston,369600,388853,Direct Sales,2024-Q2,2024-06
+2024-06-08,Payment Gateway Service,Risk Management,Asia Pacific,Singapore,Central,212217,152351,Direct Sales,2024-Q2,2024-06
+2024-06-08,Payment Gateway Service,Insurance Products,Asia Pacific,Australia,Canberra,114153,146414,Mobile App,2024-Q2,2024-06
+2024-06-09,Digital Banking Platform,Investment Services,North America,Mexico,Nezahualcóyotl,485493,359670,Direct Sales,2024-Q2,2024-06
+2024-06-09,Property Insurance Package,Payment Processing,Europe,United Kingdom,Liverpool,367075,379451,Direct Sales,2024-Q2,2024-06
+2024-06-10,Digital Banking Platform,Risk Management,North America,United States,San Diego,566866,423494,Direct Sales,2024-Q2,2024-06
+2024-06-10,Investment Portfolio Management,Banking Solutions,Europe,Germany,Essen,663193,912702,Direct Sales,2024-Q2,2024-06
+2024-06-10,Trading Analytics Tool,Banking Solutions,North America,Canada,Calgary,313870,321407,Wholesale,2024-Q2,2024-06
+2024-06-10,Retirement Planning Service,Insurance Products,Europe,United Kingdom,Birmingham,333679,332370,Direct Sales,2024-Q2,2024-06
+2024-06-11,Credit Risk Assessment Tool,Banking Solutions,North America,United States,San Antonio,240030,318463,Online,2024-Q2,2024-06
+2024-06-11,Credit Risk Assessment Tool,Risk Management,North America,Canada,Hamilton,216945,194439,Partner,2024-Q2,2024-06
+2024-06-12,Retirement Planning Service,Banking Solutions,Europe,France,Toulouse,318656,227208,Partner,2024-Q2,2024-06
+2024-06-12,Fraud Detection System,Banking Solutions,North America,Mexico,Puebla,342100,437911,Wholesale,2024-Q2,2024-06
+2024-06-12,Fraud Detection System,Banking Solutions,North America,United States,New York,407044,495447,Mobile App,2024-Q2,2024-06
+2024-06-12,Wealth Management Platform,Payment Processing,Asia Pacific,Australia,Gold Coast,301664,305545,Retail,2024-Q2,2024-06
+2024-06-13,Property Insurance Package,Investment Services,Asia Pacific,Japan,Tokyo,214277,231058,Partner,2024-Q2,2024-06
+2024-06-13,Fraud Detection System,Risk Management,Asia Pacific,Australia,Sydney,112710,101360,Online,2024-Q2,2024-06
+2024-06-13,Financial Planning Software,Risk Management,Europe,Germany,Dortmund,213117,162441,Mobile App,2024-Q2,2024-06
+2024-06-13,Investment Portfolio Management,Payment Processing,Asia Pacific,Australia,Gold Coast,285691,211877,Retail,2024-Q2,2024-06
+2024-06-13,Digital Wallet Solution,Investment Services,Europe,United Kingdom,Manchester,464235,422560,Direct Sales,2024-Q2,2024-06
+2024-06-13,Payment Gateway Service,Banking Solutions,Asia Pacific,Singapore,Northeast,168436,223885,Wholesale,2024-Q2,2024-06
+2024-06-14,Retirement Planning Service,Investment Services,Asia Pacific,Japan,Tokyo,322890,280696,Direct Sales,2024-Q2,2024-06
+2024-06-14,Wealth Management Platform,Banking Solutions,North America,Mexico,Tijuana,150210,181219,Wholesale,2024-Q2,2024-06
+2024-06-14,Auto Insurance Coverage,Payment Processing,North America,Canada,Winnipeg,273399,241982,Wholesale,2024-Q2,2024-06
+2024-06-14,Digital Wallet Solution,Insurance Products,Asia Pacific,Australia,Sunshine Coast,184633,192884,Wholesale,2024-Q2,2024-06
+2024-06-15,Property Insurance Package,Insurance Products,Asia Pacific,Australia,Sydney,206219,202557,Partner,2024-Q2,2024-06
+2024-06-15,Financial Planning Software,Payment Processing,North America,Mexico,Zapopan,649478,671367,Direct Sales,2024-Q2,2024-06
+2024-06-15,Digital Wallet Solution,Investment Services,Asia Pacific,Australia,Canberra,263287,220008,Wholesale,2024-Q2,2024-06
+2024-06-16,Mobile Banking App,Insurance Products,Europe,Germany,Stuttgart,269752,293949,Wholesale,2024-Q2,2024-06
+2024-06-16,Digital Wallet Solution,Banking Solutions,Asia Pacific,Singapore,West,233216,166333,Online,2024-Q2,2024-06
+2024-06-16,Mobile Banking App,Payment Processing,North America,Mexico,Tijuana,344217,369829,Partner,2024-Q2,2024-06
+2024-06-16,Compliance Management Software,Investment Services,North America,Canada,Quebec City,289924,322469,Wholesale,2024-Q2,2024-06
+2024-06-16,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Singapore,Northeast,219862,233233,Wholesale,2024-Q2,2024-06
+2024-06-17,Wealth Management Platform,Risk Management,Europe,France,Montpellier,219725,171887,Mobile App,2024-Q2,2024-06
+2024-06-17,Retirement Planning Service,Banking Solutions,North America,United States,New York,204612,258110,Retail,2024-Q2,2024-06
+2024-06-17,Auto Insurance Coverage,Payment Processing,Asia Pacific,Australia,Perth,315011,348296,Online,2024-Q2,2024-06
+2024-06-17,Property Insurance Package,Investment Services,Europe,France,Marseille,163430,140391,Partner,2024-Q2,2024-06
+2024-06-17,Mobile Banking App,Risk Management,Asia Pacific,Japan,Tokyo,217718,198329,Mobile App,2024-Q2,2024-06
+2024-06-17,Life Insurance Policy,Risk Management,Europe,France,Lille,324481,347787,Mobile App,2024-Q2,2024-06
+2024-06-17,Investment Portfolio Management,Payment Processing,Asia Pacific,Japan,Yokohama,338346,294687,Direct Sales,2024-Q2,2024-06
+2024-06-17,Wealth Management Platform,Payment Processing,North America,Canada,Hamilton,665391,914512,Direct Sales,2024-Q2,2024-06
+2024-06-18,Compliance Management Software,Banking Solutions,North America,United States,Phoenix,152587,156626,Wholesale,2024-Q2,2024-06
+2024-06-18,Digital Banking Platform,Payment Processing,Asia Pacific,Australia,Gold Coast,335451,433033,Partner,2024-Q2,2024-06
+2024-06-18,Mobile Banking App,Investment Services,North America,United States,Philadelphia,398845,347069,Wholesale,2024-Q2,2024-06
+2024-06-19,Auto Insurance Coverage,Insurance Products,Europe,France,Marseille,306133,260248,Online,2024-Q2,2024-06
+2024-06-19,Trading Analytics Tool,Risk Management,Asia Pacific,Singapore,Central,219208,171863,Wholesale,2024-Q2,2024-06
+2024-06-19,Life Insurance Policy,Investment Services,Europe,France,Marseille,113708,119870,Mobile App,2024-Q2,2024-06
+2024-06-20,Property Insurance Package,Insurance Products,Asia Pacific,Japan,Saitama,180096,182930,Wholesale,2024-Q2,2024-06
+2024-06-20,Fraud Detection System,Payment Processing,Europe,France,Marseille,362021,404392,Online,2024-Q2,2024-06
+2024-06-20,Credit Risk Assessment Tool,Investment Services,Europe,United Kingdom,Manchester,406426,402830,Partner,2024-Q2,2024-06
+2024-06-21,Retirement Planning Service,Banking Solutions,Europe,Germany,Berlin,393171,533819,Retail,2024-Q2,2024-06
+2024-06-21,Compliance Management Software,Risk Management,Europe,Germany,Düsseldorf,283769,310487,Mobile App,2024-Q2,2024-06
+2024-06-21,Auto Insurance Coverage,Risk Management,Europe,Germany,Dortmund,466670,552119,Online,2024-Q2,2024-06
+2024-06-21,Credit Risk Assessment Tool,Payment Processing,Asia Pacific,Japan,Kobe,252909,205659,Direct Sales,2024-Q2,2024-06
+2024-06-21,Financial Planning Software,Investment Services,Asia Pacific,Australia,Perth,435724,550698,Direct Sales,2024-Q2,2024-06
+2024-06-22,Auto Insurance Coverage,Risk Management,North America,United States,San Diego,337413,236707,Online,2024-Q2,2024-06
+2024-06-22,Investment Portfolio Management,Banking Solutions,Europe,France,Lille,611682,849185,Direct Sales,2024-Q2,2024-06
+2024-06-23,Auto Insurance Coverage,Payment Processing,Asia Pacific,Australia,Canberra,342764,313290,Partner,2024-Q2,2024-06
+2024-06-23,Property Insurance Package,Insurance Products,Europe,Germany,Leipzig,139285,109442,Partner,2024-Q2,2024-06
+2024-06-23,Credit Risk Assessment Tool,Banking Solutions,Europe,Germany,Berlin,233433,286602,Online,2024-Q2,2024-06
+2024-06-23,Retirement Planning Service,Risk Management,Europe,France,Montpellier,125073,169633,Wholesale,2024-Q2,2024-06
+2024-06-23,Payment Gateway Service,Risk Management,Asia Pacific,Singapore,Central,199857,179806,Wholesale,2024-Q2,2024-06
+2024-06-24,Auto Insurance Coverage,Insurance Products,Europe,United Kingdom,London,468493,473489,Retail,2024-Q2,2024-06
+2024-06-24,Payment Gateway Service,Risk Management,North America,Canada,Edmonton,599217,716591,Direct Sales,2024-Q2,2024-06
+2024-06-24,Auto Insurance Coverage,Insurance Products,Asia Pacific,Japan,Fukuoka,251472,184992,Mobile App,2024-Q2,2024-06
+2024-06-25,Investment Portfolio Management,Insurance Products,Europe,United Kingdom,Leeds,276848,378123,Online,2024-Q2,2024-06
+2024-06-25,Payment Gateway Service,Banking Solutions,Asia Pacific,Australia,Sunshine Coast,154024,162101,Online,2024-Q2,2024-06
+2024-06-25,Digital Banking Platform,Banking Solutions,North America,Canada,Toronto,290780,395562,Mobile App,2024-Q2,2024-06
+2024-06-26,Payment Gateway Service,Risk Management,Europe,Germany,Berlin,455318,602469,Retail,2024-Q2,2024-06
+2024-06-26,Wealth Management Platform,Insurance Products,Europe,United Kingdom,Birmingham,210171,270684,Mobile App,2024-Q2,2024-06
+2024-06-26,Compliance Management Software,Investment Services,North America,Mexico,Zapopan,292348,237627,Online,2024-Q2,2024-06
+2024-06-26,Mobile Banking App,Insurance Products,Asia Pacific,Australia,Sydney,252896,295178,Retail,2024-Q2,2024-06
+2024-06-27,Life Insurance Policy,Insurance Products,North America,United States,Chicago,372666,315091,Mobile App,2024-Q2,2024-06
+2024-06-28,Auto Insurance Coverage,Banking Solutions,Asia Pacific,Singapore,North,270353,217895,Direct Sales,2024-Q2,2024-06
+2024-06-28,Mobile Banking App,Investment Services,North America,Canada,Vancouver,136628,177162,Online,2024-Q2,2024-06
+2024-06-28,Investment Portfolio Management,Insurance Products,Asia Pacific,Singapore,Northeast,217839,233798,Wholesale,2024-Q2,2024-06
+2024-06-28,Wealth Management Platform,Payment Processing,Asia Pacific,Singapore,Northeast,195960,226541,Online,2024-Q2,2024-06
+2024-06-28,Life Insurance Policy,Insurance Products,Asia Pacific,Singapore,Central,162629,163896,Online,2024-Q2,2024-06
+2024-06-28,Payment Gateway Service,Investment Services,Europe,France,Strasbourg,288518,298440,Retail,2024-Q2,2024-06
+2024-07-01,Financial Planning Software,Banking Solutions,Europe,France,Bordeaux,323864,329882,Mobile App,2024-Q3,2024-07
+2024-07-01,Payment Gateway Service,Risk Management,Asia Pacific,Australia,Canberra,230439,236906,Partner,2024-Q3,2024-07
+2024-07-01,Credit Risk Assessment Tool,Insurance Products,Europe,United Kingdom,Cardiff,235450,320354,Online,2024-Q3,2024-07
+2024-07-01,Auto Insurance Coverage,Payment Processing,Europe,United Kingdom,Manchester,405888,546551,Online,2024-Q3,2024-07
+2024-07-01,Payment Gateway Service,Risk Management,North America,Mexico,Monterrey,222138,247263,Online,2024-Q3,2024-07
+2024-07-02,Life Insurance Policy,Banking Solutions,North America,Canada,Edmonton,339878,443715,Mobile App,2024-Q3,2024-07
+2024-07-02,Retirement Planning Service,Investment Services,Asia Pacific,Singapore,East,121991,97579,Partner,2024-Q3,2024-07
+2024-07-02,Investment Portfolio Management,Banking Solutions,Asia Pacific,Singapore,North,196820,192218,Online,2024-Q3,2024-07
+2024-07-02,Mobile Banking App,Insurance Products,Asia Pacific,Japan,Sapporo,183979,196893,Online,2024-Q3,2024-07
+2024-07-02,Financial Planning Software,Banking Solutions,Asia Pacific,Australia,Brisbane,244882,199354,Online,2024-Q3,2024-07
+2024-07-03,Property Insurance Package,Payment Processing,Europe,France,Montpellier,314417,358448,Online,2024-Q3,2024-07
+2024-07-03,Digital Wallet Solution,Banking Solutions,North America,Mexico,Juárez,291226,326840,Wholesale,2024-Q3,2024-07
+2024-07-04,Mobile Banking App,Risk Management,North America,United States,San Jose,311827,370212,Mobile App,2024-Q3,2024-07
+2024-07-04,Trading Analytics Tool,Payment Processing,Asia Pacific,Singapore,Central,103008,115840,Online,2024-Q3,2024-07
+2024-07-04,Auto Insurance Coverage,Investment Services,Europe,United Kingdom,Birmingham,198061,187298,Retail,2024-Q3,2024-07
+2024-07-04,Life Insurance Policy,Risk Management,Asia Pacific,Singapore,North,186832,190260,Online,2024-Q3,2024-07
+2024-07-05,Property Insurance Package,Banking Solutions,North America,United States,Dallas,336096,339483,Direct Sales,2024-Q3,2024-07
+2024-07-05,Auto Insurance Coverage,Insurance Products,Asia Pacific,Australia,Brisbane,256248,232228,Mobile App,2024-Q3,2024-07
+2024-07-05,Trading Analytics Tool,Investment Services,North America,Canada,Ottawa,238565,199987,Wholesale,2024-Q3,2024-07
+2024-07-05,Property Insurance Package,Investment Services,Asia Pacific,Singapore,West,123310,163997,Wholesale,2024-Q3,2024-07
+2024-07-05,Digital Wallet Solution,Banking Solutions,Europe,France,Nice,422911,477269,Partner,2024-Q3,2024-07
+2024-07-06,Property Insurance Package,Insurance Products,North America,Canada,Calgary,312297,406647,Wholesale,2024-Q3,2024-07
+2024-07-06,Credit Risk Assessment Tool,Insurance Products,Europe,United Kingdom,Leeds,273199,323682,Online,2024-Q3,2024-07
+2024-07-07,Auto Insurance Coverage,Insurance Products,Asia Pacific,Japan,Osaka,430514,540083,Retail,2024-Q3,2024-07
+2024-07-07,Investment Portfolio Management,Payment Processing,Europe,Germany,Leipzig,214690,293635,Retail,2024-Q3,2024-07
+2024-07-07,Wealth Management Platform,Banking Solutions,Europe,Germany,Düsseldorf,193792,157169,Mobile App,2024-Q3,2024-07
+2024-07-07,Compliance Management Software,Payment Processing,North America,Mexico,Tijuana,499132,411274,Direct Sales,2024-Q3,2024-07
+2024-07-07,Fraud Detection System,Banking Solutions,North America,Canada,Hamilton,493872,673210,Direct Sales,2024-Q3,2024-07
+2024-07-07,Digital Wallet Solution,Investment Services,Asia Pacific,Singapore,North,196848,260662,Partner,2024-Q3,2024-07
+2024-07-08,Investment Portfolio Management,Risk Management,Asia Pacific,Australia,Sunshine Coast,223700,307073,Online,2024-Q3,2024-07
+2024-07-08,Auto Insurance Coverage,Risk Management,Asia Pacific,Japan,Nagoya,112910,133135,Wholesale,2024-Q3,2024-07
+2024-07-08,Credit Risk Assessment Tool,Payment Processing,Europe,Germany,Düsseldorf,243433,215424,Mobile App,2024-Q3,2024-07
+2024-07-08,Compliance Management Software,Risk Management,Asia Pacific,Australia,Newcastle,290052,229616,Partner,2024-Q3,2024-07
+2024-07-09,Fraud Detection System,Risk Management,North America,Canada,Montreal,400669,286440,Online,2024-Q3,2024-07
+2024-07-10,Property Insurance Package,Banking Solutions,North America,United States,San Antonio,189612,241548,Partner,2024-Q3,2024-07
+2024-07-10,Financial Planning Software,Insurance Products,Europe,Germany,Berlin,215509,268613,Retail,2024-Q3,2024-07
+2024-07-11,Credit Risk Assessment Tool,Payment Processing,North America,Canada,Montreal,500952,373323,Retail,2024-Q3,2024-07
+2024-07-11,Auto Insurance Coverage,Banking Solutions,North America,Canada,Ottawa,350340,261585,Wholesale,2024-Q3,2024-07
+2024-07-12,Investment Portfolio Management,Insurance Products,North America,Canada,Calgary,529424,507885,Retail,2024-Q3,2024-07
+2024-07-12,Credit Risk Assessment Tool,Payment Processing,Asia Pacific,Singapore,West,297626,224049,Direct Sales,2024-Q3,2024-07
+2024-07-12,Compliance Management Software,Investment Services,North America,Canada,Calgary,348226,437370,Retail,2024-Q3,2024-07
+2024-07-12,Mobile Banking App,Risk Management,North America,Mexico,Guadalajara,390887,436275,Online,2024-Q3,2024-07
+2024-07-13,Retirement Planning Service,Insurance Products,North America,Canada,Ottawa,464551,355781,Online,2024-Q3,2024-07
+2024-07-13,Wealth Management Platform,Risk Management,North America,Mexico,Tijuana,451299,357037,Direct Sales,2024-Q3,2024-07
+2024-07-13,Compliance Management Software,Insurance Products,Europe,Germany,Stuttgart,457124,405109,Direct Sales,2024-Q3,2024-07
+2024-07-13,Auto Insurance Coverage,Investment Services,Europe,France,Lyon,516526,597490,Direct Sales,2024-Q3,2024-07
+2024-07-13,Compliance Management Software,Payment Processing,Asia Pacific,Singapore,Northeast,275951,264033,Online,2024-Q3,2024-07
+2024-07-14,Trading Analytics Tool,Insurance Products,North America,United States,Dallas,220320,263224,Mobile App,2024-Q3,2024-07
+2024-07-14,Life Insurance Policy,Risk Management,Asia Pacific,Australia,Sydney,192640,229783,Partner,2024-Q3,2024-07
+2024-07-14,Compliance Management Software,Risk Management,Europe,Germany,Munich,301167,254491,Online,2024-Q3,2024-07
+2024-07-14,Compliance Management Software,Insurance Products,North America,United States,Philadelphia,488450,381222,Online,2024-Q3,2024-07
+2024-07-14,Compliance Management Software,Investment Services,Europe,Germany,Hamburg,243194,182506,Mobile App,2024-Q3,2024-07
+2024-07-15,Trading Analytics Tool,Risk Management,Asia Pacific,Japan,Osaka,275056,314413,Partner,2024-Q3,2024-07
+2024-07-15,Digital Banking Platform,Banking Solutions,Europe,United Kingdom,Edinburgh,285457,298441,Direct Sales,2024-Q3,2024-07
+2024-07-15,Compliance Management Software,Risk Management,Asia Pacific,Japan,Saitama,113667,88723,Wholesale,2024-Q3,2024-07
+2024-07-15,Mobile Banking App,Payment Processing,Europe,United Kingdom,London,170703,188639,Online,2024-Q3,2024-07
+2024-07-16,Compliance Management Software,Investment Services,Asia Pacific,Singapore,Central,186675,173266,Online,2024-Q3,2024-07
+2024-07-16,Trading Analytics Tool,Risk Management,Europe,United Kingdom,Glasgow,347782,336387,Retail,2024-Q3,2024-07
+2024-07-17,Retirement Planning Service,Insurance Products,North America,Canada,Mississauga,109804,111395,Wholesale,2024-Q3,2024-07
+2024-07-17,Trading Analytics Tool,Investment Services,Asia Pacific,Japan,Fukuoka,149437,183358,Partner,2024-Q3,2024-07
+2024-07-18,Mobile Banking App,Banking Solutions,Europe,Germany,Dortmund,406935,308321,Partner,2024-Q3,2024-07
+2024-07-18,Auto Insurance Coverage,Investment Services,Europe,Germany,Frankfurt,405295,521695,Online,2024-Q3,2024-07
+2024-07-18,Payment Gateway Service,Payment Processing,Europe,United Kingdom,Cardiff,195482,151467,Wholesale,2024-Q3,2024-07
+2024-07-18,Financial Planning Software,Risk Management,North America,United States,Houston,180640,197246,Wholesale,2024-Q3,2024-07
+2024-07-19,Digital Wallet Solution,Banking Solutions,Asia Pacific,Japan,Nagoya,315084,381043,Partner,2024-Q3,2024-07
+2024-07-19,Auto Insurance Coverage,Insurance Products,Asia Pacific,Australia,Adelaide,276157,302519,Direct Sales,2024-Q3,2024-07
+2024-07-19,Retirement Planning Service,Banking Solutions,Asia Pacific,Japan,Osaka,112517,124735,Wholesale,2024-Q3,2024-07
+2024-07-19,Investment Portfolio Management,Insurance Products,Asia Pacific,Singapore,West,271350,273757,Retail,2024-Q3,2024-07
+2024-07-19,Fraud Detection System,Insurance Products,Asia Pacific,Australia,Melbourne,201989,278732,Retail,2024-Q3,2024-07
+2024-07-20,Financial Planning Software,Banking Solutions,Asia Pacific,Australia,Melbourne,253880,225737,Retail,2024-Q3,2024-07
+2024-07-20,Life Insurance Policy,Payment Processing,Asia Pacific,Japan,Sapporo,182775,130762,Wholesale,2024-Q3,2024-07
+2024-07-20,Trading Analytics Tool,Insurance Products,Europe,United Kingdom,Manchester,135037,154834,Mobile App,2024-Q3,2024-07
+2024-07-20,Auto Insurance Coverage,Risk Management,North America,Mexico,Juárez,199933,145489,Wholesale,2024-Q3,2024-07
+2024-07-21,Compliance Management Software,Risk Management,North America,Canada,Toronto,424688,366204,Direct Sales,2024-Q3,2024-07
+2024-07-21,Fraud Detection System,Risk Management,Asia Pacific,Japan,Kawasaki,255250,330922,Mobile App,2024-Q3,2024-07
+2024-07-21,Retirement Planning Service,Risk Management,Asia Pacific,Australia,Canberra,235303,291188,Online,2024-Q3,2024-07
+2024-07-23,Digital Wallet Solution,Insurance Products,Europe,Germany,Frankfurt,277458,346185,Direct Sales,2024-Q3,2024-07
+2024-07-23,Financial Planning Software,Insurance Products,North America,Canada,Winnipeg,176110,157478,Online,2024-Q3,2024-07
+2024-07-23,Digital Banking Platform,Banking Solutions,Europe,United Kingdom,Leeds,250393,245693,Mobile App,2024-Q3,2024-07
+2024-07-23,Digital Wallet Solution,Insurance Products,North America,Mexico,Chihuahua,351104,293854,Direct Sales,2024-Q3,2024-07
+2024-07-23,Auto Insurance Coverage,Insurance Products,Europe,United Kingdom,Birmingham,344392,334702,Wholesale,2024-Q3,2024-07
+2024-07-23,Retirement Planning Service,Banking Solutions,Europe,France,Paris,326162,262518,Online,2024-Q3,2024-07
+2024-07-24,Wealth Management Platform,Investment Services,Asia Pacific,Australia,Adelaide,188153,199907,Retail,2024-Q3,2024-07
+2024-07-24,Digital Wallet Solution,Investment Services,Asia Pacific,Australia,Newcastle,226372,209154,Online,2024-Q3,2024-07
+2024-07-24,Investment Portfolio Management,Payment Processing,North America,Canada,Mississauga,500735,483113,Direct Sales,2024-Q3,2024-07
+2024-07-25,Digital Wallet Solution,Banking Solutions,North America,United States,San Antonio,241794,266495,Mobile App,2024-Q3,2024-07
+2024-07-25,Payment Gateway Service,Payment Processing,Europe,France,Strasbourg,274127,193714,Online,2024-Q3,2024-07
+2024-07-25,Trading Analytics Tool,Insurance Products,Asia Pacific,Japan,Osaka,330736,422605,Direct Sales,2024-Q3,2024-07
+2024-07-26,Life Insurance Policy,Investment Services,North America,Canada,Calgary,256078,199256,Wholesale,2024-Q3,2024-07
+2024-07-26,Digital Banking Platform,Investment Services,North America,United States,Phoenix,542576,601434,Direct Sales,2024-Q3,2024-07
+2024-07-26,Investment Portfolio Management,Investment Services,Europe,France,Toulouse,363635,312026,Partner,2024-Q3,2024-07
+2024-07-26,Digital Banking Platform,Investment Services,Asia Pacific,Australia,Sydney,402833,364496,Retail,2024-Q3,2024-07
+2024-07-26,Trading Analytics Tool,Risk Management,North America,United States,Phoenix,257687,243212,Direct Sales,2024-Q3,2024-07
+2024-07-27,Investment Portfolio Management,Investment Services,Europe,United Kingdom,Manchester,489241,533602,Retail,2024-Q3,2024-07
+2024-07-27,Life Insurance Policy,Banking Solutions,North America,Canada,Winnipeg,460665,499109,Mobile App,2024-Q3,2024-07
+2024-07-27,Compliance Management Software,Banking Solutions,Asia Pacific,Japan,Osaka,388849,363003,Direct Sales,2024-Q3,2024-07
+2024-07-27,Property Insurance Package,Banking Solutions,Asia Pacific,Australia,Sydney,119466,122617,Wholesale,2024-Q3,2024-07
+2024-07-27,Mobile Banking App,Investment Services,North America,United States,Dallas,357825,389954,Mobile App,2024-Q3,2024-07
+2024-07-28,Digital Banking Platform,Banking Solutions,Asia Pacific,Japan,Osaka,379734,365013,Retail,2024-Q3,2024-07
+2024-07-28,Payment Gateway Service,Payment Processing,Europe,Germany,Berlin,374222,385382,Mobile App,2024-Q3,2024-07
+2024-08-01,Wealth Management Platform,Payment Processing,Europe,France,Marseille,134779,112433,Mobile App,2024-Q3,2024-08
+2024-08-01,Property Insurance Package,Insurance Products,North America,Mexico,Tijuana,203927,235471,Mobile App,2024-Q3,2024-08
+2024-08-01,Investment Portfolio Management,Payment Processing,Europe,France,Lille,329275,351579,Online,2024-Q3,2024-08
+2024-08-01,Auto Insurance Coverage,Investment Services,Europe,United Kingdom,London,349465,264706,Direct Sales,2024-Q3,2024-08
+2024-08-01,Payment Gateway Service,Risk Management,Europe,United Kingdom,Birmingham,159727,182560,Wholesale,2024-Q3,2024-08
+2024-08-01,Mobile Banking App,Banking Solutions,North America,United States,Philadelphia,214512,171915,Partner,2024-Q3,2024-08
+2024-08-02,Mobile Banking App,Risk Management,Asia Pacific,Japan,Kobe,125706,170885,Wholesale,2024-Q3,2024-08
+2024-08-03,Retirement Planning Service,Insurance Products,Europe,United Kingdom,Glasgow,670013,537614,Direct Sales,2024-Q3,2024-08
+2024-08-03,Trading Analytics Tool,Insurance Products,Asia Pacific,Japan,Tokyo,470328,548959,Direct Sales,2024-Q3,2024-08
+2024-08-03,Digital Banking Platform,Insurance Products,Asia Pacific,Australia,Canberra,232540,231555,Wholesale,2024-Q3,2024-08
+2024-08-03,Property Insurance Package,Payment Processing,Asia Pacific,Singapore,Central,116288,155418,Partner,2024-Q3,2024-08
+2024-08-03,Property Insurance Package,Insurance Products,Asia Pacific,Japan,Tokyo,175766,128771,Partner,2024-Q3,2024-08
+2024-08-04,Wealth Management Platform,Investment Services,Europe,France,Toulouse,164153,183396,Wholesale,2024-Q3,2024-08
+2024-08-04,Fraud Detection System,Banking Solutions,Asia Pacific,Australia,Perth,155767,141893,Mobile App,2024-Q3,2024-08
+2024-08-05,Compliance Management Software,Risk Management,North America,Mexico,León,234037,189761,Online,2024-Q3,2024-08
+2024-08-05,Digital Banking Platform,Insurance Products,North America,Mexico,Nezahualcóyotl,521398,705484,Direct Sales,2024-Q3,2024-08
+2024-08-06,Fraud Detection System,Banking Solutions,North America,Mexico,Tijuana,220658,227838,Mobile App,2024-Q3,2024-08
+2024-08-06,Investment Portfolio Management,Banking Solutions,Asia Pacific,Japan,Yokohama,252588,234705,Online,2024-Q3,2024-08
+2024-08-06,Trading Analytics Tool,Insurance Products,Asia Pacific,Australia,Perth,180387,242847,Retail,2024-Q3,2024-08
+2024-08-06,Trading Analytics Tool,Risk Management,Asia Pacific,Australia,Brisbane,163975,162042,Wholesale,2024-Q3,2024-08
+2024-08-06,Property Insurance Package,Insurance Products,Asia Pacific,Australia,Sunshine Coast,109704,85846,Online,2024-Q3,2024-08
+2024-08-06,Property Insurance Package,Insurance Products,Asia Pacific,Japan,Nagoya,218536,203128,Mobile App,2024-Q3,2024-08
+2024-08-07,Payment Gateway Service,Banking Solutions,Asia Pacific,Australia,Sunshine Coast,237496,278419,Direct Sales,2024-Q3,2024-08
+2024-08-07,Trading Analytics Tool,Investment Services,Asia Pacific,Japan,Tokyo,163702,136440,Wholesale,2024-Q3,2024-08
+2024-08-07,Credit Risk Assessment Tool,Banking Solutions,Asia Pacific,Australia,Sydney,224062,280549,Online,2024-Q3,2024-08
+2024-08-08,Wealth Management Platform,Investment Services,North America,United States,San Jose,321882,328015,Mobile App,2024-Q3,2024-08
+2024-08-08,Compliance Management Software,Investment Services,North America,Canada,Montreal,276136,357204,Retail,2024-Q3,2024-08
+2024-08-08,Wealth Management Platform,Risk Management,Europe,France,Lille,371256,263474,Retail,2024-Q3,2024-08
+2024-08-08,Credit Risk Assessment Tool,Risk Management,North America,United States,Houston,220391,258573,Mobile App,2024-Q3,2024-08
+2024-08-08,Wealth Management Platform,Insurance Products,Asia Pacific,Japan,Sapporo,107080,99627,Wholesale,2024-Q3,2024-08
+2024-08-09,Digital Wallet Solution,Banking Solutions,Asia Pacific,Japan,Kobe,261917,203606,Retail,2024-Q3,2024-08
+2024-08-09,Digital Banking Platform,Investment Services,North America,Canada,Quebec City,269351,357386,Mobile App,2024-Q3,2024-08
+2024-08-10,Wealth Management Platform,Banking Solutions,North America,Canada,Toronto,553869,606121,Direct Sales,2024-Q3,2024-08
+2024-08-10,Retirement Planning Service,Insurance Products,Asia Pacific,Australia,Sydney,205637,149143,Online,2024-Q3,2024-08
+2024-08-10,Investment Portfolio Management,Insurance Products,North America,Canada,Montreal,289293,237517,Wholesale,2024-Q3,2024-08
+2024-08-10,Investment Portfolio Management,Investment Services,Europe,United Kingdom,Manchester,163271,126566,Wholesale,2024-Q3,2024-08
+2024-08-11,Credit Risk Assessment Tool,Investment Services,Asia Pacific,Australia,Newcastle,155342,206175,Wholesale,2024-Q3,2024-08
+2024-08-11,Payment Gateway Service,Banking Solutions,Asia Pacific,Japan,Saitama,184669,175272,Wholesale,2024-Q3,2024-08
+2024-08-11,Mobile Banking App,Insurance Products,Europe,France,Marseille,202159,172615,Direct Sales,2024-Q3,2024-08
+2024-08-11,Retirement Planning Service,Banking Solutions,Asia Pacific,Singapore,East,178769,235800,Retail,2024-Q3,2024-08
+2024-08-12,Mobile Banking App,Investment Services,North America,Canada,Quebec City,328837,434068,Mobile App,2024-Q3,2024-08
+2024-08-12,Wealth Management Platform,Investment Services,Asia Pacific,Singapore,Central,154052,201547,Retail,2024-Q3,2024-08
+2024-08-12,Payment Gateway Service,Investment Services,Europe,United Kingdom,Manchester,270050,246356,Direct Sales,2024-Q3,2024-08
+2024-08-12,Compliance Management Software,Payment Processing,Europe,France,Montpellier,195445,241509,Partner,2024-Q3,2024-08
+2024-08-12,Fraud Detection System,Investment Services,North America,Mexico,Juárez,438214,561065,Direct Sales,2024-Q3,2024-08
+2024-08-12,Financial Planning Software,Banking Solutions,Europe,Germany,Berlin,256909,345200,Direct Sales,2024-Q3,2024-08
+2024-08-12,Financial Planning Software,Banking Solutions,Asia Pacific,Australia,Perth,283418,296918,Direct Sales,2024-Q3,2024-08
+2024-08-12,Retirement Planning Service,Risk Management,Europe,Germany,Düsseldorf,405486,288428,Retail,2024-Q3,2024-08
+2024-08-12,Trading Analytics Tool,Payment Processing,Asia Pacific,Japan,Kyoto,272649,215666,Direct Sales,2024-Q3,2024-08
+2024-08-13,Retirement Planning Service,Payment Processing,Asia Pacific,Australia,Wollongong,414608,496766,Retail,2024-Q3,2024-08
+2024-08-14,Retirement Planning Service,Investment Services,Asia Pacific,Japan,Kawasaki,442906,545009,Direct Sales,2024-Q3,2024-08
+2024-08-15,Trading Analytics Tool,Insurance Products,North America,Canada,Calgary,177110,191889,Mobile App,2024-Q3,2024-08
+2024-08-15,Digital Wallet Solution,Risk Management,Asia Pacific,Japan,Kawasaki,195855,195767,Mobile App,2024-Q3,2024-08
+2024-08-15,Digital Wallet Solution,Banking Solutions,Europe,United Kingdom,Glasgow,264108,321725,Online,2024-Q3,2024-08
+2024-08-16,Payment Gateway Service,Payment Processing,North America,United States,San Jose,249447,333190,Online,2024-Q3,2024-08
+2024-08-16,Wealth Management Platform,Payment Processing,Asia Pacific,Japan,Sapporo,293737,331032,Wholesale,2024-Q3,2024-08
+2024-08-16,Wealth Management Platform,Risk Management,Asia Pacific,Australia,Gold Coast,253173,342800,Online,2024-Q3,2024-08
+2024-08-17,Payment Gateway Service,Risk Management,Europe,Germany,Düsseldorf,323025,239054,Partner,2024-Q3,2024-08
+2024-08-17,Payment Gateway Service,Insurance Products,Asia Pacific,Singapore,North,302678,367189,Wholesale,2024-Q3,2024-08
+2024-08-18,Financial Planning Software,Insurance Products,Europe,Germany,Dortmund,215416,208592,Wholesale,2024-Q3,2024-08
+2024-08-18,Credit Risk Assessment Tool,Banking Solutions,North America,Canada,Vancouver,381329,478875,Partner,2024-Q3,2024-08
+2024-08-18,Credit Risk Assessment Tool,Payment Processing,North America,United States,Philadelphia,203175,250427,Wholesale,2024-Q3,2024-08
+2024-08-18,Wealth Management Platform,Banking Solutions,Asia Pacific,Singapore,Northeast,212770,155506,Direct Sales,2024-Q3,2024-08
+2024-08-18,Credit Risk Assessment Tool,Investment Services,North America,United States,New York,208261,161850,Online,2024-Q3,2024-08
+2024-08-18,Life Insurance Policy,Insurance Products,Europe,United Kingdom,Sheffield,144422,153519,Online,2024-Q3,2024-08
+2024-08-18,Compliance Management Software,Investment Services,Asia Pacific,Australia,Canberra,104531,121705,Wholesale,2024-Q3,2024-08
+2024-08-19,Mobile Banking App,Insurance Products,Asia Pacific,Singapore,North,437935,515957,Direct Sales,2024-Q3,2024-08
+2024-08-19,Compliance Management Software,Investment Services,Europe,France,Marseille,521957,474252,Direct Sales,2024-Q3,2024-08
+2024-08-19,Property Insurance Package,Payment Processing,Asia Pacific,Australia,Adelaide,201943,201713,Partner,2024-Q3,2024-08
+2024-08-19,Life Insurance Policy,Risk Management,Asia Pacific,Singapore,West,508179,373747,Direct Sales,2024-Q3,2024-08
+2024-08-19,Fraud Detection System,Insurance Products,Asia Pacific,Singapore,Central,243154,263489,Wholesale,2024-Q3,2024-08
+2024-08-19,Fraud Detection System,Banking Solutions,Europe,United Kingdom,Edinburgh,249982,289409,Mobile App,2024-Q3,2024-08
+2024-08-19,Life Insurance Policy,Risk Management,Asia Pacific,Japan,Kobe,211991,226374,Mobile App,2024-Q3,2024-08
+2024-08-20,Compliance Management Software,Banking Solutions,Asia Pacific,Japan,Nagoya,353005,420138,Online,2024-Q3,2024-08
+2024-08-20,Digital Banking Platform,Payment Processing,Europe,Germany,Leipzig,256767,234800,Wholesale,2024-Q3,2024-08
+2024-08-20,Trading Analytics Tool,Payment Processing,Asia Pacific,Australia,Gold Coast,243287,199411,Partner,2024-Q3,2024-08
+2024-08-20,Compliance Management Software,Banking Solutions,Asia Pacific,Japan,Saitama,219493,176675,Online,2024-Q3,2024-08
+2024-08-21,Credit Risk Assessment Tool,Insurance Products,Asia Pacific,Singapore,North,348201,311072,Direct Sales,2024-Q3,2024-08
+2024-08-21,Trading Analytics Tool,Risk Management,Europe,Germany,Munich,196587,159458,Partner,2024-Q3,2024-08
+2024-08-21,Trading Analytics Tool,Risk Management,North America,Canada,Edmonton,401968,357465,Partner,2024-Q3,2024-08
+2024-08-23,Retirement Planning Service,Banking Solutions,Europe,Germany,Munich,227226,309795,Partner,2024-Q3,2024-08
+2024-08-23,Trading Analytics Tool,Insurance Products,North America,United States,Los Angeles,292311,206741,Partner,2024-Q3,2024-08
+2024-08-24,Compliance Management Software,Banking Solutions,Europe,Germany,Frankfurt,113317,90460,Wholesale,2024-Q3,2024-08
+2024-08-25,Trading Analytics Tool,Banking Solutions,Europe,United Kingdom,Leeds,264526,266439,Wholesale,2024-Q3,2024-08
+2024-08-26,Investment Portfolio Management,Risk Management,Europe,France,Strasbourg,385981,338949,Online,2024-Q3,2024-08
+2024-08-26,Digital Wallet Solution,Payment Processing,North America,United States,Chicago,293079,273497,Wholesale,2024-Q3,2024-08
+2024-08-26,Digital Wallet Solution,Banking Solutions,Europe,United Kingdom,Manchester,444448,375469,Retail,2024-Q3,2024-08
+2024-08-26,Retirement Planning Service,Insurance Products,Asia Pacific,Australia,Melbourne,379273,489968,Direct Sales,2024-Q3,2024-08
+2024-08-26,Digital Banking Platform,Risk Management,Europe,France,Nantes,461459,480795,Direct Sales,2024-Q3,2024-08
+2024-08-26,Fraud Detection System,Banking Solutions,Europe,Germany,Berlin,184140,223459,Online,2024-Q3,2024-08
+2024-08-27,Trading Analytics Tool,Banking Solutions,Europe,United Kingdom,Bristol,409038,299507,Online,2024-Q3,2024-08
+2024-08-27,Digital Banking Platform,Payment Processing,Europe,Germany,Essen,311663,392103,Direct Sales,2024-Q3,2024-08
+2024-08-27,Compliance Management Software,Payment Processing,North America,Canada,Mississauga,202681,213935,Wholesale,2024-Q3,2024-08
+2024-08-27,Digital Banking Platform,Banking Solutions,North America,United States,Dallas,371453,307638,Mobile App,2024-Q3,2024-08
+2024-08-27,Auto Insurance Coverage,Risk Management,Asia Pacific,Singapore,Northeast,331243,256945,Direct Sales,2024-Q3,2024-08
+2024-08-28,Mobile Banking App,Risk Management,North America,United States,New York,677024,625003,Direct Sales,2024-Q3,2024-08
+2024-08-28,Wealth Management Platform,Payment Processing,Europe,Germany,Hamburg,192322,245845,Mobile App,2024-Q3,2024-08
+2024-08-28,Mobile Banking App,Insurance Products,North America,United States,Houston,313518,415355,Online,2024-Q3,2024-08
+2024-08-28,Property Insurance Package,Payment Processing,Europe,United Kingdom,Bristol,165256,230802,Mobile App,2024-Q3,2024-08
+2024-08-28,Auto Insurance Coverage,Investment Services,Asia Pacific,Singapore,East,235980,214164,Partner,2024-Q3,2024-08
+2024-09-01,Fraud Detection System,Risk Management,North America,Mexico,Mexico City,165650,216236,Mobile App,2024-Q3,2024-09
+2024-09-01,Compliance Management Software,Banking Solutions,North America,United States,San Jose,284419,278345,Mobile App,2024-Q3,2024-09
+2024-09-01,Life Insurance Policy,Insurance Products,Asia Pacific,Japan,Tokyo,168136,126136,Mobile App,2024-Q3,2024-09
+2024-09-02,Fraud Detection System,Risk Management,Europe,France,Toulouse,393871,415140,Direct Sales,2024-Q3,2024-09
+2024-09-03,Wealth Management Platform,Investment Services,North America,Mexico,Guadalajara,322635,225994,Retail,2024-Q3,2024-09
+2024-09-03,Retirement Planning Service,Payment Processing,Europe,United Kingdom,London,412461,302612,Direct Sales,2024-Q3,2024-09
+2024-09-03,Trading Analytics Tool,Investment Services,North America,Mexico,Chihuahua,414998,418224,Partner,2024-Q3,2024-09
+2024-09-04,Property Insurance Package,Insurance Products,Asia Pacific,Australia,Canberra,150435,202555,Wholesale,2024-Q3,2024-09
+2024-09-04,Life Insurance Policy,Banking Solutions,Asia Pacific,Japan,Fukuoka,201089,254835,Partner,2024-Q3,2024-09
+2024-09-04,Digital Wallet Solution,Payment Processing,North America,Mexico,Puebla,267684,307362,Wholesale,2024-Q3,2024-09
+2024-09-05,Investment Portfolio Management,Investment Services,Asia Pacific,Singapore,North,325901,330669,Retail,2024-Q3,2024-09
+2024-09-05,Life Insurance Policy,Investment Services,Europe,United Kingdom,Leeds,197138,145221,Mobile App,2024-Q3,2024-09
+2024-09-05,Wealth Management Platform,Risk Management,Europe,United Kingdom,Leeds,283451,366173,Partner,2024-Q3,2024-09
+2024-09-06,Payment Gateway Service,Investment Services,Asia Pacific,Singapore,West,498710,641811,Direct Sales,2024-Q3,2024-09
+2024-09-06,Wealth Management Platform,Insurance Products,Europe,France,Lille,273549,308447,Direct Sales,2024-Q3,2024-09
+2024-09-06,Investment Portfolio Management,Risk Management,Europe,France,Paris,187546,162849,Mobile App,2024-Q3,2024-09
+2024-09-06,Mobile Banking App,Insurance Products,Europe,United Kingdom,London,541808,469452,Direct Sales,2024-Q3,2024-09
+2024-09-06,Mobile Banking App,Banking Solutions,Europe,United Kingdom,Leeds,261958,310103,Retail,2024-Q3,2024-09
+2024-09-07,Digital Wallet Solution,Risk Management,North America,United States,New York,372707,472626,Direct Sales,2024-Q3,2024-09
+2024-09-08,Trading Analytics Tool,Risk Management,Asia Pacific,Singapore,West,118794,163830,Wholesale,2024-Q3,2024-09
+2024-09-08,Fraud Detection System,Investment Services,Europe,Germany,Berlin,618951,453566,Direct Sales,2024-Q3,2024-09
+2024-09-08,Compliance Management Software,Investment Services,Asia Pacific,Australia,Brisbane,320803,325608,Direct Sales,2024-Q3,2024-09
+2024-09-09,Digital Banking Platform,Risk Management,Asia Pacific,Australia,Melbourne,162650,201355,Online,2024-Q3,2024-09
+2024-09-09,Digital Banking Platform,Risk Management,North America,United States,Chicago,174018,224596,Wholesale,2024-Q3,2024-09
+2024-09-09,Trading Analytics Tool,Risk Management,Asia Pacific,Japan,Yokohama,180275,139304,Online,2024-Q3,2024-09
+2024-09-09,Wealth Management Platform,Risk Management,Asia Pacific,Japan,Saitama,316979,359972,Partner,2024-Q3,2024-09
+2024-09-10,Retirement Planning Service,Insurance Products,Europe,France,Strasbourg,143191,122064,Online,2024-Q3,2024-09
+2024-09-10,Digital Banking Platform,Investment Services,Europe,Germany,Stuttgart,452099,318737,Online,2024-Q3,2024-09
+2024-09-10,Mobile Banking App,Banking Solutions,Europe,France,Lyon,188987,181723,Partner,2024-Q3,2024-09
+2024-09-10,Trading Analytics Tool,Investment Services,North America,Mexico,Tijuana,329503,242223,Mobile App,2024-Q3,2024-09
+2024-09-10,Property Insurance Package,Risk Management,Europe,Germany,Dortmund,287104,390997,Online,2024-Q3,2024-09
+2024-09-10,Wealth Management Platform,Banking Solutions,North America,Mexico,León,248695,294394,Wholesale,2024-Q3,2024-09
+2024-09-11,Payment Gateway Service,Risk Management,North America,United States,Dallas,245404,329240,Online,2024-Q3,2024-09
+2024-09-11,Wealth Management Platform,Risk Management,North America,Canada,Toronto,359451,388046,Online,2024-Q3,2024-09
+2024-09-12,Compliance Management Software,Insurance Products,Asia Pacific,Australia,Gold Coast,194724,223505,Retail,2024-Q3,2024-09
+2024-09-13,Digital Banking Platform,Investment Services,Asia Pacific,Singapore,East,157187,126690,Mobile App,2024-Q3,2024-09
+2024-09-13,Financial Planning Software,Investment Services,Asia Pacific,Japan,Nagoya,187269,164023,Partner,2024-Q3,2024-09
+2024-09-13,Trading Analytics Tool,Insurance Products,North America,Canada,Hamilton,183465,222738,Online,2024-Q3,2024-09
+2024-09-13,Fraud Detection System,Investment Services,Europe,France,Nice,249769,308318,Wholesale,2024-Q3,2024-09
+2024-09-13,Wealth Management Platform,Banking Solutions,North America,Mexico,Nezahualcóyotl,149333,197466,Online,2024-Q3,2024-09
+2024-09-13,Retirement Planning Service,Payment Processing,North America,United States,San Diego,261110,298811,Partner,2024-Q3,2024-09
+2024-09-14,Digital Wallet Solution,Banking Solutions,Europe,France,Montpellier,207175,247227,Partner,2024-Q3,2024-09
+2024-09-15,Mobile Banking App,Banking Solutions,North America,United States,San Antonio,333076,391570,Retail,2024-Q3,2024-09
+2024-09-15,Wealth Management Platform,Banking Solutions,Asia Pacific,Singapore,Central,161623,152888,Partner,2024-Q3,2024-09
+2024-09-15,Retirement Planning Service,Investment Services,Europe,Germany,Hamburg,340727,259577,Partner,2024-Q3,2024-09
+2024-09-15,Property Insurance Package,Investment Services,Asia Pacific,Singapore,North,151914,187646,Mobile App,2024-Q3,2024-09
+2024-09-16,Investment Portfolio Management,Risk Management,Asia Pacific,Singapore,West,141244,111463,Retail,2024-Q3,2024-09
+2024-09-16,Mobile Banking App,Investment Services,Europe,United Kingdom,London,251266,192858,Online,2024-Q3,2024-09
+2024-09-17,Property Insurance Package,Risk Management,North America,Canada,Toronto,413476,577163,Direct Sales,2024-Q3,2024-09
+2024-09-17,Digital Wallet Solution,Insurance Products,Asia Pacific,Japan,Kobe,206959,222988,Wholesale,2024-Q3,2024-09
+2024-09-17,Credit Risk Assessment Tool,Banking Solutions,North America,Canada,Toronto,311291,241178,Mobile App,2024-Q3,2024-09
+2024-09-18,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Australia,Wollongong,212030,230206,Retail,2024-Q3,2024-09
+2024-09-19,Mobile Banking App,Payment Processing,Europe,United Kingdom,Sheffield,512108,602816,Direct Sales,2024-Q3,2024-09
+2024-09-19,Life Insurance Policy,Insurance Products,Asia Pacific,Australia,Newcastle,332641,249280,Retail,2024-Q3,2024-09
+2024-09-19,Wealth Management Platform,Insurance Products,North America,United States,Los Angeles,248136,238036,Online,2024-Q3,2024-09
+2024-09-19,Compliance Management Software,Risk Management,Europe,Germany,Berlin,163399,173800,Mobile App,2024-Q3,2024-09
+2024-09-19,Financial Planning Software,Investment Services,North America,Canada,Ottawa,341634,458585,Mobile App,2024-Q3,2024-09
+2024-09-19,Life Insurance Policy,Investment Services,North America,Mexico,Tijuana,200691,183766,Wholesale,2024-Q3,2024-09
+2024-09-19,Auto Insurance Coverage,Banking Solutions,North America,United States,Chicago,336961,421081,Wholesale,2024-Q3,2024-09
+2024-09-19,Trading Analytics Tool,Banking Solutions,Europe,Germany,Cologne,366953,305226,Direct Sales,2024-Q3,2024-09
+2024-09-20,Wealth Management Platform,Banking Solutions,Asia Pacific,Japan,Kawasaki,260446,284437,Wholesale,2024-Q3,2024-09
+2024-09-20,Wealth Management Platform,Risk Management,Europe,Germany,Düsseldorf,594481,484472,Direct Sales,2024-Q3,2024-09
+2024-09-20,Mobile Banking App,Payment Processing,Europe,United Kingdom,Glasgow,284203,301323,Retail,2024-Q3,2024-09
+2024-09-20,Retirement Planning Service,Banking Solutions,North America,Mexico,León,446045,388789,Online,2024-Q3,2024-09
+2024-09-20,Property Insurance Package,Insurance Products,Europe,United Kingdom,London,189803,141793,Retail,2024-Q3,2024-09
+2024-09-20,Life Insurance Policy,Investment Services,Europe,United Kingdom,Manchester,194986,227006,Wholesale,2024-Q3,2024-09
+2024-09-21,Wealth Management Platform,Risk Management,Europe,Germany,Munich,472167,584620,Direct Sales,2024-Q3,2024-09
+2024-09-22,Wealth Management Platform,Payment Processing,Europe,France,Marseille,212828,255498,Wholesale,2024-Q3,2024-09
+2024-09-22,Digital Wallet Solution,Payment Processing,Asia Pacific,Singapore,North,159270,190842,Wholesale,2024-Q3,2024-09
+2024-09-22,Digital Wallet Solution,Payment Processing,Asia Pacific,Australia,Sunshine Coast,170499,187402,Partner,2024-Q3,2024-09
+2024-09-22,Financial Planning Software,Payment Processing,North America,Canada,Ottawa,249295,229710,Retail,2024-Q3,2024-09
+2024-09-22,Wealth Management Platform,Payment Processing,Asia Pacific,Singapore,East,119610,92677,Wholesale,2024-Q3,2024-09
+2024-09-22,Mobile Banking App,Risk Management,Europe,France,Marseille,160575,168243,Online,2024-Q3,2024-09
+2024-09-23,Fraud Detection System,Banking Solutions,Europe,United Kingdom,Manchester,309990,376377,Mobile App,2024-Q3,2024-09
+2024-09-23,Wealth Management Platform,Payment Processing,Europe,Germany,Leipzig,259067,322338,Online,2024-Q3,2024-09
+2024-09-23,Life Insurance Policy,Banking Solutions,Asia Pacific,Japan,Tokyo,205670,221222,Retail,2024-Q3,2024-09
+2024-09-23,Fraud Detection System,Investment Services,Asia Pacific,Singapore,West,140589,140816,Wholesale,2024-Q3,2024-09
+2024-09-23,Retirement Planning Service,Investment Services,Asia Pacific,Japan,Osaka,271324,278698,Online,2024-Q3,2024-09
+2024-09-24,Wealth Management Platform,Risk Management,Europe,France,Strasbourg,243340,330321,Mobile App,2024-Q3,2024-09
+2024-09-24,Compliance Management Software,Banking Solutions,North America,United States,San Antonio,248952,313484,Wholesale,2024-Q3,2024-09
+2024-09-24,Trading Analytics Tool,Investment Services,North America,United States,Los Angeles,464996,379125,Retail,2024-Q3,2024-09
+2024-09-25,Property Insurance Package,Banking Solutions,Asia Pacific,Japan,Tokyo,405787,380705,Direct Sales,2024-Q3,2024-09
+2024-09-25,Digital Wallet Solution,Banking Solutions,North America,Mexico,Tijuana,256038,268971,Wholesale,2024-Q3,2024-09
+2024-09-25,Trading Analytics Tool,Insurance Products,Europe,United Kingdom,Cardiff,188091,228799,Mobile App,2024-Q3,2024-09
+2024-09-25,Digital Wallet Solution,Payment Processing,Asia Pacific,Australia,Perth,166955,205710,Retail,2024-Q3,2024-09
+2024-09-25,Trading Analytics Tool,Insurance Products,North America,Canada,Winnipeg,146296,182762,Wholesale,2024-Q3,2024-09
+2024-09-26,Investment Portfolio Management,Risk Management,Asia Pacific,Japan,Fukuoka,147152,203059,Wholesale,2024-Q3,2024-09
+2024-09-26,Life Insurance Policy,Investment Services,Europe,Germany,Cologne,233696,285330,Direct Sales,2024-Q3,2024-09
+2024-09-26,Wealth Management Platform,Banking Solutions,North America,United States,San Antonio,179218,199212,Mobile App,2024-Q3,2024-09
+2024-09-26,Digital Banking Platform,Payment Processing,Europe,Germany,Frankfurt,286624,281367,Wholesale,2024-Q3,2024-09
+2024-09-26,Investment Portfolio Management,Insurance Products,Asia Pacific,Australia,Melbourne,431412,534554,Direct Sales,2024-Q3,2024-09
+2024-09-26,Auto Insurance Coverage,Insurance Products,Asia Pacific,Australia,Newcastle,473725,481085,Direct Sales,2024-Q3,2024-09
+2024-09-26,Compliance Management Software,Investment Services,Asia Pacific,Japan,Kawasaki,319049,338629,Mobile App,2024-Q3,2024-09
+2024-09-26,Payment Gateway Service,Payment Processing,Europe,United Kingdom,Edinburgh,493033,531512,Direct Sales,2024-Q3,2024-09
+2024-09-27,Retirement Planning Service,Payment Processing,North America,United States,Houston,320163,446238,Direct Sales,2024-Q3,2024-09
+2024-09-27,Trading Analytics Tool,Banking Solutions,Asia Pacific,Singapore,Central,356558,327543,Direct Sales,2024-Q3,2024-09
+2024-09-27,Fraud Detection System,Banking Solutions,North America,United States,Dallas,311088,318793,Direct Sales,2024-Q3,2024-09
+2024-09-27,Retirement Planning Service,Insurance Products,North America,Canada,Ottawa,271613,225269,Direct Sales,2024-Q3,2024-09
+2024-09-27,Fraud Detection System,Investment Services,Asia Pacific,Japan,Osaka,183173,236033,Partner,2024-Q3,2024-09
+2024-09-28,Fraud Detection System,Risk Management,Europe,France,Lille,237539,212177,Retail,2024-Q3,2024-09
+2024-10-01,Life Insurance Policy,Insurance Products,North America,Mexico,Guadalajara,349970,473216,Retail,2024-Q4,2024-10
+2024-10-01,Digital Wallet Solution,Payment Processing,Asia Pacific,Australia,Brisbane,135979,120797,Partner,2024-Q4,2024-10
+2024-10-01,Wealth Management Platform,Investment Services,Europe,France,Strasbourg,249074,336466,Mobile App,2024-Q4,2024-10
+2024-10-02,Fraud Detection System,Risk Management,Europe,Germany,Düsseldorf,271216,354507,Partner,2024-Q4,2024-10
+2024-10-02,Investment Portfolio Management,Insurance Products,North America,United States,San Diego,421251,315079,Online,2024-Q4,2024-10
+2024-10-02,Fraud Detection System,Payment Processing,North America,Mexico,Juárez,282226,313739,Partner,2024-Q4,2024-10
+2024-10-03,Trading Analytics Tool,Banking Solutions,Asia Pacific,Singapore,West,455983,438961,Direct Sales,2024-Q4,2024-10
+2024-10-03,Digital Wallet Solution,Banking Solutions,Europe,Germany,Leipzig,504870,502605,Retail,2024-Q4,2024-10
+2024-10-03,Auto Insurance Coverage,Payment Processing,Europe,United Kingdom,Glasgow,303833,354154,Partner,2024-Q4,2024-10
+2024-10-03,Life Insurance Policy,Banking Solutions,Europe,France,Lille,319535,276689,Partner,2024-Q4,2024-10
+2024-10-03,Investment Portfolio Management,Risk Management,Europe,France,Marseille,231185,238711,Retail,2024-Q4,2024-10
+2024-10-04,Credit Risk Assessment Tool,Payment Processing,Asia Pacific,Japan,Sapporo,182629,201747,Wholesale,2024-Q4,2024-10
+2024-10-04,Payment Gateway Service,Banking Solutions,Europe,United Kingdom,Liverpool,143699,144745,Online,2024-Q4,2024-10
+2024-10-04,Retirement Planning Service,Banking Solutions,Europe,France,Nice,409460,346669,Online,2024-Q4,2024-10
+2024-10-05,Retirement Planning Service,Banking Solutions,Asia Pacific,Japan,Kawasaki,168661,118791,Mobile App,2024-Q4,2024-10
+2024-10-05,Compliance Management Software,Payment Processing,North America,Mexico,Zapopan,336507,413850,Retail,2024-Q4,2024-10
+2024-10-05,Wealth Management Platform,Banking Solutions,Europe,Germany,Frankfurt,180753,150514,Wholesale,2024-Q4,2024-10
+2024-10-05,Payment Gateway Service,Banking Solutions,Asia Pacific,Japan,Kyoto,402800,284728,Partner,2024-Q4,2024-10
+2024-10-06,Digital Banking Platform,Risk Management,Europe,France,Nice,316460,368233,Retail,2024-Q4,2024-10
+2024-10-06,Investment Portfolio Management,Banking Solutions,Asia Pacific,Australia,Perth,273414,250073,Partner,2024-Q4,2024-10
+2024-10-06,Fraud Detection System,Banking Solutions,North America,Canada,Vancouver,373037,474064,Mobile App,2024-Q4,2024-10
+2024-10-07,Investment Portfolio Management,Banking Solutions,Asia Pacific,Australia,Adelaide,163072,153186,Online,2024-Q4,2024-10
+2024-10-07,Financial Planning Software,Investment Services,Asia Pacific,Japan,Osaka,248545,216496,Mobile App,2024-Q4,2024-10
+2024-10-07,Compliance Management Software,Banking Solutions,Asia Pacific,Japan,Osaka,272293,332265,Mobile App,2024-Q4,2024-10
+2024-10-08,Digital Banking Platform,Risk Management,Asia Pacific,Japan,Kobe,291336,405525,Mobile App,2024-Q4,2024-10
+2024-10-08,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Australia,Sydney,357299,294675,Retail,2024-Q4,2024-10
+2024-10-08,Credit Risk Assessment Tool,Insurance Products,Europe,Germany,Munich,133920,112792,Wholesale,2024-Q4,2024-10
+2024-10-09,Credit Risk Assessment Tool,Payment Processing,Asia Pacific,Singapore,Central,265711,210223,Online,2024-Q4,2024-10
+2024-10-09,Digital Banking Platform,Risk Management,North America,United States,Houston,201333,233777,Wholesale,2024-Q4,2024-10
+2024-10-09,Life Insurance Policy,Insurance Products,Europe,United Kingdom,London,367840,325850,Retail,2024-Q4,2024-10
+2024-10-09,Wealth Management Platform,Payment Processing,North America,Mexico,Nezahualcóyotl,275478,375108,Direct Sales,2024-Q4,2024-10
+2024-10-10,Payment Gateway Service,Payment Processing,North America,United States,Chicago,230839,231679,Partner,2024-Q4,2024-10
+2024-10-10,Digital Wallet Solution,Payment Processing,Asia Pacific,Japan,Kyoto,364100,398217,Partner,2024-Q4,2024-10
+2024-10-10,Retirement Planning Service,Insurance Products,Europe,Germany,Frankfurt,178132,233438,Wholesale,2024-Q4,2024-10
+2024-10-10,Auto Insurance Coverage,Banking Solutions,Asia Pacific,Australia,Adelaide,147438,156869,Retail,2024-Q4,2024-10
+2024-10-10,Auto Insurance Coverage,Payment Processing,Asia Pacific,Australia,Perth,154515,177811,Wholesale,2024-Q4,2024-10
+2024-10-10,Digital Wallet Solution,Payment Processing,Asia Pacific,Japan,Fukuoka,298326,283850,Wholesale,2024-Q4,2024-10
+2024-10-11,Wealth Management Platform,Banking Solutions,North America,United States,New York,316195,331007,Direct Sales,2024-Q4,2024-10
+2024-10-11,Life Insurance Policy,Payment Processing,Asia Pacific,Australia,Wollongong,189145,224346,Mobile App,2024-Q4,2024-10
+2024-10-11,Digital Banking Platform,Investment Services,North America,Mexico,León,360918,397251,Partner,2024-Q4,2024-10
+2024-10-11,Mobile Banking App,Payment Processing,Asia Pacific,Singapore,Northeast,142371,100249,Mobile App,2024-Q4,2024-10
+2024-10-11,Fraud Detection System,Banking Solutions,North America,Canada,Mississauga,214690,298992,Retail,2024-Q4,2024-10
+2024-10-11,Property Insurance Package,Insurance Products,North America,United States,Houston,301704,415711,Mobile App,2024-Q4,2024-10
+2024-10-12,Property Insurance Package,Banking Solutions,Asia Pacific,Australia,Wollongong,453690,415527,Direct Sales,2024-Q4,2024-10
+2024-10-12,Fraud Detection System,Banking Solutions,North America,Canada,Winnipeg,514259,705063,Retail,2024-Q4,2024-10
+2024-10-13,Retirement Planning Service,Insurance Products,Europe,France,Marseille,312026,235315,Retail,2024-Q4,2024-10
+2024-10-13,Compliance Management Software,Banking Solutions,Asia Pacific,Australia,Canberra,278439,380868,Partner,2024-Q4,2024-10
+2024-10-13,Wealth Management Platform,Risk Management,Europe,United Kingdom,Liverpool,342411,334773,Retail,2024-Q4,2024-10
+2024-10-13,Investment Portfolio Management,Insurance Products,Europe,France,Bordeaux,371223,452363,Online,2024-Q4,2024-10
+2024-10-13,Financial Planning Software,Investment Services,Asia Pacific,Singapore,Northeast,250608,346448,Partner,2024-Q4,2024-10
+2024-10-13,Mobile Banking App,Investment Services,Asia Pacific,Australia,Sydney,200563,170100,Mobile App,2024-Q4,2024-10
+2024-10-14,Auto Insurance Coverage,Banking Solutions,Europe,Germany,Essen,436068,360645,Direct Sales,2024-Q4,2024-10
+2024-10-14,Compliance Management Software,Insurance Products,North America,Canada,Toronto,286569,301201,Direct Sales,2024-Q4,2024-10
+2024-10-14,Credit Risk Assessment Tool,Investment Services,Europe,United Kingdom,Glasgow,279169,280076,Wholesale,2024-Q4,2024-10
+2024-10-14,Trading Analytics Tool,Banking Solutions,Europe,United Kingdom,Liverpool,310536,333594,Mobile App,2024-Q4,2024-10
+2024-10-15,Compliance Management Software,Payment Processing,Europe,United Kingdom,Leeds,297255,280696,Online,2024-Q4,2024-10
+2024-10-15,Retirement Planning Service,Payment Processing,Europe,Germany,Cologne,238719,249926,Online,2024-Q4,2024-10
+2024-10-16,Fraud Detection System,Investment Services,North America,Mexico,Tijuana,165656,194952,Mobile App,2024-Q4,2024-10
+2024-10-16,Compliance Management Software,Banking Solutions,Asia Pacific,Singapore,West,247699,303217,Wholesale,2024-Q4,2024-10
+2024-10-16,Compliance Management Software,Payment Processing,Asia Pacific,Singapore,Northeast,307994,229511,Online,2024-Q4,2024-10
+2024-10-17,Property Insurance Package,Banking Solutions,Europe,France,Lille,246483,329637,Mobile App,2024-Q4,2024-10
+2024-10-18,Compliance Management Software,Insurance Products,North America,United States,Philadelphia,200896,231431,Retail,2024-Q4,2024-10
+2024-10-18,Trading Analytics Tool,Risk Management,Europe,Germany,Essen,311563,423873,Online,2024-Q4,2024-10
+2024-10-18,Wealth Management Platform,Risk Management,Europe,Germany,Cologne,210900,239238,Direct Sales,2024-Q4,2024-10
+2024-10-19,Financial Planning Software,Risk Management,Asia Pacific,Japan,Sapporo,367336,315373,Partner,2024-Q4,2024-10
+2024-10-19,Trading Analytics Tool,Insurance Products,Asia Pacific,Singapore,Central,178861,162477,Mobile App,2024-Q4,2024-10
+2024-10-20,Property Insurance Package,Risk Management,Europe,United Kingdom,Cardiff,253618,275932,Retail,2024-Q4,2024-10
+2024-10-20,Trading Analytics Tool,Banking Solutions,Europe,France,Nice,167952,231870,Online,2024-Q4,2024-10
+2024-10-20,Trading Analytics Tool,Payment Processing,Europe,United Kingdom,Leeds,353459,311943,Online,2024-Q4,2024-10
+2024-10-20,Digital Wallet Solution,Payment Processing,North America,Canada,Mississauga,438340,334262,Retail,2024-Q4,2024-10
+2024-10-20,Fraud Detection System,Risk Management,Europe,France,Marseille,173280,150712,Partner,2024-Q4,2024-10
+2024-10-20,Payment Gateway Service,Banking Solutions,Asia Pacific,Singapore,West,295255,322376,Direct Sales,2024-Q4,2024-10
+2024-10-20,Payment Gateway Service,Risk Management,Asia Pacific,Australia,Sydney,138181,121249,Partner,2024-Q4,2024-10
+2024-10-21,Life Insurance Policy,Risk Management,Asia Pacific,Singapore,West,96702,104524,Wholesale,2024-Q4,2024-10
+2024-10-21,Financial Planning Software,Banking Solutions,Europe,France,Montpellier,425413,530208,Retail,2024-Q4,2024-10
+2024-10-22,Payment Gateway Service,Insurance Products,Europe,United Kingdom,Edinburgh,691276,962989,Direct Sales,2024-Q4,2024-10
+2024-10-22,Mobile Banking App,Banking Solutions,North America,Canada,Calgary,221152,246885,Retail,2024-Q4,2024-10
+2024-10-23,Trading Analytics Tool,Payment Processing,Asia Pacific,Singapore,Central,335960,268640,Partner,2024-Q4,2024-10
+2024-10-23,Fraud Detection System,Payment Processing,Europe,France,Marseille,238066,178276,Online,2024-Q4,2024-10
+2024-10-23,Fraud Detection System,Investment Services,North America,Mexico,Juárez,391126,381187,Online,2024-Q4,2024-10
+2024-10-23,Digital Banking Platform,Investment Services,Europe,France,Montpellier,202752,234730,Wholesale,2024-Q4,2024-10
+2024-10-23,Auto Insurance Coverage,Risk Management,Europe,Germany,Berlin,369403,344973,Retail,2024-Q4,2024-10
+2024-10-23,Compliance Management Software,Risk Management,Europe,Germany,Berlin,249676,308535,Direct Sales,2024-Q4,2024-10
+2024-10-24,Investment Portfolio Management,Insurance Products,Asia Pacific,Japan,Yokohama,469672,412424,Direct Sales,2024-Q4,2024-10
+2024-10-24,Investment Portfolio Management,Insurance Products,Europe,United Kingdom,Birmingham,626005,855721,Direct Sales,2024-Q4,2024-10
+2024-10-24,Compliance Management Software,Investment Services,North America,Mexico,Zapopan,495915,680907,Online,2024-Q4,2024-10
+2024-10-25,Digital Wallet Solution,Risk Management,Europe,United Kingdom,Cardiff,409595,543964,Retail,2024-Q4,2024-10
+2024-10-25,Mobile Banking App,Risk Management,Europe,France,Lyon,211068,223137,Online,2024-Q4,2024-10
+2024-10-25,Life Insurance Policy,Insurance Products,Europe,France,Paris,196321,259716,Wholesale,2024-Q4,2024-10
+2024-10-25,Digital Wallet Solution,Insurance Products,North America,Canada,Calgary,274481,348376,Wholesale,2024-Q4,2024-10
+2024-10-25,Auto Insurance Coverage,Investment Services,Europe,Germany,Cologne,258642,337575,Mobile App,2024-Q4,2024-10
+2024-10-26,Digital Banking Platform,Insurance Products,Europe,United Kingdom,Sheffield,462868,543050,Retail,2024-Q4,2024-10
+2024-10-26,Mobile Banking App,Investment Services,Europe,Germany,Düsseldorf,275069,360078,Direct Sales,2024-Q4,2024-10
+2024-10-26,Trading Analytics Tool,Payment Processing,North America,Mexico,Guadalajara,344030,428055,Direct Sales,2024-Q4,2024-10
+2024-10-26,Property Insurance Package,Payment Processing,Asia Pacific,Japan,Kobe,341979,341291,Retail,2024-Q4,2024-10
+2024-10-27,Wealth Management Platform,Payment Processing,Europe,France,Paris,328991,280150,Partner,2024-Q4,2024-10
+2024-10-27,Credit Risk Assessment Tool,Payment Processing,North America,Canada,Ottawa,283260,290087,Online,2024-Q4,2024-10
+2024-10-27,Retirement Planning Service,Investment Services,Europe,United Kingdom,Sheffield,422836,323915,Partner,2024-Q4,2024-10
+2024-10-28,Retirement Planning Service,Insurance Products,Europe,France,Lyon,460942,423217,Direct Sales,2024-Q4,2024-10
+2024-10-28,Mobile Banking App,Payment Processing,North America,United States,San Antonio,426494,307910,Wholesale,2024-Q4,2024-10
+2024-11-01,Compliance Management Software,Payment Processing,Asia Pacific,Singapore,North,357058,463021,Online,2024-Q4,2024-11
+2024-11-01,Digital Wallet Solution,Risk Management,North America,Mexico,Chihuahua,348464,418483,Online,2024-Q4,2024-11
+2024-11-01,Trading Analytics Tool,Risk Management,North America,United States,Los Angeles,450012,328115,Partner,2024-Q4,2024-11
+2024-11-01,Digital Wallet Solution,Banking Solutions,Europe,Germany,Stuttgart,458071,353018,Online,2024-Q4,2024-11
+2024-11-02,Retirement Planning Service,Banking Solutions,North America,United States,Chicago,163631,160047,Wholesale,2024-Q4,2024-11
+2024-11-02,Property Insurance Package,Insurance Products,North America,Mexico,Mexico City,330759,374372,Online,2024-Q4,2024-11
+2024-11-02,Digital Banking Platform,Insurance Products,Europe,Germany,Berlin,315652,314446,Wholesale,2024-Q4,2024-11
+2024-11-02,Retirement Planning Service,Insurance Products,Europe,Germany,Hamburg,133813,143472,Partner,2024-Q4,2024-11
+2024-11-02,Fraud Detection System,Investment Services,Asia Pacific,Japan,Kawasaki,236821,175423,Partner,2024-Q4,2024-11
+2024-11-03,Wealth Management Platform,Banking Solutions,Asia Pacific,Australia,Brisbane,175928,127210,Mobile App,2024-Q4,2024-11
+2024-11-03,Mobile Banking App,Payment Processing,Asia Pacific,Japan,Saitama,140646,112621,Partner,2024-Q4,2024-11
+2024-11-03,Digital Wallet Solution,Insurance Products,Europe,Germany,Stuttgart,160601,137544,Mobile App,2024-Q4,2024-11
+2024-11-04,Mobile Banking App,Banking Solutions,North America,Canada,Montreal,275198,304421,Wholesale,2024-Q4,2024-11
+2024-11-04,Compliance Management Software,Investment Services,Europe,United Kingdom,Sheffield,318893,421262,Partner,2024-Q4,2024-11
+2024-11-04,Wealth Management Platform,Payment Processing,Asia Pacific,Japan,Kobe,151367,199840,Retail,2024-Q4,2024-11
+2024-11-04,Payment Gateway Service,Banking Solutions,Asia Pacific,Australia,Sydney,462081,617938,Retail,2024-Q4,2024-11
+2024-11-05,Financial Planning Software,Payment Processing,North America,Mexico,Puebla,556346,736769,Direct Sales,2024-Q4,2024-11
+2024-11-05,Financial Planning Software,Banking Solutions,Europe,Germany,Essen,397279,390571,Partner,2024-Q4,2024-11
+2024-11-05,Retirement Planning Service,Investment Services,Europe,United Kingdom,London,274504,332287,Direct Sales,2024-Q4,2024-11
+2024-11-05,Compliance Management Software,Banking Solutions,Europe,United Kingdom,Leeds,426806,589818,Retail,2024-Q4,2024-11
+2024-11-05,Investment Portfolio Management,Insurance Products,Asia Pacific,Australia,Perth,274248,355429,Wholesale,2024-Q4,2024-11
+2024-11-05,Fraud Detection System,Banking Solutions,North America,United States,San Antonio,161750,179907,Partner,2024-Q4,2024-11
+2024-11-07,Credit Risk Assessment Tool,Banking Solutions,Europe,France,Marseille,302471,219722,Partner,2024-Q4,2024-11
+2024-11-08,Financial Planning Software,Insurance Products,North America,Canada,Hamilton,309311,354227,Wholesale,2024-Q4,2024-11
+2024-11-08,Wealth Management Platform,Banking Solutions,Europe,United Kingdom,London,238795,170388,Direct Sales,2024-Q4,2024-11
+2024-11-08,Digital Wallet Solution,Risk Management,North America,Mexico,Guadalajara,304490,277722,Wholesale,2024-Q4,2024-11
+2024-11-08,Wealth Management Platform,Risk Management,Europe,United Kingdom,Leeds,198779,259469,Partner,2024-Q4,2024-11
+2024-11-08,Digital Wallet Solution,Insurance Products,Europe,France,Paris,343940,464492,Retail,2024-Q4,2024-11
+2024-11-08,Life Insurance Policy,Banking Solutions,Europe,Germany,Leipzig,425758,512237,Direct Sales,2024-Q4,2024-11
+2024-11-08,Mobile Banking App,Banking Solutions,North America,Canada,Vancouver,361216,332225,Mobile App,2024-Q4,2024-11
+2024-11-08,Payment Gateway Service,Investment Services,Europe,United Kingdom,Cardiff,179579,145563,Partner,2024-Q4,2024-11
+2024-11-09,Payment Gateway Service,Banking Solutions,North America,Canada,Toronto,387975,299239,Retail,2024-Q4,2024-11
+2024-11-09,Investment Portfolio Management,Payment Processing,Europe,Germany,Hamburg,202630,243043,Retail,2024-Q4,2024-11
+2024-11-09,Auto Insurance Coverage,Insurance Products,Asia Pacific,Japan,Nagoya,616806,846691,Direct Sales,2024-Q4,2024-11
+2024-11-10,Trading Analytics Tool,Insurance Products,Asia Pacific,Singapore,West,208393,200974,Partner,2024-Q4,2024-11
+2024-11-10,Retirement Planning Service,Investment Services,Europe,France,Paris,446650,491868,Retail,2024-Q4,2024-11
+2024-11-10,Wealth Management Platform,Risk Management,Europe,United Kingdom,Birmingham,371784,420876,Direct Sales,2024-Q4,2024-11
+2024-11-11,Property Insurance Package,Investment Services,Europe,Germany,Leipzig,271783,337743,Mobile App,2024-Q4,2024-11
+2024-11-11,Payment Gateway Service,Risk Management,North America,Canada,Toronto,430520,439501,Direct Sales,2024-Q4,2024-11
+2024-11-11,Compliance Management Software,Insurance Products,North America,United States,Dallas,189016,239637,Mobile App,2024-Q4,2024-11
+2024-11-12,Digital Wallet Solution,Risk Management,North America,Canada,Vancouver,342473,300616,Online,2024-Q4,2024-11
+2024-11-12,Life Insurance Policy,Payment Processing,Asia Pacific,Australia,Sydney,215034,159851,Retail,2024-Q4,2024-11
+2024-11-12,Compliance Management Software,Risk Management,Europe,Germany,Dortmund,202325,154328,Retail,2024-Q4,2024-11
+2024-11-13,Compliance Management Software,Insurance Products,North America,Canada,Ottawa,271633,368882,Wholesale,2024-Q4,2024-11
+2024-11-13,Financial Planning Software,Payment Processing,North America,Canada,Quebec City,401661,544075,Partner,2024-Q4,2024-11
+2024-11-14,Investment Portfolio Management,Investment Services,Europe,Germany,Dortmund,654308,703852,Direct Sales,2024-Q4,2024-11
+2024-11-14,Life Insurance Policy,Risk Management,Asia Pacific,Singapore,East,101357,110170,Wholesale,2024-Q4,2024-11
+2024-11-14,Wealth Management Platform,Payment Processing,Europe,France,Lille,145744,185803,Mobile App,2024-Q4,2024-11
+2024-11-14,Mobile Banking App,Risk Management,Asia Pacific,Australia,Brisbane,275548,272301,Partner,2024-Q4,2024-11
+2024-11-15,Financial Planning Software,Banking Solutions,Europe,France,Bordeaux,400250,326611,Mobile App,2024-Q4,2024-11
+2024-11-15,Financial Planning Software,Payment Processing,North America,Mexico,Tijuana,382692,461589,Wholesale,2024-Q4,2024-11
+2024-11-15,Life Insurance Policy,Banking Solutions,Europe,Germany,Düsseldorf,431532,544014,Partner,2024-Q4,2024-11
+2024-11-15,Property Insurance Package,Banking Solutions,Europe,Germany,Munich,154624,151208,Wholesale,2024-Q4,2024-11
+2024-11-15,Digital Banking Platform,Banking Solutions,Asia Pacific,Japan,Saitama,138687,177917,Wholesale,2024-Q4,2024-11
+2024-11-15,Financial Planning Software,Payment Processing,North America,Canada,Winnipeg,432199,560397,Retail,2024-Q4,2024-11
+2024-11-16,Financial Planning Software,Payment Processing,Asia Pacific,Australia,Canberra,310921,375531,Retail,2024-Q4,2024-11
+2024-11-16,Life Insurance Policy,Payment Processing,Asia Pacific,Australia,Canberra,134637,156718,Online,2024-Q4,2024-11
+2024-11-16,Compliance Management Software,Payment Processing,Asia Pacific,Singapore,Northeast,300898,349588,Online,2024-Q4,2024-11
+2024-11-16,Investment Portfolio Management,Investment Services,Asia Pacific,Australia,Gold Coast,140551,161118,Wholesale,2024-Q4,2024-11
+2024-11-16,Mobile Banking App,Investment Services,North America,United States,San Diego,453256,531750,Direct Sales,2024-Q4,2024-11
+2024-11-17,Property Insurance Package,Banking Solutions,Europe,France,Nice,155838,157307,Retail,2024-Q4,2024-11
+2024-11-17,Digital Banking Platform,Payment Processing,Europe,France,Lille,290605,366371,Wholesale,2024-Q4,2024-11
+2024-11-17,Payment Gateway Service,Risk Management,Europe,France,Strasbourg,248039,346868,Partner,2024-Q4,2024-11
+2024-11-17,Investment Portfolio Management,Investment Services,Europe,United Kingdom,Leeds,297221,247429,Retail,2024-Q4,2024-11
+2024-11-18,Retirement Planning Service,Banking Solutions,Europe,Germany,Düsseldorf,111323,144106,Wholesale,2024-Q4,2024-11
+2024-11-18,Financial Planning Software,Investment Services,Asia Pacific,Japan,Sapporo,135540,98726,Mobile App,2024-Q4,2024-11
+2024-11-18,Financial Planning Software,Payment Processing,North America,Canada,Edmonton,290610,365419,Mobile App,2024-Q4,2024-11
+2024-11-19,Auto Insurance Coverage,Investment Services,Asia Pacific,Australia,Perth,188540,179575,Partner,2024-Q4,2024-11
+2024-11-19,Trading Analytics Tool,Banking Solutions,North America,United States,Houston,371926,375595,Partner,2024-Q4,2024-11
+2024-11-19,Mobile Banking App,Investment Services,North America,Mexico,Monterrey,234756,251124,Wholesale,2024-Q4,2024-11
+2024-11-19,Property Insurance Package,Insurance Products,Asia Pacific,Australia,Adelaide,321558,225461,Retail,2024-Q4,2024-11
+2024-11-19,Retirement Planning Service,Insurance Products,North America,United States,San Jose,400616,333863,Retail,2024-Q4,2024-11
+2024-11-19,Payment Gateway Service,Insurance Products,North America,United States,Houston,307835,284352,Retail,2024-Q4,2024-11
+2024-11-20,Wealth Management Platform,Banking Solutions,Europe,United Kingdom,Manchester,180159,217847,Wholesale,2024-Q4,2024-11
+2024-11-20,Retirement Planning Service,Insurance Products,North America,United States,San Jose,405059,357131,Retail,2024-Q4,2024-11
+2024-11-20,Payment Gateway Service,Risk Management,Asia Pacific,Japan,Kobe,314578,397770,Partner,2024-Q4,2024-11
+2024-11-21,Investment Portfolio Management,Insurance Products,Europe,Germany,Düsseldorf,385203,502132,Mobile App,2024-Q4,2024-11
+2024-11-21,Property Insurance Package,Payment Processing,Europe,France,Nantes,289960,274228,Partner,2024-Q4,2024-11
+2024-11-21,Fraud Detection System,Banking Solutions,Asia Pacific,Singapore,North,165197,224323,Wholesale,2024-Q4,2024-11
+2024-11-21,Digital Banking Platform,Insurance Products,Asia Pacific,Singapore,East,141921,158507,Online,2024-Q4,2024-11
+2024-11-22,Investment Portfolio Management,Banking Solutions,North America,United States,New York,145358,168279,Wholesale,2024-Q4,2024-11
+2024-11-22,Mobile Banking App,Payment Processing,North America,Canada,Calgary,468749,467348,Direct Sales,2024-Q4,2024-11
+2024-11-22,Trading Analytics Tool,Investment Services,Europe,Germany,Essen,338909,434407,Partner,2024-Q4,2024-11
+2024-11-23,Life Insurance Policy,Investment Services,North America,Canada,Winnipeg,251932,255361,Partner,2024-Q4,2024-11
+2024-11-23,Fraud Detection System,Risk Management,Europe,France,Nice,282439,345104,Direct Sales,2024-Q4,2024-11
+2024-11-23,Fraud Detection System,Payment Processing,Asia Pacific,Japan,Sapporo,318431,317482,Retail,2024-Q4,2024-11
+2024-11-23,Trading Analytics Tool,Banking Solutions,Europe,France,Nantes,282242,215322,Partner,2024-Q4,2024-11
+2024-11-23,Payment Gateway Service,Banking Solutions,North America,Canada,Quebec City,690770,570977,Direct Sales,2024-Q4,2024-11
+2024-11-24,Retirement Planning Service,Banking Solutions,North America,Mexico,Chihuahua,395157,315308,Retail,2024-Q4,2024-11
+2024-11-24,Financial Planning Software,Insurance Products,North America,United States,San Diego,360928,469930,Online,2024-Q4,2024-11
+2024-11-24,Auto Insurance Coverage,Payment Processing,North America,United States,Dallas,215370,151277,Partner,2024-Q4,2024-11
+2024-11-25,Payment Gateway Service,Banking Solutions,Asia Pacific,Australia,Adelaide,114877,93280,Online,2024-Q4,2024-11
+2024-11-25,Life Insurance Policy,Insurance Products,North America,Mexico,Tijuana,156640,171485,Partner,2024-Q4,2024-11
+2024-11-26,Wealth Management Platform,Insurance Products,Europe,France,Montpellier,185946,178681,Online,2024-Q4,2024-11
+2024-11-27,Fraud Detection System,Payment Processing,North America,Canada,Edmonton,368107,457260,Partner,2024-Q4,2024-11
+2024-11-27,Credit Risk Assessment Tool,Insurance Products,Asia Pacific,Singapore,Northeast,311704,416651,Online,2024-Q4,2024-11
+2024-11-27,Payment Gateway Service,Banking Solutions,North America,Mexico,Nezahualcóyotl,477385,508922,Mobile App,2024-Q4,2024-11
+2024-11-27,Life Insurance Policy,Banking Solutions,Asia Pacific,Japan,Osaka,258470,348561,Partner,2024-Q4,2024-11
+2024-11-28,Wealth Management Platform,Investment Services,Europe,United Kingdom,Liverpool,118102,146367,Wholesale,2024-Q4,2024-11
+2024-11-28,Payment Gateway Service,Risk Management,Europe,Germany,Stuttgart,255252,285093,Wholesale,2024-Q4,2024-11
+2024-12-01,Digital Wallet Solution,Payment Processing,Europe,United Kingdom,Birmingham,131756,124840,Wholesale,2024-Q4,2024-12
+2024-12-01,Wealth Management Platform,Risk Management,Europe,France,Strasbourg,484057,631550,Direct Sales,2024-Q4,2024-12
+2024-12-01,Financial Planning Software,Banking Solutions,Asia Pacific,Japan,Kyoto,196555,231317,Mobile App,2024-Q4,2024-12
+2024-12-03,Digital Wallet Solution,Payment Processing,North America,United States,Los Angeles,417576,572183,Direct Sales,2024-Q4,2024-12
+2024-12-03,Life Insurance Policy,Insurance Products,North America,United States,Phoenix,314226,264194,Mobile App,2024-Q4,2024-12
+2024-12-03,Credit Risk Assessment Tool,Risk Management,North America,Mexico,Nezahualcóyotl,302946,403564,Online,2024-Q4,2024-12
+2024-12-03,Compliance Management Software,Risk Management,Europe,Germany,Cologne,132571,104563,Wholesale,2024-Q4,2024-12
+2024-12-03,Credit Risk Assessment Tool,Payment Processing,Asia Pacific,Australia,Melbourne,284588,200731,Direct Sales,2024-Q4,2024-12
+2024-12-04,Property Insurance Package,Investment Services,North America,Mexico,Chihuahua,335206,287025,Wholesale,2024-Q4,2024-12
+2024-12-04,Digital Wallet Solution,Banking Solutions,Europe,Germany,Düsseldorf,179486,211188,Retail,2024-Q4,2024-12
+2024-12-04,Trading Analytics Tool,Banking Solutions,Europe,United Kingdom,Sheffield,462755,488093,Direct Sales,2024-Q4,2024-12
+2024-12-04,Payment Gateway Service,Banking Solutions,Asia Pacific,Australia,Sunshine Coast,382480,530743,Direct Sales,2024-Q4,2024-12
+2024-12-04,Retirement Planning Service,Investment Services,Asia Pacific,Australia,Newcastle,344515,264730,Mobile App,2024-Q4,2024-12
+2024-12-05,Investment Portfolio Management,Payment Processing,North America,Mexico,Guadalajara,261555,239912,Mobile App,2024-Q4,2024-12
+2024-12-05,Trading Analytics Tool,Investment Services,North America,United States,San Diego,365591,258301,Wholesale,2024-Q4,2024-12
+2024-12-05,Wealth Management Platform,Risk Management,Europe,United Kingdom,Bristol,297871,316210,Mobile App,2024-Q4,2024-12
+2024-12-05,Compliance Management Software,Risk Management,Europe,United Kingdom,Edinburgh,232457,270521,Wholesale,2024-Q4,2024-12
+2024-12-05,Compliance Management Software,Insurance Products,North America,Canada,Quebec City,445381,483547,Direct Sales,2024-Q4,2024-12
+2024-12-06,Trading Analytics Tool,Investment Services,Europe,United Kingdom,Leeds,153743,162671,Wholesale,2024-Q4,2024-12
+2024-12-06,Investment Portfolio Management,Investment Services,North America,Canada,Vancouver,441447,528858,Online,2024-Q4,2024-12
+2024-12-06,Mobile Banking App,Banking Solutions,Asia Pacific,Australia,Sydney,183169,182129,Direct Sales,2024-Q4,2024-12
+2024-12-06,Compliance Management Software,Payment Processing,North America,Canada,Vancouver,318668,326116,Direct Sales,2024-Q4,2024-12
+2024-12-07,Digital Wallet Solution,Banking Solutions,Asia Pacific,Singapore,East,249302,249440,Mobile App,2024-Q4,2024-12
+2024-12-07,Wealth Management Platform,Banking Solutions,North America,Canada,Calgary,347745,470765,Mobile App,2024-Q4,2024-12
+2024-12-08,Financial Planning Software,Payment Processing,North America,Mexico,Nezahualcóyotl,645152,596941,Direct Sales,2024-Q4,2024-12
+2024-12-09,Auto Insurance Coverage,Investment Services,North America,Canada,Calgary,273561,324126,Wholesale,2024-Q4,2024-12
+2024-12-09,Investment Portfolio Management,Payment Processing,Europe,Germany,Munich,403312,382609,Online,2024-Q4,2024-12
+2024-12-10,Digital Wallet Solution,Insurance Products,North America,Canada,Ottawa,465816,478021,Direct Sales,2024-Q4,2024-12
+2024-12-10,Digital Wallet Solution,Investment Services,Asia Pacific,Japan,Kawasaki,152250,121411,Online,2024-Q4,2024-12
+2024-12-10,Life Insurance Policy,Investment Services,North America,Mexico,Mexico City,310910,422659,Online,2024-Q4,2024-12
+2024-12-11,Trading Analytics Tool,Insurance Products,Europe,Germany,Hamburg,272315,227010,Retail,2024-Q4,2024-12
+2024-12-11,Digital Banking Platform,Risk Management,North America,Mexico,Nezahualcóyotl,168556,136891,Mobile App,2024-Q4,2024-12
+2024-12-11,Investment Portfolio Management,Payment Processing,North America,Canada,Winnipeg,210835,199648,Direct Sales,2024-Q4,2024-12
+2024-12-11,Payment Gateway Service,Payment Processing,Asia Pacific,Japan,Sapporo,137917,106792,Mobile App,2024-Q4,2024-12
+2024-12-12,Trading Analytics Tool,Banking Solutions,North America,United States,Los Angeles,512093,418438,Retail,2024-Q4,2024-12
+2024-12-12,Life Insurance Policy,Risk Management,Europe,France,Montpellier,209691,150882,Mobile App,2024-Q4,2024-12
+2024-12-12,Property Insurance Package,Banking Solutions,Europe,France,Lyon,285990,256035,Partner,2024-Q4,2024-12
+2024-12-13,Mobile Banking App,Banking Solutions,Asia Pacific,Japan,Tokyo,392547,408889,Retail,2024-Q4,2024-12
+2024-12-13,Digital Banking Platform,Investment Services,Europe,France,Nice,245693,181738,Wholesale,2024-Q4,2024-12
+2024-12-13,Life Insurance Policy,Payment Processing,Europe,Germany,Hamburg,273878,203470,Mobile App,2024-Q4,2024-12
+2024-12-14,Auto Insurance Coverage,Risk Management,Europe,United Kingdom,Birmingham,275989,203803,Direct Sales,2024-Q4,2024-12
+2024-12-14,Financial Planning Software,Banking Solutions,Asia Pacific,Australia,Brisbane,226831,238809,Retail,2024-Q4,2024-12
+2024-12-14,Compliance Management Software,Investment Services,Asia Pacific,Japan,Kyoto,125682,116701,Mobile App,2024-Q4,2024-12
+2024-12-15,Retirement Planning Service,Investment Services,Europe,France,Bordeaux,393853,378599,Retail,2024-Q4,2024-12
+2024-12-15,Retirement Planning Service,Banking Solutions,Asia Pacific,Japan,Yokohama,235802,173481,Online,2024-Q4,2024-12
+2024-12-15,Financial Planning Software,Banking Solutions,Europe,France,Nice,108613,150904,Wholesale,2024-Q4,2024-12
+2024-12-15,Financial Planning Software,Risk Management,North America,United States,San Jose,156749,172201,Online,2024-Q4,2024-12
+2024-12-15,Life Insurance Policy,Investment Services,Europe,Germany,Cologne,245459,232568,Mobile App,2024-Q4,2024-12
+2024-12-15,Auto Insurance Coverage,Payment Processing,North America,Mexico,Zapopan,342696,310733,Online,2024-Q4,2024-12
+2024-12-16,Life Insurance Policy,Risk Management,North America,Canada,Montreal,423040,495918,Online,2024-Q4,2024-12
+2024-12-17,Credit Risk Assessment Tool,Investment Services,Europe,Germany,Frankfurt,654119,896852,Direct Sales,2024-Q4,2024-12
+2024-12-17,Fraud Detection System,Insurance Products,Europe,United Kingdom,Manchester,125301,117862,Wholesale,2024-Q4,2024-12
+2024-12-17,Auto Insurance Coverage,Payment Processing,North America,Mexico,Nezahualcóyotl,218170,167437,Partner,2024-Q4,2024-12
+2024-12-17,Credit Risk Assessment Tool,Investment Services,North America,Canada,Edmonton,639975,835024,Direct Sales,2024-Q4,2024-12
+2024-12-17,Retirement Planning Service,Payment Processing,Europe,France,Strasbourg,529855,668409,Direct Sales,2024-Q4,2024-12
+2024-12-18,Wealth Management Platform,Payment Processing,North America,Canada,Calgary,221766,274035,Wholesale,2024-Q4,2024-12
+2024-12-18,Compliance Management Software,Risk Management,Asia Pacific,Australia,Sydney,106999,101349,Wholesale,2024-Q4,2024-12
+2024-12-18,Mobile Banking App,Risk Management,Europe,France,Marseille,130746,132207,Mobile App,2024-Q4,2024-12
+2024-12-18,Auto Insurance Coverage,Payment Processing,Asia Pacific,Singapore,Central,110645,107468,Mobile App,2024-Q4,2024-12
+2024-12-18,Retirement Planning Service,Risk Management,Europe,Germany,Essen,393464,352487,Wholesale,2024-Q4,2024-12
+2024-12-18,Mobile Banking App,Investment Services,Europe,United Kingdom,Sheffield,319042,444642,Retail,2024-Q4,2024-12
+2024-12-19,Credit Risk Assessment Tool,Risk Management,Europe,France,Montpellier,188948,203244,Mobile App,2024-Q4,2024-12
+2024-12-19,Mobile Banking App,Banking Solutions,North America,Mexico,Juárez,268383,191134,Wholesale,2024-Q4,2024-12
+2024-12-20,Compliance Management Software,Payment Processing,Asia Pacific,Japan,Tokyo,190679,144464,Retail,2024-Q4,2024-12
+2024-12-20,Compliance Management Software,Payment Processing,North America,Mexico,Mexico City,349330,305756,Mobile App,2024-Q4,2024-12
+2024-12-20,Fraud Detection System,Payment Processing,North America,Canada,Calgary,228086,312439,Retail,2024-Q4,2024-12
+2024-12-21,Property Insurance Package,Banking Solutions,Asia Pacific,Japan,Nagoya,279345,354076,Direct Sales,2024-Q4,2024-12
+2024-12-21,Property Insurance Package,Insurance Products,North America,United States,Los Angeles,409691,380803,Online,2024-Q4,2024-12
+2024-12-21,Life Insurance Policy,Payment Processing,North America,Mexico,Tijuana,203262,222488,Online,2024-Q4,2024-12
+2024-12-22,Financial Planning Software,Banking Solutions,Asia Pacific,Singapore,North,266286,350736,Direct Sales,2024-Q4,2024-12
+2024-12-22,Property Insurance Package,Risk Management,Europe,Germany,Berlin,310933,351266,Mobile App,2024-Q4,2024-12
+2024-12-22,Retirement Planning Service,Banking Solutions,Europe,United Kingdom,Leeds,318280,270697,Partner,2024-Q4,2024-12
+2024-12-22,Compliance Management Software,Banking Solutions,Europe,United Kingdom,London,317025,401451,Direct Sales,2024-Q4,2024-12
+2024-12-22,Investment Portfolio Management,Payment Processing,Asia Pacific,Australia,Canberra,205089,215288,Retail,2024-Q4,2024-12
+2024-12-23,Payment Gateway Service,Payment Processing,Asia Pacific,Singapore,Northeast,132547,127239,Partner,2024-Q4,2024-12
+2024-12-23,Mobile Banking App,Payment Processing,North America,Canada,Toronto,304989,385645,Wholesale,2024-Q4,2024-12
+2024-12-23,Investment Portfolio Management,Banking Solutions,Europe,France,Lille,282086,203875,Online,2024-Q4,2024-12
+2024-12-24,Life Insurance Policy,Insurance Products,Asia Pacific,Singapore,West,341939,295158,Retail,2024-Q4,2024-12
+2024-12-24,Auto Insurance Coverage,Risk Management,Europe,Germany,Berlin,180731,204050,Partner,2024-Q4,2024-12
+2024-12-24,Investment Portfolio Management,Risk Management,Europe,Germany,Dortmund,116013,160882,Mobile App,2024-Q4,2024-12
+2024-12-24,Credit Risk Assessment Tool,Banking Solutions,Asia Pacific,Singapore,West,176577,126035,Partner,2024-Q4,2024-12
+2024-12-25,Property Insurance Package,Insurance Products,North America,Canada,Vancouver,288606,333859,Direct Sales,2024-Q4,2024-12
+2024-12-25,Retirement Planning Service,Banking Solutions,Asia Pacific,Japan,Tokyo,282012,356796,Retail,2024-Q4,2024-12
+2024-12-25,Life Insurance Policy,Payment Processing,North America,Mexico,Juárez,184321,241249,Wholesale,2024-Q4,2024-12
+2024-12-25,Compliance Management Software,Banking Solutions,Asia Pacific,Japan,Kyoto,221867,217104,Online,2024-Q4,2024-12
+2024-12-25,Digital Wallet Solution,Risk Management,Asia Pacific,Japan,Saitama,99976,107475,Wholesale,2024-Q4,2024-12
+2024-12-25,Credit Risk Assessment Tool,Insurance Products,Europe,France,Lille,337556,464672,Online,2024-Q4,2024-12
+2024-12-25,Digital Banking Platform,Investment Services,Asia Pacific,Australia,Sydney,280926,363230,Online,2024-Q4,2024-12
+2024-12-26,Trading Analytics Tool,Insurance Products,Asia Pacific,Japan,Nagoya,281448,259630,Partner,2024-Q4,2024-12
+2024-12-26,Retirement Planning Service,Investment Services,North America,Canada,Hamilton,336418,418999,Mobile App,2024-Q4,2024-12
+2024-12-26,Credit Risk Assessment Tool,Banking Solutions,Europe,France,Nice,221761,218357,Mobile App,2024-Q4,2024-12
+2024-12-26,Life Insurance Policy,Payment Processing,North America,Mexico,Tijuana,285279,338246,Direct Sales,2024-Q4,2024-12
+2024-12-26,Wealth Management Platform,Risk Management,Europe,France,Marseille,693881,877826,Direct Sales,2024-Q4,2024-12
+2024-12-27,Payment Gateway Service,Payment Processing,North America,United States,Chicago,479880,452323,Retail,2024-Q4,2024-12
+2024-12-27,Investment Portfolio Management,Payment Processing,Asia Pacific,Singapore,Central,339186,345728,Retail,2024-Q4,2024-12
+2024-12-27,Property Insurance Package,Investment Services,Asia Pacific,Australia,Perth,410308,443563,Direct Sales,2024-Q4,2024-12
+2024-12-27,Digital Banking Platform,Investment Services,Europe,United Kingdom,Bristol,368767,293141,Online,2024-Q4,2024-12
+2024-12-28,Fraud Detection System,Insurance Products,Europe,Germany,Stuttgart,334194,351368,Wholesale,2024-Q4,2024-12
+2024-12-28,Auto Insurance Coverage,Risk Management,North America,United States,New York,196432,237900,Mobile App,2024-Q4,2024-12
+2024-12-28,Payment Gateway Service,Payment Processing,Asia Pacific,Australia,Melbourne,315934,434386,Partner,2024-Q4,2024-12
+2025-01-01,Fraud Detection System,Banking Solutions,Europe,Germany,Essen,279017,209136,Direct Sales,2025-Q1,2025-01
+2025-01-01,Trading Analytics Tool,Investment Services,North America,Canada,Hamilton,169662,130152,Wholesale,2025-Q1,2025-01
+2025-01-01,Fraud Detection System,Investment Services,North America,United States,New York,388081,312111,Partner,2025-Q1,2025-01
+2025-01-01,Life Insurance Policy,Insurance Products,Europe,France,Lille,197849,215869,Partner,2025-Q1,2025-01
+2025-01-01,Auto Insurance Coverage,Banking Solutions,North America,Mexico,Mexico City,414216,459102,Partner,2025-Q1,2025-01
+2025-01-02,Life Insurance Policy,Banking Solutions,Europe,Germany,Munich,311593,292833,Retail,2025-Q1,2025-01
+2025-01-02,Fraud Detection System,Investment Services,Asia Pacific,Singapore,East,132068,146513,Mobile App,2025-Q1,2025-01
+2025-01-02,Auto Insurance Coverage,Investment Services,Asia Pacific,Japan,Sapporo,88917,110993,Wholesale,2025-Q1,2025-01
+2025-01-03,Digital Banking Platform,Banking Solutions,Asia Pacific,Singapore,East,140583,143251,Online,2025-Q1,2025-01
+2025-01-03,Credit Risk Assessment Tool,Insurance Products,North America,Canada,Edmonton,198881,220299,Online,2025-Q1,2025-01
+2025-01-03,Digital Banking Platform,Payment Processing,Europe,Germany,Leipzig,181575,145905,Retail,2025-Q1,2025-01
+2025-01-04,Fraud Detection System,Risk Management,Europe,United Kingdom,London,385704,333137,Direct Sales,2025-Q1,2025-01
+2025-01-04,Auto Insurance Coverage,Risk Management,Europe,Germany,Leipzig,278033,271844,Partner,2025-Q1,2025-01
+2025-01-04,Trading Analytics Tool,Payment Processing,Asia Pacific,Japan,Kawasaki,245168,292070,Wholesale,2025-Q1,2025-01
+2025-01-05,Financial Planning Software,Banking Solutions,Asia Pacific,Singapore,East,393273,326834,Retail,2025-Q1,2025-01
+2025-01-05,Fraud Detection System,Investment Services,North America,Canada,Toronto,289340,227525,Mobile App,2025-Q1,2025-01
+2025-01-06,Life Insurance Policy,Insurance Products,Europe,Germany,Frankfurt,282920,303420,Mobile App,2025-Q1,2025-01
+2025-01-06,Wealth Management Platform,Risk Management,Asia Pacific,Singapore,North,151547,129652,Wholesale,2025-Q1,2025-01
+2025-01-06,Property Insurance Package,Risk Management,North America,Canada,Vancouver,148430,106573,Partner,2025-Q1,2025-01
+2025-01-06,Auto Insurance Coverage,Risk Management,North America,Canada,Toronto,283614,381550,Partner,2025-Q1,2025-01
+2025-01-07,Payment Gateway Service,Investment Services,North America,Mexico,Juárez,258724,354160,Wholesale,2025-Q1,2025-01
+2025-01-07,Digital Banking Platform,Insurance Products,Europe,Germany,Essen,303146,367578,Direct Sales,2025-Q1,2025-01
+2025-01-07,Life Insurance Policy,Insurance Products,North America,Canada,Toronto,218079,187422,Online,2025-Q1,2025-01
+2025-01-08,Payment Gateway Service,Banking Solutions,Asia Pacific,Japan,Fukuoka,254850,282975,Mobile App,2025-Q1,2025-01
+2025-01-08,Wealth Management Platform,Payment Processing,North America,Mexico,Tijuana,487464,553256,Direct Sales,2025-Q1,2025-01
+2025-01-08,Life Insurance Policy,Banking Solutions,Asia Pacific,Australia,Sunshine Coast,246006,178185,Retail,2025-Q1,2025-01
+2025-01-08,Trading Analytics Tool,Risk Management,Europe,United Kingdom,Leeds,564916,569633,Direct Sales,2025-Q1,2025-01
+2025-01-09,Life Insurance Policy,Insurance Products,Europe,France,Nice,570136,638442,Direct Sales,2025-Q1,2025-01
+2025-01-09,Wealth Management Platform,Banking Solutions,Europe,France,Lyon,425252,539140,Retail,2025-Q1,2025-01
+2025-01-10,Fraud Detection System,Payment Processing,Asia Pacific,Singapore,West,355044,479237,Online,2025-Q1,2025-01
+2025-01-10,Wealth Management Platform,Payment Processing,North America,United States,Philadelphia,215608,298553,Direct Sales,2025-Q1,2025-01
+2025-01-10,Digital Banking Platform,Banking Solutions,Europe,Germany,Stuttgart,242899,294381,Online,2025-Q1,2025-01
+2025-01-10,Wealth Management Platform,Payment Processing,Asia Pacific,Japan,Kyoto,325364,404870,Online,2025-Q1,2025-01
+2025-01-11,Investment Portfolio Management,Risk Management,Asia Pacific,Japan,Nagoya,254295,198634,Direct Sales,2025-Q1,2025-01
+2025-01-11,Credit Risk Assessment Tool,Payment Processing,Europe,United Kingdom,Cardiff,489314,490116,Retail,2025-Q1,2025-01
+2025-01-11,Wealth Management Platform,Risk Management,Europe,Germany,Stuttgart,234121,208373,Retail,2025-Q1,2025-01
+2025-01-12,Financial Planning Software,Insurance Products,North America,Canada,Calgary,417488,357547,Retail,2025-Q1,2025-01
+2025-01-12,Financial Planning Software,Investment Services,Asia Pacific,Singapore,North,199688,242121,Partner,2025-Q1,2025-01
+2025-01-13,Life Insurance Policy,Insurance Products,Asia Pacific,Australia,Melbourne,138162,142119,Online,2025-Q1,2025-01
+2025-01-13,Compliance Management Software,Insurance Products,North America,Canada,Ottawa,279055,296254,Wholesale,2025-Q1,2025-01
+2025-01-13,Mobile Banking App,Payment Processing,North America,Canada,Ottawa,530325,383763,Partner,2025-Q1,2025-01
+2025-01-14,Digital Wallet Solution,Insurance Products,Asia Pacific,Singapore,East,200541,189879,Retail,2025-Q1,2025-01
+2025-01-14,Investment Portfolio Management,Banking Solutions,Europe,United Kingdom,Glasgow,338562,237509,Retail,2025-Q1,2025-01
+2025-01-14,Trading Analytics Tool,Insurance Products,North America,Mexico,Monterrey,274824,313559,Mobile App,2025-Q1,2025-01
+2025-01-14,Investment Portfolio Management,Banking Solutions,Asia Pacific,Australia,Wollongong,152408,125751,Partner,2025-Q1,2025-01
+2025-01-14,Investment Portfolio Management,Payment Processing,North America,Mexico,Zapopan,290755,399481,Direct Sales,2025-Q1,2025-01
+2025-01-15,Mobile Banking App,Insurance Products,Asia Pacific,Australia,Wollongong,325237,412420,Mobile App,2025-Q1,2025-01
+2025-01-15,Payment Gateway Service,Banking Solutions,North America,United States,Philadelphia,148721,135580,Partner,2025-Q1,2025-01
+2025-01-15,Compliance Management Software,Banking Solutions,Europe,Germany,Essen,335494,337418,Wholesale,2025-Q1,2025-01
+2025-01-15,Trading Analytics Tool,Banking Solutions,North America,United States,San Jose,270145,267251,Mobile App,2025-Q1,2025-01
+2025-01-15,Fraud Detection System,Payment Processing,Asia Pacific,Singapore,West,294529,378623,Online,2025-Q1,2025-01
+2025-01-15,Retirement Planning Service,Insurance Products,Europe,Germany,Stuttgart,253179,323911,Wholesale,2025-Q1,2025-01
+2025-01-15,Compliance Management Software,Payment Processing,Asia Pacific,Singapore,North,327810,313210,Partner,2025-Q1,2025-01
+2025-01-15,Compliance Management Software,Risk Management,Asia Pacific,Singapore,West,187306,139610,Partner,2025-Q1,2025-01
+2025-01-15,Retirement Planning Service,Payment Processing,Asia Pacific,Australia,Melbourne,272646,249540,Mobile App,2025-Q1,2025-01
+2025-01-16,Digital Wallet Solution,Investment Services,Asia Pacific,Japan,Saitama,195629,272526,Wholesale,2025-Q1,2025-01
+2025-01-16,Trading Analytics Tool,Investment Services,North America,United States,San Diego,477697,403916,Direct Sales,2025-Q1,2025-01
+2025-01-16,Digital Banking Platform,Insurance Products,Europe,France,Lille,343868,366039,Mobile App,2025-Q1,2025-01
+2025-01-17,Financial Planning Software,Insurance Products,Asia Pacific,Singapore,East,261785,246496,Mobile App,2025-Q1,2025-01
+2025-01-17,Credit Risk Assessment Tool,Risk Management,North America,Mexico,Zapopan,351558,297419,Partner,2025-Q1,2025-01
+2025-01-18,Digital Wallet Solution,Risk Management,Europe,Germany,Stuttgart,186696,215846,Online,2025-Q1,2025-01
+2025-01-18,Wealth Management Platform,Investment Services,Asia Pacific,Japan,Nagoya,236993,305207,Partner,2025-Q1,2025-01
+2025-01-18,Wealth Management Platform,Risk Management,Asia Pacific,Japan,Yokohama,219940,307890,Mobile App,2025-Q1,2025-01
+2025-01-18,Digital Banking Platform,Investment Services,Europe,France,Nantes,314085,242180,Direct Sales,2025-Q1,2025-01
+2025-01-18,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Singapore,Northeast,207248,281035,Wholesale,2025-Q1,2025-01
+2025-01-19,Wealth Management Platform,Banking Solutions,Europe,Germany,Hamburg,442680,564834,Direct Sales,2025-Q1,2025-01
+2025-01-19,Payment Gateway Service,Banking Solutions,Europe,United Kingdom,Cardiff,199494,148098,Online,2025-Q1,2025-01
+2025-01-19,Digital Wallet Solution,Banking Solutions,Europe,France,Marseille,190852,139747,Mobile App,2025-Q1,2025-01
+2025-01-19,Life Insurance Policy,Investment Services,Europe,Germany,Munich,306619,345679,Retail,2025-Q1,2025-01
+2025-01-19,Fraud Detection System,Investment Services,Asia Pacific,Japan,Kawasaki,369459,377122,Direct Sales,2025-Q1,2025-01
+2025-01-19,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Japan,Tokyo,208477,257329,Retail,2025-Q1,2025-01
+2025-01-20,Digital Wallet Solution,Banking Solutions,Europe,United Kingdom,Sheffield,242370,202655,Direct Sales,2025-Q1,2025-01
+2025-01-20,Retirement Planning Service,Risk Management,North America,Mexico,Chihuahua,157027,114235,Retail,2025-Q1,2025-01
+2025-01-20,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Japan,Fukuoka,343127,281085,Mobile App,2025-Q1,2025-01
+2025-01-21,Trading Analytics Tool,Investment Services,North America,Mexico,Puebla,396288,498703,Direct Sales,2025-Q1,2025-01
+2025-01-21,Mobile Banking App,Investment Services,Asia Pacific,Australia,Sydney,227747,224551,Online,2025-Q1,2025-01
+2025-01-21,Digital Wallet Solution,Investment Services,Asia Pacific,Japan,Nagoya,191142,174908,Online,2025-Q1,2025-01
+2025-01-21,Financial Planning Software,Risk Management,Asia Pacific,Singapore,East,165230,194431,Retail,2025-Q1,2025-01
+2025-01-22,Mobile Banking App,Investment Services,Asia Pacific,Japan,Kawasaki,220148,244360,Wholesale,2025-Q1,2025-01
+2025-01-22,Property Insurance Package,Insurance Products,North America,Mexico,Chihuahua,340161,348990,Wholesale,2025-Q1,2025-01
+2025-01-22,Fraud Detection System,Investment Services,North America,Mexico,Zapopan,381883,506009,Partner,2025-Q1,2025-01
+2025-01-22,Property Insurance Package,Insurance Products,Asia Pacific,Australia,Brisbane,171952,179782,Mobile App,2025-Q1,2025-01
+2025-01-23,Retirement Planning Service,Investment Services,Asia Pacific,Australia,Wollongong,225421,291194,Retail,2025-Q1,2025-01
+2025-01-24,Auto Insurance Coverage,Payment Processing,Asia Pacific,Singapore,East,174082,163938,Retail,2025-Q1,2025-01
+2025-01-24,Property Insurance Package,Investment Services,North America,Mexico,Puebla,280802,244360,Retail,2025-Q1,2025-01
+2025-01-24,Investment Portfolio Management,Payment Processing,Europe,France,Nice,168663,213704,Online,2025-Q1,2025-01
+2025-01-25,Financial Planning Software,Investment Services,North America,Canada,Ottawa,366868,264014,Mobile App,2025-Q1,2025-01
+2025-01-26,Digital Banking Platform,Payment Processing,Europe,United Kingdom,London,261060,274855,Retail,2025-Q1,2025-01
+2025-01-26,Payment Gateway Service,Investment Services,Europe,France,Strasbourg,298444,210951,Retail,2025-Q1,2025-01
+2025-01-26,Mobile Banking App,Payment Processing,North America,United States,Los Angeles,410318,405446,Partner,2025-Q1,2025-01
+2025-01-26,Retirement Planning Service,Investment Services,Asia Pacific,Australia,Canberra,222649,310416,Mobile App,2025-Q1,2025-01
+2025-01-26,Wealth Management Platform,Risk Management,Asia Pacific,Japan,Yokohama,270577,255869,Mobile App,2025-Q1,2025-01
+2025-01-26,Financial Planning Software,Risk Management,Europe,France,Nantes,308572,313711,Mobile App,2025-Q1,2025-01
+2025-01-27,Digital Banking Platform,Investment Services,Europe,United Kingdom,Edinburgh,331991,318319,Online,2025-Q1,2025-01
+2025-01-27,Wealth Management Platform,Investment Services,Europe,Germany,Essen,728495,971957,Direct Sales,2025-Q1,2025-01
+2025-01-27,Fraud Detection System,Insurance Products,Europe,France,Marseille,467546,380319,Retail,2025-Q1,2025-01
+2025-01-27,Investment Portfolio Management,Insurance Products,North America,United States,Dallas,334152,401731,Partner,2025-Q1,2025-01
+2025-01-27,Payment Gateway Service,Insurance Products,Europe,United Kingdom,Leeds,315593,425222,Partner,2025-Q1,2025-01
+2025-01-27,Property Insurance Package,Payment Processing,Europe,France,Nice,420048,343307,Partner,2025-Q1,2025-01
+2025-01-28,Retirement Planning Service,Investment Services,Asia Pacific,Japan,Kawasaki,149947,130938,Retail,2025-Q1,2025-01
+2025-02-01,Fraud Detection System,Payment Processing,North America,United States,San Diego,147363,173124,Wholesale,2025-Q1,2025-02
+2025-02-01,Retirement Planning Service,Payment Processing,Europe,Germany,Berlin,356934,488333,Retail,2025-Q1,2025-02
+2025-02-01,Payment Gateway Service,Payment Processing,Asia Pacific,Singapore,Northeast,195371,229478,Wholesale,2025-Q1,2025-02
+2025-02-01,Financial Planning Software,Banking Solutions,Asia Pacific,Japan,Kobe,119753,101548,Wholesale,2025-Q1,2025-02
+2025-02-02,Payment Gateway Service,Risk Management,Europe,United Kingdom,Sheffield,344888,436048,Retail,2025-Q1,2025-02
+2025-02-02,Property Insurance Package,Investment Services,Asia Pacific,Australia,Newcastle,325605,257011,Direct Sales,2025-Q1,2025-02
+2025-02-02,Mobile Banking App,Payment Processing,Asia Pacific,Japan,Kobe,271360,260383,Partner,2025-Q1,2025-02
+2025-02-02,Digital Banking Platform,Risk Management,North America,Canada,Vancouver,254471,279832,Direct Sales,2025-Q1,2025-02
+2025-02-03,Mobile Banking App,Risk Management,Europe,France,Lille,460917,395823,Direct Sales,2025-Q1,2025-02
+2025-02-03,Retirement Planning Service,Investment Services,North America,United States,Philadelphia,504159,696634,Direct Sales,2025-Q1,2025-02
+2025-02-03,Digital Banking Platform,Investment Services,North America,Mexico,León,330958,259290,Online,2025-Q1,2025-02
+2025-02-03,Wealth Management Platform,Insurance Products,Europe,France,Nice,336490,264994,Mobile App,2025-Q1,2025-02
+2025-02-03,Payment Gateway Service,Banking Solutions,North America,Mexico,Zapopan,279683,251333,Retail,2025-Q1,2025-02
+2025-02-03,Retirement Planning Service,Investment Services,Europe,Germany,Düsseldorf,353224,379376,Retail,2025-Q1,2025-02
+2025-02-03,Digital Wallet Solution,Investment Services,Europe,United Kingdom,Liverpool,260346,308692,Retail,2025-Q1,2025-02
+2025-02-03,Property Insurance Package,Risk Management,North America,Canada,Edmonton,293914,239309,Mobile App,2025-Q1,2025-02
+2025-02-04,Investment Portfolio Management,Banking Solutions,North America,Mexico,Guadalajara,447252,525698,Online,2025-Q1,2025-02
+2025-02-04,Retirement Planning Service,Risk Management,Asia Pacific,Singapore,North,131308,176711,Wholesale,2025-Q1,2025-02
+2025-02-04,Mobile Banking App,Investment Services,North America,Canada,Ottawa,332888,454305,Partner,2025-Q1,2025-02
+2025-02-05,Mobile Banking App,Banking Solutions,Europe,Germany,Hamburg,418891,438911,Direct Sales,2025-Q1,2025-02
+2025-02-05,Wealth Management Platform,Payment Processing,Europe,United Kingdom,Bristol,273311,310334,Mobile App,2025-Q1,2025-02
+2025-02-06,Auto Insurance Coverage,Insurance Products,North America,Mexico,Juárez,428976,400818,Mobile App,2025-Q1,2025-02
+2025-02-06,Trading Analytics Tool,Investment Services,Europe,Germany,Stuttgart,471309,449469,Online,2025-Q1,2025-02
+2025-02-06,Wealth Management Platform,Investment Services,Asia Pacific,Singapore,Central,91865,128175,Mobile App,2025-Q1,2025-02
+2025-02-07,Mobile Banking App,Payment Processing,Europe,United Kingdom,Cardiff,156997,192085,Partner,2025-Q1,2025-02
+2025-02-07,Trading Analytics Tool,Insurance Products,North America,Canada,Hamilton,283827,382803,Wholesale,2025-Q1,2025-02
+2025-02-07,Financial Planning Software,Insurance Products,Asia Pacific,Singapore,Northeast,232622,229886,Partner,2025-Q1,2025-02
+2025-02-08,Life Insurance Policy,Banking Solutions,North America,United States,Los Angeles,478331,647472,Online,2025-Q1,2025-02
+2025-02-08,Property Insurance Package,Banking Solutions,Asia Pacific,Singapore,West,481147,551126,Direct Sales,2025-Q1,2025-02
+2025-02-09,Investment Portfolio Management,Insurance Products,Asia Pacific,Japan,Osaka,285736,379710,Mobile App,2025-Q1,2025-02
+2025-02-09,Auto Insurance Coverage,Payment Processing,Asia Pacific,Japan,Yokohama,179339,210002,Online,2025-Q1,2025-02
+2025-02-09,Compliance Management Software,Risk Management,Asia Pacific,Australia,Sydney,217031,288169,Partner,2025-Q1,2025-02
+2025-02-09,Retirement Planning Service,Risk Management,Asia Pacific,Australia,Canberra,277577,339643,Partner,2025-Q1,2025-02
+2025-02-09,Mobile Banking App,Payment Processing,Asia Pacific,Japan,Kobe,272996,340174,Mobile App,2025-Q1,2025-02
+2025-02-10,Mobile Banking App,Payment Processing,Asia Pacific,Singapore,Central,175925,214016,Mobile App,2025-Q1,2025-02
+2025-02-10,Life Insurance Policy,Payment Processing,Europe,France,Nantes,308670,268337,Wholesale,2025-Q1,2025-02
+2025-02-11,Credit Risk Assessment Tool,Banking Solutions,Europe,Germany,Cologne,210990,156504,Retail,2025-Q1,2025-02
+2025-02-11,Digital Banking Platform,Investment Services,Europe,United Kingdom,Bristol,258345,325605,Mobile App,2025-Q1,2025-02
+2025-02-11,Wealth Management Platform,Investment Services,Europe,Germany,Hamburg,191992,256320,Mobile App,2025-Q1,2025-02
+2025-02-11,Compliance Management Software,Payment Processing,Asia Pacific,Japan,Tokyo,259078,234382,Online,2025-Q1,2025-02
+2025-02-11,Life Insurance Policy,Banking Solutions,North America,Mexico,Guadalajara,201294,175440,Mobile App,2025-Q1,2025-02
+2025-02-12,Investment Portfolio Management,Risk Management,Europe,Germany,Hamburg,138541,146641,Wholesale,2025-Q1,2025-02
+2025-02-12,Property Insurance Package,Investment Services,Asia Pacific,Australia,Perth,368108,263180,Direct Sales,2025-Q1,2025-02
+2025-02-12,Wealth Management Platform,Risk Management,Europe,France,Marseille,247322,280659,Mobile App,2025-Q1,2025-02
+2025-02-12,Payment Gateway Service,Insurance Products,Europe,Germany,Stuttgart,342484,426562,Mobile App,2025-Q1,2025-02
+2025-02-12,Compliance Management Software,Risk Management,Europe,United Kingdom,Bristol,258983,315212,Wholesale,2025-Q1,2025-02
+2025-02-12,Financial Planning Software,Payment Processing,North America,Canada,Hamilton,317773,247880,Mobile App,2025-Q1,2025-02
+2025-02-13,Fraud Detection System,Investment Services,Asia Pacific,Australia,Canberra,160519,125491,Wholesale,2025-Q1,2025-02
+2025-02-13,Investment Portfolio Management,Insurance Products,North America,United States,New York,181382,231820,Mobile App,2025-Q1,2025-02
+2025-02-13,Digital Wallet Solution,Insurance Products,Asia Pacific,Singapore,West,237456,264438,Online,2025-Q1,2025-02
+2025-02-13,Mobile Banking App,Payment Processing,North America,Canada,Mississauga,187555,262074,Wholesale,2025-Q1,2025-02
+2025-02-14,Investment Portfolio Management,Payment Processing,Asia Pacific,Singapore,Central,94217,87016,Mobile App,2025-Q1,2025-02
+2025-02-14,Mobile Banking App,Payment Processing,North America,United States,Chicago,361559,380679,Mobile App,2025-Q1,2025-02
+2025-02-15,Property Insurance Package,Investment Services,Asia Pacific,Australia,Sydney,292260,320473,Online,2025-Q1,2025-02
+2025-02-15,Property Insurance Package,Banking Solutions,North America,Mexico,Monterrey,186012,136402,Mobile App,2025-Q1,2025-02
+2025-02-15,Digital Banking Platform,Insurance Products,Europe,France,Toulouse,225634,198984,Wholesale,2025-Q1,2025-02
+2025-02-16,Compliance Management Software,Insurance Products,Europe,Germany,Essen,259151,312473,Retail,2025-Q1,2025-02
+2025-02-16,Wealth Management Platform,Investment Services,Asia Pacific,Japan,Fukuoka,285424,227448,Wholesale,2025-Q1,2025-02
+2025-02-16,Mobile Banking App,Insurance Products,Asia Pacific,Australia,Perth,180835,245496,Partner,2025-Q1,2025-02
+2025-02-16,Life Insurance Policy,Payment Processing,Asia Pacific,Australia,Gold Coast,326581,249527,Retail,2025-Q1,2025-02
+2025-02-16,Auto Insurance Coverage,Banking Solutions,Asia Pacific,Japan,Yokohama,355202,287054,Online,2025-Q1,2025-02
+2025-02-16,Digital Wallet Solution,Banking Solutions,Europe,Germany,Stuttgart,358431,292675,Online,2025-Q1,2025-02
+2025-02-17,Payment Gateway Service,Investment Services,Asia Pacific,Australia,Sydney,127789,127772,Retail,2025-Q1,2025-02
+2025-02-18,Trading Analytics Tool,Investment Services,North America,Canada,Vancouver,212393,282388,Mobile App,2025-Q1,2025-02
+2025-02-18,Compliance Management Software,Insurance Products,Europe,Germany,Berlin,283807,276985,Mobile App,2025-Q1,2025-02
+2025-02-18,Credit Risk Assessment Tool,Insurance Products,Europe,United Kingdom,Edinburgh,407405,335001,Partner,2025-Q1,2025-02
+2025-02-19,Mobile Banking App,Investment Services,North America,Canada,Ottawa,201211,174455,Partner,2025-Q1,2025-02
+2025-02-19,Trading Analytics Tool,Payment Processing,North America,Canada,Mississauga,390393,303945,Wholesale,2025-Q1,2025-02
+2025-02-19,Credit Risk Assessment Tool,Insurance Products,Asia Pacific,Australia,Melbourne,189669,160896,Direct Sales,2025-Q1,2025-02
+2025-02-19,Auto Insurance Coverage,Risk Management,Asia Pacific,Australia,Newcastle,217680,225399,Wholesale,2025-Q1,2025-02
+2025-02-20,Retirement Planning Service,Banking Solutions,Europe,Germany,Frankfurt,382550,374396,Retail,2025-Q1,2025-02
+2025-02-20,Wealth Management Platform,Payment Processing,Europe,Germany,Frankfurt,318953,335578,Retail,2025-Q1,2025-02
+2025-02-20,Retirement Planning Service,Insurance Products,Europe,Germany,Dortmund,364901,446338,Partner,2025-Q1,2025-02
+2025-02-21,Investment Portfolio Management,Payment Processing,Asia Pacific,Japan,Yokohama,364113,363271,Partner,2025-Q1,2025-02
+2025-02-21,Property Insurance Package,Investment Services,Europe,France,Nantes,171789,211292,Online,2025-Q1,2025-02
+2025-02-21,Retirement Planning Service,Insurance Products,North America,Canada,Montreal,672875,731540,Direct Sales,2025-Q1,2025-02
+2025-02-22,Credit Risk Assessment Tool,Payment Processing,Europe,United Kingdom,Sheffield,289345,320230,Mobile App,2025-Q1,2025-02
+2025-02-22,Financial Planning Software,Banking Solutions,Europe,France,Nice,473657,518337,Retail,2025-Q1,2025-02
+2025-02-22,Wealth Management Platform,Risk Management,North America,United States,San Diego,221490,181353,Retail,2025-Q1,2025-02
+2025-02-22,Auto Insurance Coverage,Risk Management,North America,Mexico,Puebla,455147,341226,Online,2025-Q1,2025-02
+2025-02-23,Auto Insurance Coverage,Payment Processing,Asia Pacific,Australia,Adelaide,252643,341165,Direct Sales,2025-Q1,2025-02
+2025-02-23,Digital Banking Platform,Risk Management,Asia Pacific,Singapore,East,343075,376220,Online,2025-Q1,2025-02
+2025-02-24,Digital Wallet Solution,Payment Processing,North America,Canada,Hamilton,512929,410251,Retail,2025-Q1,2025-02
+2025-02-24,Investment Portfolio Management,Payment Processing,Europe,France,Bordeaux,556348,575445,Direct Sales,2025-Q1,2025-02
+2025-02-24,Investment Portfolio Management,Payment Processing,Asia Pacific,Japan,Osaka,100735,76723,Wholesale,2025-Q1,2025-02
+2025-02-25,Life Insurance Policy,Payment Processing,Asia Pacific,Singapore,Central,95715,109029,Wholesale,2025-Q1,2025-02
+2025-02-25,Compliance Management Software,Payment Processing,Europe,United Kingdom,London,302687,389820,Partner,2025-Q1,2025-02
+2025-02-25,Investment Portfolio Management,Insurance Products,Europe,United Kingdom,Manchester,361007,446899,Mobile App,2025-Q1,2025-02
+2025-02-25,Trading Analytics Tool,Banking Solutions,Asia Pacific,Japan,Fukuoka,143371,182285,Wholesale,2025-Q1,2025-02
+2025-02-26,Wealth Management Platform,Investment Services,Europe,Germany,Hamburg,232716,248394,Wholesale,2025-Q1,2025-02
+2025-02-26,Compliance Management Software,Payment Processing,North America,Mexico,Zapopan,561794,413234,Direct Sales,2025-Q1,2025-02
+2025-02-26,Life Insurance Policy,Investment Services,North America,Canada,Edmonton,383832,392127,Retail,2025-Q1,2025-02
+2025-02-26,Digital Banking Platform,Risk Management,North America,United States,Chicago,284516,349548,Online,2025-Q1,2025-02
+2025-02-27,Investment Portfolio Management,Payment Processing,North America,Canada,Hamilton,179576,209521,Partner,2025-Q1,2025-02
+2025-02-27,Fraud Detection System,Insurance Products,Asia Pacific,Singapore,East,299366,293091,Online,2025-Q1,2025-02
+2025-02-27,Life Insurance Policy,Payment Processing,North America,Mexico,Monterrey,406679,483430,Online,2025-Q1,2025-02
+2025-02-28,Payment Gateway Service,Insurance Products,Europe,United Kingdom,Manchester,380928,415259,Retail,2025-Q1,2025-02
+2025-02-28,Life Insurance Policy,Banking Solutions,Europe,France,Lyon,331985,240384,Direct Sales,2025-Q1,2025-02
+2025-02-28,Fraud Detection System,Banking Solutions,Europe,Germany,Hamburg,331529,278302,Partner,2025-Q1,2025-02
+2025-02-28,Credit Risk Assessment Tool,Risk Management,Europe,Germany,Essen,388400,299784,Direct Sales,2025-Q1,2025-02
+2025-03-01,Fraud Detection System,Payment Processing,Europe,Germany,Munich,222130,265860,Partner,2025-Q1,2025-03
+2025-03-01,Fraud Detection System,Risk Management,Asia Pacific,Australia,Adelaide,204956,197641,Mobile App,2025-Q1,2025-03
+2025-03-02,Mobile Banking App,Risk Management,Europe,France,Nantes,407948,550855,Retail,2025-Q1,2025-03
+2025-03-02,Investment Portfolio Management,Banking Solutions,Europe,Germany,Berlin,517352,548483,Partner,2025-Q1,2025-03
+2025-03-02,Auto Insurance Coverage,Insurance Products,Europe,France,Strasbourg,308916,300790,Wholesale,2025-Q1,2025-03
+2025-03-02,Investment Portfolio Management,Investment Services,Europe,United Kingdom,Cardiff,351405,279287,Direct Sales,2025-Q1,2025-03
+2025-03-03,Wealth Management Platform,Investment Services,Asia Pacific,Australia,Perth,312188,389985,Retail,2025-Q1,2025-03
+2025-03-03,Retirement Planning Service,Insurance Products,Asia Pacific,Singapore,Northeast,503410,558647,Direct Sales,2025-Q1,2025-03
+2025-03-03,Wealth Management Platform,Risk Management,Asia Pacific,Singapore,Northeast,265795,309195,Wholesale,2025-Q1,2025-03
+2025-03-03,Property Insurance Package,Insurance Products,North America,Mexico,Monterrey,261181,313735,Direct Sales,2025-Q1,2025-03
+2025-03-04,Trading Analytics Tool,Risk Management,Europe,Germany,Cologne,324759,432163,Direct Sales,2025-Q1,2025-03
+2025-03-05,Digital Banking Platform,Insurance Products,Asia Pacific,Australia,Sydney,241901,241225,Partner,2025-Q1,2025-03
+2025-03-05,Fraud Detection System,Risk Management,Asia Pacific,Japan,Kobe,296250,253665,Direct Sales,2025-Q1,2025-03
+2025-03-06,Fraud Detection System,Investment Services,Europe,United Kingdom,Leeds,207158,224179,Online,2025-Q1,2025-03
+2025-03-06,Property Insurance Package,Insurance Products,Europe,United Kingdom,Leeds,256863,229587,Mobile App,2025-Q1,2025-03
+2025-03-07,Mobile Banking App,Investment Services,North America,United States,New York,543187,594267,Partner,2025-Q1,2025-03
+2025-03-07,Auto Insurance Coverage,Insurance Products,North America,Canada,Toronto,357742,462159,Wholesale,2025-Q1,2025-03
+2025-03-07,Auto Insurance Coverage,Risk Management,North America,Mexico,Juárez,166405,127075,Retail,2025-Q1,2025-03
+2025-03-08,Wealth Management Platform,Banking Solutions,Europe,Germany,Cologne,375024,461554,Partner,2025-Q1,2025-03
+2025-03-08,Mobile Banking App,Banking Solutions,Asia Pacific,Singapore,North,285951,324912,Retail,2025-Q1,2025-03
+2025-03-08,Investment Portfolio Management,Investment Services,Europe,Germany,Cologne,387045,330321,Online,2025-Q1,2025-03
+2025-03-08,Compliance Management Software,Insurance Products,Europe,Germany,Cologne,295677,357571,Online,2025-Q1,2025-03
+2025-03-09,Wealth Management Platform,Investment Services,Europe,France,Lyon,191818,187197,Retail,2025-Q1,2025-03
+2025-03-09,Digital Wallet Solution,Payment Processing,North America,United States,San Jose,187732,188049,Online,2025-Q1,2025-03
+2025-03-09,Trading Analytics Tool,Payment Processing,Europe,Germany,Leipzig,232220,267833,Partner,2025-Q1,2025-03
+2025-03-09,Life Insurance Policy,Banking Solutions,Europe,United Kingdom,Glasgow,167940,122668,Mobile App,2025-Q1,2025-03
+2025-03-09,Investment Portfolio Management,Payment Processing,North America,Mexico,Monterrey,620554,668108,Direct Sales,2025-Q1,2025-03
+2025-03-09,Life Insurance Policy,Risk Management,North America,Mexico,Puebla,266730,308380,Wholesale,2025-Q1,2025-03
+2025-03-09,Payment Gateway Service,Banking Solutions,North America,United States,San Antonio,470885,434399,Direct Sales,2025-Q1,2025-03
+2025-03-09,Digital Wallet Solution,Investment Services,Asia Pacific,Australia,Newcastle,260379,248648,Partner,2025-Q1,2025-03
+2025-03-10,Financial Planning Software,Risk Management,Asia Pacific,Singapore,Central,193160,145046,Mobile App,2025-Q1,2025-03
+2025-03-10,Mobile Banking App,Banking Solutions,Europe,Germany,Düsseldorf,302424,300817,Online,2025-Q1,2025-03
+2025-03-10,Compliance Management Software,Risk Management,Europe,United Kingdom,Liverpool,298704,390076,Wholesale,2025-Q1,2025-03
+2025-03-10,Credit Risk Assessment Tool,Banking Solutions,Asia Pacific,Japan,Osaka,220444,218913,Online,2025-Q1,2025-03
+2025-03-10,Retirement Planning Service,Banking Solutions,North America,United States,Chicago,715582,842850,Direct Sales,2025-Q1,2025-03
+2025-03-11,Wealth Management Platform,Investment Services,Asia Pacific,Australia,Brisbane,211385,228545,Mobile App,2025-Q1,2025-03
+2025-03-11,Mobile Banking App,Risk Management,Asia Pacific,Japan,Saitama,271201,281634,Online,2025-Q1,2025-03
+2025-03-11,Digital Banking Platform,Investment Services,North America,Mexico,Chihuahua,372250,457412,Retail,2025-Q1,2025-03
+2025-03-11,Mobile Banking App,Risk Management,North America,Mexico,Chihuahua,330299,449226,Partner,2025-Q1,2025-03
+2025-03-11,Digital Wallet Solution,Banking Solutions,Europe,France,Nice,565904,646344,Direct Sales,2025-Q1,2025-03
+2025-03-12,Trading Analytics Tool,Insurance Products,Asia Pacific,Japan,Nagoya,236641,247434,Mobile App,2025-Q1,2025-03
+2025-03-13,Auto Insurance Coverage,Insurance Products,Europe,Germany,Stuttgart,494815,547745,Direct Sales,2025-Q1,2025-03
+2025-03-13,Property Insurance Package,Investment Services,North America,Mexico,Mexico City,180583,179299,Retail,2025-Q1,2025-03
+2025-03-13,Wealth Management Platform,Investment Services,Asia Pacific,Japan,Osaka,268906,276259,Wholesale,2025-Q1,2025-03
+2025-03-13,Fraud Detection System,Banking Solutions,North America,Canada,Toronto,231172,263656,Online,2025-Q1,2025-03
+2025-03-14,Digital Banking Platform,Investment Services,Asia Pacific,Australia,Adelaide,276477,364709,Online,2025-Q1,2025-03
+2025-03-14,Retirement Planning Service,Risk Management,North America,Mexico,León,208805,154610,Direct Sales,2025-Q1,2025-03
+2025-03-14,Auto Insurance Coverage,Payment Processing,North America,Mexico,León,337886,464984,Partner,2025-Q1,2025-03
+2025-03-14,Financial Planning Software,Insurance Products,Asia Pacific,Singapore,West,222981,164774,Mobile App,2025-Q1,2025-03
+2025-03-14,Retirement Planning Service,Risk Management,Europe,France,Toulouse,391020,450670,Retail,2025-Q1,2025-03
+2025-03-15,Fraud Detection System,Investment Services,North America,Mexico,Tijuana,355145,459832,Online,2025-Q1,2025-03
+2025-03-15,Credit Risk Assessment Tool,Investment Services,North America,Canada,Montreal,244912,224321,Wholesale,2025-Q1,2025-03
+2025-03-15,Digital Banking Platform,Banking Solutions,Europe,Germany,Hamburg,311980,269573,Retail,2025-Q1,2025-03
+2025-03-16,Retirement Planning Service,Payment Processing,Europe,France,Bordeaux,383547,435796,Partner,2025-Q1,2025-03
+2025-03-16,Property Insurance Package,Payment Processing,Europe,Germany,Cologne,436409,522210,Partner,2025-Q1,2025-03
+2025-03-16,Retirement Planning Service,Payment Processing,Europe,Germany,Stuttgart,362704,345206,Direct Sales,2025-Q1,2025-03
+2025-03-17,Fraud Detection System,Payment Processing,Asia Pacific,Singapore,Northeast,352019,376723,Retail,2025-Q1,2025-03
+2025-03-18,Financial Planning Software,Insurance Products,Europe,France,Lyon,361894,256106,Mobile App,2025-Q1,2025-03
+2025-03-18,Fraud Detection System,Risk Management,Asia Pacific,Australia,Canberra,317102,283597,Partner,2025-Q1,2025-03
+2025-03-18,Digital Banking Platform,Payment Processing,Asia Pacific,Australia,Gold Coast,177451,232878,Mobile App,2025-Q1,2025-03
+2025-03-18,Financial Planning Software,Investment Services,North America,Mexico,Mexico City,321538,336522,Mobile App,2025-Q1,2025-03
+2025-03-19,Life Insurance Policy,Investment Services,Europe,Germany,Essen,349968,305130,Partner,2025-Q1,2025-03
+2025-03-20,Property Insurance Package,Investment Services,Europe,United Kingdom,Glasgow,218858,195739,Online,2025-Q1,2025-03
+2025-03-20,Wealth Management Platform,Banking Solutions,Europe,France,Nantes,322044,277434,Mobile App,2025-Q1,2025-03
+2025-03-20,Life Insurance Policy,Banking Solutions,Europe,France,Lille,166284,224189,Retail,2025-Q1,2025-03
+2025-03-21,Retirement Planning Service,Investment Services,North America,Canada,Montreal,265783,334883,Wholesale,2025-Q1,2025-03
+2025-03-21,Digital Wallet Solution,Investment Services,Europe,Germany,Munich,370135,357008,Direct Sales,2025-Q1,2025-03
+2025-03-21,Wealth Management Platform,Payment Processing,North America,United States,Houston,291716,350503,Direct Sales,2025-Q1,2025-03
+2025-03-21,Retirement Planning Service,Insurance Products,North America,Mexico,Monterrey,244473,222705,Partner,2025-Q1,2025-03
+2025-03-22,Property Insurance Package,Payment Processing,North America,United States,San Jose,343882,439564,Wholesale,2025-Q1,2025-03
+2025-03-22,Financial Planning Software,Banking Solutions,Asia Pacific,Singapore,Central,138268,188077,Online,2025-Q1,2025-03
+2025-03-22,Digital Wallet Solution,Insurance Products,Asia Pacific,Australia,Sunshine Coast,133316,112248,Wholesale,2025-Q1,2025-03
+2025-03-22,Wealth Management Platform,Payment Processing,Asia Pacific,Australia,Newcastle,155362,127171,Retail,2025-Q1,2025-03
+2025-03-23,Retirement Planning Service,Banking Solutions,North America,Canada,Hamilton,287146,255604,Partner,2025-Q1,2025-03
+2025-03-23,Fraud Detection System,Insurance Products,Europe,United Kingdom,Edinburgh,241897,254068,Mobile App,2025-Q1,2025-03
+2025-03-23,Digital Wallet Solution,Payment Processing,Asia Pacific,Australia,Brisbane,255297,207674,Retail,2025-Q1,2025-03
+2025-03-23,Mobile Banking App,Payment Processing,North America,Canada,Vancouver,547675,674396,Partner,2025-Q1,2025-03
+2025-03-24,Retirement Planning Service,Risk Management,North America,United States,Houston,301272,235569,Mobile App,2025-Q1,2025-03
+2025-03-24,Property Insurance Package,Payment Processing,North America,Canada,Quebec City,604035,648729,Direct Sales,2025-Q1,2025-03
+2025-03-24,Compliance Management Software,Investment Services,North America,Mexico,Nezahualcóyotl,284918,213942,Partner,2025-Q1,2025-03
+2025-03-25,Fraud Detection System,Banking Solutions,Europe,France,Montpellier,220937,230161,Online,2025-Q1,2025-03
+2025-03-25,Digital Wallet Solution,Insurance Products,Asia Pacific,Singapore,West,180206,170328,Wholesale,2025-Q1,2025-03
+2025-03-25,Credit Risk Assessment Tool,Insurance Products,Asia Pacific,Japan,Yokohama,215554,258760,Wholesale,2025-Q1,2025-03
+2025-03-25,Investment Portfolio Management,Insurance Products,North America,Mexico,Puebla,509925,489550,Retail,2025-Q1,2025-03
+2025-03-25,Investment Portfolio Management,Insurance Products,Asia Pacific,Singapore,Central,166559,177621,Retail,2025-Q1,2025-03
+2025-03-26,Investment Portfolio Management,Insurance Products,Asia Pacific,Japan,Kawasaki,328285,358222,Mobile App,2025-Q1,2025-03
+2025-03-26,Mobile Banking App,Risk Management,Europe,France,Lyon,361582,399792,Retail,2025-Q1,2025-03
+2025-03-26,Life Insurance Policy,Banking Solutions,Asia Pacific,Japan,Saitama,360104,317838,Mobile App,2025-Q1,2025-03
+2025-03-26,Payment Gateway Service,Investment Services,North America,Mexico,Guadalajara,317926,369576,Wholesale,2025-Q1,2025-03
+2025-03-26,Trading Analytics Tool,Risk Management,North America,United States,San Diego,354155,281844,Mobile App,2025-Q1,2025-03
+2025-03-26,Fraud Detection System,Banking Solutions,Europe,United Kingdom,Liverpool,143830,145527,Wholesale,2025-Q1,2025-03
+2025-03-27,Trading Analytics Tool,Payment Processing,Asia Pacific,Singapore,Northeast,392564,368267,Retail,2025-Q1,2025-03
+2025-03-27,Trading Analytics Tool,Insurance Products,Asia Pacific,Japan,Fukuoka,133080,113301,Partner,2025-Q1,2025-03
+2025-03-28,Credit Risk Assessment Tool,Payment Processing,North America,Canada,Mississauga,536044,474577,Direct Sales,2025-Q1,2025-03
+2025-03-28,Life Insurance Policy,Insurance Products,North America,Canada,Winnipeg,373448,449507,Partner,2025-Q1,2025-03
+2025-03-28,Mobile Banking App,Payment Processing,Asia Pacific,Australia,Sydney,201168,261829,Retail,2025-Q1,2025-03
+2025-03-28,Life Insurance Policy,Investment Services,North America,Mexico,Zapopan,412467,560163,Retail,2025-Q1,2025-03
+2025-03-28,Credit Risk Assessment Tool,Payment Processing,North America,Mexico,León,439780,601253,Direct Sales,2025-Q1,2025-03
+2025-03-28,Credit Risk Assessment Tool,Insurance Products,North America,United States,Philadelphia,229729,211991,Wholesale,2025-Q1,2025-03
+2025-03-28,Property Insurance Package,Risk Management,Europe,Germany,Dortmund,256619,218569,Mobile App,2025-Q1,2025-03
+2025-04-01,Wealth Management Platform,Insurance Products,Asia Pacific,Japan,Nagoya,294141,217690,Retail,2025-Q2,2025-04
+2025-04-01,Investment Portfolio Management,Insurance Products,North America,Mexico,Guadalajara,306670,389947,Mobile App,2025-Q2,2025-04
+2025-04-02,Retirement Planning Service,Insurance Products,North America,Mexico,Tijuana,268466,214888,Retail,2025-Q2,2025-04
+2025-04-02,Investment Portfolio Management,Banking Solutions,North America,Mexico,Chihuahua,521531,368678,Direct Sales,2025-Q2,2025-04
+2025-04-03,Life Insurance Policy,Risk Management,Europe,United Kingdom,Leeds,200086,191186,Online,2025-Q2,2025-04
+2025-04-03,Retirement Planning Service,Risk Management,Europe,United Kingdom,London,438085,516848,Retail,2025-Q2,2025-04
+2025-04-03,Payment Gateway Service,Insurance Products,Asia Pacific,Singapore,West,151366,203900,Retail,2025-Q2,2025-04
+2025-04-03,Compliance Management Software,Risk Management,Asia Pacific,Australia,Perth,378439,430556,Direct Sales,2025-Q2,2025-04
+2025-04-03,Digital Wallet Solution,Risk Management,North America,Mexico,Chihuahua,211187,223718,Retail,2025-Q2,2025-04
+2025-04-03,Payment Gateway Service,Insurance Products,North America,Mexico,Mexico City,599638,747967,Direct Sales,2025-Q2,2025-04
+2025-04-04,Credit Risk Assessment Tool,Risk Management,North America,Mexico,Chihuahua,416917,568233,Retail,2025-Q2,2025-04
+2025-04-04,Trading Analytics Tool,Risk Management,Europe,France,Nantes,154683,183120,Online,2025-Q2,2025-04
+2025-04-04,Mobile Banking App,Risk Management,North America,United States,Los Angeles,347948,244769,Retail,2025-Q2,2025-04
+2025-04-05,Investment Portfolio Management,Payment Processing,North America,United States,Philadelphia,389786,280201,Partner,2025-Q2,2025-04
+2025-04-05,Retirement Planning Service,Investment Services,Asia Pacific,Singapore,North,324736,362690,Retail,2025-Q2,2025-04
+2025-04-05,Trading Analytics Tool,Payment Processing,Europe,United Kingdom,London,455356,598601,Partner,2025-Q2,2025-04
+2025-04-06,Mobile Banking App,Risk Management,Asia Pacific,Singapore,North,142656,130636,Retail,2025-Q2,2025-04
+2025-04-06,Retirement Planning Service,Investment Services,Europe,France,Nice,143696,144363,Mobile App,2025-Q2,2025-04
+2025-04-06,Payment Gateway Service,Banking Solutions,Asia Pacific,Singapore,West,246607,304052,Retail,2025-Q2,2025-04
+2025-04-06,Payment Gateway Service,Insurance Products,Europe,France,Paris,256023,292690,Wholesale,2025-Q2,2025-04
+2025-04-06,Property Insurance Package,Insurance Products,Asia Pacific,Singapore,Northeast,392037,288812,Direct Sales,2025-Q2,2025-04
+2025-04-07,Property Insurance Package,Risk Management,Asia Pacific,Japan,Fukuoka,247725,295785,Online,2025-Q2,2025-04
+2025-04-07,Financial Planning Software,Investment Services,Asia Pacific,Japan,Yokohama,249500,177086,Wholesale,2025-Q2,2025-04
+2025-04-07,Auto Insurance Coverage,Investment Services,Asia Pacific,Singapore,West,120799,114215,Mobile App,2025-Q2,2025-04
+2025-04-08,Investment Portfolio Management,Banking Solutions,Europe,United Kingdom,Birmingham,489777,614156,Retail,2025-Q2,2025-04
+2025-04-08,Wealth Management Platform,Investment Services,North America,United States,Los Angeles,408991,492380,Direct Sales,2025-Q2,2025-04
+2025-04-08,Retirement Planning Service,Investment Services,Europe,France,Lille,175617,150912,Partner,2025-Q2,2025-04
+2025-04-10,Retirement Planning Service,Payment Processing,North America,Canada,Toronto,374026,451627,Retail,2025-Q2,2025-04
+2025-04-10,Credit Risk Assessment Tool,Banking Solutions,North America,Mexico,Puebla,406426,447366,Direct Sales,2025-Q2,2025-04
+2025-04-10,Credit Risk Assessment Tool,Insurance Products,Europe,Germany,Düsseldorf,499605,385139,Direct Sales,2025-Q2,2025-04
+2025-04-10,Trading Analytics Tool,Risk Management,Europe,United Kingdom,Manchester,279680,388740,Partner,2025-Q2,2025-04
+2025-04-10,Credit Risk Assessment Tool,Banking Solutions,Europe,Germany,Munich,141598,139455,Online,2025-Q2,2025-04
+2025-04-10,Property Insurance Package,Investment Services,Europe,France,Lille,203429,170930,Retail,2025-Q2,2025-04
+2025-04-11,Mobile Banking App,Banking Solutions,Asia Pacific,Japan,Kyoto,145097,186101,Partner,2025-Q2,2025-04
+2025-04-11,Digital Wallet Solution,Risk Management,North America,Canada,Quebec City,667558,613979,Direct Sales,2025-Q2,2025-04
+2025-04-12,Wealth Management Platform,Risk Management,North America,Canada,Toronto,264201,256323,Mobile App,2025-Q2,2025-04
+2025-04-12,Fraud Detection System,Risk Management,Asia Pacific,Australia,Sydney,240394,200411,Online,2025-Q2,2025-04
+2025-04-12,Digital Banking Platform,Payment Processing,Europe,France,Strasbourg,207952,173623,Mobile App,2025-Q2,2025-04
+2025-04-12,Compliance Management Software,Payment Processing,North America,Canada,Calgary,399619,422232,Direct Sales,2025-Q2,2025-04
+2025-04-12,Property Insurance Package,Insurance Products,Asia Pacific,Japan,Sapporo,587570,749849,Direct Sales,2025-Q2,2025-04
+2025-04-12,Payment Gateway Service,Risk Management,Europe,Germany,Cologne,399506,441361,Mobile App,2025-Q2,2025-04
+2025-04-13,Auto Insurance Coverage,Insurance Products,North America,United States,San Antonio,477093,524942,Direct Sales,2025-Q2,2025-04
+2025-04-13,Compliance Management Software,Banking Solutions,Asia Pacific,Singapore,Northeast,256808,230647,Wholesale,2025-Q2,2025-04
+2025-04-14,Compliance Management Software,Payment Processing,Asia Pacific,Japan,Yokohama,209379,211784,Direct Sales,2025-Q2,2025-04
+2025-04-14,Property Insurance Package,Investment Services,Asia Pacific,Japan,Kobe,336006,383625,Direct Sales,2025-Q2,2025-04
+2025-04-15,Fraud Detection System,Insurance Products,Asia Pacific,Singapore,West,174052,178057,Online,2025-Q2,2025-04
+2025-04-15,Financial Planning Software,Banking Solutions,North America,United States,Dallas,359931,305356,Wholesale,2025-Q2,2025-04
+2025-04-15,Credit Risk Assessment Tool,Banking Solutions,Asia Pacific,Singapore,West,112989,137976,Partner,2025-Q2,2025-04
+2025-04-15,Financial Planning Software,Payment Processing,Europe,United Kingdom,Sheffield,385884,448710,Partner,2025-Q2,2025-04
+2025-04-16,Auto Insurance Coverage,Banking Solutions,Europe,United Kingdom,Glasgow,247827,316454,Online,2025-Q2,2025-04
+2025-04-16,Investment Portfolio Management,Risk Management,Europe,United Kingdom,Sheffield,263444,222324,Partner,2025-Q2,2025-04
+2025-04-16,Retirement Planning Service,Banking Solutions,North America,Canada,Hamilton,224188,266329,Partner,2025-Q2,2025-04
+2025-04-16,Retirement Planning Service,Insurance Products,Europe,France,Nantes,378738,468572,Direct Sales,2025-Q2,2025-04
+2025-04-17,Mobile Banking App,Banking Solutions,Asia Pacific,Singapore,West,443578,502534,Direct Sales,2025-Q2,2025-04
+2025-04-17,Retirement Planning Service,Banking Solutions,Asia Pacific,Australia,Adelaide,300002,289603,Direct Sales,2025-Q2,2025-04
+2025-04-17,Fraud Detection System,Investment Services,Asia Pacific,Australia,Brisbane,346428,374134,Mobile App,2025-Q2,2025-04
+2025-04-17,Digital Banking Platform,Investment Services,Asia Pacific,Japan,Kobe,314411,436940,Retail,2025-Q2,2025-04
+2025-04-17,Investment Portfolio Management,Investment Services,Europe,France,Lyon,597056,658661,Direct Sales,2025-Q2,2025-04
+2025-04-18,Retirement Planning Service,Payment Processing,Europe,Germany,Stuttgart,275253,329559,Mobile App,2025-Q2,2025-04
+2025-04-18,Investment Portfolio Management,Insurance Products,Europe,France,Nantes,216354,225084,Wholesale,2025-Q2,2025-04
+2025-04-19,Financial Planning Software,Banking Solutions,Asia Pacific,Australia,Gold Coast,121514,93790,Mobile App,2025-Q2,2025-04
+2025-04-19,Life Insurance Policy,Risk Management,North America,United States,Phoenix,208559,189134,Wholesale,2025-Q2,2025-04
+2025-04-19,Credit Risk Assessment Tool,Insurance Products,Europe,Germany,Essen,313958,296425,Mobile App,2025-Q2,2025-04
+2025-04-19,Digital Wallet Solution,Investment Services,North America,Canada,Vancouver,157093,149488,Online,2025-Q2,2025-04
+2025-04-19,Fraud Detection System,Payment Processing,Europe,United Kingdom,Leeds,393722,361043,Direct Sales,2025-Q2,2025-04
+2025-04-19,Digital Banking Platform,Investment Services,Europe,Germany,Cologne,317689,235296,Retail,2025-Q2,2025-04
+2025-04-20,Financial Planning Software,Banking Solutions,Asia Pacific,Japan,Yokohama,131831,101778,Partner,2025-Q2,2025-04
+2025-04-20,Wealth Management Platform,Insurance Products,Europe,Germany,Frankfurt,402515,525337,Direct Sales,2025-Q2,2025-04
+2025-04-20,Trading Analytics Tool,Investment Services,North America,Mexico,Puebla,211942,295433,Partner,2025-Q2,2025-04
+2025-04-20,Payment Gateway Service,Investment Services,Europe,France,Lyon,250003,320846,Partner,2025-Q2,2025-04
+2025-04-20,Property Insurance Package,Insurance Products,Asia Pacific,Singapore,Central,219907,251524,Mobile App,2025-Q2,2025-04
+2025-04-21,Wealth Management Platform,Insurance Products,Europe,France,Toulouse,436339,572006,Direct Sales,2025-Q2,2025-04
+2025-04-21,Retirement Planning Service,Risk Management,Europe,Germany,Düsseldorf,332415,289437,Retail,2025-Q2,2025-04
+2025-04-21,Digital Banking Platform,Banking Solutions,Europe,France,Nice,214125,192275,Wholesale,2025-Q2,2025-04
+2025-04-21,Investment Portfolio Management,Payment Processing,Europe,United Kingdom,Birmingham,245943,191163,Mobile App,2025-Q2,2025-04
+2025-04-21,Auto Insurance Coverage,Payment Processing,Asia Pacific,Singapore,East,486708,432397,Direct Sales,2025-Q2,2025-04
+2025-04-22,Credit Risk Assessment Tool,Risk Management,North America,Mexico,León,380536,449230,Wholesale,2025-Q2,2025-04
+2025-04-22,Retirement Planning Service,Insurance Products,Europe,France,Montpellier,389240,498138,Online,2025-Q2,2025-04
+2025-04-22,Property Insurance Package,Insurance Products,Asia Pacific,Japan,Kobe,182683,145312,Wholesale,2025-Q2,2025-04
+2025-04-22,Retirement Planning Service,Banking Solutions,Asia Pacific,Japan,Kobe,116918,162510,Mobile App,2025-Q2,2025-04
+2025-04-23,Wealth Management Platform,Insurance Products,Europe,United Kingdom,Sheffield,374418,410613,Retail,2025-Q2,2025-04
+2025-04-23,Life Insurance Policy,Investment Services,Europe,Germany,Munich,280499,216336,Wholesale,2025-Q2,2025-04
+2025-04-23,Trading Analytics Tool,Risk Management,Asia Pacific,Australia,Perth,296906,278749,Mobile App,2025-Q2,2025-04
+2025-04-23,Compliance Management Software,Payment Processing,Asia Pacific,Australia,Melbourne,365936,284786,Retail,2025-Q2,2025-04
+2025-04-24,Life Insurance Policy,Payment Processing,Asia Pacific,Japan,Kyoto,155064,176925,Online,2025-Q2,2025-04
+2025-04-24,Life Insurance Policy,Investment Services,Asia Pacific,Australia,Perth,399555,363495,Direct Sales,2025-Q2,2025-04
+2025-04-24,Investment Portfolio Management,Insurance Products,Asia Pacific,Japan,Tokyo,318472,229760,Mobile App,2025-Q2,2025-04
+2025-04-25,Property Insurance Package,Banking Solutions,Europe,United Kingdom,Edinburgh,226079,158840,Wholesale,2025-Q2,2025-04
+2025-04-25,Digital Banking Platform,Investment Services,North America,Canada,Mississauga,421655,497465,Partner,2025-Q2,2025-04
+2025-04-25,Trading Analytics Tool,Insurance Products,North America,Mexico,Zapopan,218438,170715,Online,2025-Q2,2025-04
+2025-04-25,Life Insurance Policy,Insurance Products,Asia Pacific,Singapore,Northeast,128203,141059,Mobile App,2025-Q2,2025-04
+2025-04-25,Digital Banking Platform,Investment Services,Asia Pacific,Australia,Adelaide,150551,107749,Online,2025-Q2,2025-04
+2025-04-26,Digital Banking Platform,Insurance Products,Europe,Germany,Essen,328318,316948,Online,2025-Q2,2025-04
+2025-04-26,Auto Insurance Coverage,Insurance Products,Europe,France,Strasbourg,406999,393768,Online,2025-Q2,2025-04
+2025-04-26,Retirement Planning Service,Risk Management,Europe,Germany,Leipzig,394654,451467,Direct Sales,2025-Q2,2025-04
+2025-04-27,Digital Banking Platform,Banking Solutions,Asia Pacific,Japan,Fukuoka,121790,160791,Partner,2025-Q2,2025-04
+2025-04-27,Fraud Detection System,Banking Solutions,Europe,United Kingdom,Leeds,313151,410546,Direct Sales,2025-Q2,2025-04
+2025-04-27,Financial Planning Software,Payment Processing,Asia Pacific,Singapore,Central,325211,395576,Partner,2025-Q2,2025-04
+2025-04-27,Payment Gateway Service,Insurance Products,Europe,United Kingdom,Liverpool,294428,220902,Direct Sales,2025-Q2,2025-04
+2025-04-28,Compliance Management Software,Banking Solutions,North America,Canada,Vancouver,330108,427965,Retail,2025-Q2,2025-04
+2025-05-01,Auto Insurance Coverage,Insurance Products,North America,United States,San Diego,266382,295023,Mobile App,2025-Q2,2025-05
+2025-05-01,Digital Banking Platform,Insurance Products,Europe,France,Nantes,240740,183141,Wholesale,2025-Q2,2025-05
+2025-05-02,Compliance Management Software,Investment Services,Europe,Germany,Cologne,127361,127283,Wholesale,2025-Q2,2025-05
+2025-05-02,Payment Gateway Service,Investment Services,Asia Pacific,Australia,Adelaide,231104,215512,Online,2025-Q2,2025-05
+2025-05-02,Retirement Planning Service,Risk Management,Europe,United Kingdom,Leeds,313225,384380,Wholesale,2025-Q2,2025-05
+2025-05-02,Credit Risk Assessment Tool,Banking Solutions,North America,Canada,Quebec City,344112,369463,Online,2025-Q2,2025-05
+2025-05-02,Investment Portfolio Management,Investment Services,North America,Mexico,Juárez,231217,255769,Retail,2025-Q2,2025-05
+2025-05-02,Life Insurance Policy,Insurance Products,Asia Pacific,Singapore,North,128877,144549,Partner,2025-Q2,2025-05
+2025-05-03,Fraud Detection System,Investment Services,Asia Pacific,Australia,Sydney,283717,205812,Retail,2025-Q2,2025-05
+2025-05-03,Property Insurance Package,Payment Processing,Europe,France,Toulouse,364010,281305,Retail,2025-Q2,2025-05
+2025-05-03,Compliance Management Software,Insurance Products,Asia Pacific,Australia,Brisbane,297450,316997,Partner,2025-Q2,2025-05
+2025-05-04,Trading Analytics Tool,Payment Processing,Europe,United Kingdom,Leeds,184301,241882,Retail,2025-Q2,2025-05
+2025-05-04,Fraud Detection System,Investment Services,Asia Pacific,Japan,Saitama,255266,208261,Online,2025-Q2,2025-05
+2025-05-04,Digital Wallet Solution,Risk Management,Europe,United Kingdom,Sheffield,212590,165561,Retail,2025-Q2,2025-05
+2025-05-04,Investment Portfolio Management,Risk Management,Asia Pacific,Singapore,Central,249687,224643,Wholesale,2025-Q2,2025-05
+2025-05-06,Financial Planning Software,Investment Services,Asia Pacific,Singapore,West,281112,230382,Partner,2025-Q2,2025-05
+2025-05-06,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Japan,Fukuoka,171614,132652,Wholesale,2025-Q2,2025-05
+2025-05-06,Digital Wallet Solution,Insurance Products,North America,Canada,Mississauga,374468,310293,Wholesale,2025-Q2,2025-05
+2025-05-06,Retirement Planning Service,Payment Processing,Europe,United Kingdom,Glasgow,243204,330671,Mobile App,2025-Q2,2025-05
+2025-05-06,Trading Analytics Tool,Insurance Products,Asia Pacific,Singapore,Central,293752,275307,Online,2025-Q2,2025-05
+2025-05-07,Fraud Detection System,Insurance Products,Europe,France,Nantes,245511,234095,Mobile App,2025-Q2,2025-05
+2025-05-07,Wealth Management Platform,Insurance Products,Europe,United Kingdom,Manchester,293235,334494,Wholesale,2025-Q2,2025-05
+2025-05-07,Auto Insurance Coverage,Investment Services,North America,Canada,Hamilton,262748,252013,Wholesale,2025-Q2,2025-05
+2025-05-08,Retirement Planning Service,Payment Processing,North America,United States,San Antonio,243564,297282,Retail,2025-Q2,2025-05
+2025-05-09,Trading Analytics Tool,Payment Processing,Europe,France,Paris,309537,327341,Online,2025-Q2,2025-05
+2025-05-09,Payment Gateway Service,Investment Services,North America,United States,San Antonio,296077,300500,Partner,2025-Q2,2025-05
+2025-05-10,Fraud Detection System,Payment Processing,North America,Mexico,Monterrey,208196,183669,Retail,2025-Q2,2025-05
+2025-05-10,Wealth Management Platform,Investment Services,Europe,France,Strasbourg,207567,282307,Wholesale,2025-Q2,2025-05
+2025-05-10,Financial Planning Software,Banking Solutions,Asia Pacific,Japan,Yokohama,353327,251261,Partner,2025-Q2,2025-05
+2025-05-11,Fraud Detection System,Payment Processing,Europe,United Kingdom,Cardiff,160591,203096,Partner,2025-Q2,2025-05
+2025-05-11,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Singapore,North,129693,129931,Partner,2025-Q2,2025-05
+2025-05-11,Retirement Planning Service,Risk Management,Asia Pacific,Singapore,North,219900,278379,Partner,2025-Q2,2025-05
+2025-05-11,Compliance Management Software,Risk Management,North America,United States,Houston,388208,535553,Partner,2025-Q2,2025-05
+2025-05-12,Digital Banking Platform,Insurance Products,North America,Canada,Edmonton,214511,206466,Online,2025-Q2,2025-05
+2025-05-12,Fraud Detection System,Payment Processing,Asia Pacific,Japan,Nagoya,237353,330524,Online,2025-Q2,2025-05
+2025-05-12,Wealth Management Platform,Payment Processing,Europe,United Kingdom,Birmingham,427534,490708,Retail,2025-Q2,2025-05
+2025-05-13,Digital Wallet Solution,Banking Solutions,North America,Mexico,Chihuahua,236206,312632,Online,2025-Q2,2025-05
+2025-05-14,Payment Gateway Service,Payment Processing,North America,Mexico,Juárez,285200,310514,Wholesale,2025-Q2,2025-05
+2025-05-14,Credit Risk Assessment Tool,Risk Management,Europe,United Kingdom,Liverpool,304572,409234,Wholesale,2025-Q2,2025-05
+2025-05-14,Life Insurance Policy,Insurance Products,North America,Canada,Vancouver,137878,126921,Mobile App,2025-Q2,2025-05
+2025-05-15,Wealth Management Platform,Banking Solutions,North America,Mexico,Guadalajara,360984,377733,Retail,2025-Q2,2025-05
+2025-05-15,Wealth Management Platform,Risk Management,North America,Canada,Quebec City,257371,252502,Retail,2025-Q2,2025-05
+2025-05-15,Auto Insurance Coverage,Insurance Products,Asia Pacific,Japan,Nagoya,345056,324260,Retail,2025-Q2,2025-05
+2025-05-16,Fraud Detection System,Insurance Products,North America,United States,Dallas,163734,217097,Wholesale,2025-Q2,2025-05
+2025-05-16,Retirement Planning Service,Banking Solutions,Europe,Germany,Leipzig,445773,506961,Partner,2025-Q2,2025-05
+2025-05-16,Financial Planning Software,Risk Management,North America,Mexico,Puebla,316018,250955,Mobile App,2025-Q2,2025-05
+2025-05-16,Credit Risk Assessment Tool,Payment Processing,North America,United States,Houston,191784,247761,Partner,2025-Q2,2025-05
+2025-05-16,Wealth Management Platform,Risk Management,Asia Pacific,Singapore,North,194696,205247,Partner,2025-Q2,2025-05
+2025-05-17,Compliance Management Software,Payment Processing,Asia Pacific,Japan,Kawasaki,220958,277137,Mobile App,2025-Q2,2025-05
+2025-05-17,Digital Wallet Solution,Payment Processing,Asia Pacific,Singapore,North,150747,195663,Online,2025-Q2,2025-05
+2025-05-18,Investment Portfolio Management,Banking Solutions,Asia Pacific,Singapore,West,417679,314572,Direct Sales,2025-Q2,2025-05
+2025-05-18,Wealth Management Platform,Banking Solutions,Europe,United Kingdom,London,401816,333026,Retail,2025-Q2,2025-05
+2025-05-18,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Japan,Osaka,142608,194340,Partner,2025-Q2,2025-05
+2025-05-18,Mobile Banking App,Banking Solutions,Asia Pacific,Australia,Wollongong,328654,423547,Online,2025-Q2,2025-05
+2025-05-18,Credit Risk Assessment Tool,Insurance Products,Asia Pacific,Singapore,Central,205959,174719,Wholesale,2025-Q2,2025-05
+2025-05-18,Wealth Management Platform,Investment Services,Asia Pacific,Japan,Kyoto,189987,139110,Mobile App,2025-Q2,2025-05
+2025-05-18,Mobile Banking App,Risk Management,Europe,United Kingdom,Sheffield,388867,282263,Direct Sales,2025-Q2,2025-05
+2025-05-19,Digital Wallet Solution,Risk Management,Asia Pacific,Singapore,North,469166,502717,Retail,2025-Q2,2025-05
+2025-05-19,Credit Risk Assessment Tool,Banking Solutions,Europe,France,Nice,227581,289483,Partner,2025-Q2,2025-05
+2025-05-19,Trading Analytics Tool,Payment Processing,Europe,France,Paris,372648,372862,Retail,2025-Q2,2025-05
+2025-05-19,Trading Analytics Tool,Investment Services,North America,United States,Phoenix,192237,232307,Retail,2025-Q2,2025-05
+2025-05-20,Fraud Detection System,Insurance Products,Asia Pacific,Australia,Sydney,240706,274456,Direct Sales,2025-Q2,2025-05
+2025-05-20,Digital Banking Platform,Payment Processing,Europe,France,Lille,376107,365339,Partner,2025-Q2,2025-05
+2025-05-20,Mobile Banking App,Insurance Products,Asia Pacific,Singapore,Central,147407,104023,Wholesale,2025-Q2,2025-05
+2025-05-20,Investment Portfolio Management,Payment Processing,Europe,France,Strasbourg,303514,331785,Online,2025-Q2,2025-05
+2025-05-21,Trading Analytics Tool,Investment Services,Europe,France,Lyon,308115,330796,Retail,2025-Q2,2025-05
+2025-05-21,Financial Planning Software,Banking Solutions,Europe,Germany,Stuttgart,383201,472420,Online,2025-Q2,2025-05
+2025-05-21,Payment Gateway Service,Insurance Products,Europe,Germany,Frankfurt,259619,251680,Partner,2025-Q2,2025-05
+2025-05-21,Digital Banking Platform,Payment Processing,North America,United States,Dallas,210222,218345,Partner,2025-Q2,2025-05
+2025-05-21,Mobile Banking App,Payment Processing,North America,United States,Philadelphia,467958,534025,Direct Sales,2025-Q2,2025-05
+2025-05-21,Retirement Planning Service,Insurance Products,Europe,France,Paris,220281,285611,Mobile App,2025-Q2,2025-05
+2025-05-22,Financial Planning Software,Banking Solutions,North America,United States,San Diego,459577,476403,Retail,2025-Q2,2025-05
+2025-05-22,Mobile Banking App,Payment Processing,Europe,Germany,Frankfurt,176940,221317,Online,2025-Q2,2025-05
+2025-05-22,Digital Wallet Solution,Risk Management,Asia Pacific,Japan,Osaka,166894,182704,Wholesale,2025-Q2,2025-05
+2025-05-22,Digital Wallet Solution,Insurance Products,North America,Mexico,Mexico City,583104,471130,Direct Sales,2025-Q2,2025-05
+2025-05-22,Fraud Detection System,Risk Management,Asia Pacific,Australia,Adelaide,267485,199479,Wholesale,2025-Q2,2025-05
+2025-05-22,Investment Portfolio Management,Banking Solutions,Asia Pacific,Australia,Sydney,261725,243545,Online,2025-Q2,2025-05
+2025-05-22,Digital Wallet Solution,Insurance Products,Europe,United Kingdom,Bristol,373306,300982,Mobile App,2025-Q2,2025-05
+2025-05-22,Credit Risk Assessment Tool,Investment Services,Asia Pacific,Australia,Melbourne,172316,151180,Partner,2025-Q2,2025-05
+2025-05-22,Auto Insurance Coverage,Risk Management,Asia Pacific,Australia,Melbourne,162437,128458,Wholesale,2025-Q2,2025-05
+2025-05-23,Life Insurance Policy,Investment Services,North America,Mexico,Monterrey,241417,214058,Mobile App,2025-Q2,2025-05
+2025-05-23,Wealth Management Platform,Risk Management,Asia Pacific,Japan,Kyoto,219311,237562,Wholesale,2025-Q2,2025-05
+2025-05-23,Financial Planning Software,Risk Management,Asia Pacific,Singapore,East,236273,290004,Online,2025-Q2,2025-05
+2025-05-23,Property Insurance Package,Risk Management,Asia Pacific,Japan,Saitama,235151,273726,Partner,2025-Q2,2025-05
+2025-05-24,Financial Planning Software,Risk Management,Asia Pacific,Australia,Adelaide,265480,332445,Direct Sales,2025-Q2,2025-05
+2025-05-25,Investment Portfolio Management,Risk Management,Asia Pacific,Singapore,Northeast,302436,233493,Partner,2025-Q2,2025-05
+2025-05-25,Digital Banking Platform,Banking Solutions,Europe,Germany,Essen,463047,621410,Retail,2025-Q2,2025-05
+2025-05-25,Digital Banking Platform,Banking Solutions,Asia Pacific,Australia,Melbourne,176430,151188,Wholesale,2025-Q2,2025-05
+2025-05-25,Credit Risk Assessment Tool,Banking Solutions,Europe,United Kingdom,Sheffield,413593,508050,Partner,2025-Q2,2025-05
+2025-05-25,Compliance Management Software,Investment Services,Asia Pacific,Singapore,East,180683,193939,Mobile App,2025-Q2,2025-05
+2025-05-26,Retirement Planning Service,Insurance Products,North America,Canada,Winnipeg,359537,371240,Partner,2025-Q2,2025-05
+2025-05-26,Digital Wallet Solution,Payment Processing,Asia Pacific,Japan,Kawasaki,459580,624278,Direct Sales,2025-Q2,2025-05
+2025-05-26,Property Insurance Package,Risk Management,Asia Pacific,Australia,Melbourne,188304,263576,Wholesale,2025-Q2,2025-05
+2025-05-26,Financial Planning Software,Investment Services,Asia Pacific,Australia,Perth,313147,315445,Direct Sales,2025-Q2,2025-05
+2025-05-27,Life Insurance Policy,Risk Management,Europe,Germany,Dortmund,483830,617636,Online,2025-Q2,2025-05
+2025-05-27,Life Insurance Policy,Payment Processing,North America,United States,Dallas,362890,337737,Direct Sales,2025-Q2,2025-05
+2025-05-27,Investment Portfolio Management,Banking Solutions,Asia Pacific,Australia,Perth,225624,166803,Retail,2025-Q2,2025-05
+2025-05-28,Fraud Detection System,Payment Processing,North America,Canada,Edmonton,320114,288523,Online,2025-Q2,2025-05
+2025-05-28,Life Insurance Policy,Risk Management,North America,Canada,Vancouver,396405,432416,Direct Sales,2025-Q2,2025-05
+2025-05-28,Retirement Planning Service,Banking Solutions,Europe,Germany,Berlin,239970,298045,Mobile App,2025-Q2,2025-05
+2025-06-01,Digital Wallet Solution,Risk Management,North America,United States,Houston,305134,386226,Retail,2025-Q2,2025-06
+2025-06-01,Trading Analytics Tool,Risk Management,Europe,France,Bordeaux,256734,345930,Wholesale,2025-Q2,2025-06
+2025-06-01,Trading Analytics Tool,Risk Management,Europe,Germany,Leipzig,181751,208495,Partner,2025-Q2,2025-06
+2025-06-01,Property Insurance Package,Risk Management,Asia Pacific,Japan,Fukuoka,126399,94038,Wholesale,2025-Q2,2025-06
+2025-06-01,Trading Analytics Tool,Risk Management,Europe,France,Lyon,323094,417595,Mobile App,2025-Q2,2025-06
+2025-06-01,Financial Planning Software,Insurance Products,Europe,Germany,Leipzig,125317,96564,Wholesale,2025-Q2,2025-06
+2025-06-02,Investment Portfolio Management,Risk Management,Asia Pacific,Singapore,Central,187963,166437,Wholesale,2025-Q2,2025-06
+2025-06-02,Retirement Planning Service,Insurance Products,Europe,Germany,Essen,253598,281436,Partner,2025-Q2,2025-06
+2025-06-02,Wealth Management Platform,Payment Processing,North America,United States,Houston,534698,632112,Direct Sales,2025-Q2,2025-06
+2025-06-02,Payment Gateway Service,Risk Management,Asia Pacific,Japan,Tokyo,248081,209424,Retail,2025-Q2,2025-06
+2025-06-03,Digital Banking Platform,Payment Processing,North America,United States,San Diego,313641,330419,Mobile App,2025-Q2,2025-06
+2025-06-03,Financial Planning Software,Risk Management,North America,United States,Dallas,357441,381973,Direct Sales,2025-Q2,2025-06
+2025-06-03,Investment Portfolio Management,Investment Services,Europe,Germany,Frankfurt,291433,298312,Retail,2025-Q2,2025-06
+2025-06-03,Trading Analytics Tool,Risk Management,Asia Pacific,Australia,Brisbane,235012,323931,Online,2025-Q2,2025-06
+2025-06-03,Credit Risk Assessment Tool,Risk Management,Asia Pacific,Singapore,West,114402,123502,Wholesale,2025-Q2,2025-06
+2025-06-03,Credit Risk Assessment Tool,Insurance Products,Europe,United Kingdom,London,261905,294060,Direct Sales,2025-Q2,2025-06
+2025-06-04,Payment Gateway Service,Banking Solutions,Europe,United Kingdom,Liverpool,275707,369250,Retail,2025-Q2,2025-06
+2025-06-04,Retirement Planning Service,Risk Management,North America,Mexico,Monterrey,293101,248636,Direct Sales,2025-Q2,2025-06
+2025-06-04,Trading Analytics Tool,Insurance Products,Asia Pacific,Australia,Perth,349082,428813,Partner,2025-Q2,2025-06
+2025-06-04,Trading Analytics Tool,Insurance Products,North America,Canada,Quebec City,625854,768124,Direct Sales,2025-Q2,2025-06
+2025-06-04,Investment Portfolio Management,Payment Processing,Asia Pacific,Japan,Kyoto,221627,274517,Online,2025-Q2,2025-06
+2025-06-05,Credit Risk Assessment Tool,Investment Services,Asia Pacific,Singapore,Central,283320,266465,Mobile App,2025-Q2,2025-06
+2025-06-05,Digital Banking Platform,Investment Services,Europe,United Kingdom,Edinburgh,271872,370434,Direct Sales,2025-Q2,2025-06
+2025-06-05,Credit Risk Assessment Tool,Investment Services,Asia Pacific,Australia,Newcastle,273828,291458,Mobile App,2025-Q2,2025-06
+2025-06-07,Property Insurance Package,Payment Processing,Asia Pacific,Singapore,North,318703,253506,Wholesale,2025-Q2,2025-06
+2025-06-08,Retirement Planning Service,Payment Processing,Europe,Germany,Stuttgart,297239,360300,Retail,2025-Q2,2025-06
+2025-06-08,Wealth Management Platform,Payment Processing,North America,Mexico,León,256929,212829,Wholesale,2025-Q2,2025-06
+2025-06-08,Financial Planning Software,Risk Management,Europe,Germany,Stuttgart,176759,151276,Mobile App,2025-Q2,2025-06
+2025-06-08,Retirement Planning Service,Insurance Products,Asia Pacific,Australia,Melbourne,253334,317500,Mobile App,2025-Q2,2025-06
+2025-06-08,Fraud Detection System,Risk Management,North America,United States,Houston,302519,228061,Wholesale,2025-Q2,2025-06
+2025-06-09,Digital Banking Platform,Banking Solutions,Europe,France,Marseille,279139,281776,Partner,2025-Q2,2025-06
+2025-06-09,Retirement Planning Service,Risk Management,Europe,United Kingdom,London,323561,348969,Wholesale,2025-Q2,2025-06
+2025-06-10,Digital Wallet Solution,Risk Management,North America,Mexico,Monterrey,246587,213440,Partner,2025-Q2,2025-06
+2025-06-10,Payment Gateway Service,Risk Management,Asia Pacific,Australia,Sunshine Coast,448510,508578,Direct Sales,2025-Q2,2025-06
+2025-06-10,Investment Portfolio Management,Insurance Products,Asia Pacific,Singapore,Northeast,129473,174023,Mobile App,2025-Q2,2025-06
+2025-06-10,Compliance Management Software,Banking Solutions,North America,Canada,Vancouver,320116,447691,Direct Sales,2025-Q2,2025-06
+2025-06-10,Payment Gateway Service,Insurance Products,North America,Mexico,Nezahualcóyotl,210867,187919,Wholesale,2025-Q2,2025-06
+2025-06-11,Property Insurance Package,Risk Management,Asia Pacific,Japan,Yokohama,216394,179903,Wholesale,2025-Q2,2025-06
+2025-06-11,Digital Banking Platform,Payment Processing,Europe,Germany,Munich,232728,293454,Wholesale,2025-Q2,2025-06
+2025-06-12,Credit Risk Assessment Tool,Payment Processing,Europe,United Kingdom,Sheffield,329759,390570,Online,2025-Q2,2025-06
+2025-06-12,Auto Insurance Coverage,Investment Services,Europe,United Kingdom,Edinburgh,289054,211425,Online,2025-Q2,2025-06
+2025-06-12,Auto Insurance Coverage,Risk Management,North America,Mexico,Zapopan,416747,348666,Direct Sales,2025-Q2,2025-06
+2025-06-12,Investment Portfolio Management,Risk Management,Europe,Germany,Essen,150286,187161,Wholesale,2025-Q2,2025-06
+2025-06-13,Financial Planning Software,Payment Processing,Asia Pacific,Japan,Yokohama,132342,167898,Partner,2025-Q2,2025-06
+2025-06-13,Life Insurance Policy,Investment Services,Asia Pacific,Australia,Adelaide,300524,382486,Partner,2025-Q2,2025-06
+2025-06-13,Fraud Detection System,Risk Management,Europe,United Kingdom,Glasgow,129335,154276,Mobile App,2025-Q2,2025-06
+2025-06-14,Auto Insurance Coverage,Insurance Products,North America,Mexico,Tijuana,348594,263685,Direct Sales,2025-Q2,2025-06
+2025-06-14,Property Insurance Package,Insurance Products,Europe,France,Bordeaux,335845,380555,Online,2025-Q2,2025-06
+2025-06-15,Digital Banking Platform,Risk Management,North America,United States,Phoenix,134285,97019,Partner,2025-Q2,2025-06
+2025-06-15,Trading Analytics Tool,Payment Processing,Asia Pacific,Singapore,Central,241537,206109,Mobile App,2025-Q2,2025-06
+2025-06-15,Investment Portfolio Management,Insurance Products,Asia Pacific,Singapore,Northeast,188113,219100,Online,2025-Q2,2025-06
+2025-06-16,Digital Banking Platform,Investment Services,North America,Canada,Mississauga,229131,231547,Wholesale,2025-Q2,2025-06
+2025-06-16,Financial Planning Software,Investment Services,North America,Mexico,León,209392,257972,Retail,2025-Q2,2025-06
+2025-06-16,Financial Planning Software,Investment Services,Asia Pacific,Japan,Kobe,525382,633779,Direct Sales,2025-Q2,2025-06
+2025-06-17,Trading Analytics Tool,Banking Solutions,Asia Pacific,Singapore,Central,150809,184557,Mobile App,2025-Q2,2025-06
+2025-06-17,Mobile Banking App,Payment Processing,North America,Canada,Hamilton,598100,512432,Direct Sales,2025-Q2,2025-06
+2025-06-17,Trading Analytics Tool,Payment Processing,Europe,Germany,Frankfurt,397115,348263,Retail,2025-Q2,2025-06
+2025-06-17,Compliance Management Software,Insurance Products,Europe,Germany,Berlin,358822,490739,Partner,2025-Q2,2025-06
+2025-06-17,Life Insurance Policy,Banking Solutions,North America,Mexico,Zapopan,319005,240593,Mobile App,2025-Q2,2025-06
+2025-06-18,Trading Analytics Tool,Payment Processing,Asia Pacific,Japan,Osaka,244993,340489,Mobile App,2025-Q2,2025-06
+2025-06-18,Financial Planning Software,Investment Services,Asia Pacific,Japan,Sapporo,145640,188811,Retail,2025-Q2,2025-06
+2025-06-18,Property Insurance Package,Risk Management,North America,Canada,Mississauga,412286,475950,Retail,2025-Q2,2025-06
+2025-06-18,Wealth Management Platform,Banking Solutions,North America,Mexico,Mexico City,287028,251843,Mobile App,2025-Q2,2025-06
+2025-06-19,Compliance Management Software,Investment Services,Europe,France,Paris,389916,423006,Online,2025-Q2,2025-06
+2025-06-19,Trading Analytics Tool,Payment Processing,Asia Pacific,Singapore,Northeast,452215,396589,Retail,2025-Q2,2025-06
+2025-06-20,Property Insurance Package,Banking Solutions,North America,United States,Philadelphia,387678,279783,Wholesale,2025-Q2,2025-06
+2025-06-20,Auto Insurance Coverage,Banking Solutions,North America,Mexico,Mexico City,674117,596473,Direct Sales,2025-Q2,2025-06
+2025-06-21,Fraud Detection System,Risk Management,North America,Canada,Hamilton,321099,416710,Direct Sales,2025-Q2,2025-06
+2025-06-21,Wealth Management Platform,Risk Management,North America,Mexico,Tijuana,509883,698381,Online,2025-Q2,2025-06
+2025-06-21,Life Insurance Policy,Investment Services,North America,Mexico,Nezahualcóyotl,366910,420554,Mobile App,2025-Q2,2025-06
+2025-06-21,Digital Wallet Solution,Insurance Products,North America,United States,New York,310703,379389,Partner,2025-Q2,2025-06
+2025-06-22,Compliance Management Software,Investment Services,Europe,Germany,Leipzig,332187,398972,Partner,2025-Q2,2025-06
+2025-06-22,Compliance Management Software,Payment Processing,North America,Mexico,Guadalajara,427189,406875,Retail,2025-Q2,2025-06
+2025-06-22,Compliance Management Software,Risk Management,Asia Pacific,Japan,Yokohama,112387,151885,Mobile App,2025-Q2,2025-06
+2025-06-23,Digital Wallet Solution,Risk Management,Asia Pacific,Singapore,Northeast,104662,92547,Online,2025-Q2,2025-06
+2025-06-23,Wealth Management Platform,Investment Services,Europe,France,Marseille,263739,321193,Online,2025-Q2,2025-06
+2025-06-24,Mobile Banking App,Payment Processing,North America,United States,Houston,297610,290517,Mobile App,2025-Q2,2025-06
+2025-06-24,Investment Portfolio Management,Investment Services,North America,Canada,Winnipeg,279925,224693,Mobile App,2025-Q2,2025-06
+2025-06-24,Digital Wallet Solution,Insurance Products,Europe,France,Bordeaux,388194,289045,Direct Sales,2025-Q2,2025-06
+2025-06-24,Digital Banking Platform,Risk Management,Europe,Germany,Stuttgart,428971,499406,Direct Sales,2025-Q2,2025-06
+2025-06-24,Mobile Banking App,Banking Solutions,Asia Pacific,Japan,Nagoya,403209,552626,Retail,2025-Q2,2025-06
+2025-06-25,Auto Insurance Coverage,Risk Management,Asia Pacific,Australia,Wollongong,304797,293984,Mobile App,2025-Q2,2025-06
+2025-06-25,Auto Insurance Coverage,Banking Solutions,Europe,United Kingdom,Edinburgh,341251,241853,Online,2025-Q2,2025-06
+2025-06-25,Financial Planning Software,Payment Processing,North America,United States,Los Angeles,243236,180400,Partner,2025-Q2,2025-06
+2025-06-25,Compliance Management Software,Insurance Products,Asia Pacific,Japan,Kawasaki,432062,560796,Retail,2025-Q2,2025-06
+2025-06-26,Life Insurance Policy,Payment Processing,Asia Pacific,Singapore,East,310252,233851,Partner,2025-Q2,2025-06
+2025-06-26,Auto Insurance Coverage,Insurance Products,North America,Mexico,Guadalajara,279890,317552,Retail,2025-Q2,2025-06
+2025-06-26,Digital Wallet Solution,Banking Solutions,Europe,Germany,Dortmund,338603,419540,Retail,2025-Q2,2025-06
+2025-06-26,Digital Banking Platform,Banking Solutions,North America,Canada,Edmonton,481848,413282,Partner,2025-Q2,2025-06
+2025-06-26,Trading Analytics Tool,Banking Solutions,North America,Mexico,Juárez,529637,699900,Partner,2025-Q2,2025-06
+2025-06-26,Fraud Detection System,Risk Management,North America,Canada,Winnipeg,271837,327473,Partner,2025-Q2,2025-06
+2025-06-27,Digital Wallet Solution,Banking Solutions,Europe,France,Nice,401189,422756,Partner,2025-Q2,2025-06
+2025-06-27,Trading Analytics Tool,Banking Solutions,Asia Pacific,Japan,Yokohama,112538,125284,Mobile App,2025-Q2,2025-06
+2025-06-27,Fraud Detection System,Payment Processing,Asia Pacific,Australia,Melbourne,201098,252423,Partner,2025-Q2,2025-06
+2025-06-27,Payment Gateway Service,Insurance Products,Europe,France,Montpellier,290019,386604,Mobile App,2025-Q2,2025-06
+2025-06-27,Investment Portfolio Management,Risk Management,Asia Pacific,Singapore,North,276024,211265,Online,2025-Q2,2025-06
+2025-06-28,Retirement Planning Service,Investment Services,North America,Canada,Mississauga,307201,219262,Direct Sales,2025-Q2,2025-06
+2025-06-28,Life Insurance Policy,Insurance Products,North America,Canada,Toronto,168031,219011,Wholesale,2025-Q2,2025-06
+2025-06-28,Investment Portfolio Management,Payment Processing,Europe,France,Paris,306350,379069,Direct Sales,2025-Q2,2025-06
+2025-06-28,Life Insurance Policy,Payment Processing,Asia Pacific,Singapore,East,276171,346039,Direct Sales,2025-Q2,2025-06

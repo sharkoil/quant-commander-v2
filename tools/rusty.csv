@@ -1,0 +1,601 @@
+Date,Product,Category,Region,Country,City,Budget,Actuals,Channel,Quarter,Month
+2024-07-01,Professional Certification Program,Learning Management,North America,Canada,Vancouver,418504,430237,Direct Sales,2024-Q3,2024-07
+2024-07-01,Exam Proctoring System,Research Platforms,Europe,Germany,Frankfurt,118328,148830,Partner,2024-Q3,2024-07
+2024-07-02,Educational Analytics Platform,Learning Management,Asia Pacific,Singapore,East,107062,135689,Partner,2024-Q3,2024-07
+2024-07-03,Interactive Course Content,Learning Management,North America,United States,Dallas,202937,205314,Online,2024-Q3,2024-07
+2024-07-03,Corporate Training Program,Assessment Tools,North America,Mexico,Chihuahua,82034,101073,Online,2024-Q3,2024-07
+2024-07-05,Virtual Classroom Software,Research Platforms,North America,United States,Houston,231284,305487,Direct Sales,2024-Q3,2024-07
+2024-07-05,Exam Proctoring System,Assessment Tools,Asia Pacific,Australia,Sydney,180231,170489,Retail,2024-Q3,2024-07
+2024-07-06,Language Learning App,Assessment Tools,North America,Mexico,Puebla,154313,141341,Online,2024-Q3,2024-07
+2024-07-06,Interactive Course Content,Research Platforms,North America,Canada,Edmonton,126247,130832,Wholesale,2024-Q3,2024-07
+2024-07-08,Educational Video Series,Learning Management,Asia Pacific,Australia,Adelaide,294710,352008,Direct Sales,2024-Q3,2024-07
+2024-07-08,Interactive Course Content,Educational Content,Asia Pacific,Japan,Kawasaki,86805,94763,Retail,2024-Q3,2024-07
+2024-07-08,Corporate Training Program,Educational Content,Europe,France,Paris,258402,314898,Direct Sales,2024-Q3,2024-07
+2024-07-09,Language Learning App,Research Platforms,Europe,France,Nantes,154665,109313,Wholesale,2024-Q3,2024-07
+2024-07-10,Exam Proctoring System,Training Programs,North America,United States,Dallas,173146,196310,Direct Sales,2024-Q3,2024-07
+2024-07-11,Online Learning Platform,Research Platforms,North America,Canada,Mississauga,276101,244353,Direct Sales,2024-Q3,2024-07
+2024-07-11,Skills Training Workshop,Research Platforms,North America,United States,San Antonio,254431,281899,Partner,2024-Q3,2024-07
+2024-07-12,Professional Certification Program,Educational Content,Europe,United Kingdom,Bristol,159097,119779,Wholesale,2024-Q3,2024-07
+2024-07-14,Corporate Training Program,Training Programs,Europe,Germany,Munich,215092,244598,Partner,2024-Q3,2024-07
+2024-07-14,STEM Education Kit,Assessment Tools,Europe,United Kingdom,Edinburgh,78761,69756,Mobile App,2024-Q3,2024-07
+2024-07-14,Language Learning App,Research Platforms,Asia Pacific,Japan,Fukuoka,66402,67072,Online,2024-Q3,2024-07
+2024-07-15,Student Assessment Tool,Learning Management,North America,Mexico,Juárez,161599,116827,Online,2024-Q3,2024-07
+2024-07-15,Exam Proctoring System,Training Programs,Europe,United Kingdom,Manchester,225695,243976,Partner,2024-Q3,2024-07
+2024-07-16,Online Learning Platform,Training Programs,Asia Pacific,Australia,Sunshine Coast,68663,79991,Retail,2024-Q3,2024-07
+2024-07-16,Online Learning Platform,Research Platforms,Europe,Germany,Dortmund,243560,315368,Retail,2024-Q3,2024-07
+2024-07-16,Virtual Classroom Software,Training Programs,Asia Pacific,Singapore,North,269908,239602,Direct Sales,2024-Q3,2024-07
+2024-07-17,Educational Analytics Platform,Educational Content,Europe,United Kingdom,Sheffield,219930,288983,Direct Sales,2024-Q3,2024-07
+2024-07-17,Corporate Training Program,Training Programs,Asia Pacific,Australia,Melbourne,96689,102981,Partner,2024-Q3,2024-07
+2024-07-17,Interactive Course Content,Training Programs,North America,Canada,Montreal,278932,316204,Retail,2024-Q3,2024-07
+2024-07-17,Educational Analytics Platform,Assessment Tools,Asia Pacific,Singapore,North,261762,248896,Direct Sales,2024-Q3,2024-07
+2024-07-18,Academic Research Database,Learning Management,Asia Pacific,Japan,Kobe,129019,127720,Online,2024-Q3,2024-07
+2024-07-18,Skills Training Workshop,Training Programs,Asia Pacific,Singapore,West,91598,107904,Retail,2024-Q3,2024-07
+2024-07-18,Language Learning App,Learning Management,Europe,Germany,Dortmund,298480,416296,Direct Sales,2024-Q3,2024-07
+2024-07-19,STEM Education Kit,Training Programs,North America,United States,San Diego,269745,339308,Online,2024-Q3,2024-07
+2024-07-19,Academic Research Database,Learning Management,Europe,Germany,Hamburg,197168,176885,Direct Sales,2024-Q3,2024-07
+2024-07-19,Corporate Training Program,Training Programs,Europe,United Kingdom,Liverpool,189584,232105,Direct Sales,2024-Q3,2024-07
+2024-07-20,Student Information System,Training Programs,Europe,United Kingdom,Glasgow,261858,200445,Partner,2024-Q3,2024-07
+2024-07-20,Interactive Course Content,Educational Content,Europe,Germany,Leipzig,142203,185337,Mobile App,2024-Q3,2024-07
+2024-07-22,Corporate Training Program,Training Programs,North America,Canada,Vancouver,298703,318582,Direct Sales,2024-Q3,2024-07
+2024-07-23,Academic Research Database,Training Programs,Asia Pacific,Australia,Melbourne,185217,186203,Mobile App,2024-Q3,2024-07
+2024-07-23,Student Information System,Assessment Tools,Asia Pacific,Australia,Melbourne,184080,153078,Retail,2024-Q3,2024-07
+2024-07-23,Professional Certification Program,Assessment Tools,Asia Pacific,Japan,Fukuoka,108052,93773,Direct Sales,2024-Q3,2024-07
+2024-07-25,Interactive Course Content,Training Programs,North America,United States,Philadelphia,92864,102358,Wholesale,2024-Q3,2024-07
+2024-07-25,Interactive Course Content,Training Programs,North America,Canada,Quebec City,61256,51155,Wholesale,2024-Q3,2024-07
+2024-07-25,Language Learning App,Learning Management,North America,Canada,Mississauga,135677,186684,Online,2024-Q3,2024-07
+2024-07-25,STEM Education Kit,Research Platforms,North America,Mexico,León,173530,185319,Direct Sales,2024-Q3,2024-07
+2024-07-26,Educational Video Series,Training Programs,Asia Pacific,Singapore,East,134940,167817,Retail,2024-Q3,2024-07
+2024-07-26,Virtual Classroom Software,Research Platforms,Asia Pacific,Singapore,West,190780,215303,Direct Sales,2024-Q3,2024-07
+2024-07-26,STEM Education Kit,Training Programs,North America,United States,Los Angeles,311113,293790,Partner,2024-Q3,2024-07
+2024-07-28,Skills Training Workshop,Assessment Tools,Asia Pacific,Australia,Adelaide,135972,153923,Online,2024-Q3,2024-07
+2024-07-28,Exam Proctoring System,Assessment Tools,Asia Pacific,Singapore,Northeast,155819,193084,Online,2024-Q3,2024-07
+2024-08-01,Library Management System,Training Programs,Europe,France,Toulouse,72460,71799,Wholesale,2024-Q3,2024-08
+2024-08-01,Academic Research Database,Educational Content,North America,United States,Dallas,133555,171994,Online,2024-Q3,2024-08
+2024-08-01,Educational Video Series,Assessment Tools,Asia Pacific,Japan,Kobe,85546,92469,Partner,2024-Q3,2024-08
+2024-08-02,Interactive Course Content,Learning Management,North America,Mexico,Puebla,158360,168294,Online,2024-Q3,2024-08
+2024-08-03,Educational Analytics Platform,Research Platforms,Europe,Germany,Frankfurt,112856,87314,Wholesale,2024-Q3,2024-08
+2024-08-04,Online Learning Platform,Training Programs,Asia Pacific,Japan,Osaka,78472,63325,Mobile App,2024-Q3,2024-08
+2024-08-04,Academic Research Database,Training Programs,Europe,Germany,Munich,205808,197430,Retail,2024-Q3,2024-08
+2024-08-05,STEM Education Kit,Training Programs,Europe,Germany,Frankfurt,103822,129571,Partner,2024-Q3,2024-08
+2024-08-05,Educational Video Series,Research Platforms,Asia Pacific,Australia,Canberra,135442,182291,Online,2024-Q3,2024-08
+2024-08-06,Library Management System,Research Platforms,North America,United States,Chicago,300950,222988,Retail,2024-Q3,2024-08
+2024-08-06,Academic Research Database,Research Platforms,North America,United States,Chicago,277686,343298,Direct Sales,2024-Q3,2024-08
+2024-08-06,Professional Certification Program,Assessment Tools,North America,Canada,Quebec City,166865,227016,Wholesale,2024-Q3,2024-08
+2024-08-07,Skills Training Workshop,Educational Content,Europe,France,Toulouse,90422,114427,Online,2024-Q3,2024-08
+2024-08-07,Student Information System,Educational Content,North America,Canada,Mississauga,160238,182756,Retail,2024-Q3,2024-08
+2024-08-08,Online Learning Platform,Educational Content,Asia Pacific,Japan,Kawasaki,219169,225409,Retail,2024-Q3,2024-08
+2024-08-09,Professional Certification Program,Research Platforms,Europe,Germany,Stuttgart,249470,237283,Retail,2024-Q3,2024-08
+2024-08-09,STEM Education Kit,Learning Management,Europe,Germany,Düsseldorf,140985,193566,Direct Sales,2024-Q3,2024-08
+2024-08-10,Corporate Training Program,Training Programs,North America,Mexico,Guadalajara,205786,199436,Online,2024-Q3,2024-08
+2024-08-10,Professional Certification Program,Assessment Tools,North America,Canada,Toronto,249205,221240,Partner,2024-Q3,2024-08
+2024-08-11,Online Learning Platform,Educational Content,Europe,United Kingdom,Edinburgh,180423,168474,Direct Sales,2024-Q3,2024-08
+2024-08-11,Academic Research Database,Assessment Tools,Asia Pacific,Singapore,Central,205983,227727,Partner,2024-Q3,2024-08
+2024-08-12,Language Learning App,Learning Management,Asia Pacific,Australia,Melbourne,227741,210455,Partner,2024-Q3,2024-08
+2024-08-13,Educational Analytics Platform,Educational Content,North America,Canada,Montreal,83502,73342,Mobile App,2024-Q3,2024-08
+2024-08-13,Online Learning Platform,Training Programs,North America,United States,Houston,89113,70762,Wholesale,2024-Q3,2024-08
+2024-08-14,Student Assessment Tool,Training Programs,North America,Canada,Vancouver,266712,226744,Partner,2024-Q3,2024-08
+2024-08-14,Educational Analytics Platform,Training Programs,Asia Pacific,Australia,Sunshine Coast,145543,193255,Retail,2024-Q3,2024-08
+2024-08-14,Library Management System,Educational Content,Europe,France,Paris,235684,276252,Online,2024-Q3,2024-08
+2024-08-15,Interactive Course Content,Research Platforms,Asia Pacific,Australia,Wollongong,216153,277168,Retail,2024-Q3,2024-08
+2024-08-15,Student Assessment Tool,Educational Content,North America,Mexico,Nezahualcóyotl,80486,62751,Partner,2024-Q3,2024-08
+2024-08-16,Virtual Classroom Software,Training Programs,Europe,Germany,Munich,166238,139615,Wholesale,2024-Q3,2024-08
+2024-08-16,Language Learning App,Educational Content,Asia Pacific,Singapore,Central,136097,108891,Direct Sales,2024-Q3,2024-08
+2024-08-16,Online Learning Platform,Research Platforms,Asia Pacific,Australia,Brisbane,215839,199659,Online,2024-Q3,2024-08
+2024-08-16,Virtual Classroom Software,Learning Management,North America,Mexico,Monterrey,185717,183216,Retail,2024-Q3,2024-08
+2024-08-16,Student Information System,Educational Content,North America,United States,Philadelphia,163697,213013,Mobile App,2024-Q3,2024-08
+2024-08-17,Exam Proctoring System,Educational Content,North America,United States,San Diego,100142,97665,Wholesale,2024-Q3,2024-08
+2024-08-17,Virtual Classroom Software,Assessment Tools,Europe,France,Montpellier,151166,206547,Mobile App,2024-Q3,2024-08
+2024-08-17,Professional Certification Program,Assessment Tools,Europe,United Kingdom,Sheffield,138431,157919,Online,2024-Q3,2024-08
+2024-08-18,Professional Certification Program,Educational Content,Europe,Germany,Frankfurt,84958,100265,Mobile App,2024-Q3,2024-08
+2024-08-18,Interactive Course Content,Research Platforms,North America,United States,San Jose,83868,63175,Partner,2024-Q3,2024-08
+2024-08-18,Student Assessment Tool,Assessment Tools,Asia Pacific,Singapore,Northeast,193620,140708,Online,2024-Q3,2024-08
+2024-08-20,Language Learning App,Educational Content,Asia Pacific,Singapore,East,315618,422451,Direct Sales,2024-Q3,2024-08
+2024-08-20,Educational Video Series,Assessment Tools,Europe,France,Montpellier,182332,188708,Partner,2024-Q3,2024-08
+2024-08-21,Professional Certification Program,Educational Content,Asia Pacific,Singapore,North,176994,229635,Retail,2024-Q3,2024-08
+2024-08-23,Academic Research Database,Training Programs,Europe,Germany,Leipzig,455939,449727,Direct Sales,2024-Q3,2024-08
+2024-08-24,Academic Research Database,Educational Content,Asia Pacific,Australia,Melbourne,178534,202387,Online,2024-Q3,2024-08
+2024-08-24,Student Assessment Tool,Training Programs,Europe,United Kingdom,Bristol,193331,246663,Partner,2024-Q3,2024-08
+2024-08-26,Educational Analytics Platform,Training Programs,Europe,United Kingdom,Birmingham,277917,383601,Retail,2024-Q3,2024-08
+2024-08-27,Virtual Classroom Software,Research Platforms,Asia Pacific,Singapore,Central,251505,243776,Direct Sales,2024-Q3,2024-08
+2024-08-28,Virtual Classroom Software,Training Programs,North America,Canada,Vancouver,236070,175117,Direct Sales,2024-Q3,2024-08
+2024-08-28,Corporate Training Program,Assessment Tools,Europe,United Kingdom,Cardiff,129280,177689,Wholesale,2024-Q3,2024-08
+2024-09-01,Academic Research Database,Learning Management,North America,Canada,Quebec City,87517,86904,Partner,2024-Q3,2024-09
+2024-09-01,Academic Research Database,Educational Content,Asia Pacific,Australia,Melbourne,135814,104743,Partner,2024-Q3,2024-09
+2024-09-02,Online Learning Platform,Assessment Tools,Europe,United Kingdom,Leeds,202506,242538,Online,2024-Q3,2024-09
+2024-09-02,Language Learning App,Educational Content,Europe,France,Nantes,169541,140903,Mobile App,2024-Q3,2024-09
+2024-09-02,Virtual Classroom Software,Learning Management,Europe,France,Montpellier,253551,322007,Direct Sales,2024-Q3,2024-09
+2024-09-04,Academic Research Database,Educational Content,North America,Canada,Vancouver,208670,279331,Retail,2024-Q3,2024-09
+2024-09-04,Corporate Training Program,Research Platforms,Europe,France,Marseille,141839,159288,Wholesale,2024-Q3,2024-09
+2024-09-04,Interactive Course Content,Assessment Tools,Europe,United Kingdom,Cardiff,209262,287608,Direct Sales,2024-Q3,2024-09
+2024-09-05,Virtual Classroom Software,Assessment Tools,North America,Canada,Mississauga,173481,220718,Mobile App,2024-Q3,2024-09
+2024-09-05,Corporate Training Program,Training Programs,Europe,United Kingdom,London,144125,157079,Wholesale,2024-Q3,2024-09
+2024-09-06,Online Learning Platform,Learning Management,North America,United States,Philadelphia,95878,118210,Mobile App,2024-Q3,2024-09
+2024-09-07,Online Learning Platform,Assessment Tools,Europe,United Kingdom,Manchester,141321,153472,Wholesale,2024-Q3,2024-09
+2024-09-07,Library Management System,Training Programs,Europe,Germany,Dortmund,78193,75126,Partner,2024-Q3,2024-09
+2024-09-08,Skills Training Workshop,Educational Content,Europe,United Kingdom,Leeds,270383,225642,Online,2024-Q3,2024-09
+2024-09-08,Interactive Course Content,Research Platforms,Europe,France,Paris,142156,114435,Partner,2024-Q3,2024-09
+2024-09-09,Educational Video Series,Assessment Tools,North America,Canada,Montreal,143567,195629,Online,2024-Q3,2024-09
+2024-09-09,Online Learning Platform,Research Platforms,North America,Mexico,Zapopan,192532,149474,Direct Sales,2024-Q3,2024-09
+2024-09-09,Exam Proctoring System,Training Programs,Europe,Germany,Munich,89729,81550,Online,2024-Q3,2024-09
+2024-09-09,Online Learning Platform,Learning Management,North America,Canada,Vancouver,225162,259942,Partner,2024-Q3,2024-09
+2024-09-11,STEM Education Kit,Learning Management,Asia Pacific,Australia,Brisbane,85431,65406,Online,2024-Q3,2024-09
+2024-09-12,Student Assessment Tool,Training Programs,Europe,Germany,Hamburg,106494,102580,Wholesale,2024-Q3,2024-09
+2024-09-12,STEM Education Kit,Assessment Tools,North America,United States,San Diego,173938,210046,Mobile App,2024-Q3,2024-09
+2024-09-13,Library Management System,Research Platforms,North America,Mexico,Mexico City,60501,51652,Wholesale,2024-Q3,2024-09
+2024-09-14,Interactive Course Content,Learning Management,Asia Pacific,Singapore,West,328281,271258,Direct Sales,2024-Q3,2024-09
+2024-09-15,Student Information System,Research Platforms,North America,United States,Los Angeles,474711,650443,Direct Sales,2024-Q3,2024-09
+2024-09-16,Skills Training Workshop,Assessment Tools,North America,United States,Dallas,231419,163882,Direct Sales,2024-Q3,2024-09
+2024-09-17,Interactive Course Content,Educational Content,Europe,Germany,Berlin,271694,361765,Online,2024-Q3,2024-09
+2024-09-18,Virtual Classroom Software,Research Platforms,Asia Pacific,Japan,Nagoya,146157,102602,Online,2024-Q3,2024-09
+2024-09-18,Virtual Classroom Software,Learning Management,Asia Pacific,Australia,Gold Coast,124550,104034,Partner,2024-Q3,2024-09
+2024-09-19,Online Learning Platform,Assessment Tools,North America,United States,Phoenix,97285,89491,Partner,2024-Q3,2024-09
+2024-09-20,Interactive Course Content,Training Programs,Asia Pacific,Singapore,North,178796,223691,Retail,2024-Q3,2024-09
+2024-09-20,Student Assessment Tool,Training Programs,Europe,France,Montpellier,164379,117575,Retail,2024-Q3,2024-09
+2024-09-20,STEM Education Kit,Training Programs,North America,Canada,Hamilton,99812,90216,Online,2024-Q3,2024-09
+2024-09-20,Skills Training Workshop,Assessment Tools,Asia Pacific,Australia,Adelaide,89752,85936,Retail,2024-Q3,2024-09
+2024-09-21,Skills Training Workshop,Research Platforms,Europe,France,Nice,314586,352284,Retail,2024-Q3,2024-09
+2024-09-21,Professional Certification Program,Educational Content,Europe,Germany,Hamburg,121390,148778,Retail,2024-Q3,2024-09
+2024-09-21,Corporate Training Program,Learning Management,North America,Mexico,Mexico City,99773,130057,Mobile App,2024-Q3,2024-09
+2024-09-21,Exam Proctoring System,Research Platforms,North America,Mexico,Monterrey,155122,149379,Mobile App,2024-Q3,2024-09
+2024-09-21,Educational Video Series,Educational Content,North America,United States,Phoenix,197377,265007,Online,2024-Q3,2024-09
+2024-09-23,Corporate Training Program,Learning Management,Asia Pacific,Australia,Brisbane,186351,159886,Direct Sales,2024-Q3,2024-09
+2024-09-23,Library Management System,Educational Content,Europe,France,Nice,70788,75763,Mobile App,2024-Q3,2024-09
+2024-09-24,Library Management System,Learning Management,Europe,Germany,Leipzig,108590,82588,Wholesale,2024-Q3,2024-09
+2024-09-24,Skills Training Workshop,Research Platforms,Asia Pacific,Australia,Melbourne,174877,198704,Partner,2024-Q3,2024-09
+2024-09-25,Educational Analytics Platform,Training Programs,Europe,United Kingdom,Edinburgh,109134,143519,Wholesale,2024-Q3,2024-09
+2024-09-26,Skills Training Workshop,Training Programs,Europe,Germany,Hamburg,141287,184476,Partner,2024-Q3,2024-09
+2024-09-26,Online Learning Platform,Training Programs,Europe,United Kingdom,Leeds,139532,179246,Partner,2024-Q3,2024-09
+2024-09-28,Educational Analytics Platform,Training Programs,Asia Pacific,Singapore,North,147792,111129,Online,2024-Q3,2024-09
+2024-09-28,Virtual Classroom Software,Training Programs,Europe,United Kingdom,Edinburgh,287629,372942,Direct Sales,2024-Q3,2024-09
+2024-09-28,Virtual Classroom Software,Learning Management,North America,Mexico,Nezahualcóyotl,82793,62374,Mobile App,2024-Q3,2024-09
+2024-09-28,STEM Education Kit,Assessment Tools,Europe,United Kingdom,Edinburgh,82880,66778,Partner,2024-Q3,2024-09
+2024-10-02,Educational Analytics Platform,Educational Content,North America,United States,San Jose,248398,213322,Partner,2024-Q4,2024-10
+2024-10-02,Educational Analytics Platform,Assessment Tools,North America,Canada,Montreal,213767,249921,Wholesale,2024-Q4,2024-10
+2024-10-02,Academic Research Database,Assessment Tools,Asia Pacific,Singapore,East,54837,72745,Online,2024-Q4,2024-10
+2024-10-02,Educational Video Series,Educational Content,Asia Pacific,Australia,Brisbane,82912,86321,Wholesale,2024-Q4,2024-10
+2024-10-02,Library Management System,Learning Management,Europe,Germany,Leipzig,190937,201562,Online,2024-Q4,2024-10
+2024-10-03,Academic Research Database,Research Platforms,Asia Pacific,Australia,Perth,248372,216466,Direct Sales,2024-Q4,2024-10
+2024-10-05,Student Assessment Tool,Training Programs,Europe,United Kingdom,Leeds,60790,70635,Online,2024-Q4,2024-10
+2024-10-05,Interactive Course Content,Assessment Tools,Europe,United Kingdom,Leeds,358024,398904,Direct Sales,2024-Q4,2024-10
+2024-10-05,Professional Certification Program,Learning Management,North America,United States,Los Angeles,161257,152169,Partner,2024-Q4,2024-10
+2024-10-06,Skills Training Workshop,Training Programs,Asia Pacific,Australia,Perth,150120,153586,Partner,2024-Q4,2024-10
+2024-10-06,Virtual Classroom Software,Assessment Tools,Europe,Germany,Frankfurt,265855,257705,Partner,2024-Q4,2024-10
+2024-10-09,Interactive Course Content,Educational Content,Europe,France,Paris,216325,190858,Mobile App,2024-Q4,2024-10
+2024-10-09,Skills Training Workshop,Learning Management,North America,United States,Chicago,218715,272176,Retail,2024-Q4,2024-10
+2024-10-09,Language Learning App,Learning Management,Europe,Germany,Dortmund,175466,207945,Wholesale,2024-Q4,2024-10
+2024-10-09,Skills Training Workshop,Research Platforms,North America,United States,Houston,283636,332615,Direct Sales,2024-Q4,2024-10
+2024-10-10,Corporate Training Program,Assessment Tools,Asia Pacific,Singapore,North,86463,102380,Online,2024-Q4,2024-10
+2024-10-10,Student Assessment Tool,Research Platforms,North America,Mexico,Zapopan,330847,321452,Partner,2024-Q4,2024-10
+2024-10-10,Student Assessment Tool,Educational Content,Asia Pacific,Singapore,North,167727,212455,Retail,2024-Q4,2024-10
+2024-10-11,Language Learning App,Research Platforms,Asia Pacific,Australia,Gold Coast,71505,88841,Wholesale,2024-Q4,2024-10
+2024-10-11,Student Information System,Educational Content,Europe,Germany,Munich,188802,222224,Mobile App,2024-Q4,2024-10
+2024-10-12,Educational Video Series,Learning Management,Asia Pacific,Japan,Saitama,95348,122925,Mobile App,2024-Q4,2024-10
+2024-10-12,Student Information System,Research Platforms,Asia Pacific,Australia,Brisbane,267279,347089,Retail,2024-Q4,2024-10
+2024-10-13,Virtual Classroom Software,Educational Content,North America,Canada,Winnipeg,114537,100900,Online,2024-Q4,2024-10
+2024-10-13,Exam Proctoring System,Learning Management,Asia Pacific,Japan,Kawasaki,202047,192284,Online,2024-Q4,2024-10
+2024-10-14,Virtual Classroom Software,Educational Content,Asia Pacific,Singapore,North,191243,235668,Mobile App,2024-Q4,2024-10
+2024-10-14,STEM Education Kit,Assessment Tools,Europe,United Kingdom,Manchester,154143,110940,Mobile App,2024-Q4,2024-10
+2024-10-14,Virtual Classroom Software,Assessment Tools,Europe,Germany,Berlin,116108,116356,Mobile App,2024-Q4,2024-10
+2024-10-14,Educational Analytics Platform,Educational Content,North America,Canada,Quebec City,111376,79650,Wholesale,2024-Q4,2024-10
+2024-10-14,Online Learning Platform,Research Platforms,Europe,Germany,Berlin,364040,362870,Direct Sales,2024-Q4,2024-10
+2024-10-16,Online Learning Platform,Assessment Tools,Europe,France,Lyon,168315,181503,Wholesale,2024-Q4,2024-10
+2024-10-17,Exam Proctoring System,Research Platforms,Europe,France,Lille,235348,305073,Partner,2024-Q4,2024-10
+2024-10-17,Skills Training Workshop,Assessment Tools,Europe,Germany,Stuttgart,140657,174709,Partner,2024-Q4,2024-10
+2024-10-18,Language Learning App,Assessment Tools,North America,United States,Houston,86891,82111,Retail,2024-Q4,2024-10
+2024-10-18,Interactive Course Content,Learning Management,North America,Mexico,Zapopan,145862,167260,Mobile App,2024-Q4,2024-10
+2024-10-19,Student Information System,Research Platforms,Asia Pacific,Japan,Kawasaki,163289,162366,Online,2024-Q4,2024-10
+2024-10-19,Student Assessment Tool,Assessment Tools,North America,Mexico,Tijuana,70283,51631,Wholesale,2024-Q4,2024-10
+2024-10-19,Student Assessment Tool,Learning Management,Europe,United Kingdom,Edinburgh,141491,192596,Mobile App,2024-Q4,2024-10
+2024-10-20,Student Information System,Assessment Tools,North America,United States,Philadelphia,109417,80340,Direct Sales,2024-Q4,2024-10
+2024-10-21,Academic Research Database,Educational Content,North America,United States,Philadelphia,96474,132971,Mobile App,2024-Q4,2024-10
+2024-10-21,Educational Analytics Platform,Training Programs,North America,United States,Houston,151080,154869,Wholesale,2024-Q4,2024-10
+2024-10-21,Educational Analytics Platform,Educational Content,North America,Mexico,Chihuahua,314904,316505,Direct Sales,2024-Q4,2024-10
+2024-10-21,Exam Proctoring System,Training Programs,Asia Pacific,Singapore,North,330764,276030,Direct Sales,2024-Q4,2024-10
+2024-10-22,STEM Education Kit,Assessment Tools,Asia Pacific,Australia,Canberra,206691,287970,Retail,2024-Q4,2024-10
+2024-10-23,Educational Video Series,Educational Content,Europe,France,Montpellier,178586,150001,Wholesale,2024-Q4,2024-10
+2024-10-24,Virtual Classroom Software,Learning Management,North America,Canada,Quebec City,186370,218591,Wholesale,2024-Q4,2024-10
+2024-10-24,Student Assessment Tool,Educational Content,Europe,France,Marseille,199444,241364,Mobile App,2024-Q4,2024-10
+2024-10-25,Skills Training Workshop,Training Programs,North America,Canada,Montreal,238828,300140,Direct Sales,2024-Q4,2024-10
+2024-10-26,Educational Analytics Platform,Training Programs,Europe,United Kingdom,Liverpool,85480,119595,Wholesale,2024-Q4,2024-10
+2024-10-26,Skills Training Workshop,Training Programs,North America,United States,New York,119689,156539,Direct Sales,2024-Q4,2024-10
+2024-10-28,Virtual Classroom Software,Assessment Tools,North America,Canada,Montreal,197856,205824,Mobile App,2024-Q4,2024-10
+2024-11-01,Online Learning Platform,Research Platforms,North America,United States,Los Angeles,113215,107384,Wholesale,2024-Q4,2024-11
+2024-11-01,STEM Education Kit,Educational Content,Asia Pacific,Australia,Gold Coast,256046,352242,Partner,2024-Q4,2024-11
+2024-11-02,STEM Education Kit,Research Platforms,North America,United States,San Diego,120744,115555,Partner,2024-Q4,2024-11
+2024-11-04,Language Learning App,Research Platforms,Asia Pacific,Japan,Kobe,156349,177219,Online,2024-Q4,2024-11
+2024-11-05,Educational Video Series,Educational Content,Asia Pacific,Japan,Saitama,64477,84474,Wholesale,2024-Q4,2024-11
+2024-11-05,Exam Proctoring System,Assessment Tools,North America,Mexico,Zapopan,259531,234201,Online,2024-Q4,2024-11
+2024-11-05,Educational Video Series,Assessment Tools,Europe,United Kingdom,Leeds,223284,233723,Direct Sales,2024-Q4,2024-11
+2024-11-06,Educational Analytics Platform,Research Platforms,Asia Pacific,Singapore,Northeast,125835,156393,Direct Sales,2024-Q4,2024-11
+2024-11-06,Educational Analytics Platform,Assessment Tools,North America,United States,New York,191765,166400,Direct Sales,2024-Q4,2024-11
+2024-11-07,Library Management System,Assessment Tools,Asia Pacific,Singapore,North,78890,71624,Direct Sales,2024-Q4,2024-11
+2024-11-07,STEM Education Kit,Educational Content,North America,Canada,Hamilton,206165,217409,Wholesale,2024-Q4,2024-11
+2024-11-08,Skills Training Workshop,Learning Management,Asia Pacific,Japan,Kawasaki,163471,139868,Online,2024-Q4,2024-11
+2024-11-10,Academic Research Database,Learning Management,Asia Pacific,Singapore,West,68006,47850,Wholesale,2024-Q4,2024-11
+2024-11-10,STEM Education Kit,Research Platforms,Asia Pacific,Singapore,West,160966,135525,Wholesale,2024-Q4,2024-11
+2024-11-11,Exam Proctoring System,Training Programs,Asia Pacific,Japan,Yokohama,158489,113164,Direct Sales,2024-Q4,2024-11
+2024-11-12,Language Learning App,Educational Content,North America,Canada,Quebec City,256944,255345,Online,2024-Q4,2024-11
+2024-11-12,STEM Education Kit,Training Programs,North America,Mexico,Mexico City,164067,214153,Mobile App,2024-Q4,2024-11
+2024-11-12,Academic Research Database,Learning Management,North America,Mexico,Juárez,259015,317586,Mobile App,2024-Q4,2024-11
+2024-11-13,Academic Research Database,Training Programs,Europe,Germany,Dortmund,54021,63031,Wholesale,2024-Q4,2024-11
+2024-11-13,Online Learning Platform,Educational Content,Asia Pacific,Singapore,Central,68418,65143,Retail,2024-Q4,2024-11
+2024-11-15,Interactive Course Content,Assessment Tools,Asia Pacific,Japan,Tokyo,270347,248235,Direct Sales,2024-Q4,2024-11
+2024-11-15,Interactive Course Content,Educational Content,Europe,France,Marseille,294394,295078,Partner,2024-Q4,2024-11
+2024-11-16,Online Learning Platform,Educational Content,North America,Mexico,Juárez,171158,121563,Online,2024-Q4,2024-11
+2024-11-16,Professional Certification Program,Educational Content,North America,United States,Dallas,101267,76356,Wholesale,2024-Q4,2024-11
+2024-11-17,Educational Video Series,Training Programs,North America,United States,San Jose,69787,87334,Wholesale,2024-Q4,2024-11
+2024-11-17,Educational Analytics Platform,Educational Content,North America,Canada,Ottawa,124877,138903,Partner,2024-Q4,2024-11
+2024-11-19,Virtual Classroom Software,Assessment Tools,Europe,Germany,Essen,129136,110681,Direct Sales,2024-Q4,2024-11
+2024-11-20,Student Information System,Learning Management,Europe,France,Nice,188824,225607,Wholesale,2024-Q4,2024-11
+2024-11-21,STEM Education Kit,Assessment Tools,North America,Canada,Quebec City,214722,286347,Retail,2024-Q4,2024-11
+2024-11-21,Student Assessment Tool,Learning Management,Europe,Germany,Düsseldorf,235267,324292,Partner,2024-Q4,2024-11
+2024-11-22,Student Information System,Research Platforms,Asia Pacific,Australia,Gold Coast,76827,95980,Retail,2024-Q4,2024-11
+2024-11-22,Educational Analytics Platform,Learning Management,North America,United States,Dallas,228196,189192,Retail,2024-Q4,2024-11
+2024-11-23,Skills Training Workshop,Learning Management,Asia Pacific,Singapore,Northeast,213871,242551,Direct Sales,2024-Q4,2024-11
+2024-11-23,Educational Analytics Platform,Educational Content,North America,United States,San Diego,254805,238849,Mobile App,2024-Q4,2024-11
+2024-11-23,Online Learning Platform,Training Programs,North America,Canada,Mississauga,332292,387797,Direct Sales,2024-Q4,2024-11
+2024-11-23,Exam Proctoring System,Learning Management,Asia Pacific,Australia,Perth,208156,179080,Direct Sales,2024-Q4,2024-11
+2024-11-23,Educational Video Series,Assessment Tools,Europe,United Kingdom,Birmingham,269031,277248,Partner,2024-Q4,2024-11
+2024-11-24,Interactive Course Content,Research Platforms,Asia Pacific,Japan,Kawasaki,149319,173597,Mobile App,2024-Q4,2024-11
+2024-11-24,Educational Video Series,Assessment Tools,Asia Pacific,Japan,Kawasaki,100178,123668,Mobile App,2024-Q4,2024-11
+2024-11-24,Corporate Training Program,Learning Management,Europe,France,Bordeaux,210941,167301,Online,2024-Q4,2024-11
+2024-11-25,Academic Research Database,Educational Content,North America,Mexico,Chihuahua,128130,144261,Wholesale,2024-Q4,2024-11
+2024-11-25,Academic Research Database,Training Programs,Asia Pacific,Japan,Osaka,158580,124016,Direct Sales,2024-Q4,2024-11
+2024-11-26,Educational Video Series,Assessment Tools,North America,Mexico,Juárez,194794,192045,Wholesale,2024-Q4,2024-11
+2024-11-26,Student Assessment Tool,Educational Content,North America,Canada,Quebec City,370043,334866,Direct Sales,2024-Q4,2024-11
+2024-11-26,Skills Training Workshop,Educational Content,Asia Pacific,Singapore,West,129074,147045,Online,2024-Q4,2024-11
+2024-11-26,Corporate Training Program,Assessment Tools,North America,Canada,Edmonton,144182,178104,Online,2024-Q4,2024-11
+2024-11-27,Skills Training Workshop,Assessment Tools,North America,Mexico,León,457443,366451,Direct Sales,2024-Q4,2024-11
+2024-11-28,Student Assessment Tool,Assessment Tools,North America,Canada,Ottawa,146087,148259,Wholesale,2024-Q4,2024-11
+2024-11-28,Interactive Course Content,Research Platforms,Asia Pacific,Australia,Gold Coast,240187,187026,Direct Sales,2024-Q4,2024-11
+2024-11-28,Student Information System,Assessment Tools,Asia Pacific,Australia,Canberra,89620,97719,Online,2024-Q4,2024-11
+2024-12-01,STEM Education Kit,Training Programs,Europe,United Kingdom,Leeds,286402,216049,Direct Sales,2024-Q4,2024-12
+2024-12-01,Virtual Classroom Software,Research Platforms,North America,Canada,Montreal,159749,149402,Wholesale,2024-Q4,2024-12
+2024-12-02,Library Management System,Assessment Tools,Europe,United Kingdom,Edinburgh,63021,67672,Wholesale,2024-Q4,2024-12
+2024-12-03,Educational Video Series,Research Platforms,Europe,France,Lille,195297,158464,Wholesale,2024-Q4,2024-12
+2024-12-03,Skills Training Workshop,Research Platforms,North America,Canada,Calgary,214067,228773,Retail,2024-Q4,2024-12
+2024-12-04,Exam Proctoring System,Training Programs,North America,Mexico,Guadalajara,182500,159989,Direct Sales,2024-Q4,2024-12
+2024-12-04,Online Learning Platform,Assessment Tools,North America,United States,Dallas,125181,155303,Partner,2024-Q4,2024-12
+2024-12-05,Student Assessment Tool,Assessment Tools,Europe,France,Lille,286041,205923,Direct Sales,2024-Q4,2024-12
+2024-12-06,Corporate Training Program,Assessment Tools,Asia Pacific,Australia,Perth,126510,139108,Wholesale,2024-Q4,2024-12
+2024-12-06,Online Learning Platform,Assessment Tools,North America,United States,Chicago,126896,132305,Online,2024-Q4,2024-12
+2024-12-07,STEM Education Kit,Training Programs,Europe,United Kingdom,Glasgow,137723,144675,Wholesale,2024-Q4,2024-12
+2024-12-08,Language Learning App,Research Platforms,Asia Pacific,Singapore,Central,64550,64232,Mobile App,2024-Q4,2024-12
+2024-12-08,Educational Video Series,Educational Content,Asia Pacific,Japan,Sapporo,66932,61053,Wholesale,2024-Q4,2024-12
+2024-12-08,Virtual Classroom Software,Research Platforms,Asia Pacific,Singapore,West,110427,95132,Mobile App,2024-Q4,2024-12
+2024-12-08,Skills Training Workshop,Educational Content,Europe,France,Nice,73218,62588,Wholesale,2024-Q4,2024-12
+2024-12-08,Interactive Course Content,Educational Content,Europe,United Kingdom,Glasgow,213648,233861,Wholesale,2024-Q4,2024-12
+2024-12-08,Student Information System,Assessment Tools,Europe,United Kingdom,Cardiff,106191,129598,Direct Sales,2024-Q4,2024-12
+2024-12-09,Interactive Course Content,Educational Content,Europe,France,Nice,356124,471152,Direct Sales,2024-Q4,2024-12
+2024-12-09,Library Management System,Training Programs,Europe,United Kingdom,Manchester,191687,180280,Mobile App,2024-Q4,2024-12
+2024-12-10,Interactive Course Content,Educational Content,Europe,France,Paris,123957,144573,Mobile App,2024-Q4,2024-12
+2024-12-10,Interactive Course Content,Educational Content,Asia Pacific,Japan,Tokyo,87132,71771,Mobile App,2024-Q4,2024-12
+2024-12-11,Language Learning App,Learning Management,North America,Canada,Mississauga,232891,191683,Retail,2024-Q4,2024-12
+2024-12-11,Interactive Course Content,Training Programs,Asia Pacific,Australia,Sunshine Coast,166842,149360,Direct Sales,2024-Q4,2024-12
+2024-12-11,STEM Education Kit,Research Platforms,North America,Mexico,Nezahualcóyotl,132684,120242,Partner,2024-Q4,2024-12
+2024-12-12,Online Learning Platform,Research Platforms,North America,Canada,Winnipeg,228195,301091,Retail,2024-Q4,2024-12
+2024-12-12,STEM Education Kit,Training Programs,Asia Pacific,Japan,Tokyo,187610,187232,Retail,2024-Q4,2024-12
+2024-12-12,Online Learning Platform,Educational Content,North America,Canada,Toronto,103045,84822,Direct Sales,2024-Q4,2024-12
+2024-12-12,STEM Education Kit,Research Platforms,Asia Pacific,Japan,Yokohama,147158,159760,Online,2024-Q4,2024-12
+2024-12-12,Exam Proctoring System,Research Platforms,Asia Pacific,Japan,Yokohama,142603,161108,Wholesale,2024-Q4,2024-12
+2024-12-12,Academic Research Database,Research Platforms,Asia Pacific,Singapore,North,256021,271429,Direct Sales,2024-Q4,2024-12
+2024-12-13,Interactive Course Content,Educational Content,Europe,United Kingdom,Manchester,269848,190873,Partner,2024-Q4,2024-12
+2024-12-14,Skills Training Workshop,Research Platforms,Asia Pacific,Singapore,East,70482,76489,Wholesale,2024-Q4,2024-12
+2024-12-14,Corporate Training Program,Learning Management,North America,Canada,Montreal,166702,144478,Online,2024-Q4,2024-12
+2024-12-14,Library Management System,Training Programs,Asia Pacific,Japan,Osaka,182384,180760,Retail,2024-Q4,2024-12
+2024-12-15,Professional Certification Program,Training Programs,Asia Pacific,Japan,Fukuoka,209823,225606,Direct Sales,2024-Q4,2024-12
+2024-12-15,Educational Analytics Platform,Training Programs,Asia Pacific,Singapore,Central,109407,91518,Wholesale,2024-Q4,2024-12
+2024-12-16,Educational Analytics Platform,Educational Content,Asia Pacific,Japan,Saitama,67838,87822,Mobile App,2024-Q4,2024-12
+2024-12-17,Skills Training Workshop,Research Platforms,Asia Pacific,Singapore,Northeast,145693,177017,Wholesale,2024-Q4,2024-12
+2024-12-19,Professional Certification Program,Research Platforms,North America,Mexico,Puebla,293636,282736,Retail,2024-Q4,2024-12
+2024-12-19,STEM Education Kit,Training Programs,Europe,United Kingdom,Edinburgh,67208,85114,Wholesale,2024-Q4,2024-12
+2024-12-19,Student Assessment Tool,Educational Content,North America,Mexico,Nezahualcóyotl,418240,446761,Direct Sales,2024-Q4,2024-12
+2024-12-19,Student Assessment Tool,Training Programs,Asia Pacific,Singapore,West,184583,143193,Online,2024-Q4,2024-12
+2024-12-20,Student Information System,Educational Content,Asia Pacific,Australia,Melbourne,89389,103712,Online,2024-Q4,2024-12
+2024-12-20,Student Information System,Assessment Tools,Europe,Germany,Cologne,185228,248628,Online,2024-Q4,2024-12
+2024-12-21,Educational Analytics Platform,Training Programs,Asia Pacific,Australia,Newcastle,95081,97493,Direct Sales,2024-Q4,2024-12
+2024-12-22,Library Management System,Research Platforms,North America,United States,Houston,273471,319836,Retail,2024-Q4,2024-12
+2024-12-22,Educational Analytics Platform,Training Programs,North America,Canada,Ottawa,132500,167072,Partner,2024-Q4,2024-12
+2024-12-24,Student Assessment Tool,Training Programs,Europe,Germany,Cologne,104219,108800,Online,2024-Q4,2024-12
+2024-12-27,Skills Training Workshop,Learning Management,Asia Pacific,Singapore,North,115317,137351,Wholesale,2024-Q4,2024-12
+2024-12-27,Interactive Course Content,Research Platforms,North America,Mexico,León,223211,228516,Retail,2024-Q4,2024-12
+2025-01-02,Online Learning Platform,Research Platforms,North America,United States,Philadelphia,277623,323442,Direct Sales,2025-Q1,2025-01
+2025-01-03,Interactive Course Content,Assessment Tools,Europe,United Kingdom,Birmingham,96547,92460,Online,2025-Q1,2025-01
+2025-01-04,Student Assessment Tool,Educational Content,Asia Pacific,Australia,Sunshine Coast,118595,117756,Wholesale,2025-Q1,2025-01
+2025-01-04,Student Assessment Tool,Assessment Tools,Asia Pacific,Singapore,Northeast,139351,103565,Wholesale,2025-Q1,2025-01
+2025-01-05,Student Information System,Training Programs,Europe,Germany,Hamburg,431968,389250,Direct Sales,2025-Q1,2025-01
+2025-01-05,Exam Proctoring System,Learning Management,Asia Pacific,Japan,Tokyo,84288,90722,Wholesale,2025-Q1,2025-01
+2025-01-06,Professional Certification Program,Assessment Tools,North America,Canada,Winnipeg,210960,286142,Retail,2025-Q1,2025-01
+2025-01-06,Academic Research Database,Training Programs,North America,United States,Houston,135955,126054,Mobile App,2025-Q1,2025-01
+2025-01-06,Skills Training Workshop,Assessment Tools,Europe,Germany,Stuttgart,85383,77953,Partner,2025-Q1,2025-01
+2025-01-07,Skills Training Workshop,Training Programs,Asia Pacific,Australia,Newcastle,152605,184530,Mobile App,2025-Q1,2025-01
+2025-01-07,Educational Video Series,Assessment Tools,Asia Pacific,Singapore,East,284753,338303,Retail,2025-Q1,2025-01
+2025-01-07,Interactive Course Content,Learning Management,Asia Pacific,Singapore,Central,120147,129695,Wholesale,2025-Q1,2025-01
+2025-01-08,Skills Training Workshop,Training Programs,Asia Pacific,Japan,Osaka,163839,124116,Retail,2025-Q1,2025-01
+2025-01-08,Online Learning Platform,Training Programs,Europe,United Kingdom,Edinburgh,187890,231864,Retail,2025-Q1,2025-01
+2025-01-09,Academic Research Database,Training Programs,North America,Canada,Edmonton,156325,118327,Mobile App,2025-Q1,2025-01
+2025-01-09,Online Learning Platform,Research Platforms,Europe,France,Paris,135124,108874,Wholesale,2025-Q1,2025-01
+2025-01-10,Educational Analytics Platform,Educational Content,North America,Canada,Mississauga,265115,300521,Direct Sales,2025-Q1,2025-01
+2025-01-10,Library Management System,Learning Management,North America,United States,New York,127792,120615,Wholesale,2025-Q1,2025-01
+2025-01-11,Language Learning App,Educational Content,North America,Mexico,Tijuana,91402,99895,Online,2025-Q1,2025-01
+2025-01-11,STEM Education Kit,Research Platforms,Europe,France,Marseille,153348,194375,Partner,2025-Q1,2025-01
+2025-01-11,Language Learning App,Learning Management,North America,Mexico,Nezahualcóyotl,240353,325458,Direct Sales,2025-Q1,2025-01
+2025-01-11,Student Information System,Training Programs,Asia Pacific,Japan,Sapporo,173599,150524,Partner,2025-Q1,2025-01
+2025-01-14,Skills Training Workshop,Learning Management,North America,Mexico,Tijuana,240587,299723,Retail,2025-Q1,2025-01
+2025-01-14,Student Information System,Research Platforms,Asia Pacific,Singapore,East,91469,71277,Wholesale,2025-Q1,2025-01
+2025-01-16,Virtual Classroom Software,Research Platforms,Asia Pacific,Australia,Melbourne,109208,86869,Wholesale,2025-Q1,2025-01
+2025-01-17,Corporate Training Program,Research Platforms,North America,United States,San Diego,322404,342978,Retail,2025-Q1,2025-01
+2025-01-17,Educational Analytics Platform,Educational Content,Asia Pacific,Japan,Yokohama,110408,138310,Direct Sales,2025-Q1,2025-01
+2025-01-17,Virtual Classroom Software,Assessment Tools,Europe,France,Bordeaux,280509,227729,Retail,2025-Q1,2025-01
+2025-01-17,Student Assessment Tool,Educational Content,Europe,France,Paris,55198,60581,Wholesale,2025-Q1,2025-01
+2025-01-17,Virtual Classroom Software,Educational Content,Europe,Germany,Hamburg,232083,279147,Mobile App,2025-Q1,2025-01
+2025-01-18,Student Information System,Educational Content,Europe,Germany,Essen,217012,171718,Retail,2025-Q1,2025-01
+2025-01-20,Academic Research Database,Research Platforms,North America,Canada,Edmonton,284131,369499,Online,2025-Q1,2025-01
+2025-01-20,Skills Training Workshop,Training Programs,Europe,France,Bordeaux,192839,221338,Partner,2025-Q1,2025-01
+2025-01-21,Educational Analytics Platform,Research Platforms,North America,United States,Phoenix,163272,193401,Wholesale,2025-Q1,2025-01
+2025-01-23,Professional Certification Program,Educational Content,North America,Mexico,Chihuahua,321443,290548,Partner,2025-Q1,2025-01
+2025-01-23,Academic Research Database,Learning Management,North America,Canada,Mississauga,194760,143901,Retail,2025-Q1,2025-01
+2025-01-23,Library Management System,Educational Content,Asia Pacific,Australia,Brisbane,126412,133981,Mobile App,2025-Q1,2025-01
+2025-01-24,Online Learning Platform,Research Platforms,North America,United States,Chicago,121000,88678,Wholesale,2025-Q1,2025-01
+2025-01-24,Online Learning Platform,Educational Content,North America,Mexico,Mexico City,285802,337787,Direct Sales,2025-Q1,2025-01
+2025-01-25,Exam Proctoring System,Assessment Tools,Asia Pacific,Singapore,Northeast,268914,295075,Direct Sales,2025-Q1,2025-01
+2025-01-25,Student Information System,Research Platforms,Europe,France,Bordeaux,194134,191497,Online,2025-Q1,2025-01
+2025-01-25,Student Assessment Tool,Learning Management,North America,Canada,Calgary,282359,328998,Mobile App,2025-Q1,2025-01
+2025-01-25,Exam Proctoring System,Research Platforms,North America,Mexico,Tijuana,276857,236005,Retail,2025-Q1,2025-01
+2025-01-26,Virtual Classroom Software,Training Programs,Asia Pacific,Japan,Nagoya,196024,240863,Online,2025-Q1,2025-01
+2025-01-26,Academic Research Database,Educational Content,Asia Pacific,Australia,Gold Coast,121390,89647,Direct Sales,2025-Q1,2025-01
+2025-01-27,Online Learning Platform,Assessment Tools,Asia Pacific,Australia,Adelaide,186402,244362,Online,2025-Q1,2025-01
+2025-01-27,Educational Analytics Platform,Research Platforms,North America,Mexico,Juárez,165038,218232,Online,2025-Q1,2025-01
+2025-01-28,Skills Training Workshop,Assessment Tools,Europe,United Kingdom,Sheffield,100111,78965,Wholesale,2025-Q1,2025-01
+2025-01-28,Language Learning App,Training Programs,Europe,Germany,Munich,85538,103043,Wholesale,2025-Q1,2025-01
+2025-01-28,Corporate Training Program,Research Platforms,North America,United States,Chicago,212555,259101,Retail,2025-Q1,2025-01
+2025-02-01,Educational Analytics Platform,Training Programs,North America,United States,Dallas,66647,84348,Wholesale,2025-Q1,2025-02
+2025-02-01,Educational Analytics Platform,Assessment Tools,Asia Pacific,Singapore,North,90530,110691,Retail,2025-Q1,2025-02
+2025-02-01,Skills Training Workshop,Learning Management,North America,Mexico,Chihuahua,166710,179509,Wholesale,2025-Q1,2025-02
+2025-02-02,Library Management System,Research Platforms,Asia Pacific,Australia,Wollongong,221227,308778,Partner,2025-Q1,2025-02
+2025-02-02,Online Learning Platform,Training Programs,North America,Mexico,Zapopan,178491,154967,Online,2025-Q1,2025-02
+2025-02-02,Corporate Training Program,Educational Content,North America,Canada,Mississauga,131969,152028,Retail,2025-Q1,2025-02
+2025-02-03,Professional Certification Program,Educational Content,Asia Pacific,Japan,Yokohama,112217,120621,Wholesale,2025-Q1,2025-02
+2025-02-03,Library Management System,Learning Management,Europe,Germany,Munich,95309,79865,Mobile App,2025-Q1,2025-02
+2025-02-04,Exam Proctoring System,Educational Content,North America,Mexico,Juárez,186724,183618,Direct Sales,2025-Q1,2025-02
+2025-02-05,Interactive Course Content,Training Programs,Europe,France,Montpellier,119360,145915,Online,2025-Q1,2025-02
+2025-02-05,Virtual Classroom Software,Training Programs,North America,Mexico,Puebla,213383,215176,Wholesale,2025-Q1,2025-02
+2025-02-05,Educational Analytics Platform,Learning Management,North America,United States,San Antonio,138619,163785,Direct Sales,2025-Q1,2025-02
+2025-02-06,Corporate Training Program,Educational Content,North America,Mexico,Zapopan,126065,130070,Direct Sales,2025-Q1,2025-02
+2025-02-06,Corporate Training Program,Research Platforms,Asia Pacific,Japan,Kobe,43187,51461,Wholesale,2025-Q1,2025-02
+2025-02-07,STEM Education Kit,Educational Content,Asia Pacific,Singapore,West,172860,192699,Online,2025-Q1,2025-02
+2025-02-07,Online Learning Platform,Research Platforms,North America,Mexico,Monterrey,188902,241703,Wholesale,2025-Q1,2025-02
+2025-02-08,Interactive Course Content,Educational Content,North America,Canada,Toronto,239813,239257,Direct Sales,2025-Q1,2025-02
+2025-02-09,STEM Education Kit,Assessment Tools,North America,United States,Houston,114869,115117,Mobile App,2025-Q1,2025-02
+2025-02-10,Language Learning App,Educational Content,Europe,United Kingdom,Liverpool,158308,168759,Mobile App,2025-Q1,2025-02
+2025-02-10,Library Management System,Educational Content,Europe,United Kingdom,Glasgow,163431,181155,Online,2025-Q1,2025-02
+2025-02-10,Language Learning App,Learning Management,Europe,France,Toulouse,133798,172295,Wholesale,2025-Q1,2025-02
+2025-02-11,STEM Education Kit,Assessment Tools,Asia Pacific,Australia,Brisbane,66344,61895,Mobile App,2025-Q1,2025-02
+2025-02-11,Online Learning Platform,Research Platforms,North America,United States,San Diego,111285,83542,Wholesale,2025-Q1,2025-02
+2025-02-12,Language Learning App,Training Programs,Asia Pacific,Japan,Osaka,209732,282041,Partner,2025-Q1,2025-02
+2025-02-12,Exam Proctoring System,Training Programs,Europe,Germany,Dortmund,221647,295494,Retail,2025-Q1,2025-02
+2025-02-13,Professional Certification Program,Research Platforms,Asia Pacific,Japan,Nagoya,196310,239630,Wholesale,2025-Q1,2025-02
+2025-02-13,Corporate Training Program,Assessment Tools,Asia Pacific,Australia,Brisbane,118391,95784,Mobile App,2025-Q1,2025-02
+2025-02-13,Professional Certification Program,Assessment Tools,Asia Pacific,Singapore,East,118191,90150,Wholesale,2025-Q1,2025-02
+2025-02-14,Educational Analytics Platform,Training Programs,Europe,France,Nantes,252858,181409,Mobile App,2025-Q1,2025-02
+2025-02-15,Interactive Course Content,Training Programs,North America,United States,Dallas,228173,184507,Partner,2025-Q1,2025-02
+2025-02-15,Corporate Training Program,Training Programs,Europe,France,Lille,196711,274435,Wholesale,2025-Q1,2025-02
+2025-02-15,Language Learning App,Training Programs,Asia Pacific,Japan,Yokohama,162477,217139,Direct Sales,2025-Q1,2025-02
+2025-02-15,Interactive Course Content,Learning Management,Asia Pacific,Japan,Tokyo,191203,141426,Partner,2025-Q1,2025-02
+2025-02-16,Library Management System,Training Programs,North America,Mexico,Puebla,214077,268240,Retail,2025-Q1,2025-02
+2025-02-16,Educational Analytics Platform,Research Platforms,Europe,Germany,Hamburg,75872,90571,Wholesale,2025-Q1,2025-02
+2025-02-16,Exam Proctoring System,Educational Content,Europe,France,Bordeaux,121241,118395,Partner,2025-Q1,2025-02
+2025-02-19,Language Learning App,Learning Management,Europe,France,Nantes,158800,196430,Retail,2025-Q1,2025-02
+2025-02-19,Academic Research Database,Research Platforms,Europe,United Kingdom,Glasgow,109277,81443,Wholesale,2025-Q1,2025-02
+2025-02-21,STEM Education Kit,Learning Management,Asia Pacific,Japan,Kawasaki,118247,122027,Wholesale,2025-Q1,2025-02
+2025-02-21,Educational Video Series,Training Programs,Asia Pacific,Singapore,West,73021,96027,Online,2025-Q1,2025-02
+2025-02-22,Professional Certification Program,Educational Content,Asia Pacific,Australia,Brisbane,166971,157597,Partner,2025-Q1,2025-02
+2025-02-24,Online Learning Platform,Training Programs,Europe,Germany,Dortmund,141046,188726,Wholesale,2025-Q1,2025-02
+2025-02-25,Student Information System,Assessment Tools,Europe,France,Montpellier,185361,190257,Retail,2025-Q1,2025-02
+2025-02-26,Student Information System,Assessment Tools,North America,Canada,Toronto,101891,82241,Direct Sales,2025-Q1,2025-02
+2025-02-26,STEM Education Kit,Learning Management,Asia Pacific,Japan,Fukuoka,92779,118580,Wholesale,2025-Q1,2025-02
+2025-02-27,Educational Analytics Platform,Training Programs,Europe,United Kingdom,Cardiff,120793,124982,Wholesale,2025-Q1,2025-02
+2025-02-28,Educational Video Series,Assessment Tools,North America,United States,Phoenix,343349,310454,Direct Sales,2025-Q1,2025-02
+2025-02-28,Library Management System,Training Programs,Asia Pacific,Australia,Sydney,252183,200276,Retail,2025-Q1,2025-02
+2025-02-28,Corporate Training Program,Assessment Tools,Asia Pacific,Japan,Fukuoka,186941,195795,Mobile App,2025-Q1,2025-02
+2025-02-28,Online Learning Platform,Educational Content,Europe,Germany,Munich,165417,141183,Direct Sales,2025-Q1,2025-02
+2025-03-01,Virtual Classroom Software,Research Platforms,Asia Pacific,Japan,Kyoto,48994,64185,Wholesale,2025-Q1,2025-03
+2025-03-03,Interactive Course Content,Research Platforms,Europe,Germany,Düsseldorf,104177,98791,Direct Sales,2025-Q1,2025-03
+2025-03-03,Corporate Training Program,Training Programs,North America,Mexico,Juárez,388769,338476,Direct Sales,2025-Q1,2025-03
+2025-03-03,Interactive Course Content,Assessment Tools,North America,United States,Phoenix,288640,306529,Direct Sales,2025-Q1,2025-03
+2025-03-04,Academic Research Database,Learning Management,North America,Canada,Winnipeg,197065,161931,Online,2025-Q1,2025-03
+2025-03-04,Educational Video Series,Training Programs,Europe,France,Paris,230085,258517,Partner,2025-Q1,2025-03
+2025-03-05,Academic Research Database,Educational Content,Europe,France,Nantes,167439,133740,Wholesale,2025-Q1,2025-03
+2025-03-05,Professional Certification Program,Training Programs,Asia Pacific,Japan,Kawasaki,166673,211683,Partner,2025-Q1,2025-03
+2025-03-06,Corporate Training Program,Assessment Tools,Asia Pacific,Australia,Sunshine Coast,173769,205052,Retail,2025-Q1,2025-03
+2025-03-08,Skills Training Workshop,Research Platforms,Europe,Germany,Frankfurt,106923,115370,Wholesale,2025-Q1,2025-03
+2025-03-08,Academic Research Database,Training Programs,Asia Pacific,Japan,Sapporo,97934,132682,Wholesale,2025-Q1,2025-03
+2025-03-09,Online Learning Platform,Learning Management,Asia Pacific,Japan,Osaka,169528,183205,Mobile App,2025-Q1,2025-03
+2025-03-10,Virtual Classroom Software,Learning Management,North America,United States,Phoenix,289806,251884,Online,2025-Q1,2025-03
+2025-03-10,Interactive Course Content,Assessment Tools,North America,Canada,Toronto,65348,72423,Wholesale,2025-Q1,2025-03
+2025-03-10,STEM Education Kit,Learning Management,Asia Pacific,Australia,Gold Coast,154591,163915,Online,2025-Q1,2025-03
+2025-03-11,Online Learning Platform,Research Platforms,Asia Pacific,Singapore,Northeast,148322,127345,Online,2025-Q1,2025-03
+2025-03-11,Virtual Classroom Software,Assessment Tools,Europe,United Kingdom,Leeds,164130,185182,Wholesale,2025-Q1,2025-03
+2025-03-12,STEM Education Kit,Learning Management,Asia Pacific,Australia,Perth,158219,190076,Partner,2025-Q1,2025-03
+2025-03-12,Educational Video Series,Educational Content,Asia Pacific,Japan,Kawasaki,79002,85185,Wholesale,2025-Q1,2025-03
+2025-03-12,Student Assessment Tool,Training Programs,North America,United States,San Antonio,184611,212567,Mobile App,2025-Q1,2025-03
+2025-03-13,Exam Proctoring System,Research Platforms,Asia Pacific,Australia,Perth,150231,180738,Retail,2025-Q1,2025-03
+2025-03-15,Exam Proctoring System,Learning Management,Europe,United Kingdom,Edinburgh,252091,193629,Retail,2025-Q1,2025-03
+2025-03-15,Language Learning App,Training Programs,Europe,United Kingdom,Leeds,138558,122845,Online,2025-Q1,2025-03
+2025-03-15,STEM Education Kit,Learning Management,Europe,France,Bordeaux,202051,153970,Mobile App,2025-Q1,2025-03
+2025-03-15,Educational Video Series,Training Programs,North America,Mexico,Guadalajara,164292,115887,Direct Sales,2025-Q1,2025-03
+2025-03-15,Interactive Course Content,Learning Management,Europe,France,Paris,114994,127862,Wholesale,2025-Q1,2025-03
+2025-03-15,Student Assessment Tool,Training Programs,Asia Pacific,Australia,Canberra,249923,231216,Direct Sales,2025-Q1,2025-03
+2025-03-16,Online Learning Platform,Educational Content,Europe,Germany,Stuttgart,121919,101587,Wholesale,2025-Q1,2025-03
+2025-03-18,Skills Training Workshop,Assessment Tools,Europe,United Kingdom,Manchester,221420,181014,Direct Sales,2025-Q1,2025-03
+2025-03-18,Language Learning App,Educational Content,North America,Canada,Winnipeg,149962,194525,Partner,2025-Q1,2025-03
+2025-03-18,Skills Training Workshop,Assessment Tools,Asia Pacific,Japan,Sapporo,107623,110522,Wholesale,2025-Q1,2025-03
+2025-03-19,Professional Certification Program,Assessment Tools,Asia Pacific,Singapore,North,168044,120715,Partner,2025-Q1,2025-03
+2025-03-19,Professional Certification Program,Training Programs,Asia Pacific,Japan,Kawasaki,126004,138619,Retail,2025-Q1,2025-03
+2025-03-19,Educational Video Series,Assessment Tools,North America,Mexico,Mexico City,222474,281540,Retail,2025-Q1,2025-03
+2025-03-21,Exam Proctoring System,Educational Content,Asia Pacific,Australia,Newcastle,197320,187673,Wholesale,2025-Q1,2025-03
+2025-03-21,Corporate Training Program,Educational Content,Asia Pacific,Japan,Saitama,262362,302237,Partner,2025-Q1,2025-03
+2025-03-21,STEM Education Kit,Assessment Tools,Europe,United Kingdom,Edinburgh,232464,199312,Retail,2025-Q1,2025-03
+2025-03-22,Exam Proctoring System,Research Platforms,Europe,United Kingdom,Liverpool,177167,177487,Direct Sales,2025-Q1,2025-03
+2025-03-23,Student Information System,Training Programs,North America,United States,Dallas,249853,182228,Online,2025-Q1,2025-03
+2025-03-23,Exam Proctoring System,Educational Content,Asia Pacific,Japan,Nagoya,67170,52427,Wholesale,2025-Q1,2025-03
+2025-03-23,Interactive Course Content,Learning Management,North America,United States,Los Angeles,103569,95638,Mobile App,2025-Q1,2025-03
+2025-03-23,Professional Certification Program,Educational Content,Asia Pacific,Japan,Fukuoka,127602,92971,Online,2025-Q1,2025-03
+2025-03-24,Interactive Course Content,Research Platforms,Asia Pacific,Japan,Kobe,153580,214143,Wholesale,2025-Q1,2025-03
+2025-03-24,Student Information System,Assessment Tools,Europe,Germany,Dortmund,72581,89000,Wholesale,2025-Q1,2025-03
+2025-03-24,Language Learning App,Educational Content,North America,Mexico,Guadalajara,172825,133396,Direct Sales,2025-Q1,2025-03
+2025-03-24,STEM Education Kit,Learning Management,North America,United States,Los Angeles,163619,210952,Partner,2025-Q1,2025-03
+2025-03-25,Language Learning App,Assessment Tools,North America,United States,Phoenix,124859,161194,Mobile App,2025-Q1,2025-03
+2025-03-25,STEM Education Kit,Educational Content,Asia Pacific,Japan,Kobe,117307,94288,Partner,2025-Q1,2025-03
+2025-03-25,Language Learning App,Learning Management,Asia Pacific,Australia,Brisbane,95823,99890,Mobile App,2025-Q1,2025-03
+2025-03-28,Interactive Course Content,Educational Content,Europe,Germany,Berlin,291652,239742,Retail,2025-Q1,2025-03
+2025-04-01,Skills Training Workshop,Learning Management,Europe,France,Strasbourg,170811,197553,Direct Sales,2025-Q2,2025-04
+2025-04-01,Academic Research Database,Research Platforms,Asia Pacific,Australia,Melbourne,93281,85563,Wholesale,2025-Q2,2025-04
+2025-04-01,Library Management System,Research Platforms,Europe,United Kingdom,Bristol,179326,185329,Wholesale,2025-Q2,2025-04
+2025-04-01,Exam Proctoring System,Training Programs,North America,United States,Phoenix,111553,97003,Wholesale,2025-Q2,2025-04
+2025-04-02,Online Learning Platform,Training Programs,Europe,Germany,Düsseldorf,189531,238689,Mobile App,2025-Q2,2025-04
+2025-04-02,Academic Research Database,Assessment Tools,North America,Mexico,Zapopan,250162,217878,Online,2025-Q2,2025-04
+2025-04-02,Interactive Course Content,Educational Content,Europe,France,Lyon,189114,223065,Retail,2025-Q2,2025-04
+2025-04-04,Corporate Training Program,Educational Content,North America,United States,Los Angeles,103065,125565,Online,2025-Q2,2025-04
+2025-04-04,Skills Training Workshop,Educational Content,Europe,Germany,Leipzig,175634,212500,Partner,2025-Q2,2025-04
+2025-04-05,Corporate Training Program,Research Platforms,Europe,Germany,Berlin,311117,349905,Retail,2025-Q2,2025-04
+2025-04-05,Library Management System,Assessment Tools,Europe,United Kingdom,Sheffield,104135,87553,Partner,2025-Q2,2025-04
+2025-04-06,Interactive Course Content,Educational Content,North America,United States,Dallas,164738,142774,Mobile App,2025-Q2,2025-04
+2025-04-07,Exam Proctoring System,Assessment Tools,Europe,France,Marseille,143566,113642,Online,2025-Q2,2025-04
+2025-04-09,Online Learning Platform,Training Programs,Europe,Germany,Berlin,144676,103958,Retail,2025-Q2,2025-04
+2025-04-09,Educational Video Series,Educational Content,North America,United States,Philadelphia,160536,209635,Wholesale,2025-Q2,2025-04
+2025-04-09,Corporate Training Program,Educational Content,Europe,Germany,Munich,183727,149747,Retail,2025-Q2,2025-04
+2025-04-10,Corporate Training Program,Assessment Tools,Asia Pacific,Singapore,Northeast,96018,95025,Mobile App,2025-Q2,2025-04
+2025-04-10,Library Management System,Learning Management,Europe,Germany,Frankfurt,210133,151056,Direct Sales,2025-Q2,2025-04
+2025-04-10,Language Learning App,Assessment Tools,Europe,United Kingdom,Edinburgh,96712,99028,Partner,2025-Q2,2025-04
+2025-04-10,Academic Research Database,Learning Management,Asia Pacific,Japan,Kyoto,259492,217813,Direct Sales,2025-Q2,2025-04
+2025-04-10,Language Learning App,Learning Management,Asia Pacific,Australia,Sydney,187113,161385,Direct Sales,2025-Q2,2025-04
+2025-04-10,Educational Video Series,Training Programs,Asia Pacific,Singapore,Central,205798,213142,Partner,2025-Q2,2025-04
+2025-04-11,Language Learning App,Research Platforms,Europe,France,Paris,185500,177052,Online,2025-Q2,2025-04
+2025-04-11,Language Learning App,Assessment Tools,Europe,Germany,Berlin,267299,305333,Online,2025-Q2,2025-04
+2025-04-12,Library Management System,Training Programs,North America,Canada,Ottawa,180299,215186,Online,2025-Q2,2025-04
+2025-04-13,Educational Video Series,Learning Management,Asia Pacific,Japan,Kawasaki,102259,125171,Wholesale,2025-Q2,2025-04
+2025-04-13,Language Learning App,Educational Content,Asia Pacific,Singapore,Northeast,143120,134290,Online,2025-Q2,2025-04
+2025-04-14,Student Assessment Tool,Assessment Tools,Europe,United Kingdom,Cardiff,172541,235800,Mobile App,2025-Q2,2025-04
+2025-04-15,Corporate Training Program,Educational Content,Europe,Germany,Leipzig,190535,192902,Partner,2025-Q2,2025-04
+2025-04-15,Educational Analytics Platform,Educational Content,North America,Mexico,León,75783,75936,Wholesale,2025-Q2,2025-04
+2025-04-15,Exam Proctoring System,Learning Management,Asia Pacific,Japan,Yokohama,205141,184163,Online,2025-Q2,2025-04
+2025-04-16,Exam Proctoring System,Training Programs,North America,United States,Dallas,151632,192122,Partner,2025-Q2,2025-04
+2025-04-17,Skills Training Workshop,Research Platforms,Asia Pacific,Singapore,East,221577,209102,Direct Sales,2025-Q2,2025-04
+2025-04-18,Educational Analytics Platform,Learning Management,North America,Canada,Winnipeg,255331,303057,Direct Sales,2025-Q2,2025-04
+2025-04-19,Exam Proctoring System,Learning Management,Europe,France,Lyon,122725,107744,Retail,2025-Q2,2025-04
+2025-04-19,Educational Analytics Platform,Learning Management,Asia Pacific,Japan,Nagoya,94627,103061,Partner,2025-Q2,2025-04
+2025-04-20,Educational Analytics Platform,Learning Management,Europe,Germany,Hamburg,165267,192459,Direct Sales,2025-Q2,2025-04
+2025-04-20,Academic Research Database,Training Programs,Europe,United Kingdom,Bristol,150586,129979,Retail,2025-Q2,2025-04
+2025-04-20,Library Management System,Learning Management,Europe,Germany,Düsseldorf,200691,246871,Online,2025-Q2,2025-04
+2025-04-20,Corporate Training Program,Training Programs,North America,United States,Dallas,255703,296687,Direct Sales,2025-Q2,2025-04
+2025-04-21,Library Management System,Assessment Tools,Europe,France,Marseille,87544,78338,Partner,2025-Q2,2025-04
+2025-04-21,Language Learning App,Assessment Tools,North America,Mexico,Tijuana,145589,125422,Mobile App,2025-Q2,2025-04
+2025-04-21,Skills Training Workshop,Learning Management,North America,United States,San Diego,290460,205503,Partner,2025-Q2,2025-04
+2025-04-22,Exam Proctoring System,Research Platforms,Asia Pacific,Japan,Sapporo,138634,138525,Online,2025-Q2,2025-04
+2025-04-25,Skills Training Workshop,Educational Content,North America,Canada,Vancouver,130983,148971,Online,2025-Q2,2025-04
+2025-04-25,Exam Proctoring System,Educational Content,Europe,United Kingdom,Bristol,117321,153232,Wholesale,2025-Q2,2025-04
+2025-04-26,Educational Analytics Platform,Assessment Tools,Europe,Germany,Frankfurt,157006,154191,Partner,2025-Q2,2025-04
+2025-04-27,Student Information System,Research Platforms,Asia Pacific,Singapore,North,139338,143854,Wholesale,2025-Q2,2025-04
+2025-04-27,Language Learning App,Research Platforms,Europe,United Kingdom,Leeds,158804,132759,Online,2025-Q2,2025-04
+2025-04-27,Exam Proctoring System,Educational Content,Asia Pacific,Japan,Fukuoka,117944,155765,Online,2025-Q2,2025-04
+2025-05-02,Educational Analytics Platform,Research Platforms,Asia Pacific,Japan,Nagoya,136231,159706,Direct Sales,2025-Q2,2025-05
+2025-05-02,STEM Education Kit,Research Platforms,Europe,United Kingdom,Sheffield,158903,164845,Online,2025-Q2,2025-05
+2025-05-03,Corporate Training Program,Research Platforms,North America,Mexico,Zapopan,62429,71725,Wholesale,2025-Q2,2025-05
+2025-05-05,Exam Proctoring System,Training Programs,North America,Canada,Toronto,81268,75881,Wholesale,2025-Q2,2025-05
+2025-05-05,Student Information System,Research Platforms,Europe,Germany,Essen,83305,110181,Mobile App,2025-Q2,2025-05
+2025-05-06,Academic Research Database,Learning Management,Europe,France,Paris,155401,157823,Wholesale,2025-Q2,2025-05
+2025-05-06,Corporate Training Program,Learning Management,Asia Pacific,Japan,Osaka,267977,232277,Direct Sales,2025-Q2,2025-05
+2025-05-07,Online Learning Platform,Training Programs,Asia Pacific,Singapore,North,196121,227577,Retail,2025-Q2,2025-05
+2025-05-08,Skills Training Workshop,Learning Management,Asia Pacific,Singapore,Northeast,170104,141208,Wholesale,2025-Q2,2025-05
+2025-05-08,Student Assessment Tool,Learning Management,North America,United States,Philadelphia,150459,165972,Online,2025-Q2,2025-05
+2025-05-08,STEM Education Kit,Assessment Tools,Asia Pacific,Singapore,North,79681,70127,Wholesale,2025-Q2,2025-05
+2025-05-08,Language Learning App,Assessment Tools,Europe,Germany,Hamburg,241267,248532,Direct Sales,2025-Q2,2025-05
+2025-05-09,Student Information System,Learning Management,Europe,United Kingdom,Sheffield,156494,116404,Partner,2025-Q2,2025-05
+2025-05-09,Academic Research Database,Research Platforms,Europe,United Kingdom,Birmingham,88157,83746,Wholesale,2025-Q2,2025-05
+2025-05-10,Library Management System,Training Programs,North America,Canada,Ottawa,236974,294052,Online,2025-Q2,2025-05
+2025-05-10,Academic Research Database,Research Platforms,Asia Pacific,Australia,Brisbane,78874,80785,Wholesale,2025-Q2,2025-05
+2025-05-11,Educational Video Series,Training Programs,North America,Mexico,León,158873,220230,Mobile App,2025-Q2,2025-05
+2025-05-11,Educational Analytics Platform,Educational Content,North America,United States,San Jose,193099,259248,Wholesale,2025-Q2,2025-05
+2025-05-12,Student Assessment Tool,Educational Content,North America,United States,Chicago,214188,213858,Partner,2025-Q2,2025-05
+2025-05-12,Virtual Classroom Software,Learning Management,North America,Mexico,Juárez,98493,132872,Wholesale,2025-Q2,2025-05
+2025-05-12,Professional Certification Program,Training Programs,Europe,Germany,Frankfurt,55820,58971,Wholesale,2025-Q2,2025-05
+2025-05-13,Student Assessment Tool,Research Platforms,Europe,France,Lyon,141474,148529,Retail,2025-Q2,2025-05
+2025-05-13,Academic Research Database,Training Programs,Asia Pacific,Japan,Kobe,140574,109814,Partner,2025-Q2,2025-05
+2025-05-13,Student Assessment Tool,Assessment Tools,Europe,France,Lille,130960,93241,Online,2025-Q2,2025-05
+2025-05-14,Student Information System,Training Programs,Asia Pacific,Japan,Osaka,99924,130390,Wholesale,2025-Q2,2025-05
+2025-05-14,Exam Proctoring System,Learning Management,Asia Pacific,Japan,Kyoto,217033,241035,Online,2025-Q2,2025-05
+2025-05-14,Language Learning App,Training Programs,Europe,France,Lyon,150938,151590,Retail,2025-Q2,2025-05
+2025-05-14,Library Management System,Educational Content,North America,Canada,Winnipeg,113422,152727,Retail,2025-Q2,2025-05
+2025-05-15,STEM Education Kit,Research Platforms,Europe,United Kingdom,Leeds,82158,73386,Retail,2025-Q2,2025-05
+2025-05-16,Language Learning App,Training Programs,Asia Pacific,Japan,Osaka,90574,101640,Partner,2025-Q2,2025-05
+2025-05-16,Educational Video Series,Assessment Tools,North America,United States,Phoenix,132221,111411,Direct Sales,2025-Q2,2025-05
+2025-05-17,Virtual Classroom Software,Research Platforms,North America,Canada,Mississauga,251238,183471,Direct Sales,2025-Q2,2025-05
+2025-05-17,STEM Education Kit,Research Platforms,Asia Pacific,Japan,Yokohama,79846,107890,Partner,2025-Q2,2025-05
+2025-05-17,Virtual Classroom Software,Learning Management,Europe,United Kingdom,Manchester,227592,246731,Partner,2025-Q2,2025-05
+2025-05-18,STEM Education Kit,Learning Management,Europe,Germany,Frankfurt,168416,147960,Wholesale,2025-Q2,2025-05
+2025-05-18,STEM Education Kit,Learning Management,Europe,France,Strasbourg,93202,71885,Wholesale,2025-Q2,2025-05
+2025-05-18,Online Learning Platform,Research Platforms,Europe,France,Toulouse,217426,258308,Mobile App,2025-Q2,2025-05
+2025-05-18,Exam Proctoring System,Educational Content,Europe,France,Strasbourg,279868,307329,Partner,2025-Q2,2025-05
+2025-05-18,Interactive Course Content,Educational Content,Asia Pacific,Japan,Sapporo,156106,130495,Mobile App,2025-Q2,2025-05
+2025-05-20,Virtual Classroom Software,Training Programs,Asia Pacific,Singapore,Northeast,103673,91030,Partner,2025-Q2,2025-05
+2025-05-20,Academic Research Database,Learning Management,North America,Mexico,Puebla,157650,151927,Wholesale,2025-Q2,2025-05
+2025-05-21,STEM Education Kit,Educational Content,Europe,Germany,Stuttgart,123151,139422,Direct Sales,2025-Q2,2025-05
+2025-05-22,Library Management System,Learning Management,Asia Pacific,Singapore,Central,118245,83498,Retail,2025-Q2,2025-05
+2025-05-22,Language Learning App,Assessment Tools,Asia Pacific,Singapore,North,95622,104452,Retail,2025-Q2,2025-05
+2025-05-24,Library Management System,Training Programs,Asia Pacific,Singapore,East,150546,117942,Online,2025-Q2,2025-05
+2025-05-24,STEM Education Kit,Assessment Tools,Asia Pacific,Singapore,West,207393,205125,Direct Sales,2025-Q2,2025-05
+2025-05-26,Corporate Training Program,Assessment Tools,Europe,United Kingdom,Cardiff,158651,202063,Retail,2025-Q2,2025-05
+2025-05-27,Academic Research Database,Training Programs,Asia Pacific,Australia,Perth,207770,220243,Retail,2025-Q2,2025-05
+2025-05-28,Professional Certification Program,Training Programs,North America,United States,San Jose,254567,285704,Direct Sales,2025-Q2,2025-05
+2025-05-28,Online Learning Platform,Research Platforms,North America,Mexico,Puebla,143448,145243,Mobile App,2025-Q2,2025-05
+2025-06-01,Student Information System,Learning Management,Asia Pacific,Australia,Wollongong,131638,92500,Direct Sales,2025-Q2,2025-06
+2025-06-01,Student Assessment Tool,Learning Management,Europe,United Kingdom,Leeds,147406,167945,Online,2025-Q2,2025-06
+2025-06-01,Skills Training Workshop,Training Programs,North America,United States,San Jose,202485,183313,Retail,2025-Q2,2025-06
+2025-06-02,Language Learning App,Educational Content,Asia Pacific,Singapore,West,234006,185490,Direct Sales,2025-Q2,2025-06
+2025-06-02,Skills Training Workshop,Assessment Tools,Asia Pacific,Australia,Wollongong,86153,116099,Retail,2025-Q2,2025-06
+2025-06-02,Educational Analytics Platform,Research Platforms,Europe,United Kingdom,Liverpool,130190,123585,Mobile App,2025-Q2,2025-06
+2025-06-06,Student Assessment Tool,Learning Management,North America,Canada,Quebec City,174018,195761,Wholesale,2025-Q2,2025-06
+2025-06-07,Library Management System,Research Platforms,Asia Pacific,Australia,Sydney,75975,92897,Retail,2025-Q2,2025-06
+2025-06-08,Virtual Classroom Software,Training Programs,Europe,United Kingdom,Liverpool,147538,109248,Partner,2025-Q2,2025-06
+2025-06-08,Educational Analytics Platform,Training Programs,Europe,United Kingdom,Edinburgh,81757,76375,Mobile App,2025-Q2,2025-06
+2025-06-08,Interactive Course Content,Assessment Tools,Europe,France,Nantes,100708,117462,Retail,2025-Q2,2025-06
+2025-06-10,STEM Education Kit,Assessment Tools,North America,United States,San Diego,238480,248959,Online,2025-Q2,2025-06
+2025-06-12,Professional Certification Program,Research Platforms,Europe,Germany,Stuttgart,90878,103302,Partner,2025-Q2,2025-06
+2025-06-12,Educational Analytics Platform,Research Platforms,North America,United States,New York,81144,64242,Online,2025-Q2,2025-06
+2025-06-12,STEM Education Kit,Training Programs,North America,Mexico,Guadalajara,305155,396604,Partner,2025-Q2,2025-06
+2025-06-13,Skills Training Workshop,Research Platforms,North America,Canada,Quebec City,205563,247046,Wholesale,2025-Q2,2025-06
+2025-06-13,Student Information System,Training Programs,North America,United States,Phoenix,306454,300774,Retail,2025-Q2,2025-06
+2025-06-13,STEM Education Kit,Research Platforms,Europe,France,Nantes,94772,130825,Mobile App,2025-Q2,2025-06
+2025-06-14,Professional Certification Program,Training Programs,North America,United States,San Diego,113093,135480,Direct Sales,2025-Q2,2025-06
+2025-06-14,Student Assessment Tool,Educational Content,Asia Pacific,Australia,Sydney,226771,265800,Direct Sales,2025-Q2,2025-06
+2025-06-15,Language Learning App,Training Programs,Europe,France,Strasbourg,213899,262060,Online,2025-Q2,2025-06
+2025-06-15,Professional Certification Program,Research Platforms,Europe,Germany,Leipzig,108968,146002,Retail,2025-Q2,2025-06
+2025-06-15,Exam Proctoring System,Training Programs,Europe,France,Paris,114258,98761,Online,2025-Q2,2025-06
+2025-06-16,Professional Certification Program,Educational Content,Europe,United Kingdom,Cardiff,112348,145172,Online,2025-Q2,2025-06
+2025-06-16,Academic Research Database,Training Programs,North America,Canada,Calgary,206665,158885,Online,2025-Q2,2025-06
+2025-06-16,Academic Research Database,Assessment Tools,Europe,Germany,Dortmund,77586,105805,Wholesale,2025-Q2,2025-06
+2025-06-17,STEM Education Kit,Assessment Tools,North America,Canada,Ottawa,252787,250615,Retail,2025-Q2,2025-06
+2025-06-17,Academic Research Database,Learning Management,North America,Canada,Edmonton,203849,206083,Mobile App,2025-Q2,2025-06
+2025-06-17,Student Information System,Learning Management,North America,United States,San Jose,238163,270939,Wholesale,2025-Q2,2025-06
+2025-06-17,Skills Training Workshop,Educational Content,Europe,Germany,Essen,332206,232807,Direct Sales,2025-Q2,2025-06
+2025-06-18,Language Learning App,Research Platforms,Europe,France,Lille,156166,143951,Mobile App,2025-Q2,2025-06
+2025-06-18,Student Information System,Training Programs,Europe,United Kingdom,Glasgow,74400,62537,Mobile App,2025-Q2,2025-06
+2025-06-19,Exam Proctoring System,Assessment Tools,Europe,United Kingdom,Sheffield,153670,200642,Partner,2025-Q2,2025-06
+2025-06-19,Exam Proctoring System,Assessment Tools,Asia Pacific,Singapore,East,151494,110051,Partner,2025-Q2,2025-06
+2025-06-20,Language Learning App,Educational Content,Asia Pacific,Singapore,Northeast,219991,235703,Partner,2025-Q2,2025-06
+2025-06-21,Online Learning Platform,Assessment Tools,Europe,France,Lyon,155943,166955,Direct Sales,2025-Q2,2025-06
+2025-06-21,Academic Research Database,Learning Management,Europe,Germany,Hamburg,217291,243493,Retail,2025-Q2,2025-06
+2025-06-22,STEM Education Kit,Training Programs,Asia Pacific,Japan,Nagoya,260277,236743,Partner,2025-Q2,2025-06
+2025-06-22,Corporate Training Program,Learning Management,Europe,Germany,Berlin,86806,68246,Partner,2025-Q2,2025-06
+2025-06-22,Corporate Training Program,Assessment Tools,Europe,France,Lyon,147476,154971,Direct Sales,2025-Q2,2025-06
+2025-06-22,Exam Proctoring System,Educational Content,North America,Canada,Montreal,97180,122887,Online,2025-Q2,2025-06
+2025-06-23,Exam Proctoring System,Training Programs,Europe,United Kingdom,Glasgow,243930,215599,Partner,2025-Q2,2025-06
+2025-06-23,Library Management System,Assessment Tools,Europe,France,Lyon,193975,167698,Direct Sales,2025-Q2,2025-06
+2025-06-24,Language Learning App,Training Programs,Asia Pacific,Australia,Brisbane,108790,143912,Online,2025-Q2,2025-06
+2025-06-24,Educational Video Series,Educational Content,North America,Mexico,León,66226,69323,Wholesale,2025-Q2,2025-06
+2025-06-25,Library Management System,Learning Management,North America,Mexico,Zapopan,130549,156215,Direct Sales,2025-Q2,2025-06
+2025-06-26,Exam Proctoring System,Educational Content,Asia Pacific,Singapore,East,88455,92293,Wholesale,2025-Q2,2025-06
+2025-06-28,Academic Research Database,Educational Content,Europe,France,Bordeaux,179722,192693,Wholesale,2025-Q2,2025-06
+2025-06-28,Educational Video Series,Learning Management,Asia Pacific,Australia,Melbourne,82745,88413,Wholesale,2025-Q2,2025-06
+2025-06-28,Academic Research Database,Learning Management,North America,Mexico,Nezahualcóyotl,159995,147544,Retail,2025-Q2,2025-06

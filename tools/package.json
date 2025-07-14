@@ -1,0 +1,26 @@
+{
+  "name": "smart-data-generator",
+  "version": "1.0.0",
+  "description": "AI-powered sample data generator for Quant Commander",
+  "main": "smart-data-generator.js",
+  "bin": {
+    "smart-data-gen": "./smart-data-generator.js"
+  },
+  "scripts": {
+    "generate": "node smart-data-generator.js",
+    "list-types": "node smart-data-generator.js list",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "csv-writer": "^1.6.0"
+  },
+  "keywords": [
+    "data-generator",
+    "csv",
+    "business-intelligence",
+    "sample-data"
+  ],
+  "author": "Quant Commander",
+  "license": "MIT"
+}

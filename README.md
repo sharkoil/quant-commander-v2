@@ -1,5 +1,31 @@
-# 🚀 Quant Com### 🆕 **### 🆕 **Recent Updates (July 2025)**
-- **🚨 Outlier Detection Analyzer**: NEW! Complete statistical anomaly detection system with IQR and Z-Score methods, variance-based analysis, and interactive scatter plot visualization showing dates on x-axis and actuals on y-axis
+# 🚀 Quant Com### 🆕 **### 🆕 **Recent Updates (July 2025)**### 🎯 **Smart Data Generator** ✅ **NEW!**
+- **AI-Powered Generation**: Create realistic business data based on 8 different industry types with intelligent product/category generation
+- **8 Business Types**: Technology, Healthcare, Retail & E-commerce, Financial Services, Manufacturing, Education, Food & Beverage, and Real Estate
+- **Realistic Financial Data**: Budget vs actual values with industry-specific ranges, regional variations, and realistic variance patterns (-30% to +40%)
+- **Geographical Intelligence**: Global locations across North America, Europe, and Asia Pacific with regional cost multipliers
+- **Channel Variations**: Multiple sales channels (Online, Retail, Direct Sales, Partner, Wholesale, Mobile App) with appropriate margin multipliers
+- **Time Series Generation**: Configurable date ranges (1-24 months) with proper temporal distribution and quarterly/monthly groupings
+- **Automatic Sample Data Folder**: All generated files automatically save to the `Sample Data` folder for immediate use in analysis
+- **Interactive CLI**: User-friendly command-line interface with business type selection, time period configuration, and custom output naming
+- **Production Ready**: Generates 10-1000 records per month with realistic variance patterns perfect for testing all analyzer types
+- **CSV Format Optimization**: Output format specifically designed for Quant Commander with Date, Product, Category, Region, Budget, Actuals, Channel columns
+
+### 🆕 **Enhanced Budget Variance Analysis** ✅ **MAJOR UPDATE!**
+- **🎯 Auto Date Range Detection**: Automatically detects earliest start date and latest end date from your data with comprehensive date format support
+- **📊 Dynamic Column Recalculation**: Real-time analysis updates when budget/actual column selections change with instant recalculation and re-rendering
+- **📅 Weekly Period Support**: Added weekly aggregation to existing monthly/quarterly/yearly options with proper start/end date tracking
+- **🔄 Expected vs Found Periods**: Shows exactly how many periods were found vs expected (e.g., "24 months of data therefore 24 rows if there is data in every month")
+- **📈 Row Count Tracking**: Each period shows exactly how many source data rows contributed to the calculation for complete transparency
+- **📋 Enhanced Period Labels**: Clear period labeling with start dates (e.g., "January 2024", "Week of Jan 1, 2024", "2024-Q1")
+- **🎯 Data Completeness Reporting**: Comprehensive summary showing data range, periods found, expected periods, and total rows processed
+- **⚡ Enhanced Visualization**: Updated visualization with data summaries, period breakdowns, and enhanced error handling
+
+### 🚨 **Outlier Detection Analyzer** ✅ **NEW!**- **🎯 Smart Data Generator**: NEW! AI-powered sample data generator with 8 business types, creating realistic financial data with budget/actual variances, regional variations, and quarterly patterns - files automatically save to Sample Data folder
+- **📊 Enhanced Budget Variance Analysis**: Complete rewrite with auto date range detection, dynamic column recalculation, weekly/monthly/quarterly/yearly period support, and accurate row counting showing exactly how many source rows contribute to each period
+- **📅 Intelligent Date Detection**: Advanced date field analysis with multiple format support (MM/DD/YYYY, YYYY-MM-DD), automatic range calculation, and expected vs found period tracking for data completeness reporting
+- **🔄 Dynamic Recalculation**: Real-time budget variance analysis updates when column selections change, with proper period aggregation and enhanced visualization showing data summaries
+- **� Period Calculation Logic**: Proper start/end dates for all period types, clear period labeling (e.g., "January 2024", "Week of Jan 1, 2024"), and comprehensive data range analysis
+- **�🚨 Outlier Detection Analyzer**: Complete statistical anomaly detection system with IQR and Z-Score methods, variance-based analysis, and interactive scatter plot visualization showing dates on x-axis and actuals on y-axis
 - **📊 Interactive Scatter Plot**: Custom HTML5 Canvas-based scatter plot with outlier highlighting, trend lines, grid system, and interactive legend for optimal data visualization
 - **🔬 Statistical Analysis**: Comprehensive outlier detection using Interquartile Range (IQR) and Z-Score methodologies with configurable thresholds and severity classification (mild/moderate/extreme)
 - **📈 Variance-Based Detection**: Intelligent outlier identification based on actual vs budget variances as specifically requested by users
@@ -227,6 +253,93 @@ ollama serve
 ```
 
 ## 💡 Usage Examples
+
+### Smart Data Generator - Creating Realistic Business Data
+
+The Smart Data Generator creates industry-specific financial data perfect for testing all analysis features:
+
+```bash
+# Navigate to tools directory
+cd tools
+
+# Run the interactive generator
+node smart-data-generator.js
+
+# Follow the prompts:
+# 1. Select business type (1-8 or name)
+# 2. Choose time period (1-24 months) 
+# 3. Set records per month (10-1000)
+# 4. Enter filename (or auto-generate)
+
+# Example workflow:
+🏢 Enter your business type: 1 (Technology)
+📅 How many months of data: 12
+📊 How many records per month: 200
+📁 Output filename: tech_analysis_2024.csv
+
+# Result: ../Sample Data/tech_analysis_2024.csv
+# - 2,400 realistic technology business records
+# - Budget ranges: $100K-$300K with regional variations
+# - Products: Enterprise Software, Cloud Platforms, AI Analytics, etc.
+# - Variance patterns: -30% to +40% for realistic analysis testing
+```
+
+**Generated Data Structure:**
+```csv
+Date,Product,Category,Region,Country,City,Budget,Actuals,Channel,Quarter,Month
+2024-01-15,Enterprise Software License,Software Solutions,North America,United States,New York,285000,312450,Direct Sales,2024-Q1,2024-01
+2024-02-22,Cloud Computing Platform,Cloud Services,Europe,United Kingdom,London,198000,178200,Online,2024-Q1,2024-02
+2024-03-10,AI Analytics Suite,AI & Analytics,Asia Pacific,Japan,Tokyo,156000,171600,Partner,2024-Q1,2024-03
+```
+
+**Available Business Types:**
+1. **Technology** ($100K-$300K): Software, Cloud, AI, Cybersecurity products
+2. **Healthcare** ($200K-$700K): Medical devices, pharmaceuticals, health software
+3. **Retail & E-commerce** ($50K-$200K): Fashion, electronics, beauty products
+4. **Financial Services** ($150K-$450K): Banking, insurance, investment products
+5. **Manufacturing** ($100K-$500K): Industrial equipment, automotive, production
+6. **Education** ($75K-$275K): Learning platforms, training, assessment tools
+7. **Food & Beverage** ($75K-$275K): Premium foods, beverages, restaurant services
+8. **Real Estate** ($75K-$275K): Property management, construction, facility services
+
+### Enhanced Budget Variance Analysis
+
+The enhanced budget variance system provides comprehensive period analysis with auto date detection:
+
+```typescript
+// Upload CSV with date, budget, and actual columns
+const financialData = [
+  { Date: '2024-01-15', Budget: 50000, Actuals: 55000, Product: 'Software License' },
+  { Date: '2024-01-20', Budget: 75000, Actuals: 72000, Product: 'Cloud Platform' },
+  { Date: '2024-02-10', Budget: 60000, Actuals: 65000, Product: 'AI Analytics' },
+  { Date: '2024-02-25', Budget: 80000, Actuals: 78000, Product: 'Security Package' }
+];
+
+// System automatically detects:
+// ✅ Date Range: 2024-01-15 to 2024-02-25 (1.4 months)
+// ✅ Date Column: "Date" 
+// ✅ Budget Column: "Budget"
+// ✅ Actual Column: "Actuals"
+// ✅ Expected Periods: 2 monthly periods
+// ✅ Found Periods: 2 (complete data coverage)
+
+// Interactive Controls:
+// - Budget Column Dropdown: Select any column (Budget, Planned, Forecast, Target)
+// - Actual Column Dropdown: Select any column (Actuals, Real, Results, Performance)  
+// - Date Column Dropdown: Select any date field for period grouping
+// - Period Type: Weekly, Monthly, Quarterly, Yearly aggregation
+// - Real-time Updates: Analysis recalculates instantly when selections change
+
+// Enhanced Results Display:
+// January 2024: Budget $125K, Actual $127K, Variance +$2K (+1.6% Favorable) [2 rows]
+// February 2024: Budget $140K, Actual $143K, Variance +$3K (+2.1% Favorable) [2 rows]
+// 
+// Data Summary:
+// - Data Range: 2024-01-15 to 2024-02-25
+// - Periods Found: 2 of 2 expected (4 total rows)
+// - Period Type: Monthly aggregation
+// - Row Count Tracking: Shows source data contribution per period
+```
 
 ### Analysis Tab - Managing Results
 
@@ -475,11 +588,12 @@ src/
 │   ├── DataGrid.tsx      # Data visualization components
 │   ├── DocumentUploadUI.tsx # File upload interface
 │   ├── ScatterPlot.tsx   # HTML5 Canvas scatter plot for outlier visualization
-│   └── OutlierModal.tsx  # Outlier detection configuration modal
+│   ├── OutlierModal.tsx  # Outlier detection configuration modal
+│   └── BudgetVarianceControls.tsx # Interactive budget variance controls
 ├── lib/                   # Core business logic
 │   ├── analyzers/        # Financial analysis engines
 │   │   ├── periodVariance.ts     # Period variance calculator
-│   │   ├── budgetVariance.ts     # Budget vs actual analyzer
+│   │   ├── budgetVarianceProcessor.ts # Enhanced budget variance with auto date detection
 │   │   ├── trendAnalysis.ts      # Trend analysis with moving averages
 │   │   ├── topNAnalysis.ts       # Top N ranking analyzer
 │   │   ├── topNHelpers.ts        # Top N utility functions
@@ -491,6 +605,11 @@ src/
 │   │   ├── outlierDetection.ts       # Statistical outlier detection engine
 │   │   ├── columnIntelligence.ts # Smart column detection
 │   │   └── csvProcessor.ts       # Intelligent CSV processing
+│   ├── utils/            # Utility functions
+│   │   ├── csvFieldAnalyzer.ts   # Enhanced CSV field analysis with date detection
+│   │   └── dataCleanup.ts        # Data cleaning and validation utilities
+│   ├── visualizations/   # Visualization components
+│   │   └── budgetVarianceVisualizer.ts # Enhanced budget variance visualization
 │   ├── timePeriodUtils.ts     # Time period utilities for quarterly analysis
 │   ├── test/             # Test utilities and harnesses
 │   │   ├── periodVarianceTest.ts     # Period variance testing
@@ -501,10 +620,21 @@ src/
 │   │   ├── outlierDetectionTest.ts   # Outlier detection testing
 │   │   └── columnIntelligenceTest.ts # Column detection testing
 │   └── ollama.ts         # AI integration utilities
-└── test/                 # Unit and integration tests
-    ├── contributionQuarterly.test.ts        # Quarterly contribution analysis tests
-    ├── contributionQuarterlyIntegration.test.ts # Integration tests
-    └── analysisService.test.ts              # Analysis service tests
+├── test/                 # Unit and integration tests
+│   ├── contributionQuarterly.test.ts        # Quarterly contribution analysis tests
+│   ├── contributionQuarterlyIntegration.test.ts # Integration tests
+│   ├── budget-variance-integration.test.ts  # Budget variance integration tests
+│   └── analysisService.test.ts              # Analysis service tests
+tools/                    # Data generation and utilities
+├── smart-data-generator.ts    # AI-powered business data generator
+├── smart-data-generator.js    # Compiled generator (ready to run)
+├── package.json              # Generator dependencies and scripts
+└── README.md                 # Generator usage guide
+Sample Data/              # Generated and sample CSV files
+├── oob_test.csv             # Original sample data (201 records)
+├── demo_technology_data.csv # Technology business sample
+├── buildstuff.csv           # Real estate sample (6K records)
+└── 6month.csv              # Manufacturing sample (600 records)
 ```
 
 ## 🧪 Testing

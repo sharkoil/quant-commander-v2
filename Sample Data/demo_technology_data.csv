@@ -1,0 +1,76 @@
+Date,Product,Category,Region,Country,City,Budget,Actuals,Channel,Quarter,Month
+2025-04-01,Video Conferencing Solution,Hardware & Devices,Asia Pacific,Australia,Sydney,162198,202978,Online,2025-Q2,2025-04
+2025-04-01,DevOps Automation Tool,Cybersecurity,North America,United States,Houston,420469,344184,Direct Sales,2025-Q2,2025-04
+2025-04-02,Enterprise Software License,Software Solutions,North America,United States,Los Angeles,343828,448749,Direct Sales,2025-Q2,2025-04
+2025-04-02,Video Conferencing Solution,Hardware & Devices,North America,United States,Chicago,295915,299931,Retail,2025-Q2,2025-04
+2025-04-03,Customer CRM System,Cybersecurity,North America,United States,New York,283242,363030,Online,2025-Q2,2025-04
+2025-04-04,Cloud Computing Platform,Cloud Services,Asia Pacific,Australia,Brisbane,240241,300646,Mobile App,2025-Q2,2025-04
+2025-04-06,Cybersecurity Package,AI & Analytics,North America,Canada,Calgary,245461,312530,Mobile App,2025-Q2,2025-04
+2025-04-07,IoT Platform,Cybersecurity,North America,Canada,Ottawa,170448,232251,Partner,2025-Q2,2025-04
+2025-04-07,Cloud Computing Platform,Cybersecurity,North America,United States,Los Angeles,132125,143814,Wholesale,2025-Q2,2025-04
+2025-04-09,AI Analytics Suite,Cloud Services,North America,United States,Chicago,260680,290871,Direct Sales,2025-Q2,2025-04
+2025-04-09,API Management Platform,Hardware & Devices,Asia Pacific,Japan,Nagoya,91415,73047,Mobile App,2025-Q2,2025-04
+2025-04-09,DevOps Automation Tool,Hardware & Devices,Europe,United Kingdom,Manchester,139068,187102,Partner,2025-Q2,2025-04
+2025-04-10,Customer CRM System,Cloud Services,North America,Canada,Vancouver,178730,221040,Online,2025-Q2,2025-04
+2025-04-11,Cybersecurity Package,Software Solutions,Asia Pacific,Australia,Melbourne,144892,103662,Direct Sales,2025-Q2,2025-04
+2025-04-12,Business Intelligence Tool,Cloud Services,Europe,United Kingdom,London,266174,214395,Retail,2025-Q2,2025-04
+2025-04-14,IoT Platform,Hardware & Devices,Asia Pacific,Japan,Tokyo,121601,95942,Online,2025-Q2,2025-04
+2025-04-14,DevOps Automation Tool,AI & Analytics,Europe,Germany,Frankfurt,141640,175558,Partner,2025-Q2,2025-04
+2025-04-17,Mobile App Development,Software Solutions,North America,Canada,Calgary,149479,139923,Wholesale,2025-Q2,2025-04
+2025-04-19,Network Security Solution,AI & Analytics,Europe,Germany,Cologne,83418,91687,Wholesale,2025-Q2,2025-04
+2025-04-21,IoT Platform,Hardware & Devices,Asia Pacific,Japan,Nagoya,211319,190648,Retail,2025-Q2,2025-04
+2025-04-21,Machine Learning Framework,Hardware & Devices,North America,Canada,Calgary,301960,245447,Direct Sales,2025-Q2,2025-04
+2025-04-23,Customer CRM System,Hardware & Devices,North America,United States,Los Angeles,192101,265085,Wholesale,2025-Q2,2025-04
+2025-04-25,API Management Platform,Hardware & Devices,North America,United States,Phoenix,105904,142576,Wholesale,2025-Q2,2025-04
+2025-04-27,IoT Platform,AI & Analytics,North America,United States,Chicago,137252,104324,Partner,2025-Q2,2025-04
+2025-04-27,API Management Platform,Cloud Services,Asia Pacific,Japan,Tokyo,74130,66799,Online,2025-Q2,2025-04
+2025-05-01,AI Analytics Suite,Cloud Services,North America,Canada,Ottawa,127886,178922,Online,2025-Q2,2025-05
+2025-05-02,Customer CRM System,Hardware & Devices,Europe,Germany,Cologne,308258,232678,Partner,2025-Q2,2025-05
+2025-05-02,DevOps Automation Tool,Hardware & Devices,Europe,Germany,Munich,197926,272376,Wholesale,2025-Q2,2025-05
+2025-05-03,Cloud Computing Platform,Software Solutions,North America,United States,Houston,250644,215575,Wholesale,2025-Q2,2025-05
+2025-05-03,Cybersecurity Package,Software Solutions,North America,Canada,Ottawa,235916,206931,Wholesale,2025-Q2,2025-05
+2025-05-05,API Management Platform,Hardware & Devices,North America,United States,Chicago,430216,391740,Direct Sales,2025-Q2,2025-05
+2025-05-06,Cybersecurity Package,Hardware & Devices,North America,Canada,Calgary,120217,86478,Wholesale,2025-Q2,2025-05
+2025-05-07,Cloud Computing Platform,AI & Analytics,North America,United States,New York,306629,322846,Direct Sales,2025-Q2,2025-05
+2025-05-09,Project Management Software,Cybersecurity,Asia Pacific,Japan,Osaka,131759,154588,Partner,2025-Q2,2025-05
+2025-05-10,Video Conferencing Solution,Hardware & Devices,Europe,Germany,Cologne,122198,86180,Online,2025-Q2,2025-05
+2025-05-11,Project Management Software,Cybersecurity,Asia Pacific,Japan,Yokohama,247666,295285,Online,2025-Q2,2025-05
+2025-05-11,Cloud Computing Platform,AI & Analytics,Asia Pacific,Japan,Nagoya,111147,119373,Retail,2025-Q2,2025-05
+2025-05-12,Enterprise Software License,Cloud Services,Asia Pacific,Australia,Melbourne,318481,406258,Retail,2025-Q2,2025-05
+2025-05-14,AI Analytics Suite,Software Solutions,Europe,Germany,Berlin,152638,142142,Mobile App,2025-Q2,2025-05
+2025-05-16,DevOps Automation Tool,Software Solutions,Asia Pacific,Australia,Adelaide,178242,223275,Direct Sales,2025-Q2,2025-05
+2025-05-17,IoT Platform,Hardware & Devices,North America,United States,Houston,307862,369975,Online,2025-Q2,2025-05
+2025-05-17,IoT Platform,Software Solutions,Europe,Germany,Munich,170576,228311,Partner,2025-Q2,2025-05
+2025-05-21,Cloud Computing Platform,Software Solutions,North America,Canada,Calgary,186642,223976,Wholesale,2025-Q2,2025-05
+2025-05-22,Machine Learning Framework,Cybersecurity,Europe,Germany,Cologne,187719,135676,Partner,2025-Q2,2025-05
+2025-05-23,DevOps Automation Tool,Software Solutions,Europe,Germany,Munich,188171,192216,Wholesale,2025-Q2,2025-05
+2025-05-24,Video Conferencing Solution,Cloud Services,Asia Pacific,Japan,Tokyo,255619,248879,Online,2025-Q2,2025-05
+2025-05-25,AI Analytics Suite,AI & Analytics,Europe,United Kingdom,Glasgow,186203,198968,Wholesale,2025-Q2,2025-05
+2025-05-25,Network Security Solution,Software Solutions,North America,United States,Los Angeles,178045,141604,Online,2025-Q2,2025-05
+2025-05-27,Customer CRM System,Hardware & Devices,Europe,United Kingdom,Liverpool,120672,149172,Retail,2025-Q2,2025-05
+2025-05-28,Video Conferencing Solution,AI & Analytics,North America,United States,Los Angeles,338257,334942,Partner,2025-Q2,2025-05
+2025-06-03,AI Analytics Suite,Hardware & Devices,North America,United States,Phoenix,207421,226150,Online,2025-Q2,2025-06
+2025-06-05,AI Analytics Suite,Cybersecurity,Asia Pacific,Australia,Perth,249421,268641,Retail,2025-Q2,2025-06
+2025-06-06,AI Analytics Suite,Cybersecurity,North America,United States,New York,338411,261854,Retail,2025-Q2,2025-06
+2025-06-08,Video Conferencing Solution,Cloud Services,Europe,United Kingdom,London,187871,171235,Wholesale,2025-Q2,2025-06
+2025-06-08,Machine Learning Framework,Hardware & Devices,Asia Pacific,Australia,Perth,195390,231454,Mobile App,2025-Q2,2025-06
+2025-06-10,Machine Learning Framework,Cloud Services,Asia Pacific,Japan,Osaka,178729,248781,Direct Sales,2025-Q2,2025-06
+2025-06-11,Cybersecurity Package,AI & Analytics,Asia Pacific,Japan,Yokohama,120748,128753,Online,2025-Q2,2025-06
+2025-06-12,API Management Platform,Cybersecurity,North America,United States,New York,222802,169811,Online,2025-Q2,2025-06
+2025-06-12,Enterprise Software License,Software Solutions,North America,United States,Chicago,132913,113735,Online,2025-Q2,2025-06
+2025-06-15,Cloud Computing Platform,Cloud Services,North America,United States,Chicago,279859,368327,Partner,2025-Q2,2025-06
+2025-06-15,Mobile App Development,Hardware & Devices,Europe,United Kingdom,Birmingham,303322,415644,Direct Sales,2025-Q2,2025-06
+2025-06-16,Customer CRM System,AI & Analytics,North America,United States,Houston,289282,263412,Online,2025-Q2,2025-06
+2025-06-16,Mobile App Development,AI & Analytics,North America,United States,Chicago,251514,218041,Direct Sales,2025-Q2,2025-06
+2025-06-17,Project Management Software,Cloud Services,North America,United States,Los Angeles,222020,172116,Wholesale,2025-Q2,2025-06
+2025-06-17,Network Security Solution,Software Solutions,Asia Pacific,Japan,Tokyo,142897,130362,Online,2025-Q2,2025-06
+2025-06-20,IoT Platform,Software Solutions,Europe,Germany,Hamburg,177799,126947,Online,2025-Q2,2025-06
+2025-06-20,Database Management System,Software Solutions,Europe,Germany,Munich,193126,150159,Online,2025-Q2,2025-06
+2025-06-20,Project Management Software,Hardware & Devices,Europe,United Kingdom,London,308377,244895,Online,2025-Q2,2025-06
+2025-06-20,Cloud Computing Platform,AI & Analytics,Europe,United Kingdom,Liverpool,284765,366634,Mobile App,2025-Q2,2025-06
+2025-06-20,Project Management Software,Software Solutions,Asia Pacific,Japan,Osaka,200913,242399,Online,2025-Q2,2025-06
+2025-06-21,Video Conferencing Solution,AI & Analytics,North America,United States,Houston,166314,117285,Partner,2025-Q2,2025-06
+2025-06-21,Mobile App Development,Cybersecurity,Asia Pacific,Japan,Tokyo,118066,92001,Partner,2025-Q2,2025-06
+2025-06-25,Cybersecurity Package,AI & Analytics,Asia Pacific,Japan,Tokyo,195686,234029,Online,2025-Q2,2025-06
+2025-06-26,Video Conferencing Solution,AI & Analytics,North America,United States,Phoenix,156418,216472,Retail,2025-Q2,2025-06
+2025-06-28,Cloud Computing Platform,AI & Analytics,Europe,Germany,Munich,200479,190645,Direct Sales,2025-Q2,2025-06
