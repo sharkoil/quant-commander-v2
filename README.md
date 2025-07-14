@@ -14,7 +14,16 @@
 
 ### 🆕 **Recent Updates (July 2025)**
 
-### 🎨 **UI/UX Style & Layout Improvements** ✅ **NEW!**
+### � **Enhanced User Experience** ✅ **LATEST!**
+- **📱 Progressive CSV Upload**: NEW! Step-by-step upload experience with clear progress indicators - file confirmation → data analysis → AI thinking → narrative → analysis prep → 3-second delay → cards
+- **🎯 Drag & Drop Functionality**: Restored Shopify draggable integration with visual drag handles (⋮⋮) for reordering analysis cards within sections 
+- **📁 Collapsible Card Controls**: Added folder icons (📁/📂) for expanding/collapsing card content with state management for better organization
+- **⚡ Real-time User Feedback**: Enhanced CSV processing with intelligent progress messages, data structure analysis, and comprehensive completion reports
+- **📊 Smart Data Detection**: Automatic classification of columns (Number/Date/Text) with detailed field analysis and file size reporting in KB
+- **🎭 Professional Upload Flow**: File confirmation → structure analysis → AI processing → narrative summary → engine preparation → thinking delay → final results with next steps
+- **🔧 Interactive Card Management**: Drag handles with hover effects, collapse/expand functionality, and proper cursor states for professional user experience
+
+### �🎨 **UI/UX Style & Layout Improvements** ✅ **NEW!**
 - **📏 Full Width Layout**: Removed artificial width constraints from Analysis tab for optimal data visibility - cards now use entire screen width for better readability
 - **🎨 High Contrast Design**: Implemented comprehensive style guide with WCAG AA compliant colors - eliminated gray text on white backgrounds for crystal clear readability
 - **📊 Enhanced Budget Variance Table**: Complete visual overhaul with high-contrast text colors, proper status indicators, and color-coded backgrounds for immediate insight recognition
