@@ -28,6 +28,7 @@ export interface BudgetVarianceControlsProps {
 /**
  * Budget variance analysis controls component
  * Provides independent controls for each analysis card
+ * Uses high-contrast colors for optimal readability
  */
 export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
   csvData,
@@ -45,10 +46,10 @@ export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
   const dateFields = getDateFields(csvData);
 
   return (
-    <div className="mb-4 p-3 bg-gray-50 rounded-lg border">
-      <div className="flex items-center justify-between mb-2">
-        <div className="text-sm font-medium text-gray-700">Budget Variance Controls</div>
-        <div className="text-xs text-gray-500">
+    <div className="mb-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+      <div className="flex items-center justify-between mb-3">
+        <div className="text-sm font-semibold text-gray-900">Budget Variance Controls</div>
+        <div className="text-xs text-gray-700">
           Map your CSV columns to analysis parameters
         </div>
       </div>
@@ -56,13 +57,13 @@ export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Budget Column Selector */}
         <div>
-          <label className="text-xs font-medium text-gray-700 mb-1 block">
+          <label className="text-xs font-medium text-gray-900 mb-2 block">
             Budget Column
           </label>
           <select
             value={budgetColumn}
             onChange={(e) => onBudgetColumnChange(e.target.value)}
-            className="w-full text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-900 focus:border-blue-500 focus:outline-none"
+            className="w-full text-sm border border-gray-300 rounded px-3 py-2 bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none"
             title="Select the column containing budget values"
           >
             {numericFields.map(field => (
@@ -75,13 +76,13 @@ export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
 
         {/* Actual Column Selector */}
         <div>
-          <label className="text-xs font-medium text-gray-700 mb-1 block">
+          <label className="text-xs font-medium text-gray-900 mb-2 block">
             Actual Column
           </label>
           <select
             value={actualColumn}
             onChange={(e) => onActualColumnChange(e.target.value)}
-            className="w-full text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-900 focus:border-blue-500 focus:outline-none"
+            className="w-full text-sm border border-gray-300 rounded px-3 py-2 bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none"
             title="Select the column containing actual values"
           >
             {numericFields.map(field => (
@@ -94,13 +95,13 @@ export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
 
         {/* Date Column Selector */}
         <div>
-          <label className="text-xs font-medium text-gray-700 mb-1 block">
+          <label className="text-xs font-medium text-gray-900 mb-2 block">
             Date Column (Optional)
           </label>
           <select
             value={dateColumn || ''}
             onChange={(e) => onDateColumnChange(e.target.value)}
-            className="w-full text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-900 focus:border-blue-500 focus:outline-none"
+            className="w-full text-sm border border-gray-300 rounded px-3 py-2 bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none"
             title="Select the column containing dates for period analysis"
           >
             <option value="">No date grouping</option>
@@ -114,13 +115,13 @@ export const BudgetVarianceControls: React.FC<BudgetVarianceControlsProps> = ({
 
         {/* Period Type Selector */}
         <div>
-          <label className="text-xs font-medium text-gray-700 mb-1 block">
+          <label className="text-xs font-medium text-gray-900 mb-2 block">
             Period Type
           </label>
           <select
             value={periodType}
             onChange={(e) => onPeriodTypeChange(e.target.value as 'weekly' | 'monthly' | 'quarterly' | 'yearly')}
-            className="w-full text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-900 focus:border-blue-500 focus:outline-none"
+            className="w-full text-sm border border-gray-300 rounded px-3 py-2 bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none disabled:bg-gray-100 disabled:text-gray-500"
             title="Select how to group data by time periods"
             disabled={!dateColumn}
           >

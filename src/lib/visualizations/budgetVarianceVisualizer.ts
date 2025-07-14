@@ -1,5 +1,6 @@
 // Creates HTML visualization for budget variance analysis
 // Generates interactive charts and tables from processed data
+// Uses high-contrast colors for optimal readability
 
 import { BudgetVarianceDataPoint, ProcessingResult } from '../analyzers/budgetVarianceProcessor';
 
@@ -18,7 +19,7 @@ export const generateBudgetVarianceVisualization = (
   const { dataPoints, summary } = result;
   
   if (dataPoints.length === 0) {
-    return '<div class="text-yellow-500 p-4">No data available for budget variance analysis</div>';
+    return '<div class="text-orange-600 p-4 font-medium">No data available for budget variance analysis</div>';
   }
 
   const totalBudget = dataPoints.reduce((sum, item) => sum + item.budget, 0);
@@ -28,77 +29,89 @@ export const generateBudgetVarianceVisualization = (
 
   let html = `
     <div class="space-y-4">
-      <div class="bg-gray-50 p-3 rounded-lg border">
-        <h3 class="text-sm font-semibold text-gray-700 mb-2">
+      <div class="bg-gray-50 p-4 rounded-lg border">
+        <h3 class="text-base font-semibold text-gray-900 mb-3">
           ${budgetColumn} vs ${actualColumn} Analysis
         </h3>
-        <div class="grid grid-cols-3 gap-4 text-sm mb-3">
-          <div class="text-center">
-            <div class="text-xs text-gray-500">Total ${budgetColumn}</div>
-            <div class="font-semibold text-blue-600">
+        <div class="grid grid-cols-3 gap-4 text-sm mb-4">
+          <div class="text-center p-3 bg-blue-50 rounded-lg">
+            <div class="text-xs font-medium text-gray-900 mb-1">Total ${budgetColumn}</div>
+            <div class="text-lg font-bold text-blue-700">
               ${formatCurrency(totalBudget)}
             </div>
           </div>
-          <div class="text-center">
-            <div class="text-xs text-gray-500">Total ${actualColumn}</div>
-            <div class="font-semibold text-green-600">
+          <div class="text-center p-3 bg-green-50 rounded-lg">
+            <div class="text-xs font-medium text-gray-900 mb-1">Total ${actualColumn}</div>
+            <div class="text-lg font-bold text-green-700">
               ${formatCurrency(totalActual)}
             </div>
           </div>
-          <div class="text-center">
-            <div class="text-xs text-gray-500">Total Variance</div>
-            <div class="font-semibold ${totalVariance >= 0 ? 'text-green-600' : 'text-red-600'}">
-              ${formatCurrency(totalVariance)} (${totalVariancePercentage.toFixed(1)}%)
+          <div class="text-center p-3 ${totalVariance >= 0 ? 'bg-green-50' : 'bg-red-50'} rounded-lg">
+            <div class="text-xs font-medium text-gray-900 mb-1">Total Variance</div>
+            <div class="text-lg font-bold ${totalVariance >= 0 ? 'text-green-700' : 'text-red-700'}">
+              ${formatCurrency(totalVariance)}
+            </div>
+            <div class="text-sm font-medium ${totalVariance >= 0 ? 'text-green-600' : 'text-red-600'}">
+              (${totalVariancePercentage.toFixed(1)}%)
             </div>
           </div>
         </div>
         
         <!-- Data Summary -->
-        <div class="text-xs text-gray-600 border-t pt-2">
+        <div class="text-sm text-gray-800 border-t pt-3 bg-white p-3 rounded border">
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <strong>Data Range:</strong> ${summary.dateRange.start.toLocaleDateString()} - ${summary.dateRange.end.toLocaleDateString()}
+              <span class="font-medium text-gray-900">Data Range:</span> 
+              <span class="text-gray-800">${summary.dateRange.start.toLocaleDateString()} - ${summary.dateRange.end.toLocaleDateString()}</span>
             </div>
             <div>
-              <strong>Periods Found:</strong> ${summary.periodsFound} of ${summary.expectedPeriods} expected (${summary.totalRows} total rows)
+              <span class="font-medium text-gray-900">Periods Found:</span> 
+              <span class="text-gray-800">${summary.periodsFound} of ${summary.expectedPeriods} expected (${summary.totalRows} total rows)</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Period Breakdown Table -->
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-xs">
+      <div class="overflow-x-auto bg-white rounded-lg border">
+        <table class="min-w-full text-sm">
           <thead class="bg-gray-100">
             <tr>
-              <th class="px-2 py-1 text-left font-medium text-gray-700">Period</th>
-              <th class="px-2 py-1 text-right font-medium text-gray-700">${budgetColumn}</th>
-              <th class="px-2 py-1 text-right font-medium text-gray-700">${actualColumn}</th>
-              <th class="px-2 py-1 text-right font-medium text-gray-700">Variance</th>
-              <th class="px-2 py-1 text-center font-medium text-gray-700">Status</th>
-              <th class="px-2 py-1 text-center font-medium text-gray-700">Rows</th>
+              <th class="px-4 py-3 text-left font-semibold text-gray-900">Period</th>
+              <th class="px-4 py-3 text-right font-semibold text-gray-900">${budgetColumn}</th>
+              <th class="px-4 py-3 text-right font-semibold text-gray-900">${actualColumn}</th>
+              <th class="px-4 py-3 text-right font-semibold text-gray-900">Variance</th>
+              <th class="px-4 py-3 text-center font-semibold text-gray-900">Status</th>
             </tr>
           </thead>
           <tbody>`;
 
   dataPoints.forEach((item, index) => {
-    const statusColor = item.status === 'favorable' ? 'text-green-600' : 
-                       item.status === 'unfavorable' ? 'text-red-600' : 'text-gray-600';
+    const statusColor = item.status === 'favorable' ? 'text-green-700' : 
+                       item.status === 'unfavorable' ? 'text-red-700' : 'text-gray-700';
+    const statusBg = item.status === 'favorable' ? 'bg-green-50' : 
+                    item.status === 'unfavorable' ? 'bg-red-50' : 'bg-gray-50';
     const statusIcon = item.status === 'favorable' ? '✅' : 
                       item.status === 'unfavorable' ? '❌' : '➖';
     
     html += `
-      <tr class="${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}">
-        <td class="px-2 py-1 font-medium">${item.period}</td>
-        <td class="px-2 py-1 text-right text-blue-600">${formatCurrency(item.budget)}</td>
-        <td class="px-2 py-1 text-right text-green-600">${formatCurrency(item.actual)}</td>
-        <td class="px-2 py-1 text-right ${statusColor}">
-          ${formatCurrency(item.variance)} (${item.variancePercentage.toFixed(1)}%)
+      <tr class="${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-blue-50 transition-colors">
+        <td class="px-4 py-3 font-medium text-gray-900 border-b">${item.period}</td>
+        <td class="px-4 py-3 text-right text-blue-700 font-medium border-b">${formatCurrency(item.budget)}</td>
+        <td class="px-4 py-3 text-right text-green-700 font-medium border-b">${formatCurrency(item.actual)}</td>
+        <td class="px-4 py-3 text-right font-medium border-b">
+          <span class="${item.variance >= 0 ? 'text-green-700' : 'text-red-700'}">
+            ${formatCurrency(item.variance)}
+          </span>
+          <div class="text-xs ${item.variance >= 0 ? 'text-green-600' : 'text-red-600'}">
+            (${item.variancePercentage.toFixed(1)}%)
+          </div>
         </td>
-        <td class="px-2 py-1 text-center ${statusColor}">
-          ${statusIcon} ${item.status}
+        <td class="px-4 py-3 text-center border-b">
+          <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${statusBg} ${statusColor}">
+            ${statusIcon} ${item.status}
+          </span>
         </td>
-        <td class="px-2 py-1 text-center text-gray-500">${item.rowCount}</td>
       </tr>`;
   });
 

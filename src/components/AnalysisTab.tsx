@@ -226,19 +226,19 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6 space-y-6">
+    <div className="w-full space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">📊 Analysis Results</h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-700 mt-1">
             Manage and explore your data analysis results with real-time CSV data processing
           </p>
         </div>
       </div>
 
       {/* Filter and Sort Controls */}
-      <div className="bg-white p-4 rounded-lg border shadow-sm">
+      <div className="bg-white p-6 rounded-lg border shadow-sm">
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex-1 min-w-64">
             <input
@@ -247,14 +247,14 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               value={filters.searchQuery || ''}
               onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
               title="Search analyses"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
             />
           </div>
           
           <select
             value={filters.type || ''}
             onChange={(e) => setFilters(prev => ({ ...prev, type: e.target.value as AnalysisType || undefined }))}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
             title="Filter by analysis type"
           >
             <option value="">All Types</option>
@@ -266,7 +266,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'date' | 'title' | 'type')}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
             title="Sort order"
           >
             <option value="date">Sort by Date</option>
@@ -293,7 +293,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               
               <div 
                 ref={pinnedContainerRef}
-                className="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+                className="grid gap-6 grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3"
               >
                 {pinnedItems.map(item => (
                   <AnalysisCard key={item.id} item={item} />
@@ -310,7 +310,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             
             <div 
               ref={unpinnedContainerRef}
-              className="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+              className="grid gap-6 grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3"
             >
               {unpinnedItems.map(item => (
                 <AnalysisCard key={item.id} item={item} />
@@ -353,24 +353,26 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
     
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-        <div className="p-4">
+      <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all duration-200 min-h-96">
+        <div className="p-6">
           {/* Header */}
-          <div className="flex items-start justify-between mb-3">
+          <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
-              <div className="flex items-center mb-2">
-                <span className="text-lg mr-2">{typeConfig.icon}</span>
-                <h3 className="font-semibold text-gray-900 truncate">{item.result.title}</h3>
+              <div className="flex items-center mb-3">
+                <span className="text-2xl mr-3">{typeConfig.icon}</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 text-lg">{item.result.title}</h3>
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${typeConfig.color} mt-1`}>
+                    {typeConfig.name}
+                  </span>
+                </div>
               </div>
-              <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${typeConfig.color}`}>
-                {typeConfig.name}
-              </span>
             </div>
           </div>
 
           {/* Budget Variance Controls */}
           {item.result.type === 'budget-variance' && (
-            <div className="mb-4">
+            <div className="mb-6">
               <BudgetVarianceControls
                 csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
                   Object.fromEntries(
@@ -389,18 +391,25 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             </div>
           )}
 
-          {/* Content */}
-          <div className="text-sm text-gray-600 mb-3">
-            Created: {new Date(item.result.createdAt).toLocaleDateString()}
+          {/* Metadata */}
+          <div className="text-sm text-gray-700 mb-4 border-b pb-3">
+            <div className="flex justify-between items-center">
+              <span>Created: {new Date(item.result.createdAt).toLocaleDateString()}</span>
+              {item.result.metadata?.recordCount && (
+                <span className="text-blue-600 font-medium">
+                  {item.result.metadata.recordCount.toLocaleString()} records
+                </span>
+              )}
+            </div>
           </div>
 
           {/* Visualization */}
           <div 
-            className="border border-gray-200 rounded p-3 bg-gray-50 min-h-32"
+            className="border border-gray-200 rounded-lg p-4 bg-gray-50 min-h-64 overflow-auto"
             dangerouslySetInnerHTML={{
               __html: item.result.type === 'budget-variance' 
                 ? generateBudgetVarianceHTML(item.id)
-                : item.result.htmlOutput || '<div>Visualization not available</div>'
+                : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
             }}
           />
         </div>

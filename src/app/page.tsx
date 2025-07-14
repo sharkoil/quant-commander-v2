@@ -1248,11 +1248,13 @@ Visit the Analysis tab to explore your budget performance analysis!`
           )}
 
           {activeTab === 'analysis' && (
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <AnalysisTab 
-                csvData={csvData}
-                csvColumns={csvColumns}
-              />
+            <div className="bg-white rounded-lg shadow-sm">
+              <div className="p-6">
+                <AnalysisTab 
+                  csvData={csvData}
+                  csvColumns={csvColumns}
+                />
+              </div>
             </div>
           )}
 
