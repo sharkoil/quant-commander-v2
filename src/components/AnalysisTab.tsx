@@ -46,6 +46,12 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   // Collapse state for cards
   const [collapsedCards, setCollapsedCards] = useState<{[key: string]: boolean}>({});
   
+  // Pin management state
+  const [pinnedState, setPinnedState] = useState<{[key: string]: boolean}>({});
+  
+  // View mode state
+  const [viewMode, setViewMode] = useState<'cards' | 'list'>('cards');
+  
   // State for budget variance analysis controls
   const [budgetVarianceControls, setBudgetVarianceControls] = useState<{
     [analysisId: string]: {
@@ -196,6 +202,43 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }));
   };
 
+  // Toggle pin state
+  const togglePinState = (itemId: string) => {
+    setPinnedState(prev => ({
+      ...prev,
+      [itemId]: !prev[itemId]
+    }));
+  };
+
+  // Enhanced filtering with pin consideration
+  const getFilteredAndSortedItems = () => {
+    // Filter items
+    const filtered = analysisItems.filter(item => {
+      if (filters.type && item.result.type !== filters.type) return false;
+      if (filters.searchQuery && !item.result.title.toLowerCase().includes(filters.searchQuery.toLowerCase())) return false;
+      return true;
+    });
+
+    // Sort items
+    const sorted = [...filtered].sort((a, b) => {
+      switch (sortBy) {
+        case 'title':
+          return a.result.title.localeCompare(b.result.title);
+        case 'type':
+          return a.result.type.localeCompare(b.result.type);
+        case 'date':
+        default:
+          return new Date(b.result.createdAt).getTime() - new Date(a.result.createdAt).getTime();
+      }
+    });
+
+    // Separate pinned and unpinned based on state and item property
+    const pinned = sorted.filter(item => item.isPinned || pinnedState[item.id]);
+    const unpinned = sorted.filter(item => !item.isPinned && !pinnedState[item.id]);
+
+    return { pinned, unpinned };
+  };
+
   // Auto-generate visualizations when controls change
   useEffect(() => {
     Object.keys(budgetVarianceControls).forEach(analysisId => {
@@ -273,27 +316,8 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
   };
 
-  // Filter and sort items
-  const filteredItems = analysisItems.filter(item => {
-    if (filters.type && item.result.type !== filters.type) return false;
-    if (filters.searchQuery && !item.result.title.toLowerCase().includes(filters.searchQuery.toLowerCase())) return false;
-    return true;
-  });
-
-  const sortedItems = [...filteredItems].sort((a, b) => {
-    switch (sortBy) {
-      case 'title':
-        return a.result.title.localeCompare(b.result.title);
-      case 'type':
-        return a.result.type.localeCompare(b.result.type);
-      case 'date':
-      default:
-        return new Date(b.result.createdAt).getTime() - new Date(a.result.createdAt).getTime();
-    }
-  });
-
-  const pinnedItems = sortedItems.filter(item => item.isPinned);
-  const unpinnedItems = sortedItems.filter(item => !item.isPinned);
+  // Get organized items using enhanced filtering
+  const { pinned: pinnedItems, unpinned: unpinnedItems } = getFilteredAndSortedItems();
 
   if (isLoading) {
     return (
@@ -318,7 +342,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
 
       {/* Filter and Sort Controls */}
       <div className="bg-white p-6 rounded-lg border shadow-sm">
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4 mb-4">
           <div className="flex-1 min-w-64">
             <input
               type="text"
@@ -353,10 +377,85 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             <option value="type">Sort by Type</option>
           </select>
         </div>
+
+        {/* View Mode and Analysis Stats */}
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            {/* View Mode Toggle */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-gray-700">View:</span>
+              <div className="flex bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => setViewMode('cards')}
+                  className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                    viewMode === 'cards' 
+                      ? 'bg-white text-blue-600 shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-800'
+                  }`}
+                  title="Card view"
+                >
+                  📊 Cards
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`px-3 py-1 rounded-md text-sm transition-colors ${
+                    viewMode === 'list' 
+                      ? 'bg-white text-blue-600 shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-800'
+                  }`}
+                  title="List view"
+                >
+                  📋 List
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => {
+                  // Expand all cards
+                  setCollapsedCards({});
+                }}
+                className="px-3 py-1 text-sm text-blue-600 hover:text-blue-800 border border-blue-200 rounded-md hover:bg-blue-50 transition-colors"
+                title="Expand all cards"
+              >
+                📂 Expand All
+              </button>
+              <button
+                onClick={() => {
+                  // Collapse all cards
+                  const allCollapsed: {[key: string]: boolean} = {};
+                  analysisItems.forEach(item => {
+                    allCollapsed[item.id] = true;
+                  });
+                  setCollapsedCards(allCollapsed);
+                }}
+                className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
+                title="Collapse all cards"
+              >
+                📁 Collapse All
+              </button>
+            </div>
+          </div>
+
+          {/* Analysis Statistics */}
+          <div className="flex items-center gap-4 text-sm text-gray-600">
+            <span>
+              📊 Total: {analysisItems.length}
+            </span>
+            <span>
+              📌 Pinned: {pinnedItems.length}
+            </span>
+            <span>
+              🔍 Filtered: {pinnedItems.length + unpinnedItems.length}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Results */}
-      {sortedItems.length > 0 ? (
+      {(pinnedItems.length + unpinnedItems.length) > 0 ? (
         <div className="space-y-6">
           {/* Pinned Items */}
           {pinnedItems.length > 0 && (
@@ -397,7 +496,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             </div>
           </div>
         </div>
-      ) : filteredItems.length === 0 ? (
+      ) : analysisItems.length > 0 ? (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">No results match your filters</h3>
@@ -472,14 +571,30 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               </div>
             </div>
             
-            {/* Collapse Button */}
-            <button
-              onClick={() => toggleCardCollapse(item.id)}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              title={isCollapsed ? "Expand" : "Collapse"}
-            >
-              {isCollapsed ? '📂' : '📁'}
-            </button>
+            {/* Action Buttons */}
+            <div className="flex items-center gap-2">
+              {/* Pin Button */}
+              <button
+                onClick={() => togglePinState(item.id)}
+                className={`p-2 transition-colors ${
+                  pinnedState[item.id] 
+                    ? 'text-yellow-600 hover:text-yellow-700' 
+                    : 'text-gray-400 hover:text-gray-600'
+                }`}
+                title={pinnedState[item.id] ? "Unpin analysis" : "Pin analysis"}
+              >
+                {pinnedState[item.id] ? '📌' : '📍'}
+              </button>
+              
+              {/* Collapse Button */}
+              <button
+                onClick={() => toggleCardCollapse(item.id)}
+                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                title={isCollapsed ? "Expand" : "Collapse"}
+              >
+                {isCollapsed ? '📂' : '📁'}
+              </button>
+            </div>
           </div>
 
           {/* Collapsible Content */}
