@@ -186,7 +186,7 @@ class SmartDataGenerator {
       businessType = foundType;
     }
 
-    const businessConfig = BUSINESS_CATEGORIES[businessType];
+    const businessConfig = BUSINESS_CATEGORIES[businessType as BusinessType];
     console.log(`\n✅ Selected: ${businessType}`);
     console.log(`📝 Description: ${businessConfig.description}`);
 
@@ -255,11 +255,20 @@ class SmartDataGenerator {
   }
 
   private getRandomLocation(): { region: string; country: string; city: string } {
-    const region = this.getRandomElement(Object.keys(REGIONS));
-    const country = this.getRandomElement(Object.keys(REGIONS[region]));
-    const city = this.getRandomElement(REGIONS[region][country]);
+    const regions = Object.keys(REGIONS) as (keyof typeof REGIONS)[];
+    const region = this.getRandomElement(regions);
     
-    return { region, country, city };
+    const countries = Object.keys(REGIONS[region]) as (keyof typeof REGIONS[typeof region])[];
+    const country = this.getRandomElement(countries);
+    
+    const cities = REGIONS[region][country];
+    const city = this.getRandomElement(cities);
+    
+    return { 
+      region: region as string, 
+      country: country as string, 
+      city: city as string 
+    };
   }
 
   private generateRealisticFinancials(
@@ -288,7 +297,7 @@ class SmartDataGenerator {
     }
 
     // Regional multipliers
-    const regionalMultipliers = {
+    const regionalMultipliers: {[key: string]: number} = {
       'North America': 1.2,
       'Europe': 1.1,
       'Asia Pacific': 0.9
@@ -296,7 +305,7 @@ class SmartDataGenerator {
     baseBudget *= regionalMultipliers[location.region] || 1.0;
 
     // Channel multipliers
-    const channelMultipliers = {
+    const channelMultipliers: {[key: string]: number} = {
       'Online': 0.85,
       'Retail': 1.0,
       'Direct Sales': 1.3,
@@ -443,7 +452,7 @@ class SmartDataGenerator {
       console.log('📥 Upload this CSV file to your application to begin analysis.');
 
     } catch (error) {
-      console.error(`❌ Error: ${error.message}`);
+      console.error(`❌ Error: ${error instanceof Error ? error.message : String(error)}`);
       process.exit(1);
     } finally {
       this.rl.close();

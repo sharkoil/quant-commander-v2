@@ -7,6 +7,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { Sortable } from '@shopify/draggable';
 import { 
   DraggableAnalysisItem, 
   AnalysisFilters, 
@@ -42,6 +43,9 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'type'>('date');
   const [isLoading, setIsLoading] = useState(true);
   
+  // Collapse state for cards
+  const [collapsedCards, setCollapsedCards] = useState<{[key: string]: boolean}>({});
+  
   // State for budget variance analysis controls
   const [budgetVarianceControls, setBudgetVarianceControls] = useState<{
     [analysisId: string]: {
@@ -53,11 +57,14 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   }>({});
   
   // Force re-render trigger for budget variance
+  // Note: Currently not used but kept for future auto-refresh functionality
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [budgetRenderTrigger, setBudgetRenderTrigger] = useState(0);
 
   // Refs for draggable containers
   const pinnedContainerRef = useRef<HTMLDivElement>(null);
   const unpinnedContainerRef = useRef<HTMLDivElement>(null);
+  const sortableRefs = useRef<{[key: string]: Sortable}>({});
 
   // Initialize analysis items on component mount
   useEffect(() => {
@@ -116,6 +123,78 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
 
     return unregister;
   }, [csvData, csvColumns]); // Re-initialize when CSV data changes
+
+  // Initialize Shopify Draggable after items are loaded
+  useEffect(() => {
+    if (isLoading || analysisItems.length === 0) return;
+
+    // Initialize draggable for both containers
+    const initializeDraggable = (containerRef: React.RefObject<HTMLDivElement | null>, containerId: string) => {
+      if (!containerRef.current) return;
+
+      // Clean up existing sortable instance
+      if (sortableRefs.current[containerId]) {
+        sortableRefs.current[containerId].destroy();
+      }
+
+      const sortable = new Sortable(containerRef.current, {
+        draggable: '.analysis-card',
+        handle: '.drag-handle',
+        mirror: {
+          appendTo: 'body',
+          constrainDimensions: true,
+        },
+      });
+
+      // Handle drag events
+      sortable.on('drag:start', () => {
+        console.log('🎯 Drag started');
+        document.body.style.cursor = 'grabbing';
+      });
+
+      sortable.on('drag:stop', () => {
+        console.log('🎯 Drag stopped');
+        document.body.style.cursor = '';
+      });
+
+      sortable.on('sortable:stop', (evt: { oldIndex: number; newIndex: number }) => {
+        console.log('🎯 Sort completed', evt);
+        // Here you could update the order in your state/backend
+        const sourceIndex = evt.oldIndex;
+        const targetIndex = evt.newIndex;
+        
+        if (sourceIndex !== targetIndex) {
+          console.log(`Moved item from ${sourceIndex} to ${targetIndex}`);
+          // You can implement position persistence here
+        }
+      });
+
+      sortableRefs.current[containerId] = sortable;
+    };
+
+    // Small delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      initializeDraggable(pinnedContainerRef, 'pinned');
+      initializeDraggable(unpinnedContainerRef, 'unpinned');
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      // Clean up sortable instances
+      Object.values(sortableRefs.current).forEach(sortable => {
+        if (sortable) sortable.destroy();
+      });
+      sortableRefs.current = {};
+    };
+  }, [analysisItems, isLoading]);
+
+  // Toggle card collapse
+  const toggleCardCollapse = (cardId: string) => {
+    setCollapsedCards(prev => ({
+      ...prev,
+      [cardId]: !prev[cardId]
+    }));
+  };
 
   // Auto-generate visualizations when controls change
   useEffect(() => {
@@ -347,71 +426,119 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   // Analysis Card Component
   function AnalysisCard({ item }: { item: DraggableAnalysisItem }) {
     const typeConfig = getAnalysisTypeConfig(item.result.type);
+    const isCollapsed = collapsedCards[item.id] || false;
     
     if (!typeConfig) {
       return null; // Skip rendering if config is not found
     }
     
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all duration-200 min-h-96">
+      <div className="analysis-card bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all duration-200 min-h-96">
         <div className="p-6">
-          {/* Header */}
+          {/* Header with drag handle and collapse button */}
           <div className="flex items-start justify-between mb-4">
-            <div className="flex-1">
-              <div className="flex items-center mb-3">
-                <span className="text-2xl mr-3">{typeConfig.icon}</span>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-lg">{item.result.title}</h3>
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${typeConfig.color} mt-1`}>
-                    {typeConfig.name}
-                  </span>
+            <div className="flex items-center flex-1">
+              {/* Drag Handle */}
+              <div 
+                className="drag-handle cursor-move mr-3 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                title="Drag to reorder"
+              >
+                <div className="flex flex-col space-y-1">
+                  <div className="flex space-x-1">
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                  </div>
+                  <div className="flex space-x-1">
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                  </div>
+                  <div className="flex space-x-1">
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                    <div className="w-1 h-1 bg-current rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex-1">
+                <div className="flex items-center mb-3">
+                  <span className="text-2xl mr-3">{typeConfig.icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-lg">{item.result.title}</h3>
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${typeConfig.color} mt-1`}>
+                      {typeConfig.name}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
+            
+            {/* Collapse Button */}
+            <button
+              onClick={() => toggleCardCollapse(item.id)}
+              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              title={isCollapsed ? "Expand" : "Collapse"}
+            >
+              {isCollapsed ? '📂' : '📁'}
+            </button>
           </div>
 
-          {/* Budget Variance Controls */}
-          {item.result.type === 'budget-variance' && (
-            <div className="mb-6">
-              <BudgetVarianceControls
-                csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
-                  Object.fromEntries(
-                    csvColumns.map((col, index) => [col, row[index]])
-                  )
-                ) : []}
-                budgetColumn={budgetVarianceControls[item.id]?.budgetColumn || getDefaultBudgetColumn(csvColumns)}
-                actualColumn={budgetVarianceControls[item.id]?.actualColumn || getDefaultActualColumn(csvColumns)}
-                dateColumn={budgetVarianceControls[item.id]?.dateColumn}
-                periodType={budgetVarianceControls[item.id]?.periodType || 'monthly'}
-                onBudgetColumnChange={(column) => updateBudgetVarianceControls(item.id, { budgetColumn: column })}
-                onActualColumnChange={(column) => updateBudgetVarianceControls(item.id, { actualColumn: column })}
-                onDateColumnChange={(column) => updateBudgetVarianceControls(item.id, { dateColumn: column })}
-                onPeriodTypeChange={(type) => updateBudgetVarianceControls(item.id, { periodType: type })}
+          {/* Collapsible Content */}
+          {!isCollapsed && (
+            <>
+              {/* Budget Variance Controls */}
+              {item.result.type === 'budget-variance' && (
+                <div className="mb-6">
+                  <BudgetVarianceControls
+                    csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvColumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : []}
+                    budgetColumn={budgetVarianceControls[item.id]?.budgetColumn || getDefaultBudgetColumn(csvColumns)}
+                    actualColumn={budgetVarianceControls[item.id]?.actualColumn || getDefaultActualColumn(csvColumns)}
+                    dateColumn={budgetVarianceControls[item.id]?.dateColumn}
+                    periodType={budgetVarianceControls[item.id]?.periodType || 'monthly'}
+                    onBudgetColumnChange={(column) => updateBudgetVarianceControls(item.id, { budgetColumn: column })}
+                    onActualColumnChange={(column) => updateBudgetVarianceControls(item.id, { actualColumn: column })}
+                    onDateColumnChange={(column) => updateBudgetVarianceControls(item.id, { dateColumn: column })}
+                    onPeriodTypeChange={(type) => updateBudgetVarianceControls(item.id, { periodType: type })}
+                  />
+                </div>
+              )}
+
+              {/* Metadata */}
+              <div className="text-sm text-gray-700 mb-4 border-b pb-3">
+                <div className="flex justify-between items-center">
+                  <span>Created: {new Date(item.result.createdAt).toLocaleDateString()}</span>
+                  {item.result.metadata?.recordCount && (
+                    <span className="text-blue-600 font-medium">
+                      {item.result.metadata.recordCount.toLocaleString()} records
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Visualization */}
+              <div 
+                className="border border-gray-200 rounded-lg p-4 bg-gray-50 min-h-64 overflow-auto"
+                dangerouslySetInnerHTML={{
+                  __html: item.result.type === 'budget-variance' 
+                    ? generateBudgetVarianceHTML(item.id)
+                    : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
+                }}
               />
+            </>
+          )}
+          
+          {/* Collapsed state preview */}
+          {isCollapsed && (
+            <div className="text-sm text-gray-600 flex items-center justify-between">
+              <span>Analysis collapsed</span>
+              <span className="text-gray-400">
+                {new Date(item.result.createdAt).toLocaleDateString()}
+              </span>
             </div>
           )}
-
-          {/* Metadata */}
-          <div className="text-sm text-gray-700 mb-4 border-b pb-3">
-            <div className="flex justify-between items-center">
-              <span>Created: {new Date(item.result.createdAt).toLocaleDateString()}</span>
-              {item.result.metadata?.recordCount && (
-                <span className="text-blue-600 font-medium">
-                  {item.result.metadata.recordCount.toLocaleString()} records
-                </span>
-              )}
-            </div>
-          </div>
-
-          {/* Visualization */}
-          <div 
-            className="border border-gray-200 rounded-lg p-4 bg-gray-50 min-h-64 overflow-auto"
-            dangerouslySetInnerHTML={{
-              __html: item.result.type === 'budget-variance' 
-                ? generateBudgetVarianceHTML(item.id)
-                : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
-            }}
-          />
         </div>
       </div>
     );
