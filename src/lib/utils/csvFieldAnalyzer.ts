@@ -161,6 +161,55 @@ export const getDefaultActualColumn = (data: unknown[] | string[]): string => {
 };
 
 /**
+ * Identifies text/categorical fields suitable for grouping and categories
+ * @param data - CSV data array
+ * @returns Array of text field names
+ */
+export const getTextFields = (data: unknown[]): string[] => {
+  if (!data || data.length === 0) return [];
+  
+  const firstRow = data[0] as Record<string, unknown>;
+  const fields = Object.keys(firstRow);
+  
+  return fields.filter(field => {
+    // Skip numeric fields
+    if (getNumericFields(data).includes(field)) {
+      return false;
+    }
+    
+    // Skip date fields
+    if (getDateFields(data).includes(field)) {
+      return false;
+    }
+    
+    // Sample multiple rows to check for categorical data
+    const sampleSize = Math.min(10, data.length);
+    const sampleValues = data.slice(0, sampleSize).map(row => {
+      const value = (row as Record<string, unknown>)[field];
+      return String(value || '').trim();
+    });
+    
+    // Remove empty values
+    const nonEmptyValues = sampleValues.filter(val => val !== '');
+    
+    // Field is categorical if it has non-empty string values
+    return nonEmptyValues.length > 0;
+  });
+};
+
+/**
+ * Gets all available column names from CSV data
+ * @param data - CSV data array
+ * @returns Array of all column names
+ */
+export const getAllFields = (data: unknown[]): string[] => {
+  if (!data || data.length === 0) return [];
+  
+  const firstRow = data[0] as Record<string, unknown>;
+  return Object.keys(firstRow);
+};
+
+/**
  * Analyzes date range and available periods in CSV data
  */
 export interface DateRangeAnalysis {

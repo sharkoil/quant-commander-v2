@@ -13,7 +13,8 @@ import { inferDataType, isLikelyDate, cleanAndConvertValue } from '@/lib/utils/d
 import dynamic from 'next/dynamic';
 import Papa from 'papaparse';
 import { checkOllamaStatus, getOllamaModels, chatWithOllama } from '@/lib/ollama';
-import { testPeriodVariance, formatPeriodVarianceTable } from '@/lib/test/periodVarianceTest';
+import { testPeriodVariance, formatPeriodVarianceTable } from '@/lib/test/periodVarianceAnalysisTest';
+
 
 const DocumentUploadUI = dynamic(() => import('@/components/DocumentUploadUI'), {
   ssr: false,

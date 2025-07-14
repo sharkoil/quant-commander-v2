@@ -13,6 +13,7 @@
   "dependencies": {
     "@shopify/draggable": "^1.1.4",
     "@tailwindcss/typography": "^0.5.16",
+    "date-fns": "^4.1.0",
     "gridjs": "^6.2.0",
     "gridjs-react": "^6.1.1",
     "next": "15.3.5",

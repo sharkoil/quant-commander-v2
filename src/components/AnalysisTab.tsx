@@ -20,15 +20,33 @@ import {
   getCurrentAnalysisResults
 } from '../lib/analysisService';
 import { BudgetVarianceControls } from './BudgetVarianceControls';
+import { ContributionControls } from './ContributionControls';
+import { PeriodVarianceControls } from './PeriodVarianceControls';
 import { 
   processBudgetVarianceData, 
   BudgetVarianceParams 
 } from '../lib/analyzers/budgetVarianceProcessor';
+import {
+  ContributionAnalysisParams
+} from '../lib/analyzers/contributionTypes';
+import {
+  processContributionData
+} from '../lib/analyzers/contributionProcessor';
+import {
+  processPeriodVarianceData,
+  PeriodVarianceParams
+} from '../lib/analyzers/periodVarianceProcessor';
+import {
+  generateContributionVisualization
+} from '../lib/visualizations/contributionVisualizer';
 import { generateBudgetVarianceVisualization } from '../lib/visualizations/budgetVarianceVisualizer';
+import { generatePeriodVarianceVisualization } from '../lib/visualizations/periodVarianceVisualizer';
 import { 
   getDefaultBudgetColumn, 
   getDefaultActualColumn,
-  getDateFields
+  getDateFields,
+  getNumericFields,
+  getTextFields
 } from '../lib/utils/csvFieldAnalyzer';
 
 interface AnalysisTabProps {
@@ -62,10 +80,41 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
   }>({});
   
+  // State for contribution analysis controls
+  const [contributionControls, setContributionControls] = useState<{
+    [analysisId: string]: {
+      valueColumn: string;
+      categoryColumn: string;
+      subcategoryColumn?: string;
+      analysisScope: 'total' | 'average' | 'period';
+      showOthers: boolean;
+      sortBy: 'contribution' | 'value' | 'alphabetical';
+      sortOrder: 'desc' | 'asc';
+      timePeriodAnalysis?: {
+        enabled: boolean;
+        periodType: 'quarter' | 'month' | 'all';
+        dateColumn: string;
+      };
+    }
+  }>({});
+
+  // State for period variance analysis controls
+  const [periodVarianceControls, setPeriodVarianceControls] = useState<{
+    [analysisId: string]: {
+      valueColumn: string;
+      dateColumn: string;
+      periodType: 'weekly' | 'monthly' | 'quarterly' | 'yearly';
+    }
+  }>({});
+  
   // Force re-render trigger for budget variance
   // Note: Currently not used but kept for future auto-refresh functionality
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [budgetRenderTrigger, setBudgetRenderTrigger] = useState(0);
+
+  // Force re-render trigger for contribution analysis
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [contributionRenderTrigger, setContributionRenderTrigger] = useState(0);
 
   // Refs for draggable containers
   const pinnedContainerRef = useRef<HTMLDivElement>(null);
@@ -81,6 +130,8 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
         
         // Initialize control states for budget variance analysis
         const initialBudgetControls: typeof budgetVarianceControls = {};
+        const initialContributionControls: typeof contributionControls = {};
+        const initialPeriodVarianceControls: typeof periodVarianceControls = {};
         
         // Convert CSV data to format expected by field analyzer
         const csvDataForAnalysis = csvData.length > 0 ? csvData.slice(1).map(row => 
@@ -110,9 +161,52 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               availableColumns: csvColumns
             });
           }
+          
+          if (item.result.type === 'contribution') {
+            // Auto-detect columns for contribution analysis
+            const numericFields = getNumericFields(csvDataForAnalysis);
+            const textFields = getTextFields(csvDataForAnalysis);
+            
+            initialContributionControls[item.id] = {
+              valueColumn: numericFields[0] || csvColumns[0] || 'Value',
+              categoryColumn: textFields[0] || csvColumns[1] || 'Category',
+              analysisScope: 'total',
+              showOthers: true,
+              sortBy: 'contribution',
+              sortOrder: 'desc'
+            };
+            
+            console.log(`🎯 Auto-detected columns for contribution ${item.id}:`, {
+              value: numericFields[0],
+              category: textFields[0],
+              availableNumeric: numericFields,
+              availableText: textFields
+            });
+          }
+
+          if (item.result.type === 'period-variance') {
+            // Auto-detect columns for period variance analysis
+            const numericFields = getNumericFields(csvDataForAnalysis);
+            const dateFields = getDateFields(csvDataForAnalysis);
+            
+            initialPeriodVarianceControls[item.id] = {
+              valueColumn: numericFields[0] || csvColumns[0] || 'Value',
+              dateColumn: dateFields[0] || csvColumns[0] || 'Date',
+              periodType: 'monthly'
+            };
+            
+            console.log(`🎯 Auto-detected columns for period variance ${item.id}:`, {
+              value: numericFields[0],
+              date: dateFields[0],
+              availableNumeric: numericFields,
+              availableDate: dateFields
+            });
+          }
         });
         
         setBudgetVarianceControls(initialBudgetControls);
+        setContributionControls(initialContributionControls);
+        setPeriodVarianceControls(initialPeriodVarianceControls);
       } catch (error) {
         console.error('Error initializing analysis items:', error);
       } finally {
@@ -271,6 +365,44 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     });
   };
 
+  // Update contribution analysis controls handler
+  const updateContributionControls = (
+    analysisId: string, 
+    updates: Partial<ContributionAnalysisParams>
+  ) => {
+    setContributionControls(prev => {
+      const updated = {
+        ...prev,
+        [analysisId]: {
+          ...prev[analysisId],
+          ...updates
+        }
+      };
+      
+      // Trigger re-render when controls change
+      setContributionRenderTrigger(prev => prev + 1);
+      
+      return updated;
+    });
+  };
+
+  const updatePeriodVarianceControls = (
+    analysisId: string, 
+    updates: Partial<PeriodVarianceParams>
+  ) => {
+    setPeriodVarianceControls(prev => {
+      const updated = {
+        ...prev,
+        [analysisId]: {
+          ...prev[analysisId],
+          ...updates
+        }
+      };
+      
+      return updated;
+    });
+  };
+
   // Generate budget variance visualization
   const generateBudgetVarianceHTML = (analysisId: string): string => {
     try {
@@ -313,6 +445,93 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     } catch (error) {
       console.error('Error generating budget variance visualization:', error);
       return '<div class="text-red-600">Error generating budget variance analysis</div>';
+    }
+  };
+
+  // Generate contribution analysis visualization
+  const generateContributionHTML = (analysisId: string): string => {
+    try {
+      const item = analysisItems.find(item => item.id === analysisId);
+      if (!item || item.result.type !== 'contribution') {
+        return '<div>No contribution analysis data available</div>';
+      }
+
+      const controls = contributionControls[analysisId];
+      if (!controls) {
+        return '<div>Loading contribution analysis controls...</div>';
+      }
+
+      // Use real CSV data instead of mock data
+      const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
+        Object.fromEntries(
+          csvColumns.map((col, index) => [col, row[index]])
+        )
+      ) : [];
+
+      if (realData.length === 0) {
+        return '<div class="text-yellow-600">No data available for contribution analysis</div>';
+      }
+
+      const processedResult = processContributionData(
+        realData,
+        {
+          valueColumn: controls.valueColumn,
+          categoryColumn: controls.categoryColumn,
+          subcategoryColumn: controls.subcategoryColumn,
+          analysisScope: controls.analysisScope,
+          showOthers: controls.showOthers,
+          sortBy: controls.sortBy,
+          sortOrder: controls.sortOrder,
+          timePeriodAnalysis: controls.timePeriodAnalysis
+        }
+      );
+
+      return generateContributionVisualization(
+        processedResult,
+        controls.valueColumn,
+        controls.categoryColumn
+      );
+    } catch (error) {
+      console.error('Error generating contribution visualization:', error);
+      return '<div class="text-red-600">Error generating contribution analysis</div>';
+    }
+  };
+
+  const generatePeriodVarianceHTML = (analysisId: string): string => {
+    try {
+      const item = analysisItems.find(item => item.id === analysisId);
+      if (!item || item.result.type !== 'period-variance') {
+        return '<div>No period variance data available</div>';
+      }
+
+      const controls = periodVarianceControls[analysisId];
+      if (!controls) {
+        return '<div>Loading period variance controls...</div>';
+      }
+
+      const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
+        Object.fromEntries(
+          csvColumns.map((col, index) => [col, row[index]])
+        )
+      ) : [];
+
+      if (realData.length === 0) {
+        return '<div class="text-yellow-600">No data available for period variance analysis</div>';
+      }
+
+      const processedResult = processPeriodVarianceData(
+        realData,
+        {
+          valueColumn: controls.valueColumn,
+          dateColumn: controls.dateColumn,
+          periodType: controls.periodType
+        }
+      );
+
+      return generatePeriodVarianceVisualization(processedResult);
+    } catch (error) {
+      console.error('Error generating period variance visualization:', error);
+      return '<div class="text-red-600">Error generating period variance analysis</div>';
     }
   };
 
@@ -621,6 +840,62 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                 </div>
               )}
 
+              {/* Contribution Analysis Controls */}
+              {item.result.type === 'contribution' && (
+                <div className="mb-6">
+                  <ContributionControls
+                    csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvColumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : []}
+                    valueColumn={contributionControls[item.id]?.valueColumn || getNumericFields(csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvCcolumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : [])[0] || csvColumns[0] || 'Value'}
+                    categoryColumn={contributionControls[item.id]?.categoryColumn || getTextFields(csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvColumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : [])[0] || csvColumns[0] || 'Category'}
+                    subcategoryColumn={contributionControls[item.id]?.subcategoryColumn}
+                    analysisScope={contributionControls[item.id]?.analysisScope || 'total'}
+                    showOthers={contributionControls[item.id]?.showOthers ?? true}
+                    sortBy={contributionControls[item.id]?.sortBy || 'contribution'}
+                    sortOrder={contributionControls[item.id]?.sortOrder || 'desc'}
+                    timePeriodAnalysis={contributionControls[item.id]?.timePeriodAnalysis}
+                    onValueColumnChange={(column) => updateContributionControls(item.id, { valueColumn: column })}
+                    onCategoryColumnChange={(column) => updateContributionControls(item.id, { categoryColumn: column })}
+                    onSubcategoryColumnChange={(column) => updateContributionControls(item.id, { subcategoryColumn: column })}
+                    onAnalysisScopeChange={(scope) => updateContributionControls(item.id, { analysisScope: scope })}
+                    onShowOthersChange={(value) => updateContributionControls(item.id, { showOthers: value })}
+                    onSortByChange={(sort) => updateContributionControls(item.id, { sortBy: sort })}
+                    onSortOrderChange={(order) => updateContributionControls(item.id, { sortOrder: order })}
+                    onTimePeriodAnalysisChange={(analysis) => updateContributionControls(item.id, { timePeriodAnalysis: analysis })}
+                  />
+                </div>
+              )}
+
+              {/* Period Variance Controls */}
+              {item.result.type === 'period-variance' && (
+                <div className="mb-6">
+                  <PeriodVarianceControls
+                    csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                      Object.fromEntries(
+                        csvColumns.map((col, index) => [col, row[index]])
+                      )
+                    ) : []}
+                    valueColumn={periodVarianceControls[item.id]?.valueColumn}
+                    dateColumn={periodVarianceControls[item.id]?.dateColumn}
+                    periodType={periodVarianceControls[item.id]?.periodType}
+                    onValueColumnChange={(column) => updatePeriodVarianceControls(item.id, { valueColumn: column })}
+                    onDateColumnChange={(column) => updatePeriodVarianceControls(item.id, { dateColumn: column })}
+                    onPeriodTypeChange={(type) => updatePeriodVarianceControls(item.id, { periodType: type })}
+                  />
+                </div>
+              )}
+
               {/* Metadata */}
               <div className="text-sm text-gray-700 mb-4 border-b pb-3">
                 <div className="flex justify-between items-center">
@@ -639,6 +914,10 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                 dangerouslySetInnerHTML={{
                   __html: item.result.type === 'budget-variance' 
                     ? generateBudgetVarianceHTML(item.id)
+                    : item.result.type === 'contribution'
+                    ? generateContributionHTML(item.id)
+                    : item.result.type === 'period-variance'
+                    ? generatePeriodVarianceHTML(item.id)
                     : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
                 }}
               />
