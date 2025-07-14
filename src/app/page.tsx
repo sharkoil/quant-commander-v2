@@ -815,65 +815,184 @@ Please adjust your parameters and try again.`
     }
   };
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       setCsvProcessingLoading(true);
-      handleNewChatMessage({ role: 'user', content: `Uploading CSV file: ${file.name} (Size: ${file.size} bytes)` });
+      
+      try {
+        // Step 1: File confirmation
+        handleNewChatMessage({ 
+          role: 'user', 
+          content: `📁 Uploading CSV file: ${file.name} (${(file.size / 1024).toFixed(1)} KB)` 
+        });
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: '✅ **File received successfully!** Starting data analysis...' 
+        });
 
-      Papa.parse(file, {
-        header: true,
-        skipEmptyLines: true,
-        complete: async (results) => {
-          try {
-            if (results.data && results.data.length > 0) {
-              const originalColumns = Object.keys(results.data[0] as object);
-              
-              const processedData = results.data.map(row => {
-                return originalColumns.map(col => {
-                  const value = (row as Record<string, unknown>)[col];
-                  const inferredType = inferDataType(value);
-                  return cleanAndConvertValue(value, inferredType);
-                });
-              });
+        // Step 2: Data analysis (with small delay for UX)
+        await new Promise(resolve => setTimeout(resolve, 800));
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: '🔍 **Analyzing data structure...** Examining columns and data types...' 
+        });
 
-              setCsvColumns(originalColumns);
-              setCsvData(processedData);
+        // Parse the CSV file
+        const parseResult = await new Promise<Papa.ParseResult<Record<string, unknown>>>((resolve, reject) => {
+          Papa.parse(file, {
+            header: true,
+            skipEmptyLines: true,
+            complete: resolve,
+            error: reject
+          });
+        });
 
-              // Automatically create contribution analysis card when CSV is loaded
-              await createContributionAnalysisCard(originalColumns, processedData, file.name);
+        // Step 3: AI thinking
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: '🤖 **AI thinking...** Processing data patterns and preparing intelligent analysis...' 
+        });
 
-              // Automatically create budget variance analysis card if appropriate columns are detected
-              await createBudgetVarianceAnalysisCard(originalColumns, processedData, file.name);
+        if (parseResult.data && parseResult.data.length > 0) {
+          const originalColumns = Object.keys(parseResult.data[0] as object);
+          
+          const processedData = parseResult.data.map(row => {
+            return originalColumns.map(col => {
+              const value = (row as Record<string, unknown>)[col];
+              const inferredType = inferDataType(value);
+              return cleanAndConvertValue(value, inferredType);
+            });
+          });
 
-              const totalRows = processedData.length;
-              const summaryData = `Columns: ${originalColumns.join(', ')}. Total Rows: ${totalRows}.`;
+          setCsvColumns(originalColumns);
+          setCsvData(processedData);
 
-              if (selectedOllamaModel) {
-                const analysisPrompt = `Please analyze the following CSV data summary and recommend appropriate financial analysis techniques. Also, describe the data in 2-3 sentences.\\n\\n${summaryData}`;
-                handleNewChatMessage({ role: 'user', content: analysisPrompt });
-                handleNewChatMessage({ role: 'assistant', content: '🤔 Analyzing your data... Please wait while I examine the structure and patterns.' });
-                const llmResponse = await chatWithOllama(
-                  [{ role: 'user', content: analysisPrompt }],
-                  selectedOllamaModel
-                );
-                handleNewChatMessage({ role: 'assistant', content: llmResponse });
-              } else {
-                handleNewChatMessage({ role: 'assistant', content: "CSV uploaded and processed, but no Ollama model is selected to analyze the data." });
-              }
-            } else {
-              handleNewChatMessage({ role: 'assistant', content: "CSV file is empty or could not be parsed." });
-            }
-          } catch (error) {
-            handleNewChatMessage({ role: 'assistant', content: `An error occurred while processing the CSV file: ${error instanceof Error ? error.message : String(error)}` });
+          // Step 4: Narrative summary
+          await new Promise(resolve => setTimeout(resolve, 1200));
+          const totalRows = processedData.length;
+          const numericColumns = originalColumns.filter(col => {
+            const colIndex = originalColumns.indexOf(col);
+            return processedData.some(row => typeof row[colIndex] === 'number');
+          });
+          
+          const dateColumns = originalColumns.filter(col => {
+            const colIndex = originalColumns.indexOf(col);
+            return processedData.some(row => row[colIndex] instanceof Date);
+          });
+
+          handleNewChatMessage({ 
+            role: 'assistant', 
+            content: `📊 **Data Analysis Complete!**
+
+**Dataset Overview:**
+- **File**: ${file.name}
+- **Records**: ${totalRows.toLocaleString()} rows
+- **Columns**: ${originalColumns.length} fields
+- **Numeric Fields**: ${numericColumns.length} (${numericColumns.slice(0, 3).join(', ')}${numericColumns.length > 3 ? '...' : ''})
+- **Date Fields**: ${dateColumns.length} (${dateColumns.slice(0, 2).join(', ')}${dateColumns.length > 2 ? '...' : ''})
+
+**Smart Detection Results:**
+${originalColumns.map(col => {
+  const colIndex = originalColumns.indexOf(col);
+  const sampleValue = processedData[0]?.[colIndex];
+  const dataType = typeof sampleValue === 'number' ? 'Number' : 
+                   sampleValue instanceof Date ? 'Date' : 'Text';
+  return `• **${col}**: ${dataType}`;
+}).join('\n')}` 
+          });
+
+          // Step 5: Analysis preparation
+          await new Promise(resolve => setTimeout(resolve, 900));
+          handleNewChatMessage({ 
+            role: 'assistant', 
+            content: '⚙️ **Preparing analysis engines...** Initializing intelligent analyzers and visualization tools...' 
+          });
+
+          // Automatically create analysis cards
+          await createContributionAnalysisCard(originalColumns, processedData, file.name);
+          await createBudgetVarianceAnalysisCard(originalColumns, processedData, file.name);
+
+          // Step 6: 3-second thinking delay before final results
+          await new Promise(resolve => setTimeout(resolve, 1500));
+          handleNewChatMessage({ 
+            role: 'assistant', 
+            content: '🧠 **AI processing complete...** Generating insights and recommendations...' 
+          });
+
+          // Step 7: Final analysis and cards
+          await new Promise(resolve => setTimeout(resolve, 3000));
+
+          const summaryData = `Columns: ${originalColumns.join(', ')}. Total Rows: ${totalRows}.`;
+          
+          // Generate LLM analysis if model is available
+          if (selectedOllamaModel) {
+            const analysisPrompt = `Please analyze the following CSV data summary and recommend appropriate financial analysis techniques. Also, describe the data in 2-3 sentences.\\n\\n${summaryData}`;
+            
+            handleNewChatMessage({ 
+              role: 'assistant', 
+              content: '🎯 **Analysis Cards Created!** Your data has been processed and analysis cards have been automatically generated in the Analysis tab.' 
+            });
+            
+            const llmResponse = await chatWithOllama(
+              [{ role: 'user', content: analysisPrompt }],
+              selectedOllamaModel
+            );
+            
+            handleNewChatMessage({ 
+              role: 'assistant', 
+              content: `🚀 **Complete Analysis Report:**
+
+${llmResponse}
+
+**Next Steps:**
+1. 📊 Visit the **Analysis tab** to explore your automatically generated analysis cards
+2. 🎛️ Use the interactive controls to customize your analysis parameters
+3. 🔍 Try the **Top N Analysis** or **Contribution Analysis** buttons for deeper insights
+4. 💬 Ask me any questions about your data in this chat!
+
+**Available Analysis Types:**
+• **Budget Variance**: Compare planned vs actual performance
+• **Contribution Analysis**: Understand value drivers and distributions  
+• **Trend Analysis**: Identify patterns over time
+• **Outlier Detection**: Find anomalies and data quality issues
+• **Top N Analysis**: Discover top/bottom performers
+
+Your data is ready for advanced financial analysis! 🎉` 
+            });
+          } else {
+            handleNewChatMessage({ 
+              role: 'assistant', 
+              content: `🎯 **Upload Complete!** 
+
+Your CSV file has been successfully processed and analysis cards have been created. 
+
+**Summary:**
+- ✅ ${totalRows.toLocaleString()} records processed
+- ✅ ${originalColumns.length} columns analyzed  
+- ✅ Analysis cards automatically generated
+- ✅ Data ready for exploration
+
+Visit the **Analysis tab** to start exploring your data with our intelligent analysis tools!
+
+*Note: No Ollama model is selected for detailed AI analysis, but all manual analysis tools are available.*` 
+            });
           }
-          setCsvProcessingLoading(false);
-        },
-        error: (error) => {
-          handleNewChatMessage({ role: 'assistant', content: `Failed to parse CSV file: ${error.message}. Please check the file format.` });
-          setCsvProcessingLoading(false);
+        } else {
+          handleNewChatMessage({ 
+            role: 'assistant', 
+            content: "❌ **Upload Failed**: CSV file appears to be empty or could not be parsed. Please check the file format and try again." 
+          });
         }
-      });
+      } catch (error) {
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: `❌ **Upload Error**: Failed to process CSV file: ${error instanceof Error ? error.message : String(error)}. Please check the file format and try again.` 
+        });
+      } finally {
+        setCsvProcessingLoading(false);
+      }
     }
   };
 
