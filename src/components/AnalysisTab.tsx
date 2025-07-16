@@ -251,10 +251,12 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             // Auto-detect columns for Top N analysis
             const numericFields = getNumericFields(csvDataForAnalysis);
             const textFields = getTextFields(csvDataForAnalysis);
+            const dateFields = getDateFields(csvDataForAnalysis);
             
             initialTopNControls[item.id] = {
               valueColumn: numericFields[0] || csvColumns[0] || 'Value',
               categoryColumn: textFields[0] || csvColumns[1] || 'Category',
+              dateColumn: dateFields[0] || csvColumns[0] || 'Date',
               topN: 3,
               bottomN: 3,
               timePeriod: 'total',
@@ -265,8 +267,10 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
             console.log(`🎯 Auto-detected columns for Top N ${item.id}:`, {
               value: numericFields[0],
               category: textFields[0],
+              date: dateFields[0],
               availableNumeric: numericFields,
-              availableText: textFields
+              availableText: textFields,
+              availableDate: dateFields
             });
           }
         });
@@ -677,7 +681,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
   };
 
-  // Generate TopN Analysis HTML - Real Implementation
+  // Generate TopN Analysis HTML - Real Implementation with Time Periods
   const generateTopNHTML = (analysisId: string): string => {
     if (!csvData || csvData.length === 0) {
       return '<div class="text-gray-700 p-4">No data available for TopN analysis</div>';
@@ -695,7 +699,18 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       `;
     }
 
-    const { valueColumn, categoryColumn, topN = 3, bottomN = 3 } = controls;
+    const { valueColumn, categoryColumn, topN = 3, bottomN = 3, timePeriod = 'total', dateColumn } = controls;
+    
+    // Check if time period analysis requires a date column
+    if (timePeriod !== 'total' && !dateColumn) {
+      return `
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">📅</div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Date Column Required</h3>
+          <p class="text-gray-600">Please select a date column for time-based analysis</p>
+        </div>
+      `;
+    }
     
     try {
       // Convert CSV data to objects for processing
@@ -705,118 +720,187 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
         )
       );
 
-      // Aggregate values by category (similar to your working example)
-      const categoryTotals: { [key: string]: number } = {};
+      // Function to get period key from date
+      const getPeriodKey = (dateValue: any): string => {
+        if (!dateValue) return 'Unknown';
+        
+        let date: Date;
+        if (dateValue instanceof Date) {
+          date = dateValue;
+        } else {
+          date = new Date(dateValue);
+        }
+        
+        if (isNaN(date.getTime())) return 'Invalid Date';
+        
+        switch (timePeriod) {
+          case 'year':
+            return date.getFullYear().toString();
+          case 'quarter':
+            const quarter = Math.ceil((date.getMonth() + 1) / 3);
+            return `Q${quarter} ${date.getFullYear()}`;
+          case 'month':
+            return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+          default:
+            return 'Total';
+        }
+      };
+
+      // Function to get display name for period
+      const getPeriodDisplay = (periodKey: string): string => {
+        switch (timePeriod) {
+          case 'year':
+            return periodKey;
+          case 'quarter':
+            return periodKey;
+          case 'month':
+            const [year, month] = periodKey.split('-');
+            const date = new Date(parseInt(year), parseInt(month) - 1);
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+          default:
+            return 'All Time';
+        }
+      };
+
+      // Group data by time period if needed
+      const periodData: { [period: string]: { [category: string]: number } } = {};
       
       dataObjects.forEach(row => {
         const category = (row as any)[categoryColumn];
         const value = parseFloat((row as any)[valueColumn]);
+        const dateValue = timePeriod !== 'total' && dateColumn ? (row as any)[dateColumn] : null;
         
         if (category && !isNaN(value)) {
-          categoryTotals[category] = (categoryTotals[category] || 0) + value;
+          const period = timePeriod === 'total' ? 'Total' : getPeriodKey(dateValue);
+          
+          if (!periodData[period]) {
+            periodData[period] = {};
+          }
+          
+          periodData[period][category] = (periodData[period][category] || 0) + value;
         }
       });
 
-      // Calculate total for percentages
-      const totalValue = Object.values(categoryTotals).reduce((sum, val) => sum + val, 0);
-      
-      // Sort and get top/bottom items
-      const sortedItems = Object.entries(categoryTotals)
-        .map(([category, value]) => ({
-          category,
-          value,
-          percentage: totalValue > 0 ? (value / totalValue) * 100 : 0
-        }))
-        .sort((a, b) => b.value - a.value);
+      // Sort periods chronologically
+      const sortedPeriods = Object.keys(periodData).sort((a, b) => {
+        if (timePeriod === 'total') return 0;
+        if (a === 'Unknown' || a === 'Invalid Date') return 1;
+        if (b === 'Unknown' || b === 'Invalid Date') return -1;
+        return a.localeCompare(b);
+      });
 
-      const topItems = sortedItems.slice(0, topN);
-      const bottomItems = sortedItems.slice(-bottomN).reverse();
+      // Generate HTML for each period
+      const periodHtml = sortedPeriods.map(period => {
+        const categoryTotals = periodData[period];
+        const totalValue = Object.values(categoryTotals).reduce((sum, val) => sum + val, 0);
+        
+        const sortedItems = Object.entries(categoryTotals)
+          .map(([category, value]) => ({
+            category,
+            value,
+            percentage: totalValue > 0 ? (value / totalValue) * 100 : 0
+          }))
+          .sort((a, b) => b.value - a.value);
 
-      // Generate HTML based on your working example
+        const topItems = sortedItems.slice(0, topN);
+        const bottomItems = sortedItems.slice(-bottomN).reverse();
+
+        return `
+          <div class="mb-8 border border-gray-200 rounded-lg p-6 bg-white">
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                ${timePeriod === 'total' ? '🏆' : '📅'} ${getPeriodDisplay(period)}
+              </h3>
+              <p class="text-sm text-gray-600">Top ${topN} & Bottom ${bottomN} ${categoryColumn} by ${valueColumn}</p>
+              <p class="text-xs text-gray-500 mt-1">${sortedItems.length} categories • ${totalValue.toLocaleString()} total</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Top Items -->
+              <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                  🔝 Top ${topN} ${categoryColumn}
+                </h4>
+                <div class="space-y-2">
+                  ${topItems.map((item, index) => `
+                    <div class="flex items-center justify-between p-2 bg-white rounded border">
+                      <div class="flex items-center">
+                        <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                          ${index + 1}
+                        </span>
+                        <span class="font-medium text-gray-800">${item.category}</span>
+                      </div>
+                      <div class="text-right">
+                        <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
+                        <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Bottom Items -->
+              <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                  📉 Bottom ${bottomN} ${categoryColumn}
+                </h4>
+                <div class="space-y-2">
+                  ${bottomItems.map((item, index) => `
+                    <div class="flex items-center justify-between p-2 bg-white rounded border">
+                      <div class="flex items-center">
+                        <span class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                          ${index + 1}
+                        </span>
+                        <span class="font-medium text-gray-800">${item.category}</span>
+                      </div>
+                      <div class="text-right">
+                        <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
+                        <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Period Summary -->
+            <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <h4 class="font-semibold text-gray-800 mb-3">� Period Summary</h4>
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div class="text-xl font-bold text-blue-600">${sortedItems.length}</div>
+                  <div class="text-sm text-gray-600">Categories</div>
+                </div>
+                <div>
+                  <div class="text-xl font-bold text-green-600">${totalValue.toLocaleString()}</div>
+                  <div class="text-sm text-gray-600">Total Value</div>
+                </div>
+                <div>
+                  <div class="text-xl font-bold text-purple-600">${(totalValue / sortedItems.length).toLocaleString()}</div>
+                  <div class="text-sm text-gray-600">Average</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Overall summary for multi-period analysis
+      const overallSummary = timePeriod !== 'total' && sortedPeriods.length > 1 ? `
+        <div class="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <h4 class="font-semibold text-blue-800 mb-3">� Overall Analysis</h4>
+          <div class="text-sm text-blue-700 space-y-2">
+            <p>• <strong>Time Period:</strong> ${getPeriodDisplay(sortedPeriods[0])} to ${getPeriodDisplay(sortedPeriods[sortedPeriods.length - 1])}</p>
+            <p>• <strong>Total Periods:</strong> ${sortedPeriods.length} ${timePeriod}${sortedPeriods.length !== 1 ? 's' : ''}</p>
+            <p>• <strong>Analysis Scope:</strong> Top ${topN} and Bottom ${bottomN} ${categoryColumn} by ${valueColumn}</p>
+          </div>
+        </div>
+      ` : '';
+
       return `
         <div class="space-y-6">
-          <div class="text-center">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">🏆 Top ${topN} & Bottom ${bottomN} Analysis</h3>
-            <p class="text-sm text-gray-600">Analysis of ${categoryColumn} by ${valueColumn}</p>
-            <p class="text-xs text-gray-500 mt-1">${sortedItems.length} categories analyzed</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Top Items -->
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-              <h4 class="font-semibold text-green-800 mb-3 flex items-center">
-                🔝 Top ${topN} ${categoryColumn}
-              </h4>
-              <div class="space-y-2">
-                ${topItems.map((item, index) => `
-                  <div class="flex items-center justify-between p-2 bg-white rounded border">
-                    <div class="flex items-center">
-                      <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                        ${index + 1}
-                      </span>
-                      <span class="font-medium text-gray-800">${item.category}</span>
-                    </div>
-                    <div class="text-right">
-                      <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
-                      <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-
-            <!-- Bottom Items -->
-            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
-              <h4 class="font-semibold text-red-800 mb-3 flex items-center">
-                📉 Bottom ${bottomN} ${categoryColumn}
-              </h4>
-              <div class="space-y-2">
-                ${bottomItems.map((item, index) => `
-                  <div class="flex items-center justify-between p-2 bg-white rounded border">
-                    <div class="flex items-center">
-                      <span class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                        ${index + 1}
-                      </span>
-                      <span class="font-medium text-gray-800">${item.category}</span>
-                    </div>
-                    <div class="text-right">
-                      <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
-                      <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-
-          <!-- Summary Statistics -->
-          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <h4 class="font-semibold text-gray-800 mb-3">📈 Summary Statistics</h4>
-            <div class="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div class="text-2xl font-bold text-blue-600">${sortedItems.length}</div>
-                <div class="text-sm text-gray-600">Total Categories</div>
-              </div>
-              <div>
-                <div class="text-2xl font-bold text-green-600">${totalValue.toLocaleString()}</div>
-                <div class="text-sm text-gray-600">Total Value</div>
-              </div>
-              <div>
-                <div class="text-2xl font-bold text-purple-600">${(totalValue / sortedItems.length).toLocaleString()}</div>
-                <div class="text-sm text-gray-600">Average Value</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Performance Insights -->
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h4 class="font-semibold text-blue-800 mb-2">💡 Key Insights</h4>
-            <div class="text-sm text-blue-700 space-y-1">
-              <p>• <strong>Top performer:</strong> ${topItems[0]?.category} represents ${topItems[0]?.percentage.toFixed(1)}% of total ${valueColumn}</p>
-              <p>• <strong>Bottom performer:</strong> ${bottomItems[0]?.category} represents ${bottomItems[0]?.percentage.toFixed(1)}% of total ${valueColumn}</p>
-              <p>• <strong>Performance gap:</strong> ${topItems[0] && bottomItems[0] ? ((topItems[0].value / bottomItems[0].value) * 100).toFixed(0) + 'x difference' : 'N/A'}</p>
-            </div>
-          </div>
+          ${periodHtml}
+          ${overallSummary}
         </div>
       `;
     } catch (error) {
@@ -826,6 +910,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
           <div class="text-4xl mb-4">❌</div>
           <h3 class="text-lg font-semibold text-gray-800 mb-2">Analysis Error</h3>
           <p class="text-gray-600">Unable to process TopN analysis. Please check your column selections.</p>
+          <p class="text-sm text-gray-500 mt-2">Error: ${error}</p>
         </div>
       `;
     }
@@ -1244,7 +1329,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               {/* Top N Analysis Controls */}
               {item.result.type === 'top-n' && (
                 <div className="mb-6">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Value Column
@@ -1286,6 +1371,46 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                         ))}
                       </select>
                     </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Time Period
+                      </label>
+                      <select
+                        value={topNControls[item.id]?.timePeriod || 'total'}
+                        onChange={(e) => updateTopNControls(item.id, { timePeriod: e.target.value as 'total' | 'year' | 'quarter' | 'month' })}
+                        className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                        title="Select time period for analysis"
+                      >
+                        <option value="total">Total (No Time Grouping)</option>
+                        <option value="year">By Year</option>
+                        <option value="quarter">By Quarter</option>
+                        <option value="month">By Month</option>
+                      </select>
+                    </div>
+
+                    {topNControls[item.id]?.timePeriod !== 'total' && (
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          Date Column
+                        </label>
+                        <select
+                          value={topNControls[item.id]?.dateColumn}
+                          onChange={(e) => updateTopNControls(item.id, { dateColumn: e.target.value })}
+                          className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                          title="Select the column for dates"
+                        >
+                          <option value="">Select a date column</option>
+                          {getDateFields(csvData.length > 0 ? csvData.slice(1).map(row => 
+                            Object.fromEntries(
+                              csvColumns.map((col, index) => [col, row[index]])
+                            )
+                          ) : []).map(field => (
+                            <option key={field} value={field}>{field}</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
