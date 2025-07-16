@@ -35,13 +35,6 @@ export const ANALYSIS_TYPES: AnalysisTypeConfig[] = [
     description: 'Identify patterns and trends over time'
   },
   {
-    type: 'top-n',
-    icon: '🏆',
-    name: 'Top N Analysis',
-    color: 'bg-yellow-100 text-yellow-800',
-    description: 'Find top performing items by criteria'
-  },
-  {
     type: 'contribution',
     icon: '🥧',
     name: 'Contribution Analysis',
@@ -61,6 +54,13 @@ export const ANALYSIS_TYPES: AnalysisTypeConfig[] = [
     name: 'Outlier Detection',
     color: 'bg-orange-100 text-orange-800',
     description: 'Identify statistical anomalies and data outliers'
+  },
+  {
+    type: 'top-n',
+    icon: '🏆',
+    name: 'Top N Analysis',
+    color: 'bg-yellow-100 text-yellow-800',
+    description: 'Analyze highest and lowest performing items'
   }
 ];
 
@@ -171,49 +171,6 @@ const MOCK_ANALYSIS_RESULTS: AnalysisResult[] = [
       insights: ['Strong growth trajectory', 'Social media driving acquisition']
     },
     parameters: { dateColumn: 'Date', valueColumn: 'New_Customers', timeframe: '6_months' },
-    status: 'completed'
-  },
-  {
-    id: 'analysis-004',
-    type: 'top-n',
-    title: 'Top 5 Products by Revenue',
-    createdAt: new Date('2024-01-12T14:20:00'),
-    htmlOutput: `
-      <div class="space-y-4">
-        <h3 class="text-lg font-semibold text-gray-800">Top N Analysis</h3>
-        <div class="space-y-3">
-          <div class="flex items-center justify-between p-3 bg-yellow-50 border-l-4 border-yellow-400">
-            <div class="flex items-center space-x-3">
-              <span class="text-xl">🥇</span>
-              <span class="font-medium">Premium Laptop Pro</span>
-            </div>
-            <span class="font-bold text-yellow-700">$1,234,567</span>
-          </div>
-          <div class="flex items-center justify-between p-3 bg-gray-50 border-l-4 border-gray-400">
-            <div class="flex items-center space-x-3">
-              <span class="text-xl">🥈</span>
-              <span class="font-medium">Wireless Headphones Elite</span>
-            </div>
-            <span class="font-bold text-gray-700">$987,654</span>
-          </div>
-          <div class="flex items-center justify-between p-3 bg-orange-50 border-l-4 border-orange-400">
-            <div class="flex items-center space-x-3">
-              <span class="text-xl">🥉</span>
-              <span class="font-medium">Smart Watch Series X</span>
-            </div>
-            <span class="font-bold text-orange-700">$756,432</span>
-          </div>
-        </div>
-      </div>
-    `,
-    metadata: {
-      datasetName: 'Product_Sales_2024.csv',
-      recordCount: 2341,
-      processingTime: 1.9,
-      columns: ['Product_Name', 'Revenue', 'Units_Sold', 'Category'],
-      insights: ['Technology products dominate', 'Premium items show strong performance']
-    },
-    parameters: { rankBy: 'Revenue', topN: 5, groupBy: 'Product_Name' },
     status: 'completed'
   },
   {

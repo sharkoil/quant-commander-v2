@@ -3,13 +3,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ChatUI, { ChatUIHandles } from '@/components/ChatUI';
 import DataGrid from '@/components/DataGrid';
-import TopNModal, { TopNAnalysisParams } from '@/components/TopNModal';
 import ContributionModal from '@/components/ContributionModal';
 import OutlierModal from '@/components/OutlierModal';
+import TopNModal from '@/components/TopNModal';
 import { ContributionAnalysisParams } from '@/lib/analyzers/contributionTypes';
 import { OutlierDetectionAnalysis } from '@/lib/analyzers/outlierDetection';
+import { TopNAnalysisParams } from '@/lib/analyzers/topNTypes';
 import { addAnalysisResult, initializeAnalysisService } from '@/lib/analysisService';
-import { inferDataType, isLikelyDate, cleanAndConvertValue } from '@/lib/utils/dataTypeUtils';
+import { inferDataType, cleanAndConvertValue } from '@/lib/utils/dataTypeUtils';
 import dynamic from 'next/dynamic';
 import Papa from 'papaparse';
 import { checkOllamaStatus, getOllamaModels, chatWithOllama } from '@/lib/ollama';
@@ -42,10 +43,9 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<'grid' | 'documents' | 'analysis'>('grid');
   const [csvProcessingLoading, setCsvProcessingLoading] = useState<boolean>(false);
   
-  // TopN Modal state
-  const [isTopNModalOpen, setIsTopNModalOpen] = useState<boolean>(false);
   const [isContributionModalOpen, setIsContributionModalOpen] = useState<boolean>(false);
   const [isOutlierModalOpen, setIsOutlierModalOpen] = useState<boolean>(false);
+  const [isTopNModalOpen, setIsTopNModalOpen] = useState<boolean>(false);
 
   const chatUIRef = useRef<ChatUIHandles>(null);
 
@@ -54,99 +54,19 @@ export default function Home() {
     initializeAnalysisService();
     console.log('🚀 Analysis service initialized in main app');
     
-    // Create real analyses for all analyzer types to show in the Analysis tab
+    // Create real analyses for specific analyzer types to show in the Analysis tab
+    // Note: Contribution and Budget Variance analyses are created automatically on CSV upload
     const createRealAnalyses = async () => {
       const sampleDataColumns = ['Revenue', 'Sales', 'Budget', 'Actual', 'Date', 'Region', 'Product', 'Category'];
       
       try {
-        // 1. Create a real Contribution Analysis
-        const { testContributionAnalysis } = await import('@/lib/test/contributionAnalysisTest');
-        const contributionTestResults = testContributionAnalysis();
-        
-        const contributionResult = {
-          id: `contrib-real-${Date.now()}`,
-          title: 'Revenue Contribution Analysis',
-          type: 'contribution' as const,
-          htmlOutput: contributionTestResults.htmlOutput,
-          parameters: {
-            valueColumn: 'Revenue',
-            categoryColumn: 'Region'
-          },
-          metadata: {
-            datasetName: csvData && csvData.length > 0 ? 'User_Data.csv' : 'Sample_Business_Data.csv',
-            recordCount: csvData ? csvData.length : 1000,
-            processingTime: 2.1,
-            columns: csvColumns && csvColumns.length > 0 ? csvColumns : sampleDataColumns,
-            insights: [
-              'Multi-dimensional contribution analysis completed',
-              'Revenue distribution across categories analyzed',            'Top performing segments identified'
-          ]
-        },
-        status: 'completed' as const,
-        createdAt: new Date()
-      };
-        addAnalysisResult(contributionResult);
+        // 1. Contribution Analysis will be created automatically when CSV is uploaded
+        // This ensures relevant analysis based on actual data columns
 
-        // 2. Create a real Budget Variance Analysis
-        const { testBudgetVariance, formatBudgetVarianceTable } = await import('@/lib/test/budgetVarianceTest');
-        const budgetTestResults = testBudgetVariance();
-        
-        const budgetVarianceResult = {
-          id: `budget-real-${Date.now()}`,
-          title: 'Budget vs Actual Variance Analysis',
-          type: 'budget-variance' as const,
-          htmlOutput: formatBudgetVarianceTable(budgetTestResults.test1),
-          parameters: {
-            budgetColumn: 'Budget',
-            actualColumn: 'Actual'
-          },
-          metadata: {
-            datasetName: csvData && csvData.length > 0 ? 'User_Data.csv' : 'Sample_Financial_Data.csv',
-            recordCount: csvData ? csvData.length : 850,
-            processingTime: 1.2,
-            columns: csvColumns && csvColumns.length > 0 ? csvColumns : sampleDataColumns,
-            insights: [
-              'Budget variance analysis completed successfully',
-              'Favorable and unfavorable variances identified',
-              'Detailed variance breakdown by category'
-            ]
-          },
-          status: 'completed' as const,
-          createdAt: new Date()
-        };
-        addAnalysisResult(budgetVarianceResult);
+        // 2. Budget Variance Analysis will be created automatically when CSV is uploaded
+        // This ensures relevant analysis based on actual data columns
 
-        // 3. Create a real Top N Analysis
-        const { testTopNAnalysis } = await import('@/lib/test/topNAnalysisTest');
-        const topNTestResults = testTopNAnalysis();
-        
-        const topNResult = {
-          id: `topn-real-${Date.now()}`,
-          title: 'Top N Performance Analysis',
-          type: 'top-n' as const,
-          htmlOutput: topNTestResults.htmlOutput,
-          parameters: {
-            valueColumn: 'Sales',
-            categoryColumn: 'Product',
-            n: 5,
-            direction: 'top'
-          },
-          metadata: {
-            datasetName: csvData && csvData.length > 0 ? 'User_Data.csv' : 'Sample_Product_Data.csv',
-            recordCount: csvData ? csvData.length : 2100,
-            processingTime: 0.65,
-            columns: csvColumns && csvColumns.length > 0 ? csvColumns : sampleDataColumns,
-            insights: [
-              'Top N analysis completed successfully',
-              'Top performers identified with rankings',            'Performance gaps analyzed'
-          ]
-        },
-        status: 'completed' as const,
-        createdAt: new Date()
-      };
-        addAnalysisResult(topNResult);
-
-        // 4. Create a real Trend Analysis
+        // 3. Create a real Trend Analysis
         const trendBrowserTestResults = testTrendAnalysis();
         
         const trendResult = {
@@ -175,7 +95,7 @@ export default function Home() {
         };
         addAnalysisResult(trendResult);
 
-        // 5. Create a real Period Variance Analysis
+        // 4. Create a real Period Variance Analysis
         const periodTestResults = testPeriodVariance();
         
         const periodVarianceResult = {
@@ -203,42 +123,10 @@ export default function Home() {
         };
         addAnalysisResult(periodVarianceResult);
 
-        // 7. Create a real Outlier Detection Analysis
-        const { testOutlierDetection } = await import('@/lib/test/outlierDetectionTest');
-        const outlierTestResults = testOutlierDetection();
-        
-        const outlierDetectionResult = {
-          id: `outlier-real-${Date.now()}`,
-          title: 'Statistical Outlier Detection',
-          type: 'outlier-detection' as const,
-          htmlOutput: outlierTestResults.htmlOutput,
-          parameters: {
-            method: 'both',
-            analysisTarget: 'variance',
-            threshold: 2,
-            iqrMultiplier: 1.5,
-            dateColumn: 'Date',
-            actualColumn: 'Actual',
-            budgetColumn: 'Budget'
-          },
-          metadata: {
-            datasetName: csvData && csvData.length > 0 ? 'User_Data.csv' : 'Sample_Financial_Data.csv',
-            recordCount: csvData ? csvData.length : 1200,
-            processingTime: 1.8,
-            columns: csvColumns && csvColumns.length > 0 ? csvColumns : sampleDataColumns,
-            insights: [
-              'Outlier detection analysis completed successfully',
-              'Statistical anomalies identified using IQR and Z-Score methods',
-              'Variance outliers detected in budget vs actual comparisons',
-              'Data quality assessment provided with risk level analysis'
-            ]
-          },
-          status: 'completed' as const,
-          createdAt: new Date()
-        };
-        addAnalysisResult(outlierDetectionResult);
+        // 5. Outlier Detection Analysis is created via interactive modal
+        // This ensures proper parameter selection and data-specific analysis
 
-        console.log('✅ Real analyses created for all analyzer types');
+        console.log('✅ Real analyses created for trend and period variance types');
       } catch (error) {
         console.error('❌ Error creating real analyses:', error);
         // Fall back to basic sample if real analysis fails
@@ -387,48 +275,6 @@ ${formattedTable}
     });
   };
 
-  // Test function for Top N analysis
-  const handleTestTopNAnalysis = async () => {
-    try {
-      const { testTopNAnalysis } = await import('../lib/test/topNAnalysisTest');
-      
-      // Run the test and get the actual HTML results
-      const testResults = testTopNAnalysis();
-      
-      // Display the test results with actual formatted HTML
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `🏆 **Top N Analysis Test Results**
-
-${testResults.htmlOutput}
-
-✅ **Test Summary:**
-- **Tests Run**: ${testResults.testsRun}
-- **All Passed**: ✅ 
-- **Performance**: ${testResults.performance}
-
-**🌟 Key Capabilities Validated:**
-• Multi-dimensional analysis across regions, states, cities, products, managers
-• Intelligent column detection with confidence scoring  
-• Time-based growth analysis with quarter-over-quarter calculations
-• Period aggregation (latest quarter performance)
-• Multiple ranking strategies (total values, growth rates, period-based)
-• Beautiful card formatting matching Budget vs Actual design
-• Comprehensive insights generation with statistical analysis
-• Edge case handling and robust error management
-
-The Top N analyzer is production-ready with beautiful card formatting! 🚀`
-      });
-      
-    } catch (error) {
-      console.error('Top N Analysis test failed:', error);
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `❌ Top N Analysis test failed: ${error instanceof Error ? error.message : 'Unknown error'}`
-      });
-    }
-  };
-
   const handleTestContributionAnalysis = async () => {
     try {
       const { testContributionAnalysis } = await import('@/lib/test/contributionAnalysisTest');
@@ -488,6 +334,136 @@ ${testResults.htmlOutput}
       handleNewChatMessage({ 
         role: 'assistant', 
         content: `Error: Contribution Analysis test failed - ${error instanceof Error ? error.message : 'Unknown error'}`
+      });
+    }
+  };
+
+  // Test function for Top N analysis
+  const handleTestTopNAnalysis = async () => {
+    try {
+      // Create a default TopN analysis card with monthly grouping
+      const analysisResult = {
+        id: `top-n-default-${Date.now()}`,
+        type: 'top-n' as const,
+        title: 'Top 5 & Bottom 5 Analysis - Monthly',
+        createdAt: new Date(),
+        htmlOutput: `
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #374151;">
+  <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); padding: 20px; border-radius: 12px; color: white; margin-bottom: 20px;">
+    <h2 style="margin: 0; font-size: 24px; font-weight: bold;">🏆 Top 5 & Bottom 5 Analysis - Monthly</h2>
+    <p style="margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;">
+      Performance analysis based on your CSV data with monthly grouping
+    </p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 20px;">
+    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+      <div style="font-size: 14px; color: #6b7280; margin-bottom: 5px;">Analysis Type</div>
+      <div style="font-size: 20px; font-weight: bold; color: #1f2937;">Monthly Grouping</div>
+    </div>
+    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+      <div style="font-size: 14px; color: #6b7280; margin-bottom: 5px;">Ready for Data</div>
+      <div style="font-size: 20px; font-weight: bold; color: #1f2937;">Upload CSV</div>
+    </div>
+    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+      <div style="font-size: 14px; color: #6b7280; margin-bottom: 5px;">Configuration</div>
+      <div style="font-size: 20px; font-weight: bold; color: #1f2937;">Click to Set</div>
+    </div>
+  </div>
+
+  <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #1f2937;">
+      📊 How to Use Top N Analysis
+    </h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <h4 style="margin: 0 0 10px 0; font-size: 16px; color: #059669;">🏆 Top N Features</h4>
+        <ul style="margin: 0; padding-left: 20px; color: #4b5563; font-size: 14px;">
+          <li>Identify highest performing items</li>
+          <li>Rank by any numeric column</li>
+          <li>Group by categories or products</li>
+          <li>Monthly, quarterly, or yearly analysis</li>
+          <li>Percentage of total calculations</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="margin: 0 0 10px 0; font-size: 16px; color: #dc2626;">📉 Bottom N Features</h4>
+        <ul style="margin: 0; padding-left: 20px; color: #4b5563; font-size: 14px;">
+          <li>Identify lowest performing items</li>
+          <li>Spot areas for improvement</li>
+          <li>Compare against top performers</li>
+          <li>Filter by positive/negative values</li>
+          <li>Time-based trend analysis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+    <h4 style="margin: 0 0 10px 0; font-size: 16px; color: #0c4a6e;">📋 Steps to Get Started</h4>
+    <ol style="margin: 0; padding-left: 20px; color: #374151; font-size: 14px;">
+      <li><strong>Upload your CSV data</strong> - Use the file upload feature</li>
+      <li><strong>Click "🏆 Top N Analysis"</strong> - Open the analysis configuration</li>
+      <li><strong>Select your columns</strong> - Choose value column (e.g., Revenue) and category column (e.g., Product)</li>
+      <li><strong>Set your preferences</strong> - Configure Top N count, time period, and analysis scope</li>
+      <li><strong>Run the analysis</strong> - Get instant results with rankings and insights</li>
+    </ol>
+  </div>
+
+  <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 20px;">
+    <div style="font-size: 14px; color: #6b7280;">
+      <strong>💡 Pro Tip:</strong> For best results, ensure your CSV has numeric columns for ranking and categorical columns for grouping. Date columns enable powerful time-based analysis.
+    </div>
+  </div>
+</div>`,
+        metadata: {
+          datasetName: 'Ready for CSV Upload',
+          recordCount: 0,
+          processingTime: Date.now(),
+          columns: [],
+          insights: ['Monthly grouping configured', 'Top 5 and Bottom 5 analysis ready', 'Upload CSV to get started']
+        },
+        parameters: {
+          valueColumn: '',
+          categoryColumn: '',
+          topN: 5,
+          bottomN: 5,
+          timePeriod: 'month',
+          analysisScope: 'all'
+        },
+        status: 'completed' as const
+      };
+      
+      // Add directly to analysis tab
+      addAnalysisResult(analysisResult);
+
+      // Also display a message in chat
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `🏆 <strong>Top N Analysis Card Added!</strong>
+
+A default Top N analysis card has been added to your Analysis tab with monthly grouping configured. This card is ready to use once you upload CSV data.
+
+<strong>Features configured:</strong>
+• Top 5 and Bottom 5 analysis
+• Monthly time period grouping
+• All values included in analysis
+• Percentage calculations enabled
+
+<strong>Next steps:</strong>
+1. Upload your CSV data
+2. Click "🏆 Top N Analysis" to configure columns
+3. Run analysis to get instant rankings and insights
+
+The Top N analysis is perfect for identifying your best and worst performers across any dataset!`
+      });
+
+    } catch (error) {
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `Error: Top N Analysis test failed - ${error instanceof Error ? error.message : 'Unknown error'}`
       });
     }
   };
@@ -625,89 +601,6 @@ ${analysis.htmlOutput}
     }
   };
 
-  // TopN Analysis handler - Now with full backend implementation
-  const handleTopNAnalysis = async (params: TopNAnalysisParams) => {
-    try {
-      if (!csvData || csvData.length === 0) {
-        handleNewChatMessage({ 
-          role: 'assistant', 
-          content: '❌ **No CSV data available**. Please upload a CSV file first to perform Top N analysis.'
-        });
-        return;
-      }
-
-      // Import the analysis function and types
-      const { calculateTopNAnalysis } = await import('@/lib/analyzers/topNAnalysis');
-      type FlexibleTopNData = { [key: string]: string | number | Date };
-      
-      // Convert frontend parameters to backend parameters
-      const backendParams = {
-        n: params.numberOfItems,
-        analysisScope: params.analysisScope,
-        valueColumn: params.valueColumn,
-        categoryColumn: params.categoryColumn || undefined,
-        dateColumn: params.periodColumn || undefined,
-        periodAggregation: params.periodAggregation,
-        direction: params.analysisType
-      };
-
-      // Convert CSV data to the format expected by the analyzer
-      const flexibleData: FlexibleTopNData[] = csvData.map(row => {
-        const convertedRow: FlexibleTopNData = {};
-        Object.entries(row).forEach(([key, value]) => {
-          // Convert values appropriately
-          if (typeof value === 'string' && !isNaN(parseFloat(value)) && isFinite(parseFloat(value))) {
-            convertedRow[key] = parseFloat(value);
-          } else if (typeof value === 'string' && isLikelyDate(value)) {
-            convertedRow[key] = new Date(value);
-          } else {
-            convertedRow[key] = String(value); // Convert all non-numeric, non-date values to strings
-          }
-        });
-        return convertedRow;
-      });
-
-      // Perform the analysis
-      const result = calculateTopNAnalysis(flexibleData, backendParams);
-
-      // Display the result in the chat
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `🏆 <strong>${params.metricName} - Top N Analysis Complete</strong>
-
-${result.htmlOutput}
-
-📈 <strong>Analysis Summary:</strong>
-- <strong>Scope</strong>: ${params.analysisScope === 'total' ? 'Total Values' : params.analysisScope === 'period' ? 'Latest Period' : 'Growth Rate'}
-- <strong>Categories Analyzed</strong>: ${result.metadata.totalCategories}
-- <strong>Data Records</strong>: ${result.metadata.totalRecords}
-- <strong>Date Range</strong>: ${result.metadata.dateRange.start.toLocaleDateString()} - ${result.metadata.dateRange.end.toLocaleDateString()}
-
-💡 <strong>Key Insights:</strong>
-${result.insights.map(insight => `• ${insight}`).join('\n')}
-
-<em>Analysis completed using intelligent column detection and ${params.periodAggregation || 'total'} aggregation.</em>`
-      });
-      
-    } catch (error) {
-      console.error('Top N Analysis failed:', error);
-      handleNewChatMessage({ 
-        role: 'assistant', 
-        content: `❌ <strong>Top N Analysis Failed</strong>
-
-<strong>Error</strong>: ${error instanceof Error ? error.message : 'Unknown error occurred'}
-
-<strong>Troubleshooting Tips:</strong>
-• Ensure the selected value column contains numeric data
-• Check that the category column exists and has valid data
-• For period/growth analysis, verify the date column contains valid dates
-• Make sure the CSV data has been properly uploaded
-
-Please adjust your parameters and try again.`
-      });
-    }
-  };
-
   // Contribution Analysis handler
   const handleContributionAnalysis = async (params: ContributionAnalysisParams) => {
     try {
@@ -788,6 +681,132 @@ ${result.insights.keyFindings.map(finding => `• ${finding}`).join('\n')}
       handleNewChatMessage({ 
         role: 'assistant', 
         content: `❌ <strong>Contribution Analysis Failed</strong>
+
+<strong>Error</strong>: ${error instanceof Error ? error.message : 'Unknown error occurred'}
+
+<strong>Troubleshooting Tips:</strong>
+• Ensure the selected value column contains numeric data
+• Check that the category column exists and has valid data
+• Verify that your data has sufficient records for meaningful analysis
+• Make sure the CSV data has been properly uploaded
+
+Please adjust your parameters and try again.`
+      });
+    }
+  };
+
+  // TopN Analysis handler
+  const handleTopNAnalysis = async (params: TopNAnalysisParams) => {
+    try {
+      if (!csvData || csvData.length === 0) {
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: '❌ <strong>No CSV data available</strong>. Please upload a CSV file first to perform Top N analysis.'
+        });
+        return;
+      }
+
+      // Import the analysis function
+      const { processTopNAnalysis } = await import('@/lib/analyzers/topNProcessor');
+
+      // Convert CSV data to proper format
+      type FlexibleTopNData = { [key: string]: string | number | Date };
+      const flexibleData: FlexibleTopNData[] = csvData.slice(1).map(row => {
+        const convertedRow: FlexibleTopNData = {};
+        csvColumns.forEach((column, index) => {
+          const value = row[index];
+          const dataType = inferDataType(value);
+          
+          if (dataType === 'number') {
+            convertedRow[column] = Number(value);
+          } else if (dataType === 'date') {
+            convertedRow[column] = new Date(String(value));
+          } else {
+            convertedRow[column] = String(value);
+          }
+        });
+        return convertedRow;
+      });
+
+      // Perform the analysis
+      const result = processTopNAnalysis(flexibleData, params);
+
+      if (!result.success) {
+        handleNewChatMessage({ 
+          role: 'assistant', 
+          content: `❌ <strong>Top N Analysis Failed</strong>
+
+<strong>Error</strong>: ${result.errorMessage || 'Unknown error occurred'}
+
+<strong>Troubleshooting Tips:</strong>
+• Ensure the selected value column contains numeric data
+• Check that the category column exists and has valid data
+• Verify that your data has sufficient records for meaningful analysis
+• Make sure the CSV data has been properly uploaded
+
+Please adjust your parameters and try again.`
+        });
+        return;
+      }
+
+      // Display the result in the chat
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `🏆 <strong>Top N Analysis Complete</strong>
+
+${result.htmlOutput}
+
+📈 <strong>Analysis Summary:</strong>
+- <strong>Total Value</strong>: ${result.overallStats.totalValue.toLocaleString()}
+- <strong>Total Items</strong>: ${result.overallStats.totalItems}
+- <strong>Average Value</strong>: ${result.overallStats.avgValue.toLocaleString()}
+- <strong>Top Performer</strong>: ${result.overallStats.topItem.name} (${result.overallStats.topItem.value.toLocaleString()})
+- <strong>Bottom Performer</strong>: ${result.overallStats.bottomItem.name} (${result.overallStats.bottomItem.value.toLocaleString()})
+- <strong>Time Period</strong>: ${result.metadata.timePeriod === 'total' ? 'Overall totals' : `Grouped by ${result.metadata.timePeriod}`}
+
+💡 <strong>Key Insights:</strong>
+• Top ${params.topN} items show the highest performing categories
+• Bottom ${params.bottomN} items highlight areas for improvement
+• Analysis scope: ${params.analysisScope === 'all' ? 'All values' : params.analysisScope === 'positive' ? 'Positive values only' : 'Negative values only'}
+
+<em>Analysis completed with intelligent time period grouping and statistical modeling.</em>`
+      });
+
+      // Add to analysis results
+      const analysisResult = {
+        id: `top-n-${Date.now()}`,
+        type: 'top-n' as const,
+        title: `Top ${params.topN} & Bottom ${params.bottomN} Analysis`,
+        createdAt: new Date(),
+        htmlOutput: result.htmlOutput,
+        metadata: {
+          datasetName: 'Uploaded CSV',
+          recordCount: flexibleData.length,
+          processingTime: Date.now(),
+          columns: csvColumns,
+          insights: [`Top performer: ${result.overallStats.topItem.name}`, `Bottom performer: ${result.overallStats.bottomItem.name}`]
+        },
+        parameters: {
+          valueColumn: params.valueColumn,
+          categoryColumn: params.categoryColumn,
+          topN: params.topN,
+          bottomN: params.bottomN,
+          timePeriod: params.timePeriod,
+          analysisScope: params.analysisScope
+        },
+        status: 'completed' as const
+      };
+      
+      addAnalysisResult(analysisResult);
+
+      // Close modal
+      setIsTopNModalOpen(false);
+
+    } catch (error) {
+      console.error('Top N Analysis failed:', error);
+      handleNewChatMessage({ 
+        role: 'assistant', 
+        content: `❌ <strong>Top N Analysis Failed</strong>
 
 <strong>Error</strong>: ${error instanceof Error ? error.message : 'Unknown error occurred'}
 
@@ -900,6 +919,7 @@ ${originalColumns.map(col => {
           // Automatically create analysis cards
           await createContributionAnalysisCard(originalColumns, processedData, file.name);
           await createBudgetVarianceAnalysisCard(originalColumns, processedData, file.name);
+          await createTopNAnalysisCard(originalColumns, processedData, file.name);
 
           // Step 6: 3-second thinking delay before final results
           await new Promise(resolve => setTimeout(resolve, 1500));
@@ -936,7 +956,7 @@ ${llmResponse}
 **Next Steps:**
 1. 📊 Visit the **Analysis tab** to explore your automatically generated analysis cards
 2. 🎛️ Use the interactive controls to customize your analysis parameters
-3. 🔍 Try the **Top N Analysis** or **Contribution Analysis** buttons for deeper insights
+3. 🔍 Try the **Contribution Analysis** buttons for deeper insights
 4. 💬 Ask me any questions about your data in this chat!
 
 **Available Analysis Types:**
@@ -944,7 +964,6 @@ ${llmResponse}
 • **Contribution Analysis**: Understand value drivers and distributions  
 • **Trend Analysis**: Identify patterns over time
 • **Outlier Detection**: Find anomalies and data quality issues
-• **Top N Analysis**: Discover top/bottom performers
 
 Your data is ready for advanced financial analysis! 🎉` 
             });
@@ -1190,6 +1209,90 @@ Visit the Analysis tab to explore your budget performance analysis!`
     }
   };
 
+  // Function to automatically create TopN analysis card on CSV load
+  const createTopNAnalysisCard = async (
+    columns: string[], 
+    data: (string | number | Date | boolean)[][], 
+    fileName: string
+  ) => {
+    console.log('🏆 createTopNAnalysisCard called with:', { columns, dataLength: data.length, fileName });
+    try {
+      // Find numeric columns for ranking
+      const numericColumns = columns.filter(col => {
+        const colIndex = columns.indexOf(col);
+        return data.some(row => typeof row[colIndex] === 'number');
+      });
+      
+      // Find text columns for grouping
+      const textColumns = columns.filter(col => {
+        const colIndex = columns.indexOf(col);
+        return data.some(row => typeof row[colIndex] === 'string');
+      });
+      
+      // Default to first numeric column or 'Revenue' if available
+      const defaultValueColumn = numericColumns.find(col => 
+        col.toLowerCase().includes('revenue') || 
+        col.toLowerCase().includes('amount') || 
+        col.toLowerCase().includes('sales') ||
+        col.toLowerCase().includes('actuals')
+      ) || numericColumns[0] || columns[0];
+      
+      // Default to first text column or 'Product' if available
+      const defaultCategoryColumn = textColumns.find(col => 
+        col.toLowerCase().includes('product') || 
+        col.toLowerCase().includes('category') || 
+        col.toLowerCase().includes('item')
+      ) || textColumns[0] || columns[1];
+      
+      // Create analysis card with actual data insights
+      const analysisResult = {
+        id: `analysis-topn-auto-${Date.now()}`,
+        type: 'top-n' as const,
+        title: `${fileName} - Top N Analysis`,
+        createdAt: new Date(),
+        htmlOutput: `
+          <div style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: white; padding: 30px; text-align: center; border-radius: 12px; margin: 20px 0;">
+            <div style="font-size: 48px; margin-bottom: 15px;">🏆</div>
+            <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">Top N Analysis Ready</h1>
+            <p style="font-size: 16px; margin-bottom: 10px;">Analyzing ${defaultCategoryColumn} by ${defaultValueColumn}</p>
+            <p style="font-size: 14px; opacity: 0.9;">Configure columns above to start analysis</p>
+          </div>
+        `,
+        metadata: {
+          datasetName: fileName,
+          recordCount: data.length,
+          processingTime: 1.2,
+          columns: columns,
+          insights: [
+            `Automatic TopN analysis generated for ${fileName}`,
+            `${data.length} records processed across ${columns.length} columns`,
+            `Primary ranking field: ${defaultValueColumn}`,
+            `Primary grouping field: ${defaultCategoryColumn}`,
+            'Interactive controls available for Top N and Bottom N configuration'
+          ]
+        },
+        parameters: { 
+          valueColumn: defaultValueColumn, 
+          categoryColumn: defaultCategoryColumn,
+          topN: 3,
+          bottomN: 3,
+          timePeriod: 'total' as const,
+          showPercentages: true,
+          analysisScope: 'all' as const
+        },
+        status: 'completed' as const
+      };
+      
+      // Add to analysis results
+      addAnalysisResult(analysisResult);
+      
+      console.log('🏆 TopN analysis card created successfully:', analysisResult.id);
+      
+    } catch (error) {
+      console.error('❌ Error creating TopN analysis card:', error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex">
       {/* Main Content Area */}
@@ -1306,23 +1409,10 @@ Visit the Analysis tab to explore your budget performance analysis!`
                       Test Trend Analysis
                     </button>
                     <button
-                      onClick={handleTestTopNAnalysis}
-                      className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
-                    >
-                      Test Top N Analysis
-                    </button>
-                    <button
                       onClick={handleTestContributionAnalysis}
                       className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
                     >
                       Test Contribution Analysis
-                    </button>
-                    <button
-                      onClick={() => setIsTopNModalOpen(true)}
-                      disabled={csvData.length === 0}
-                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition-colors text-sm disabled:bg-gray-300 disabled:cursor-not-allowed"
-                    >
-                      🏆 Top N Analysis
                     </button>
                     <button
                       onClick={() => setIsContributionModalOpen(true)}
@@ -1343,6 +1433,19 @@ Visit the Analysis tab to explore your budget performance analysis!`
                       className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm disabled:bg-gray-300 disabled:cursor-not-allowed"
                     >
                       🚨 Outlier Detection
+                    </button>
+                    <button
+                      onClick={handleTestTopNAnalysis}
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                    >
+                      Test Top N Analysis
+                    </button>
+                    <button
+                      onClick={() => setIsTopNModalOpen(true)}
+                      disabled={csvData.length === 0}
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition-colors text-sm disabled:bg-gray-300 disabled:cursor-not-allowed"
+                    >
+                      🏆 Top N Analysis
                     </button>
                   </div>
                 </div>
@@ -1385,15 +1488,6 @@ Visit the Analysis tab to explore your budget performance analysis!`
         />
       </div>
 
-      {/* Top N Analysis Modal */}
-      <TopNModal
-        isOpen={isTopNModalOpen}
-        onClose={() => setIsTopNModalOpen(false)}
-        onAnalyze={handleTopNAnalysis}
-        csvData={csvData}
-        csvColumns={csvColumns}
-      />
-      
       <ContributionModal
         isOpen={isContributionModalOpen}
         onClose={() => setIsContributionModalOpen(false)}
@@ -1406,6 +1500,14 @@ Visit the Analysis tab to explore your budget performance analysis!`
         isOpen={isOutlierModalOpen}
         onClose={() => setIsOutlierModalOpen(false)}
         onAnalysisComplete={handleOutlierAnalysisComplete}
+        csvData={csvData}
+        csvColumns={csvColumns}
+      />
+      
+      <TopNModal
+        isOpen={isTopNModalOpen}
+        onClose={() => setIsTopNModalOpen(false)}
+        onAnalyze={handleTopNAnalysis}
         csvData={csvData}
         csvColumns={csvColumns}
       />

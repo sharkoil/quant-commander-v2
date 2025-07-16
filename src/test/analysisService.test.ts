@@ -18,12 +18,11 @@ describe('Analysis Service', () => {
     it('should return all analysis type configurations', () => {
       const types = getAnalysisTypes();
       
-      expect(types).toHaveLength(6);
+      expect(types).toHaveLength(5);
       expect(types.map((t: AnalysisTypeConfig) => t.type)).toEqual([
         'period-variance',
         'budget-variance',
         'trend-analysis',
-        'top-n',
         'contribution',
         'column-intelligence'
       ]);
@@ -59,7 +58,7 @@ describe('Analysis Service', () => {
     it('should return mock analysis results', () => {
       const results = getMockAnalysisResults();
       
-      expect(results).toHaveLength(6);
+      expect(results).toHaveLength(5);
       
       // Verify structure of first result
       const firstResult = results[0];
@@ -94,7 +93,6 @@ describe('Analysis Service', () => {
       expect(types).toContain('period-variance');
       expect(types).toContain('budget-variance');
       expect(types).toContain('trend-analysis');
-      expect(types).toContain('top-n');
       expect(types).toContain('contribution');
       expect(types).toContain('column-intelligence');
     });
@@ -104,7 +102,7 @@ describe('Analysis Service', () => {
     it('should convert results to draggable items', () => {
       const items = getAnalysisResultsAsDraggableItems();
       
-      expect(items).toHaveLength(6);
+      expect(items).toHaveLength(5);
       
       // Verify structure
       items.forEach((item: DraggableAnalysisItem, index: number) => {
@@ -179,13 +177,13 @@ describe('Analysis Service', () => {
 
     it('should handle multiple filters', () => {
       const filters: AnalysisFilters = {
-        type: 'top-n',
+        type: 'contribution',
         searchQuery: 'products'
       };
       const filtered = filterAnalysisResults(mockResults, filters);
       
       filtered.forEach((result: AnalysisResult) => {
-        expect(result.type).toBe('top-n');
+        expect(result.type).toBe('contribution');
         expect(
           result.title.toLowerCase().includes('products') ||
           result.metadata.datasetName.toLowerCase().includes('products') ||

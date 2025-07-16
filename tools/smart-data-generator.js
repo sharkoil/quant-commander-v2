@@ -111,6 +111,7 @@ class SmartDataGenerator {
             input: process.stdin,
             output: process.stdout
         });
+        this.startTime = null; // For ETA calculation
     }
     async askQuestion(question) {
         return new Promise((resolve) => {
@@ -169,10 +170,28 @@ class SmartDataGenerator {
             throw new Error('Months must be a number between 1 and 24');
         }
         // Get record count
-        const recordsAnswer = await this.askQuestion('📊 How many records per month? (10-1000): ');
+        const recordsAnswer = await this.askQuestion('📊 How many records per month? (10-50000): ');
         const recordsPerMonth = parseInt(recordsAnswer);
-        if (isNaN(recordsPerMonth) || recordsPerMonth < 10 || recordsPerMonth > 1000) {
-            throw new Error('Records per month must be a number between 10 and 1000');
+        if (isNaN(recordsPerMonth) || recordsPerMonth < 10 || recordsPerMonth > 50000) {
+            throw new Error('Records per month must be a number between 10 and 50,000');
+        }
+
+        // Memory usage warning for very large datasets
+        const estimatedTotalRecords = recordsPerMonth * months;
+        if (estimatedTotalRecords > 100000) {
+            console.log('\n⚠️  LARGE DATASET WARNING:');
+            console.log(`📊 Estimated total records: ${estimatedTotalRecords.toLocaleString()}`);
+            console.log('🧠 This will require significant memory and processing time.');
+            console.log('💡 Recommendations for large datasets:');
+            console.log('   - Ensure you have at least 4GB of available RAM');
+            console.log('   - Close other applications to free up memory');
+            console.log('   - Consider generating data in smaller batches');
+            console.log('   - Process may take 10-30 minutes depending on system');
+            
+            const continueAnswer = await this.askQuestion('\n❓ Continue with large dataset generation? (y/N): ');
+            if (continueAnswer.toLowerCase() !== 'y' && continueAnswer.toLowerCase() !== 'yes') {
+                throw new Error('Large dataset generation cancelled by user');
+            }
         }
         // Get output file
         const outputFileAnswer = await this.askQuestion('📁 Output filename (press Enter for auto-generated): ');
@@ -209,6 +228,22 @@ class SmartDataGenerator {
         const country = this.getRandomElement(Object.keys(REGIONS[region]));
         const city = this.getRandomElement(REGIONS[region][country]);
         return { region, country, city };
+    }
+    calculateETA(current, total) {
+        if (!this.startTime || current === 0) return '';
+        
+        const elapsed = Date.now() - this.startTime;
+        const rate = current / elapsed; // records per millisecond
+        const remaining = total - current;
+        const eta = remaining / rate;
+        
+        if (eta < 60000) { // Less than 1 minute
+            return `(ETA: ${Math.round(eta / 1000)}s)`;
+        } else if (eta < 3600000) { // Less than 1 hour
+            return `(ETA: ${Math.round(eta / 60000)}m)`;
+        } else {
+            return `(ETA: ${Math.round(eta / 3600000)}h)`;
+        }
     }
     generateRealisticFinancials(product, category, location, channel) {
         // Base budget calculation based on business type and category
@@ -268,104 +303,159 @@ class SmartDataGenerator {
     async generateData() {
         try {
             this.config = await this.interactiveSetup();
-            console.log('\n🔧 Generating data...');
-            console.log(`📊 Business Type: ${this.config.businessType}`);
-            console.log(`📅 Time Period: ${this.config.months} months`);
-            console.log(`📈 Records: ${this.config.recordsPerMonth * this.config.months} total (${this.config.recordsPerMonth}/month)`);
-            console.log(`📁 Output: ${this.config.outputFile}\n`);
-            const data = [];
-            const dateRange = this.generateDateRange(this.config.months);
-            let totalRecords = 0;
-            const expectedTotal = this.config.months * this.config.recordsPerMonth;
-            for (let monthIndex = 0; monthIndex < this.config.months; monthIndex++) {
-                const monthDate = dateRange[monthIndex];
-                for (let recordIndex = 0; recordIndex < this.config.recordsPerMonth; recordIndex++) {
-                    // Generate random date within the month
-                    const dayOfMonth = Math.floor(Math.random() * 28) + 1; // Safe day range
-                    const recordDate = new Date(monthDate.getFullYear(), monthDate.getMonth(), dayOfMonth);
-                    const location = this.getRandomLocation();
-                    const product = this.getRandomElement(this.config.products);
-                    const category = this.getRandomElement(this.config.categories);
-                    const channel = this.getRandomElement(CHANNELS);
-                    const { budget, actuals } = this.generateRealisticFinancials(product, category, location, channel);
-                    const record = {
-                        Date: recordDate.toISOString().split('T')[0],
-                        Product: product,
-                        Category: category,
-                        Region: location.region,
-                        Country: location.country,
-                        City: location.city,
-                        Budget: budget,
-                        Actuals: actuals,
-                        Channel: channel,
-                        Quarter: this.generateQuarter(recordDate),
-                        Month: this.generateMonth(recordDate)
-                    };
-                    data.push(record);
-                    totalRecords++;
-                    // Progress indicator
-                    if (totalRecords % 50 === 0 || totalRecords === expectedTotal) {
-                        const progress = (totalRecords / expectedTotal) * 100;
-                        console.log(`📊 Progress: ${totalRecords}/${expectedTotal} (${progress.toFixed(1)}%)`);
-                    }
-                }
-            }
-            // Sort by date for better readability
-            data.sort((a, b) => new Date(a.Date).getTime() - new Date(b.Date).getTime());
-            // Write CSV file
-            const csvWriter = (0, csv_writer_1.createObjectCsvWriter)({
-                path: this.config.outputFile,
-                header: [
-                    { id: 'Date', title: 'Date' },
-                    { id: 'Product', title: 'Product' },
-                    { id: 'Category', title: 'Category' },
-                    { id: 'Region', title: 'Region' },
-                    { id: 'Country', title: 'Country' },
-                    { id: 'City', title: 'City' },
-                    { id: 'Budget', title: 'Budget' },
-                    { id: 'Actuals', title: 'Actuals' },
-                    { id: 'Channel', title: 'Channel' },
-                    { id: 'Quarter', title: 'Quarter' },
-                    { id: 'Month', title: 'Month' }
-                ]
-            });
-            await csvWriter.writeRecords(data);
-            // Generate summary
-            console.log('\n✅ Data generation complete!');
-            console.log(`📁 Output file: ${this.config.outputFile}`);
-            console.log(`📊 Total records: ${data.length.toLocaleString()}`);
-            console.log(`📅 Date range: ${data[0].Date} to ${data[data.length - 1].Date}`);
-            const uniqueProducts = new Set(data.map(r => r.Product)).size;
-            const uniqueCategories = new Set(data.map(r => r.Category)).size;
-            const uniqueRegions = new Set(data.map(r => r.Region)).size;
-            const uniqueChannels = new Set(data.map(r => r.Channel)).size;
-            console.log(`📦 Products: ${uniqueProducts}`);
-            console.log(`🏷️ Categories: ${uniqueCategories}`);
-            console.log(`🌍 Regions: ${uniqueRegions}`);
-            console.log(`📺 Channels: ${uniqueChannels}`);
-            const budgetRange = {
-                min: Math.min(...data.map(r => r.Budget)),
-                max: Math.max(...data.map(r => r.Budget))
-            };
-            const actualsRange = {
-                min: Math.min(...data.map(r => r.Actuals)),
-                max: Math.max(...data.map(r => r.Actuals))
-            };
-            console.log(`💰 Budget range: $${budgetRange.min.toLocaleString()} - $${budgetRange.max.toLocaleString()}`);
-            console.log(`💸 Actuals range: $${actualsRange.min.toLocaleString()} - $${actualsRange.max.toLocaleString()}`);
-            // Show sample data
-            console.log('\n📄 Sample records:');
-            console.table(data.slice(0, 3));
-            console.log('\n🎯 Ready for analysis in Quant Commander!');
-            console.log('📥 Upload this CSV file to your application to begin analysis.');
-        }
-        catch (error) {
+            await this.generateDataDirect();
+        } catch (error) {
             console.error(`❌ Error: ${error.message}`);
             process.exit(1);
-        }
-        finally {
+        } finally {
             this.rl.close();
         }
+    }
+
+    async generateDataDirect() {
+        if (!this.config) {
+            throw new Error('Configuration not set. Call interactiveSetup() first.');
+        }
+
+        console.log('\n🔧 Generating data...');
+        console.log(`📊 Business Type: ${this.config.businessType}`);
+        console.log(`📅 Time Period: ${this.config.months} months`);
+        console.log(`📈 Records: ${(this.config.recordsPerMonth * this.config.months).toLocaleString()} total (${this.config.recordsPerMonth.toLocaleString()}/month)`);
+        console.log(`📁 Output: ${this.config.outputFile}\n`);
+
+        // Performance warning for large datasets
+        const expectedTotalRecords = this.config.months * this.config.recordsPerMonth;
+        if (expectedTotalRecords > 10000) {
+            console.log('⚠️  Large dataset detected. This may take several minutes...');
+            console.log('💡 Tip: Consider running this in the background or reducing the record count for testing.\n');
+        }
+        const data = [];
+        const dateRange = this.generateDateRange(this.config.months);
+        let totalRecords = 0;
+        const expectedTotal = this.config.months * this.config.recordsPerMonth;
+        this.startTime = Date.now(); // Start ETA timer
+        for (let monthIndex = 0; monthIndex < this.config.months; monthIndex++) {
+            const monthDate = dateRange[monthIndex];
+            for (let recordIndex = 0; recordIndex < this.config.recordsPerMonth; recordIndex++) {
+                // Generate random date within the month
+                const dayOfMonth = Math.floor(Math.random() * 28) + 1; // Safe day range
+                const recordDate = new Date(monthDate.getFullYear(), monthDate.getMonth(), dayOfMonth);
+                const location = this.getRandomLocation();
+                const product = this.getRandomElement(this.config.products);
+                const category = this.getRandomElement(this.config.categories);
+                const channel = this.getRandomElement(CHANNELS);
+                const { budget, actuals } = this.generateRealisticFinancials(product, category, location, channel);
+                const record = {
+                    Date: recordDate.toISOString().split('T')[0],
+                    Product: product,
+                    Category: category,
+                    Region: location.region,
+                    Country: location.country,
+                    City: location.city,
+                    Budget: budget,
+                    Actuals: actuals,
+                    Channel: channel,
+                    Quarter: this.generateQuarter(recordDate),
+                    Month: this.generateMonth(recordDate)
+                };
+                data.push(record);
+                totalRecords++;
+                // Enhanced progress indicator for large datasets
+                if (totalRecords % 1000 === 0 || totalRecords === expectedTotal) {
+                    const progress = (totalRecords / expectedTotal) * 100;
+                    const eta = this.calculateETA(totalRecords, expectedTotal);
+                    console.log(`📊 Progress: ${totalRecords.toLocaleString()}/${expectedTotal.toLocaleString()} (${progress.toFixed(1)}%) ${eta}`);
+                }
+            }
+        }
+        // Sort by date for better readability (skip for very large datasets to improve performance)
+        if (data.length < 50000) {
+            console.log('📝 Sorting data by date...');
+            data.sort((a, b) => new Date(a.Date).getTime() - new Date(b.Date).getTime());
+        } else {
+            console.log('📝 Skipping sort for large dataset (performance optimization)');
+        }
+        // Write CSV file
+        console.log('💾 Writing CSV file...');
+        const csvWriter = (0, csv_writer_1.createObjectCsvWriter)({
+            path: this.config.outputFile,
+            header: [
+                { id: 'Date', title: 'Date' },
+                { id: 'Product', title: 'Product' },
+                { id: 'Category', title: 'Category' },
+                { id: 'Region', title: 'Region' },
+                { id: 'Country', title: 'Country' },
+                { id: 'City', title: 'City' },
+                { id: 'Budget', title: 'Budget' },
+                { id: 'Actuals', title: 'Actuals' },
+                { id: 'Channel', title: 'Channel' },
+                { id: 'Quarter', title: 'Quarter' },
+                { id: 'Month', title: 'Month' }
+            ]
+        });
+
+        // For very large datasets, write in batches to manage memory
+        if (data.length > 50000) {
+            console.log('📊 Large dataset detected - writing in batches...');
+            const batchSize = 10000;
+            for (let i = 0; i < data.length; i += batchSize) {
+                const batch = data.slice(i, i + batchSize);
+                if (i === 0) {
+                    await csvWriter.writeRecords(batch);
+                } else {
+                    // Append mode for subsequent batches
+                    const appendWriter = (0, csv_writer_1.createObjectCsvWriter)({
+                        path: this.config.outputFile,
+                        header: [
+                            { id: 'Date', title: 'Date' },
+                            { id: 'Product', title: 'Product' },
+                            { id: 'Category', title: 'Category' },
+                            { id: 'Region', title: 'Region' },
+                            { id: 'Country', title: 'Country' },
+                            { id: 'City', title: 'City' },
+                            { id: 'Budget', title: 'Budget' },
+                            { id: 'Actuals', title: 'Actuals' },
+                            { id: 'Channel', title: 'Channel' },
+                            { id: 'Quarter', title: 'Quarter' },
+                            { id: 'Month', title: 'Month' }
+                        ],
+                        append: true
+                    });
+                    await appendWriter.writeRecords(batch);
+                }
+                console.log(`📝 Batch ${Math.ceil((i + batchSize) / batchSize)}/${Math.ceil(data.length / batchSize)} written`);
+            }
+        } else {
+            await csvWriter.writeRecords(data);
+        }
+        // Generate summary
+        console.log('\n✅ Data generation complete!');
+        console.log(`📁 Output file: ${this.config.outputFile}`);
+        console.log(`📊 Total records: ${data.length.toLocaleString()}`);
+        console.log(`📅 Date range: ${data[0].Date} to ${data[data.length - 1].Date}`);
+        const uniqueProducts = new Set(data.map(r => r.Product)).size;
+        const uniqueCategories = new Set(data.map(r => r.Category)).size;
+        const uniqueRegions = new Set(data.map(r => r.Region)).size;
+        const uniqueChannels = new Set(data.map(r => r.Channel)).size;
+        console.log(`📦 Products: ${uniqueProducts}`);
+        console.log(`🏷️ Categories: ${uniqueCategories}`);
+        console.log(`🌍 Regions: ${uniqueRegions}`);
+        console.log(`📺 Channels: ${uniqueChannels}`);
+        const budgetRange = {
+            min: Math.min(...data.map(r => r.Budget)),
+            max: Math.max(...data.map(r => r.Budget))
+        };
+        const actualsRange = {
+            min: Math.min(...data.map(r => r.Actuals)),
+            max: Math.max(...data.map(r => r.Actuals))
+        };
+        console.log(`💰 Budget range: $${budgetRange.min.toLocaleString()} - $${budgetRange.max.toLocaleString()}`);
+        console.log(`💸 Actuals range: $${actualsRange.min.toLocaleString()} - $${actualsRange.max.toLocaleString()}`);
+        // Show sample data
+        console.log('\n📄 Sample records:');
+        console.table(data.slice(0, 3));
+        console.log('\n🎯 Ready for analysis in Quant Commander!');
+        console.log('📥 Upload this CSV file to your application to begin analysis.');
     }
 }
 exports.SmartDataGenerator = SmartDataGenerator;

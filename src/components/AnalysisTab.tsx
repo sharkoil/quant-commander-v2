@@ -13,6 +13,7 @@ import {
   AnalysisFilters, 
   AnalysisType
 } from '../types/analysis';
+import { TopNAnalysisParams } from '../lib/analyzers/topNTypes';
 import { 
   getAnalysisTypes,
   getAnalysisTypeConfig,
@@ -122,7 +123,12 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       trendType: 'simple' | 'exponential';
     }
   }>({});
-  
+
+  // State for Top N analysis controls
+  const [topNControls, setTopNControls] = useState<{
+    [analysisId: string]: TopNAnalysisParams;
+  }>({});
+
   // Force re-render trigger for budget variance
   // Note: Currently not used but kept for future auto-refresh functionality
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -149,6 +155,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
         const initialContributionControls: typeof contributionControls = {};
         const initialPeriodVarianceControls: typeof periodVarianceControls = {};
         const initialTrendAnalysisControls: typeof trendAnalysisControls = {};
+        const initialTopNControls: typeof topNControls = {};
         
         // Convert CSV data to format expected by field analyzer
         const csvDataForAnalysis = csvData.length > 0 ? csvData.slice(1).map(row => 
@@ -239,12 +246,36 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
               availableDate: dateFields
             });
           }
+
+          if (item.result.type === 'top-n') {
+            // Auto-detect columns for Top N analysis
+            const numericFields = getNumericFields(csvDataForAnalysis);
+            const textFields = getTextFields(csvDataForAnalysis);
+            
+            initialTopNControls[item.id] = {
+              valueColumn: numericFields[0] || csvColumns[0] || 'Value',
+              categoryColumn: textFields[0] || csvColumns[1] || 'Category',
+              topN: 3,
+              bottomN: 3,
+              timePeriod: 'total',
+              showPercentages: true,
+              analysisScope: 'all'
+            };
+            
+            console.log(`🎯 Auto-detected columns for Top N ${item.id}:`, {
+              value: numericFields[0],
+              category: textFields[0],
+              availableNumeric: numericFields,
+              availableText: textFields
+            });
+          }
         });
         
         setBudgetVarianceControls(initialBudgetControls);
         setContributionControls(initialContributionControls);
         setPeriodVarianceControls(initialPeriodVarianceControls);
         setTrendAnalysisControls(initialTrendAnalysisControls);
+        setTopNControls(initialTopNControls);
       } catch (error) {
         console.error('Error initializing analysis items:', error);
       } finally {
@@ -458,6 +489,23 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     });
   };
 
+  const updateTopNControls = (
+    analysisId: string, 
+    updates: Partial<TopNAnalysisParams>
+  ) => {
+    setTopNControls(prev => {
+      const updated = {
+        ...prev,
+        [analysisId]: {
+          ...prev[analysisId],
+          ...updates
+        }
+      };
+      
+      return updated;
+    });
+  };
+
   // Generate budget variance visualization
   const generateBudgetVarianceHTML = (analysisId: string): string => {
     try {
@@ -626,6 +674,160 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     } catch (error) {
       console.error('Error generating trend analysis visualization:', error);
       return '<div class="text-red-600">Error generating trend analysis</div>';
+    }
+  };
+
+  // Generate TopN Analysis HTML - Real Implementation
+  const generateTopNHTML = (analysisId: string): string => {
+    if (!csvData || csvData.length === 0) {
+      return '<div class="text-gray-700 p-4">No data available for TopN analysis</div>';
+    }
+
+    // Get the TopN controls for this analysis
+    const controls = topNControls[analysisId];
+    if (!controls || !controls.valueColumn || !controls.categoryColumn) {
+      return `
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">🔧</div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Configuration Required</h3>
+          <p class="text-gray-600">Please select value and category columns above to run TopN analysis</p>
+        </div>
+      `;
+    }
+
+    const { valueColumn, categoryColumn, topN = 3, bottomN = 3 } = controls;
+    
+    try {
+      // Convert CSV data to objects for processing
+      const dataObjects = csvData.slice(1).map(row => 
+        Object.fromEntries(
+          csvColumns.map((col, index) => [col, row[index]])
+        )
+      );
+
+      // Aggregate values by category (similar to your working example)
+      const categoryTotals: { [key: string]: number } = {};
+      
+      dataObjects.forEach(row => {
+        const category = (row as any)[categoryColumn];
+        const value = parseFloat((row as any)[valueColumn]);
+        
+        if (category && !isNaN(value)) {
+          categoryTotals[category] = (categoryTotals[category] || 0) + value;
+        }
+      });
+
+      // Calculate total for percentages
+      const totalValue = Object.values(categoryTotals).reduce((sum, val) => sum + val, 0);
+      
+      // Sort and get top/bottom items
+      const sortedItems = Object.entries(categoryTotals)
+        .map(([category, value]) => ({
+          category,
+          value,
+          percentage: totalValue > 0 ? (value / totalValue) * 100 : 0
+        }))
+        .sort((a, b) => b.value - a.value);
+
+      const topItems = sortedItems.slice(0, topN);
+      const bottomItems = sortedItems.slice(-bottomN).reverse();
+
+      // Generate HTML based on your working example
+      return `
+        <div class="space-y-6">
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">🏆 Top ${topN} & Bottom ${bottomN} Analysis</h3>
+            <p class="text-sm text-gray-600">Analysis of ${categoryColumn} by ${valueColumn}</p>
+            <p class="text-xs text-gray-500 mt-1">${sortedItems.length} categories analyzed</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Top Items -->
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                🔝 Top ${topN} ${categoryColumn}
+              </h4>
+              <div class="space-y-2">
+                ${topItems.map((item, index) => `
+                  <div class="flex items-center justify-between p-2 bg-white rounded border">
+                    <div class="flex items-center">
+                      <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                        ${index + 1}
+                      </span>
+                      <span class="font-medium text-gray-800">${item.category}</span>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
+                      <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Bottom Items -->
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+              <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                📉 Bottom ${bottomN} ${categoryColumn}
+              </h4>
+              <div class="space-y-2">
+                ${bottomItems.map((item, index) => `
+                  <div class="flex items-center justify-between p-2 bg-white rounded border">
+                    <div class="flex items-center">
+                      <span class="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                        ${index + 1}
+                      </span>
+                      <span class="font-medium text-gray-800">${item.category}</span>
+                    </div>
+                    <div class="text-right">
+                      <div class="font-semibold text-gray-900">${item.value.toLocaleString()}</div>
+                      <div class="text-sm text-gray-500">${item.percentage.toFixed(1)}%</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Statistics -->
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <h4 class="font-semibold text-gray-800 mb-3">📈 Summary Statistics</h4>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="text-2xl font-bold text-blue-600">${sortedItems.length}</div>
+                <div class="text-sm text-gray-600">Total Categories</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-green-600">${totalValue.toLocaleString()}</div>
+                <div class="text-sm text-gray-600">Total Value</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-purple-600">${(totalValue / sortedItems.length).toLocaleString()}</div>
+                <div class="text-sm text-gray-600">Average Value</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Insights -->
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h4 class="font-semibold text-blue-800 mb-2">💡 Key Insights</h4>
+            <div class="text-sm text-blue-700 space-y-1">
+              <p>• <strong>Top performer:</strong> ${topItems[0]?.category} represents ${topItems[0]?.percentage.toFixed(1)}% of total ${valueColumn}</p>
+              <p>• <strong>Bottom performer:</strong> ${bottomItems[0]?.category} represents ${bottomItems[0]?.percentage.toFixed(1)}% of total ${valueColumn}</p>
+              <p>• <strong>Performance gap:</strong> ${topItems[0] && bottomItems[0] ? ((topItems[0].value / bottomItems[0].value) * 100).toFixed(0) + 'x difference' : 'N/A'}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    } catch (error) {
+      console.error('Error generating TopN analysis:', error);
+      return `
+        <div class="text-center p-6">
+          <div class="text-4xl mb-4">❌</div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Analysis Error</h3>
+          <p class="text-gray-600">Unable to process TopN analysis. Please check your column selections.</p>
+        </div>
+      `;
     }
   };
 
@@ -1039,6 +1241,83 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                 </div>
               )}
 
+              {/* Top N Analysis Controls */}
+              {item.result.type === 'top-n' && (
+                <div className="mb-6">
+                  <div className="grid grid-cols-1 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Value Column
+                      </label>
+                      <select
+                        value={topNControls[item.id]?.valueColumn}
+                        onChange={(e) => updateTopNControls(item.id, { valueColumn: e.target.value })}
+                        className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                        title="Select the column for values"
+                      >
+                        <option value="">Select a value column</option>
+                        {getNumericFields(csvData.length > 0 ? csvData.slice(1).map(row => 
+                          Object.fromEntries(
+                            csvColumns.map((col, index) => [col, row[index]])
+                          )
+                        ) : []).map(field => (
+                          <option key={field} value={field}>{field}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Category Column
+                      </label>
+                      <select
+                        value={topNControls[item.id]?.categoryColumn}
+                        onChange={(e) => updateTopNControls(item.id, { categoryColumn: e.target.value })}
+                        className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                        title="Select the column for categories"
+                      >
+                        <option value="">Select a category column</option>
+                        {getTextFields(csvData.length > 0 ? csvData.slice(1).map(row => 
+                          Object.fromEntries(
+                            csvColumns.map((col, index) => [col, row[index]])
+                          )
+                        ) : []).map(field => (
+                          <option key={field} value={field}>{field}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Top N
+                      </label>
+                      <input
+                        type="number"
+                        min="1"
+                        value={topNControls[item.id]?.topN || 3}
+                        onChange={(e) => updateTopNControls(item.id, { topN: Math.max(1, Number(e.target.value)) })}
+                        className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                        title="Number of top/bottom items to display"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Bottom N Items
+                      </label>
+                      <input
+                        type="number"
+                        min="1"
+                        value={topNControls[item.id]?.bottomN || 3}
+                        onChange={(e) => updateTopNControls(item.id, { bottomN: Math.max(1, Number(e.target.value)) })}
+                        className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+                        title="Number of bottom items to display"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Metadata */}
               <div className="text-sm text-gray-700 mb-4 border-b pb-3">
                 <div className="flex justify-between items-center">
@@ -1063,6 +1342,8 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
                     ? generatePeriodVarianceHTML(item.id)
                     : item.result.type === 'trend-analysis'
                     ? generateTrendAnalysisHTML(item.id)
+                    : item.result.type === 'top-n'
+                    ? generateTopNHTML(item.id)
                     : item.result.htmlOutput || '<div class="text-gray-700 p-4">Visualization not available</div>'
                 }}
               />

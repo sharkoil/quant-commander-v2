@@ -7,10 +7,10 @@ export type AnalysisType =
   | 'period-variance' 
   | 'budget-variance' 
   | 'trend-analysis' 
-  | 'top-n' 
   | 'contribution'
   | 'column-intelligence'
-  | 'outlier-detection';
+  | 'outlier-detection'
+  | 'top-n';
 
 export interface AnalysisResult {
   id: string;
