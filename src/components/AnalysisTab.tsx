@@ -56,6 +56,8 @@ import {
   getTextFields
 } from '../lib/utils/csvFieldAnalyzer';
 import { GlobalAnalysisSettings, GlobalAnalysisSettings as GlobalAnalysisSettingsType } from './GlobalAnalysisSettings';
+import { AIColumnInsights } from './AIColumnInsights';
+import { SmartColumnSelector } from './SmartColumnSelector';
 
 interface AnalysisTabProps {
   csvData: (string | number | Date | boolean)[][];
@@ -157,6 +159,12 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     showPercentages: true,
     currencyFormat: 'USD'
   });
+
+  // Magical AI Experience State
+  const [showMagicalAI, setShowMagicalAI] = useState(false);
+  const [useSmartSelector, setUseSmartSelector] = useState(false);
+  const [smartColumns, setSmartColumns] = useState<Record<string, string>>({});
+  const [aiInsightsOpen, setAiInsightsOpen] = useState(false);
 
   // Initialize analysis items on component mount
   useEffect(() => {
@@ -1067,6 +1075,98 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
         settings={globalSettings}
         onSettingsChange={setGlobalSettings}
       />
+
+      {/* Magical AI Experience Section */}
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg border-2 border-indigo-200">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">🧠</span>
+            <div>
+              <h2 className="text-xl font-bold text-gray-800">AI-Powered Analysis</h2>
+              <p className="text-gray-600">Let AI help you understand your data better</p>
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setAiInsightsOpen(!aiInsightsOpen)}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+            >
+              {aiInsightsOpen ? 'Hide' : 'Show'} AI Insights
+            </button>
+            <button
+              onClick={() => setUseSmartSelector(!useSmartSelector)}
+              className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              {useSmartSelector ? 'Use Traditional' : 'Use Smart'} Selector
+            </button>
+          </div>
+        </div>
+
+        {aiInsightsOpen && (
+          <div className="mb-4">
+            <AIColumnInsights 
+              csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                Object.fromEntries(
+                  csvColumns.map((col, index) => [col, row[index]])
+                )
+              ) : []}
+              csvColumns={csvColumns}
+              onColumnSelect={(type, column) => {
+                setSmartColumns(prev => ({
+                  ...prev,
+                  [type]: column
+                }));
+                setGlobalSettings(prev => ({
+                  ...prev,
+                  ...(type === 'value' ? { primaryValueColumn: column } : {}),
+                  ...(type === 'category' ? { primaryCategoryColumn: column } : {}),
+                  ...(type === 'date' ? { dateColumn: column } : {})
+                }));
+              }}
+            />
+          </div>
+        )}
+
+        {useSmartSelector && (
+          <div className="mb-4">
+            <SmartColumnSelector
+              csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+                Object.fromEntries(
+                  csvColumns.map((col, index) => [col, row[index]])
+                )
+              ) : []}
+              csvColumns={csvColumns}
+              selectedColumns={smartColumns}
+              onColumnChange={(type, column) => {
+                setSmartColumns(prev => ({
+                  ...prev,
+                  [type]: column
+                }));
+                setGlobalSettings(prev => ({
+                  ...prev,
+                  ...(type === 'value' ? { primaryValueColumn: column } : {}),
+                  ...(type === 'category' ? { primaryCategoryColumn: column } : {}),
+                  ...(type === 'date' ? { dateColumn: column } : {})
+                }));
+              }}
+              title="Smart Column Detection"
+            />
+          </div>
+        )}
+
+        {(aiInsightsOpen || useSmartSelector) && (
+          <div className="mt-4 p-3 bg-white bg-opacity-50 rounded-lg border border-indigo-200">
+            <div className="flex items-center gap-2 text-sm text-gray-700">
+              <span className="text-indigo-600">💡</span>
+              <span className="font-medium">AI Tip:</span>
+              <span>
+                The AI has analyzed your data structure and content to provide intelligent column recommendations. 
+                Confidence scores help you understand how certain the AI is about each suggestion.
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Filter and Sort Controls */}
       <div className="bg-white p-6 rounded-lg border shadow-sm">
