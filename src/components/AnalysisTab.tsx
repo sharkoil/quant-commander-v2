@@ -55,6 +55,7 @@ import {
   getNumericFields,
   getTextFields
 } from '../lib/utils/csvFieldAnalyzer';
+import { GlobalAnalysisSettings, GlobalAnalysisSettings as GlobalAnalysisSettingsType } from './GlobalAnalysisSettings';
 
 interface AnalysisTabProps {
   csvData: (string | number | Date | boolean)[][];
@@ -142,6 +143,20 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
   const pinnedContainerRef = useRef<HTMLDivElement>(null);
   const unpinnedContainerRef = useRef<HTMLDivElement>(null);
   const sortableRefs = useRef<{[key: string]: Sortable}>({});
+
+  // Global analysis settings state
+  const [globalSettings, setGlobalSettings] = useState<GlobalAnalysisSettingsType>({
+    primaryValueColumn: 'Value',
+    secondaryValueColumn: undefined,
+    dateColumn: 'Date',
+    primaryCategoryColumn: 'Category',
+    secondaryCategoryColumn: undefined,
+    defaultTimeScale: 'month',
+    defaultTopN: 5,
+    defaultConfidenceLevel: 95,
+    showPercentages: true,
+    currencyFormat: 'USD'
+  });
 
   // Initialize analysis items on component mount
   useEffect(() => {
@@ -519,10 +534,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       }
 
       const controls = budgetVarianceControls[analysisId];
-      if (!controls) {
-        return '<div>Loading budget variance controls...</div>';
-      }
-
+      
       // Use real CSV data instead of mock data
       const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
         Object.fromEntries(
@@ -537,17 +549,17 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       const processedResult = processBudgetVarianceData(
         realData,
         {
-          budgetColumn: controls.budgetColumn,
-          actualColumn: controls.actualColumn,
-          dateColumn: controls.dateColumn,
-          periodType: controls.periodType
+          budgetColumn: controls?.budgetColumn || getDefaultBudgetColumn(realData),
+          actualColumn: controls?.actualColumn || getDefaultActualColumn(realData),
+          dateColumn: controls?.dateColumn,
+          periodType: controls?.periodType || 'monthly'
         }
       );
 
       return generateBudgetVarianceVisualization(
         processedResult,
-        controls.budgetColumn,
-        controls.actualColumn
+        controls?.budgetColumn || getDefaultBudgetColumn(realData),
+        controls?.actualColumn || getDefaultActualColumn(realData)
       );
     } catch (error) {
       console.error('Error generating budget variance visualization:', error);
@@ -564,10 +576,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       }
 
       const controls = contributionControls[analysisId];
-      if (!controls) {
-        return '<div>Loading contribution analysis controls...</div>';
-      }
-
+      
       // Use real CSV data instead of mock data
       const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
         Object.fromEntries(
@@ -582,21 +591,21 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       const processedResult = processContributionData(
         realData,
         {
-          valueColumn: controls.valueColumn,
-          categoryColumn: controls.categoryColumn,
-          subcategoryColumn: controls.subcategoryColumn,
-          analysisScope: controls.analysisScope,
-          showOthers: controls.showOthers,
-          sortBy: controls.sortBy,
-          sortOrder: controls.sortOrder,
-          timePeriodAnalysis: controls.timePeriodAnalysis
+          valueColumn: controls?.valueColumn || getNumericFields(realData)[0] || 'Value',
+          categoryColumn: controls?.categoryColumn || getTextFields(realData)[0] || 'Category',
+          subcategoryColumn: controls?.subcategoryColumn,
+          analysisScope: controls?.analysisScope || 'total',
+          showOthers: controls?.showOthers ?? true,
+          sortBy: controls?.sortBy || 'contribution',
+          sortOrder: controls?.sortOrder || 'desc',
+          timePeriodAnalysis: controls?.timePeriodAnalysis
         }
       );
 
       return generateContributionVisualization(
         processedResult,
-        controls.valueColumn,
-        controls.categoryColumn
+        controls?.valueColumn || getNumericFields(realData)[0] || 'Value',
+        controls?.categoryColumn || getTextFields(realData)[0] || 'Category'
       );
     } catch (error) {
       console.error('Error generating contribution visualization:', error);
@@ -612,10 +621,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       }
 
       const controls = periodVarianceControls[analysisId];
-      if (!controls) {
-        return '<div>Loading period variance controls...</div>';
-      }
-
+      
       const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
         Object.fromEntries(
           csvColumns.map((col, index) => [col, row[index]])
@@ -629,9 +635,9 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       const processedResult = processPeriodVarianceData(
         realData,
         {
-          valueColumn: controls.valueColumn,
-          dateColumn: controls.dateColumn,
-          periodType: controls.periodType
+          valueColumn: controls?.valueColumn || getNumericFields(realData)[0] || 'Value',
+          dateColumn: controls?.dateColumn || getDateFields(realData)[0] || 'Date',
+          periodType: controls?.periodType || 'monthly'
         }
       );
 
@@ -650,10 +656,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       }
 
       const controls = trendAnalysisControls[analysisId];
-      if (!controls) {
-        return '<div>Loading trend analysis controls...</div>';
-      }
-
+      
       const realData = csvData.length > 0 ? csvData.slice(1).map(row => 
         Object.fromEntries(
           csvColumns.map((col, index) => [col, row[index]])
@@ -667,10 +670,10 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       const processedResult = processTrendAnalysisData(
         realData,
         {
-          valueColumn: controls.valueColumn,
-          dateColumn: controls.dateColumn,
-          windowSize: controls.windowSize,
-          trendType: controls.trendType
+          valueColumn: controls?.valueColumn || getNumericFields(realData)[0] || 'Value',
+          dateColumn: controls?.dateColumn || getDateFields(realData)[0] || 'Date',
+          windowSize: controls?.windowSize || 3,
+          trendType: controls?.trendType || 'linear'
         }
       );
 
@@ -689,7 +692,16 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
 
     // Get the TopN controls for this analysis
     const controls = topNControls[analysisId];
-    if (!controls || !controls.valueColumn || !controls.categoryColumn) {
+    
+    const valueColumn = controls?.valueColumn || getNumericFields(csvData.slice(1).map(row => 
+      Object.fromEntries(csvColumns.map((col, index) => [col, row[index]]))
+    ))[0] || 'Value';
+    
+    const categoryColumn = controls?.categoryColumn || getTextFields(csvData.slice(1).map(row => 
+      Object.fromEntries(csvColumns.map((col, index) => [col, row[index]]))
+    ))[0] || 'Category';
+    
+    if (!valueColumn || !categoryColumn) {
       return `
         <div class="text-center p-6">
           <div class="text-4xl mb-4">🔧</div>
@@ -699,7 +711,7 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
       `;
     }
 
-    const { valueColumn, categoryColumn, topN = 3, bottomN = 3, timePeriod = 'total', dateColumn } = controls;
+    const { topN = 3, bottomN = 3, timePeriod = 'total', dateColumn } = controls || {};
     
     // Check if time period analysis requires a date column
     if (timePeriod !== 'total' && !dateColumn) {
@@ -939,6 +951,91 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
     }
   };
 
+  // Update controls when global settings change
+  useEffect(() => {
+    if (globalSettings) {
+      // Update budget variance controls
+      setBudgetVarianceControls(prev => {
+        const updated = { ...prev };
+        Object.keys(updated).forEach(id => {
+          updated[id] = {
+            ...updated[id],
+            budgetColumn: globalSettings.secondaryValueColumn || globalSettings.primaryValueColumn,
+            actualColumn: globalSettings.primaryValueColumn,
+            dateColumn: globalSettings.dateColumn,
+            periodType: globalSettings.defaultTimeScale === 'year' ? 'yearly' : 
+                       globalSettings.defaultTimeScale === 'quarter' ? 'quarterly' :
+                       globalSettings.defaultTimeScale === 'week' ? 'weekly' : 'monthly'
+          };
+        });
+        return updated;
+      });
+
+      // Update contribution controls
+      setContributionControls(prev => {
+        const updated = { ...prev };
+        Object.keys(updated).forEach(id => {
+          updated[id] = {
+            ...updated[id],
+            valueColumn: globalSettings.primaryValueColumn,
+            categoryColumn: globalSettings.primaryCategoryColumn,
+            subcategoryColumn: globalSettings.secondaryCategoryColumn,
+            timePeriodAnalysis: {
+              enabled: updated[id].timePeriodAnalysis?.enabled || false,
+              periodType: updated[id].timePeriodAnalysis?.periodType || 'month',
+              dateColumn: globalSettings.dateColumn
+            }
+          };
+        });
+        return updated;
+      });
+
+      // Update period variance controls
+      setPeriodVarianceControls(prev => {
+        const updated = { ...prev };
+        Object.keys(updated).forEach(id => {
+          updated[id] = {
+            ...updated[id],
+            valueColumn: globalSettings.primaryValueColumn,
+            dateColumn: globalSettings.dateColumn,
+            periodType: globalSettings.defaultTimeScale === 'year' ? 'yearly' : 
+                       globalSettings.defaultTimeScale === 'quarter' ? 'quarterly' :
+                       globalSettings.defaultTimeScale === 'week' ? 'weekly' : 'monthly'
+          };
+        });
+        return updated;
+      });
+
+      // Update trend analysis controls
+      setTrendAnalysisControls(prev => {
+        const updated = { ...prev };
+        Object.keys(updated).forEach(id => {
+          updated[id] = {
+            ...updated[id],
+            valueColumn: globalSettings.primaryValueColumn,
+            dateColumn: globalSettings.dateColumn
+          };
+        });
+        return updated;
+      });
+
+      // Update top N controls
+      setTopNControls(prev => {
+        const updated = { ...prev };
+        Object.keys(updated).forEach(id => {
+          updated[id] = {
+            ...updated[id],
+            valueColumn: globalSettings.primaryValueColumn,
+            categoryColumn: globalSettings.primaryCategoryColumn,
+            topN: globalSettings.defaultTopN,
+            dateColumn: globalSettings.dateColumn
+          };
+        });
+        return updated;
+      });
+    }
+  }, [globalSettings]);
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -959,6 +1056,17 @@ export default function AnalysisTab({ csvData, csvColumns }: AnalysisTabProps) {
           </p>
         </div>
       </div>
+
+      {/* Global Analysis Settings */}
+      <GlobalAnalysisSettings
+        csvData={csvData.length > 0 ? csvData.slice(1).map(row => 
+          Object.fromEntries(
+            csvColumns.map((col, index) => [col, row[index]])
+          )
+        ) : []}
+        settings={globalSettings}
+        onSettingsChange={setGlobalSettings}
+      />
 
       {/* Filter and Sort Controls */}
       <div className="bg-white p-6 rounded-lg border shadow-sm">
